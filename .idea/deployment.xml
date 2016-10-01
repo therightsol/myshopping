@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="myshopping">
+    <serverData>
+      <paths name="myshopping">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="myshopping" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="myshopping (1)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="myshopping (2)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
