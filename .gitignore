@@ -5,3 +5,4 @@
 .idea/modules.xml
 .idea/myshopping.iml
 .idea/workspace.xml
+./application/config/config.php
