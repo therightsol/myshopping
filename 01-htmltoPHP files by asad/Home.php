@@ -146,6 +146,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!--This is just a test.. By Assad Khan-->
+
                 <div class="tab-pane fade" id="panel-color">
                     <div id="panel-color-accordion" class="panel-group custom-accordion sm-accordion">
                         <div class="panel">
