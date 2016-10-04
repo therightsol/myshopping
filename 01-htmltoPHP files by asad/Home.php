@@ -15,7 +15,7 @@
 <?php include 'inc/head.inc.php'; ?>
 
 <body>
-
+<!-- This is test by RAMISH AHMED BUTT -->
 <?php include 'inc/topbar.inc.php'; ?>
 <?php include 'inc/header.inc.php'; ?>
 <?php include 'inc/menu.inc.php'; ?>
@@ -146,6 +146,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!--This is just a test.. By Assad Khan-->
+
                 <div class="tab-pane fade" id="panel-color">
                     <div id="panel-color-accordion" class="panel-group custom-accordion sm-accordion">
                         <div class="panel">
