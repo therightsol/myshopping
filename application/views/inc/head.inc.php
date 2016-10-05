@@ -14,13 +14,13 @@
     <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic%7CPT+Gudea:400,700,400italic%7CPT+Oswald:400,700,300"
           rel="stylesheet" id="googlefont">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/prettyPhoto.css">
-    <link rel="stylesheet" href="css/colpick.css">
-    <link rel="stylesheet" href="css/revslider.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/prettyPhoto.css">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/colpick.css">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/revslider.css">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $root; ?>assets/css/responsive.css">
     <link rel="icon" type="image/png" href="http://newsmartwave.net/html/venedor/green/images/icons/icon.png">
     <link rel="apple-touch-icon" sizes="57x57"
           href="http://newsmartwave.net/html/venedor/green/images/icons/apple-icon-57x57.png">
