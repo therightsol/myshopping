@@ -26,10 +26,23 @@
           href="http://newsmartwave.net/html/venedor/green/images/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="72x72"
           href="http://newsmartwave.net/html/venedor/green/images/icons/apple-icon-72x72.png">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write(\'<script src="js/jquery-1.11.1.min.js"><\/script>\');</script>
+    <script src="<?php echo $root; ?>assets/js/jquery-3.1.0.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD3RzzpCYVvydltOx2hRPRB9XS6FSOM-NI"></script>
+
+    <script>
+        function initialize() {
+            var mapProp = {
+                center:new google.maps.LatLng(40.71278,-74.00594),
+                zoom:5,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            var map=new google.maps.Map(document.getElementById("map"),mapProp);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script>window.jQuery || document.write(\'<script src="<?php echo $root; ?>assets/js/jquery-1.11.1.min.js"><\/script>\');</script>
     <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script><![endif]-->
+    <script src="<?php echo $root; ?>assets/js/html5shiv.js"></script>
+    <script src="<?php echo $root; ?>assets/js/respond.min.js"></script><![endif]-->
     <style id="custom-style"></style>
 </head>

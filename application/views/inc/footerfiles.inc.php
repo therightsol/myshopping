@@ -1,21 +1,21 @@
 
 
-<a href="index.html#" id="scroll-top" title="Scroll to Top"><i class="fa fa-angle-up"></i></a>
+<a href="<?php echo $root; ?>assets/index.html#" id="scroll-top" title="Scroll to Top"><i class="fa fa-angle-up"></i></a>
 <script src="<?php echo $root; ?>assets/js/bootstrap.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/jquery.debouncedresize.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="js/jquery.placeholder.js"></script>
-<script src="js/jquery.hoverIntent.min.js"></script>
-<script src="js/twitter/jquery.tweet.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jflickrfeed.min.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/jquery.themepunch.tools.min.js"></script>
-<script src="js/jquery.themepunch.revolution.min.js"></script>
-<script src="js/colpick.js"></script>
-<script src="js/main.js"></script>
+<script src="<?php echo $root; ?>assets/js/smoothscroll.js"></script>
+<script src="<?php echo $root; ?>assets/js/jquery.debouncedresize.js"></script>
+<script src="<?php echo $root; ?>assets/js/retina.min.js"></script>
+<script src="<?php echo $root; ?>assets/js/jquery.placeholder.js"></script>
+<script src="<?php echo $root; ?>assets/js/jquery.hoverIntent.min.js"></script>
+<script src="<?php echo $root; ?>assets/js/twitter/jquery.tweet.min.js"></script>
+<script src="<?php echo $root; ?>assets/js/jquery.flexslider-min.js"></script>
+<script src="<?php echo $root; ?>assets/js/owl.carousel.min.js"></script>
+<script src="<?php echo $root; ?>assets/js/jflickrfeed.min.js"></script>
+<script src="<?php echo $root; ?>assets/js/jquery.prettyPhoto.js"></script>
+<script src="<?php echo $root; ?>assets/js/jquery.themepunch.tools.min.js"></script>
+<script src="<?php echo $root; ?>assets/js/jquery.themepunch.revolution.min.js"></script>
+<script src="<?php echo $root; ?>assets/js/colpick.js"></script>
+<script src="<?php echo $root; ?>assets/js/main.js"></script>
 <script>$(function () {
     jQuery("#slider-rev").revolution({
         delay: 8e3,

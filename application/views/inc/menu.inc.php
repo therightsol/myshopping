@@ -186,7 +186,7 @@
                                                                                         class="edit-item"><i
                                                         class="fa fa-pencil"></i></a>
                                                     <figure><a href="product.html"><img
-                                                            src="images/products/thumbnails/item12.jpg"
+                                                            src="<?php echo $root; ?>assets/images/products/thumbnails/item12.jpg"
                                                             alt="phone 4"></a></figure>
                                                     <div class="dropdown-cart-details"><p class="item-name"><a
                                                             href="product.html">Cam Optia AF Webcam</a></p>
@@ -200,7 +200,7 @@
                                                                                         class="edit-item"><i
                                                         class="fa fa-pencil"></i></a>
                                                     <figure><a href="product.html"><img
-                                                            src="images/products/thumbnails/item13.jpg"
+                                                            src="<?php echo $root; ?>assets/images/products/thumbnails/item13.jpg"
                                                             alt="phone 2"></a></figure>
                                                     <div class="dropdown-cart-details"><p class="item-name"><a
                                                             href="product.html">Iphone Case Cover Original</a></p>

@@ -14,35 +14,6 @@
 <html class="ie9"><![endif]--><!--[if !IE]><!-->
 <html><!--<![endif]-->
 
-<head>
-    <meta charset="utf-8">
-    <title>Venedor - Responsive eCommerce Template</title>
-    <meta name="description" content="Responsive modern ecommerce Html5 Template">
-    <!--[if IE]>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic%7CPT+Gudea:400,700,400italic%7CPT+Oswald:400,700,300"
-          rel="stylesheet" id="googlefont">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/prettyPhoto.css">
-    <link rel="stylesheet" href="css/colpick.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" type="image/png" href="http://newsmartwave.net/html/venedor/green/images/icons/icon.png">
-    <link rel="apple-touch-icon" sizes="57x57"
-          href="http://newsmartwave.net/html/venedor/green/images/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72"
-          href="http://newsmartwave.net/html/venedor/green/images/icons/apple-icon-72x72.png">
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD45Nu6JYgh1oKG5G9ut7Nr4QW48gx-6ug&amp;sensor=false"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>');</script>
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script><![endif]-->
-    <style id="custom-style"></style>
-</head>
 
 <body>
 <!-- This is test by RAMISH AHMED BUTT -->
@@ -71,11 +42,11 @@
                             <div id="document-layout" class="collapse in">
                                 <div class="panel-body">
                                     <ul class="layout-style-list clearfix">
-                                        <li data-layout="fullwidth"><img src="images/panel/fullwidth.png"
+                                        <li data-layout="fullwidth"><img src="<?php echo $root; ?>assets/images/panel/fullwidth.png"
                                                                          alt="Fullwidth">
 
                                             <p>Fullwidth</p></li>
-                                        <li data-layout="boxed"><img src="images/panel/boxed.png" alt="Boxed">
+                                        <li data-layout="boxed"><img src="<?php echo $root; ?>assets/images/panel/boxed.png" alt="Boxed">
 
                                             <p>Boxed</p></li>
                                     </ul>
@@ -106,65 +77,65 @@
                                 <div class="panel-body">
                                     <ul class="clearfix pattern-box-list">
                                         <li><img data-src="images/patterns/pattern1.png"
-                                                 src="images/patterns/pattern1.png" alt="pattern 1"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern1.png" alt="pattern 1"></li>
                                         <li><img data-src="images/patterns/pattern2.png"
-                                                 src="images/patterns/pattern2.png" alt="pattern 2"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern2.png" alt="pattern 2"></li>
                                         <li><img data-src="images/patterns/pattern3.png"
-                                                 src="images/patterns/pattern3.png" alt="pattern 3"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern3.png" alt="pattern 3"></li>
                                         <li><img data-src="images/patterns/pattern4.png"
-                                                 src="images/patterns/pattern4.png" alt="pattern 4"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern4.png" alt="pattern 4"></li>
                                         <li><img data-src="images/patterns/pattern5.png"
-                                                 src="images/patterns/pattern5.png" alt="pattern 5"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern5.png" alt="pattern 5"></li>
                                         <li><img data-src="images/patterns/pattern6.png"
-                                                 src="images/patterns/pattern6.png" alt="pattern 6"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern6.png" alt="pattern 6"></li>
                                         <li><img data-src="images/patterns/pattern7.png"
-                                                 src="images/patterns/pattern7.png" alt="pattern 7"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern7.png" alt="pattern 7"></li>
                                         <li><img data-src="images/patterns/pattern8.png"
-                                                 src="images/patterns/pattern8.png" alt="pattern 8"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern8.png" alt="pattern 8"></li>
                                         <li><img data-src="images/patterns/pattern9.png"
-                                                 src="images/patterns/pattern9.png" alt="pattern 9"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern9.png" alt="pattern 9"></li>
                                         <li><img data-src="images/patterns/pattern10.png"
-                                                 src="images/patterns/pattern10.png" alt="pattern 10"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern10.png" alt="pattern 10"></li>
                                         <li><img data-src="images/patterns/pattern11.png"
-                                                 src="images/patterns/pattern11.png" alt="pattern 11"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern11.png" alt="pattern 11"></li>
                                         <li><img data-src="images/patterns/pattern12.png"
-                                                 src="images/patterns/pattern12.png" alt="pattern 12"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern12.png" alt="pattern 12"></li>
                                         <li><img data-src="images/patterns/pattern13.png"
-                                                 src="images/patterns/pattern13.png" alt="pattern 13"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern13.png" alt="pattern 13"></li>
                                         <li><img data-src="images/patterns/pattern14.png"
-                                                 src="images/patterns/pattern14.png" alt="pattern 14"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern14.png" alt="pattern 14"></li>
                                         <li><img data-src="images/patterns/pattern15.png"
-                                                 src="images/patterns/pattern15.png" alt="pattern 15"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern15.png" alt="pattern 15"></li>
                                         <li><img data-src="images/patterns/pattern16.png"
-                                                 src="images/patterns/pattern16.png" alt="pattern 16"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern16.png" alt="pattern 16"></li>
                                         <li><img data-src="images/patterns/pattern17.png"
-                                                 src="images/patterns/pattern17.png" alt="pattern 17"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern17.png" alt="pattern 17"></li>
                                         <li><img data-src="images/patterns/pattern18.png"
-                                                 src="images/patterns/pattern18.png" alt="pattern 18"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern18.png" alt="pattern 18"></li>
                                         <li><img data-src="images/patterns/pattern19.png"
-                                                 src="images/patterns/pattern19.png" alt="pattern 19"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern19.png" alt="pattern 19"></li>
                                         <li><img data-src="images/patterns/pattern20.png"
-                                                 src="images/patterns/pattern20.png" alt="pattern 20"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern20.png" alt="pattern 20"></li>
                                         <li><img data-src="images/patterns/pattern21.png"
-                                                 src="images/patterns/pattern21.png" alt="pattern 21"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern21.png" alt="pattern 21"></li>
                                         <li><img data-src="images/patterns/pattern22.png"
-                                                 src="images/patterns/pattern22.png" alt="pattern 22"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern22.png" alt="pattern 22"></li>
                                         <li><img data-src="images/patterns/pattern23.png"
-                                                 src="images/patterns/pattern23.png" alt="pattern 23"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern23.png" alt="pattern 23"></li>
                                         <li><img data-src="images/patterns/pattern24.png"
-                                                 src="images/patterns/pattern24.png" alt="pattern 24"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern24.png" alt="pattern 24"></li>
                                         <li><img data-src="images/patterns/pattern25.png"
-                                                 src="images/patterns/pattern25.png" alt="pattern 25"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern25.png" alt="pattern 25"></li>
                                         <li><img data-src="images/patterns/pattern26.png"
-                                                 src="images/patterns/pattern26.png" alt="pattern 26"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern26.png" alt="pattern 26"></li>
                                         <li><img data-src="images/patterns/pattern27.png"
-                                                 src="images/patterns/pattern27.png" alt="pattern 27"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern27.png" alt="pattern 27"></li>
                                         <li><img data-src="images/patterns/pattern28.png"
-                                                 src="images/patterns/pattern28.png" alt="pattern 28"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern28.png" alt="pattern 28"></li>
                                         <li><img data-src="images/patterns/pattern29.png"
-                                                 src="images/patterns/pattern29.png" alt="pattern 29"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern29.png" alt="pattern 29"></li>
                                         <li><img data-src="images/patterns/pattern30.png"
-                                                 src="images/patterns/pattern30.png" alt="pattern 30"></li>
+                                                 src="<?php echo $root; ?>assets/images/patterns/pattern30.png" alt="pattern 30"></li>
                                     </ul>
                                 </div>
                             </div>
