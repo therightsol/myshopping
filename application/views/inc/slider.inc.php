@@ -1,5 +1,3 @@
-<?php $root = base_url();   ?>
-
 <div id="slider-rev-container">
             <div id="slider-rev">
                 <ul>

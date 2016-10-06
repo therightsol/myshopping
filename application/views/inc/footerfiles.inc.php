@@ -1,8 +1,7 @@
-<?php   ?>
 
 
 <a href="index.html#" id="scroll-top" title="Scroll to Top"><i class="fa fa-angle-up"></i></a>
-<script src="js/bootstrap.min.js"></script>
+<script src="<?php echo $root; ?>assets/js/bootstrap.min.js"></script>
 <script src="js/smoothscroll.js"></script>
 <script src="js/jquery.debouncedresize.js"></script>
 <script src="js/retina.min.js"></script>
