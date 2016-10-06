@@ -1,9 +1,9 @@
-<?php   ?>
-
-
 <div id = "header">
 
+
         <div id="inner-header">
+
+            <?php $root = './assets/';  ?>
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 col-sm-5 col-xs-12 logo-container"><h1 class="logo clearfix"><span>Responsive eCommerce Template</span>

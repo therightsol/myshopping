@@ -2,10 +2,10 @@
 <project version="4">
   <component name="PublishConfigData" serverName="My shopping">
     <serverData>
-      <paths name="ramish">
+      <paths name="My shopping">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping local="$PROJECT_DIR$" web="myshopping" />
           </mappings>
         </serverdata>
       </paths>

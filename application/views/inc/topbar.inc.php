@@ -1,6 +1,6 @@
-<?php   ?>
-
 <div id="header-top">
+
+    <?php $root = './assets/';   ?>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -35,21 +35,21 @@
                                 </div>
                                 <div class="btn-group dropdown-language">
                                     <button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown">
-                                        <span class="flag-container"><img src="images/england-flag.png"
+                                        <span class="flag-container"><img src="<?php echo $root; ?>images/england-flag.png"
                                                                           alt="flag of england"></span> <span
                                             class="hide-for-xs">English</span></button>
                                     <ul class="dropdown-menu pull-right" role="menu">
                                         <li><a href="index.html#"><span class="flag-container"><img
-                                                src="images/italy-flag.png" alt="flag of england"></span><span
+                                                src="<?php echo $root; ?>images/italy-flag.png" alt="flag of england"></span><span
                                                 class="hide-for-xs">Italian</span></a></li>
                                         <li><a href="index.html#"><span class="flag-container"><img
-                                                src="images/spain-flag.png" alt="flag of italy"></span><span
+                                                src="<?php echo $root; ?>images/spain-flag.png" alt="flag of italy"></span><span
                                                 class="hide-for-xs">Spanish</span></a></li>
                                         <li><a href="index.html#"><span class="flag-container"><img
-                                                src="images/france-flag.png" alt="flag of france"></span><span
+                                                src="<?php echo $root; ?>images/france-flag.png" alt="flag of france"></span><span
                                                 class="hide-for-xs">French</span></a></li>
                                         <li><a href="index.html#"><span class="sm-separator"><img
-                                                src="images/germany-flag.png" alt="flag of germany"></span><span
+                                                src="<?php echo $root; ?>images/germany-flag.png" alt="flag of germany"></span><span
                                                 class="hide-for-xs">German</span></a></li>
                                     </ul>
                                 </div>

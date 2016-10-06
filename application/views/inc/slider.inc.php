@@ -1,10 +1,10 @@
-<?php   ?>
+<?php $root = base_url();   ?>
 
 <div id="slider-rev-container">
             <div id="slider-rev">
                 <ul>
                     <li data-transition="fade" data-slotamount="6" data-masterspeed="600" data-saveperformance="on"
-                        data-title="Special Offers"><img src="images/revslider/dummy.png" alt="slidebg1"
+                        data-title="Special Offers"><img src="<?php echo $root; ?>images/revslider/dummy.png" alt="slidebg1"
                                                          data-lazyload="images/homeslider/slide1.png"
                                                          data-bgposition="center center" data-bgfit="cover"
                                                          data-bgrepeat="no-repeat">
@@ -19,10 +19,10 @@
                              data-endspeed="800"><a href="index.html#" class="btn btn-custom-2">Learn More</a></div>
                         <div class="tp-caption lfl ltl" data-x="center" data-y="bottom" data-hoffset="-230"
                              data-speed="2000" data-start="500" data-endspeed="800"><img
-                                src="images/homeslider/slide1_1.png" alt="Slide 1_1"></div>
+                                src="<?php echo $root; ?>images/homeslider/slide1_1.png" alt="Slide 1_1"></div>
                     </li>
                     <li data-transition="fade" data-slotamount="5" data-masterspeed="600" data-saveperformance="on"
-                        data-title="Learn More"><img src="images/revslider/dummy.png" alt="slidebg2"
+                        data-title="Learn More"><img src="<?php echo $root; ?>images/revslider/dummy.png" alt="slidebg2"
                                                      data-lazyload="images/homeslider/slide2.jpg"
                                                      data-bgposition="center center" data-bgfit="cover"
                                                      data-bgrepeat="no-repeat">
@@ -41,24 +41,24 @@
                         </div>
                         <div class="tp-caption lfl ltl" data-x="center" data-y="center" data-hoffset="-204"
                              data-speed="1750" data-start="400" data-endspeed="800"><img
-                                src="images/homeslider/slide2_2.png" alt="Slide 2_2"></div>
+                                src="<?php echo $root; ?>images/homeslider/slide2_2.png" alt="Slide 2_2"></div>
                         <div class="tp-caption lfr ltr" data-x="380" data-y="50" data-speed="1800" data-start="250"
-                             data-endspeed="800"><img src="images/homeslider/slide2_1.png" alt="Slide 2_1"></div>
+                             data-endspeed="800"><img src="<?php echo $root; ?>images/homeslider/slide2_1.png" alt="Slide 2_1"></div>
                     </li>
                     <li data-transition="fade" data-slotamount="4" data-masterspeed="600" data-saveperformance="on"
-                        data-title="More Features"><img src="images/revslider/dummy.png" alt="slidebg3"
+                        data-title="More Features"><img src="<?php echo $root; ?>images/revslider/dummy.png" alt="slidebg3"
                                                         data-lazyload="images/homeslider/slide3.jpg"
                                                         data-bgposition="center center" data-bgfit="cover"
                                                         data-bgrepeat="no-repeat">
 
                         <div class="tp-caption sfr str" data-x="24" data-y="bottom" data-speed="900" data-start="500"
-                             data-endspeed="300"><img src="images/homeslider/slide3_1.png" alt="Slide 3_1"></div>
+                             data-endspeed="300"><img src="<?php echo $root; ?>images/homeslider/slide3_1.png" alt="Slide 3_1"></div>
                         <div class="tp-caption sfl stl" data-x="788" data-y="95" data-speed="1000" data-start="1200"
-                             data-endspeed="540"><img src="images/homeslider/slide3_3.png" alt="Slide 3_3"></div>
+                             data-endspeed="540"><img src="<?php echo $root; ?>images/homeslider/slide3_3.png" alt="Slide 3_3"></div>
                         <div class="tp-caption sfl stl" data-x="700" data-y="260" data-speed="800" data-start="800"
-                             data-endspeed="420"><img src="images/homeslider/slide3_2.png" alt="Slide 3_2"></div>
+                             data-endspeed="420"><img src="<?php echo $root; ?>images/homeslider/slide3_2.png" alt="Slide 3_2"></div>
                         <div class="tp-caption sfl stl" data-x="613" data-y="325" data-speed="600" data-start="400"
-                             data-endspeed="300"><img src="images/homeslider/slide3_4.png" alt="Slide 3_4"></div>
+                             data-endspeed="300"><img src="<?php echo $root; ?>images/homeslider/slide3_4.png" alt="Slide 3_4"></div>
                         <div class="tp-caption rev-title sfr str" data-x="20" data-y="56" data-speed="600"
                              data-start="1400" data-endspeed="200">CONTROL. NAVIGATE. BE RECOGNIZED.
                         </div>
