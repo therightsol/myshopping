@@ -3,7 +3,7 @@
                 <ul>
                     <li data-transition="fade" data-slotamount="6" data-masterspeed="600" data-saveperformance="on"
                         data-title="Special Offers"><img src="<?php echo $root; ?>assets/images/revslider/dummy.png" alt="slidebg1"
-                                                         data-lazyload="images/homeslider/slide1.png"
+                                                         data-lazyload="<?php echo $root . $asset; ?>images/homeslider/slide1.png"
                                                          data-bgposition="center center" data-bgfit="cover"
                                                          data-bgrepeat="no-repeat">
 
@@ -21,7 +21,7 @@
                     </li>
                     <li data-transition="fade" data-slotamount="5" data-masterspeed="600" data-saveperformance="on"
                         data-title="Learn More"><img src="<?php echo $root; ?>assets/images/revslider/dummy.png" alt="slidebg2"
-                                                     data-lazyload="images/homeslider/slide2.jpg"
+                                                     data-lazyload="<?php echo $root . $asset; ?>images/homeslider/slide2.jpg"
                                                      data-bgposition="center center" data-bgfit="cover"
                                                      data-bgrepeat="no-repeat">
 
@@ -39,13 +39,13 @@
                         </div>
                         <div class="tp-caption lfl ltl" data-x="center" data-y="center" data-hoffset="-204"
                              data-speed="1750" data-start="400" data-endspeed="800"><img
-                                src="<?php echo $root; ?>images/homeslider/slide2_2.png" alt="Slide 2_2"></div>
+                                src="<?php echo $root . $asset; ?>images/homeslider/slide2_2.png" alt="Slide 2_2"></div>
                         <div class="tp-caption lfr ltr" data-x="380" data-y="50" data-speed="1800" data-start="250"
                              data-endspeed="800"><img src="<?php echo $root; ?>assets/images/homeslider/slide2_1.png" alt="Slide 2_1"></div>
                     </li>
                     <li data-transition="fade" data-slotamount="4" data-masterspeed="600" data-saveperformance="on"
-                        data-title="More Features"><img src="<?php echo $root; ?>images/revslider/dummy.png" alt="slidebg3"
-                                                        data-lazyload="<?php echo $root; ?>assetsimages/homeslider/slide3.jpg"
+                        data-title="More Features"><img src="<?php echo $root . $asset; ?>images/revslider/dummy.png" alt="slidebg3"
+                                                        data-lazyload="<?php echo $root . $asset; ?>images/homeslider/slide3.jpg"
                                                         data-bgposition="center center" data-bgfit="cover"
                                                         data-bgrepeat="no-repeat">
 

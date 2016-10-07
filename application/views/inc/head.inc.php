@@ -10,7 +10,7 @@
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <?php $root = base_url(); ?>
+    <?php $root = base_url(); $asset = 'assets/'; ?>
     <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic%7CPT+Gudea:400,700,400italic%7CPT+Oswald:400,700,300"
           rel="stylesheet" id="googlefont">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/bootstrap.min.css">
