@@ -66,66 +66,66 @@
                             <div id="body-background-pattern" class="collapse">
                                 <div class="panel-body">
                                     <ul class="clearfix pattern-box-list">
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern1.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern1.png" alt="pattern 1"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern2.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern2.png" alt="pattern 2"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern3.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern3.png" alt="pattern 3"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern4.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern4.png" alt="pattern 4"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern5.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern5.png" alt="pattern 5"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern6.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern6.png" alt="pattern 6"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern7.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern7.png" alt="pattern 7"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern8.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern8.png" alt="pattern 8"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern9.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern9.png" alt="pattern 9"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern10.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern10.png" alt="pattern 10"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern11.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern11.png" alt="pattern 11"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern12.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern12.png" alt="pattern 12"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern13.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern13.png" alt="pattern 13"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern14.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern14.png" alt="pattern 14"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern15.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern15.png" alt="pattern 15"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern16.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern16.png" alt="pattern 16"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern17.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern17.png" alt="pattern 17"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern18.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern18.png" alt="pattern 18"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern19.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern19.png" alt="pattern 19"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern20.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern20.png" alt="pattern 20"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern21.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern21.png" alt="pattern 21"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern22.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern22.png" alt="pattern 22"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern23.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern23.png" alt="pattern 23"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern24.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern24.png" alt="pattern 24"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern25.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern25.png" alt="pattern 25"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern26.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern26.png" alt="pattern 26"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern27.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern27.png" alt="pattern 27"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern28.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern28.png" alt="pattern 28"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern29.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern29.png" alt="pattern 29"></li>
-                                        <li><img data-src="<?php echo $root . $asset; ?>images/patterns/pattern30.png"
-                                                 src="<?php echo $root . $asset; ?>images/patterns/pattern30.png" alt="pattern 30"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern1.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern1.png" alt="pattern 1"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern2.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern2.png" alt="pattern 2"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern3.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern3.png" alt="pattern 3"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern4.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern4.png" alt="pattern 4"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern5.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern5.png" alt="pattern 5"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern6.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern6.png" alt="pattern 6"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern7.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern7.png" alt="pattern 7"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern8.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern8.png" alt="pattern 8"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern9.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern9.png" alt="pattern 9"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern10.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern10.png" alt="pattern 10"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern11.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern11.png" alt="pattern 11"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern12.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern12.png" alt="pattern 12"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern13.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern13.png" alt="pattern 13"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern14.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern14.png" alt="pattern 14"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern15.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern15.png" alt="pattern 15"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern16.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern16.png" alt="pattern 16"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern17.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern17.png" alt="pattern 17"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern18.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern18.png" alt="pattern 18"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern19.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern19.png" alt="pattern 19"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern20.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern20.png" alt="pattern 20"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern21.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern21.png" alt="pattern 21"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern22.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern22.png" alt="pattern 22"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern23.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern23.png" alt="pattern 23"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern24.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern24.png" alt="pattern 24"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern25.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern25.png" alt="pattern 25"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern26.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern26.png" alt="pattern 26"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern27.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern27.png" alt="pattern 27"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern28.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern28.png" alt="pattern 28"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern29.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern29.png" alt="pattern 29"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern30.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern30.png" alt="pattern 30"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -274,8 +274,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item5.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item5-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item5.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item5-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$210<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$160<span
@@ -307,8 +307,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item6.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item6-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item6.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item6-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$199</span>
                                                 </div>
@@ -338,8 +338,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item7.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item7-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item7.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item7-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$120<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$99<span
@@ -370,8 +370,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item10.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item10-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item10.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item10-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$180<span
                                                         class="sub-price">.99</span></span></div>
@@ -397,8 +397,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item8.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item8-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item8.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item8-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$99<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$84<span
@@ -429,8 +429,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item9.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item9-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item9.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item9-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$49<span
                                                         class="sub-price">.99</span></span></div>
@@ -462,8 +462,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item2.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item2-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item2.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item2-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$160<span
                                                         class="sub-price">.99</span></span></div>
@@ -493,8 +493,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item3.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item3-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item3.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item3-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$200</span>
                                                 </div>
@@ -524,8 +524,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item5.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item5-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item5.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item5-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$120<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$99<span
@@ -556,8 +556,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item3.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item3-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item3.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item3-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$99<span
                                                         class="sub-price">.99</span></span></div>
@@ -583,8 +583,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item7.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item7-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item7.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item7-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$99<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$84<span
@@ -615,8 +615,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item5.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item5-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item5.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item5-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$49<span
                                                         class="sub-price">.99</span></span></div>
@@ -648,8 +648,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item1.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item1-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item1.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item1-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$210<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$140<span
@@ -681,8 +681,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item4.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item4-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item4.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item4-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$399</span>
                                                 </div>
@@ -712,8 +712,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item8.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item8-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item8.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item8-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$120<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$89<span
@@ -744,8 +744,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item10.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item10-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item10.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item10-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$180<span
                                                         class="sub-price">.99</span></span></div>
@@ -771,8 +771,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item6.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item6-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item6.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item6-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$99<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$84<span
@@ -803,8 +803,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item5.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item5-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item5.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item5-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$49<span
                                                         class="sub-price">.99</span></span></div>
@@ -836,8 +836,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item3.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item3-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item3.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item3-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$210<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$160<span
@@ -869,8 +869,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item4.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item4-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item4.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item4-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$199</span>
                                                 </div>
@@ -900,8 +900,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item2.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item2-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item2.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item2-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$180<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$99<span
@@ -932,8 +932,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item9.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item9-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item9.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item9-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$180<span
                                                         class="sub-price">.99</span></span></div>
@@ -959,8 +959,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item5.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item5-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item5.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item5-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$99<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$84<span
@@ -991,8 +991,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item3.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item3-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item3.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item3-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$99<span
                                                         class="sub-price">.99</span></span></div>
@@ -1024,8 +1024,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item2.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item2-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item2.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item2-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$210<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$160<span
@@ -1057,8 +1057,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item1.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item1-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item1.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item1-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$199</span>
                                                 </div>
@@ -1088,8 +1088,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item4.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item4-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item4.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item4-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$120<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$99<span
@@ -1120,8 +1120,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item10.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item10-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item10.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item10-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$180<span
                                                         class="sub-price">.99</span></span></div>
@@ -1147,8 +1147,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item6.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item6-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item6.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item6-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="old-price">$99<span
                                                         class="sub-price">.99</span></span> <span class="item-price">$84<span
@@ -1179,8 +1179,8 @@
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
                                                 <figure class="item-image-container"><a href="product.html"><img
-                                                        src="<?php echo $root . $asset; ?>images/products/item9.jpg" alt="item1" class="item-image">
-                                                    <img src="<?php echo $root . $asset; ?>images/products/item9-hover.jpg" alt="item1  Hover"
+                                                        src="<?php echo $root ; ?>assets/images/products/item9.jpg" alt="item1" class="item-image">
+                                                    <img src="<?php echo $root ; ?>assets/images/products/item9-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
                                                 <div class="item-price-container"><span class="item-price">$49<span
                                                         class="sub-price">.99</span></span></div>
@@ -1223,7 +1223,7 @@
                                 </div>
                                 <div class="col-md-5 col-sm-5 col-xs-12">
                                     <div class="sm-margin visible-xs"></div>
-                                    <img src="<?php echo $root . $asset; ?>images/showcase.png" alt="Showcase Venedor" class="img-responsive"></div>
+                                    <img src="<?php echo $root ; ?>assets/images/showcase.png" alt="Showcase Venedor" class="img-responsive"></div>
                             </div>
                             <div class="xlg-margin"></div>
                             <div class="hot-items carousel-wrapper">
@@ -1240,8 +1240,8 @@
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
                                             <figure class="item-image-container"><a href="product.html"><img
-                                                    src="<?php echo $root . $asset; ?>images/products/item2.jpg" alt="item1" class="item-image"> <img
-                                                    src="<?php echo $root . $asset; ?>images/products/item2-hover.jpg" alt="item1  Hover"
+                                                    src="<?php echo $root ; ?>assets/images/products/item2.jpg" alt="item1" class="item-image"> <img
+                                                    src="<?php echo $root ; ?>assets/images/products/item2-hover.jpg" alt="item1  Hover"
                                                     class="item-image-hover"></a></figure>
                                             <div class="item-price-container"><span class="item-price">$160<span
                                                     class="sub-price">.99</span></span></div>
@@ -1267,8 +1267,8 @@
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
                                             <figure class="item-image-container"><a href="product.html"><img
-                                                    src="<?php echo $root . $asset; ?>images/products/item3.jpg" alt="item1" class="item-image"> <img
-                                                    src="<?php echo $root . $asset; ?>images/products/item3-hover.jpg" alt="item1  Hover"
+                                                    src="<?php echo $root ; ?>assets/images/products/item3.jpg" alt="item1" class="item-image"> <img
+                                                    src="<?php echo $root ; ?>assets/images/products/item3-hover.jpg" alt="item1  Hover"
                                                     class="item-image-hover"></a></figure>
                                             <div class="item-price-container"><span class="item-price">$100</span></div>
                                             <span class="new-rect">New</span></div>
@@ -1293,8 +1293,8 @@
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
                                             <figure class="item-image-container"><a href="product.html"><img
-                                                    src="<?php echo $root . $asset; ?>images/products/item8.jpg" alt="item1" class="item-image"> <img
-                                                    src="<?php echo $root . $asset; ?>images/products/item8-hover.jpg" alt="item1  Hover"
+                                                    src="<?php echo $root ; ?>assets/images/products/item8.jpg" alt="item1" class="item-image"> <img
+                                                    src="<?php echo $root ; ?>assets/images/products/item8-hover.jpg" alt="item1  Hover"
                                                     class="item-image-hover"></a></figure>
                                             <div class="item-price-container"><span class="old-price">$100</span> <span
                                                     class="item-price">$80</span></div>
@@ -1320,8 +1320,8 @@
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
                                             <figure class="item-image-container"><a href="product.html"><img
-                                                    src="<?php echo $root . $asset; ?>images/products/item5.jpg" alt="item1" class="item-image"> <img
-                                                    src="<?php echo $root . $asset; ?>images/products/item5-hover.jpg" alt="item1  Hover"
+                                                    src="<?php echo $root ; ?>assets/images/products/item5.jpg" alt="item1" class="item-image"> <img
+                                                    src="<?php echo $root ; ?>assets/images/products/item5-hover.jpg" alt="item1  Hover"
                                                     class="item-image-hover"></a></figure>
                                             <div class="item-price-container"><span class="item-price">$99</span></div>
                                             <span class="new-rect">New</span></div>
@@ -1346,8 +1346,8 @@
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
                                             <figure class="item-image-container"><a href="product.html"><img
-                                                    src="<?php echo $root . $asset; ?>images/products/item7.jpg" alt="item1" class="item-image"> <img
-                                                    src="<?php echo $root . $asset; ?>images/products/item7-hover.jpg" alt="item1  Hover"
+                                                    src="<?php echo $root ; ?>assets/images/products/item7.jpg" alt="item1" class="item-image"> <img
+                                                    src="<?php echo $root ; ?>assets/images/products/item7-hover.jpg" alt="item1  Hover"
                                                     class="item-image-hover"></a></figure>
                                             <div class="item-price-container"><span class="item-price">$280</span></div>
                                         </div>
@@ -1391,7 +1391,7 @@
                                                 Maecenas semper aliquam massa. Praesent pharetra sem vitae nisi eleifend
                                                 molestie. Aliquam molestie scelerisque ultricies. Suspendisse potenti.
                                             </div>
-                                            <figure class="clearfix"><img src="<?php echo $root . $asset; ?>images/testimonials/anna.jpg"
+                                            <figure class="clearfix"><img src="<?php echo $root ; ?>assets/images/testimonials/anna.jpg"
                                                                           alt="Computer Ceo">
                                                 <figcaption><a href="index.html#">Anna Retallic</a>
                                                     <span>12.05.2013</span></figcaption>
@@ -1404,7 +1404,7 @@
                                                 quisquam necessitatibus fugit! Nisi tempora reiciendis omnis error
                                                 sapiente ipsam maiores dolorem maxime.
                                             </div>
-                                            <figure class="clearfix"><img src="<?php echo $root . $asset; ?>images/testimonials/jake.jpg"
+                                            <figure class="clearfix"><img src="<?php echo $root ; ?>assets/images/testimonials/jake.jpg"
                                                                           alt="Computer Ceo">
                                                 <figcaption><a href="index.html#">Jake Suasoo</a>
                                                     <span>17.05.2013</span></figcaption>
@@ -1419,7 +1419,7 @@
                                     <ul class="latest-posts-list clearfix">
                                         <li><a href="single.html">
                                             <figure class="latest-posts-media-container"><img class="img-responsive"
-                                                                                              src="<?php echo $root . $asset; ?>images/blog/post1-small.jpg"
+                                                                                              src="<?php echo $root ; ?>assets/images/blog/post1-small.jpg"
                                                                                               alt="lats post"></figure>
                                         </a><h4><a href="single.html">35% Discount on second purchase!</a></h4>
 
@@ -1433,7 +1433,7 @@
                                         </li>
                                         <li><a href="single.html">
                                             <figure class="latest-posts-media-container"><img class="img-responsive"
-                                                                                              src="<?php echo $root . $asset; ?>images/blog/post2-small.jpg"
+                                                                                              src="<?php echo $root ; ?>assets/images/blog/post2-small.jpg"
                                                                                               alt="lats post"></figure>
                                         </a><h4><a href="single.html">Free shipping for regular customers.</a></h4>
 
@@ -1447,7 +1447,7 @@
                                         </li>
                                         <li><a href="single.html">
                                             <figure class="latest-posts-media-container"><img class="img-responsive"
-                                                                                              src="<?php echo $root . $asset; ?>images/blog/post3-small.jpg"
+                                                                                              src="<?php echo $root ; ?>assets/images/blog/post3-small.jpg"
                                                                                               alt="lats post"></figure>
                                         </a><h4><a href="index.html#">New jeans on sales!</a></h4>
 
@@ -1465,9 +1465,9 @@
                             <div class="widget banner-slider-container">
                                 <div class="banner-slider flexslider">
                                     <ul class="banner-slider-list clearfix">
-                                        <li><a href="index.html#"><img src="<?php echo $root . $asset; ?>images/banner1.jpg" alt="Banner 1"></a></li>
-                                        <li><a href="index.html#"><img src="<?php echo $root . $asset; ?>images/banner2.jpg" alt="Banner 2"></a></li>
-                                        <li><a href="index.html#"><img src="<?php echo $root . $asset; ?>images/banner3.jpg" alt="Banner 3"></a></li>
+                                        <li><a href="index.html#"><img src="<?php echo $root ; ?>assets/images/banner1.jpg" alt="Banner 1"></a></li>
+                                        <li><a href="index.html#"><img src="<?php echo $root ; ?>assets/images/banner2.jpg" alt="Banner 2"></a></li>
+                                        <li><a href="index.html#"><img src="<?php echo $root ; ?>assets/images/banner3.jpg" alt="Banner 3"></a></li>
                                     </ul>
                                 </div>
                             </div>
