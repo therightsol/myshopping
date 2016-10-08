@@ -5,7 +5,7 @@
       <paths name="My shopping">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping local="$PROJECT_DIR$" web="myshopping" />
           </mappings>
         </serverdata>
       </paths>
