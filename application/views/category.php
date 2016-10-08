@@ -16,13 +16,13 @@ include 'inc/menu.inc.php';
             <ul id="option-panel-tabs-container" class="clearfix">
                 <li class="active"><a href="category.html#panel-layout" data-toggle="tab" data-panel-title="Layout"></a>
                 </li>
-                <li><a href="category.html#panel-home" data-toggle="tab" data-panel-title="Background Settings"></a>
+                <li><a href="category.htmlcategory.html#panel-home" data-toggle="tab" data-panel-title="Background Settings"></a>
                 </li>
                 <li><a href="category.html#panel-color" data-toggle="tab" data-panel-title="Color Settings"></a></li>
                 <li><a href="category.html#panel-font" data-toggle="tab" data-panel-title="Font Settings"></a></li>
-                <li><a id="option-close" href="category.html#"></a></li>
+                <li><a id="option-close" href="<?php echo $root; ?>category"></a></li>
             </ul>
-            <div id="option-panel-title" class="clearfix"><span>Layout</span> <a href="category.html#"
+            <div id="option-panel-title" class="clearfix"><span>Layout</span> <a href="<?php echo $root; ?>category"
                                                                                  id="option-panel-reset">Reset</a></div>
             <div id="option-panel-content" class="tab-content">
                 <div class="tab-pane fade in active" id="panel-layout">
@@ -260,7 +260,7 @@ include 'inc/menu.inc.php';
 
                         <p>Aenean dictum libero vitae magna sagittis, eu convallis dolor blandit. Fusce consectetur
                             tincidunt pretium. Etiam non tellus massa. Aenean tincidunt in augue nec tempus. Nulla
-                            porta libero sit amet lorem pellentesque posuere...</p><a href="category.html#"
+                            porta libero sit amet lorem pellentesque posuere...</p><a href="<?php echo $root; ?>category"
                                                                                       class="btn btn-custom">LEARN
                             MORE</a></div>
                 </div>
@@ -271,7 +271,7 @@ include 'inc/menu.inc.php';
         <div class="container">
             <ul class="breadcrumb">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="category.html#">Electronics</a></li>
+                <li><a href="<?php echo $root; ?>category">Electronics</a></li>
                 <li class="active">Mobile</li>
             </ul>
         </div>
@@ -290,12 +290,12 @@ include 'inc/menu.inc.php';
                                         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
                                                 class="fa fa-angle-down"></i></button>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="category.html#">Date</a></li>
-                                            <li><a href="category.html#">Name</a></li>
+                                            <li><a href="<?php echo $root; ?>category">Date</a></li>
+                                            <li><a href="<?php echo $root; ?>category">Name</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="view-box"><a href="category.html"
+                                <div class="view-box"><a href="<?php echo $root; ?>cstegory"
                                                          class="active icon-button icon-grid"><i
                                             class="fa fa-th-large"></i></a> <a href="category-list.html"
                                                                                class="icon-button icon-list"><i
@@ -303,12 +303,12 @@ include 'inc/menu.inc.php';
                             </div>
                             <div class="toolbox-pagination clearfix">
                                 <ul class="pagination">
-                                    <li class="active"><a href="category.html#">1</a></li>
-                                    <li><a href="category.html#">2</a></li>
-                                    <li><a href="category.html#">3</a></li>
-                                    <li><a href="category.html#">4</a></li>
-                                    <li><a href="category.html#">5</a></li>
-                                    <li><a href="category.html#"><i class="fa fa-angle-right"></i></a></li>
+                                    <li class="active"><a href="<?php echo $root; ?>category">1</a></li>
+                                    <li><a href="<?php echo $root; ?>category">2</a></li>
+                                    <li><a href="<?php echo $root; ?>category">3</a></li>
+                                    <li><a href="<?php echo $root; ?>category">4</a></li>
+                                    <li><a href="<?php echo $root; ?>category">5</a></li>
+                                    <li><a href="<?php echo $root; ?>category"><i class="fa fa-angle-right"></i></a></li>
                                 </ul>
                                 <div class="view-count-box"><span class="separator">view:</span>
 
@@ -317,8 +317,8 @@ include 'inc/menu.inc.php';
                                         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
                                                 class="fa fa-angle-down"></i></button>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="category.html#">15</a></li>
-                                            <li><a href="category.html#">30</a></li>
+                                            <li><a href="<?php echo $root; ?>category">15</a></li>
+                                            <li><a href="<?php echo $root; ?>category">30</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -330,7 +330,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item2.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item2-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -345,16 +345,16 @@ include 'inc/menu.inc.php';
                                                     <div class="ratings-result" data-result="80"></div>
                                                 </div>
                                                 <span class="ratings-amount">5 Reviews</span></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -363,7 +363,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item1.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item1-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -376,16 +376,16 @@ include 'inc/menu.inc.php';
                                                     <div class="ratings-result" data-result="74"></div>
                                                 </div>
                                                 <span class="ratings-amount">9 Reviews</span></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -394,7 +394,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item4.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item4-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -408,16 +408,16 @@ include 'inc/menu.inc.php';
                                                     <div class="ratings-result" data-result="90"></div>
                                                 </div>
                                                 <span class="ratings-amount">4 Reviews</span></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -426,7 +426,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item10.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item10-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -435,16 +435,16 @@ include 'inc/menu.inc.php';
                                         </div>
                                         <div class="item-meta-container">
                                             <div class="ratings-container"></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,7 +453,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item6.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item6-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -467,16 +467,16 @@ include 'inc/menu.inc.php';
                                                     <div class="ratings-result" data-result="70"></div>
                                                 </div>
                                                 <span class="ratings-amount">6 Reviews</span></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -485,7 +485,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item9.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item9-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -498,16 +498,16 @@ include 'inc/menu.inc.php';
                                                     <div class="ratings-result" data-result="60"></div>
                                                 </div>
                                                 <span class="ratings-amount">2 Reviews</span></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -516,7 +516,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item2.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item2-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -529,16 +529,16 @@ include 'inc/menu.inc.php';
                                                     <div class="ratings-result" data-result="80"></div>
                                                 </div>
                                                 <span class="ratings-amount">5 Reviews</span></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>productsv">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -547,7 +547,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item3.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item3-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -560,16 +560,16 @@ include 'inc/menu.inc.php';
                                                     <div class="ratings-result" data-result="74"></div>
                                                 </div>
                                                 <span class="ratings-amount">9 Reviews</span></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -578,7 +578,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item5.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item5-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -592,16 +592,16 @@ include 'inc/menu.inc.php';
                                                     <div class="ratings-result" data-result="96"></div>
                                                 </div>
                                                 <span class="ratings-amount">5 Reviews</span></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -610,7 +610,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item3.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item3-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -619,16 +619,16 @@ include 'inc/menu.inc.php';
                                         </div>
                                         <div class="item-meta-container">
                                             <div class="ratings-container"></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -637,7 +637,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item7.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item7-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -651,16 +651,16 @@ include 'inc/menu.inc.php';
                                                     <div class="ratings-result" data-result="70"></div>
                                                 </div>
                                                 <span class="ratings-amount">6 Reviews</span></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -669,7 +669,7 @@ include 'inc/menu.inc.php';
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="item item-hover">
                                         <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
+                                            <figure class="item-image-container"><a href="<?php echo $root; ?>products"><img
                                                         src="<?php echo $root; ?>assets/images/products/item5.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root; ?>assets/images/products/item5-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -682,16 +682,16 @@ include 'inc/menu.inc.php';
                                                     <div class="ratings-result" data-result="60"></div>
                                                 </div>
                                                 <span class="ratings-amount">2 Reviews</span></div>
-                                            <h3 class="item-name"><a href="product.html">Phasellus consequat</a>
+                                            <h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus consequat</a>
                                             </h3>
 
-                                            <div class="item-action"><a href="category.html#"
+                                            <div class="item-action"><a href="<?php echo $root; ?>category"
                                                                         class="item-add-btn"><span
                                                         class="icon-cart-text">Add to Cart</span></a>
 
-                                                <div class="item-action-inner"><a href="category.html#"
+                                                <div class="item-action-inner"><a href="<?php echo $root; ?>category"
                                                                                   class="icon-button icon-like">Favourite</a>
-                                                    <a href="category.html#" class="icon-button icon-compare">Checkout</a>
+                                                    <a href="<?php echo $root; ?>category" class="icon-button icon-compare">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -702,12 +702,12 @@ include 'inc/menu.inc.php';
                         <div class="pagination-container clearfix">
                             <div class="pull-right">
                                 <ul class="pagination">
-                                    <li class="active"><a href="category.html#">1</a></li>
-                                    <li><a href="category.html#">2</a></li>
-                                    <li><a href="category.html#">3</a></li>
-                                    <li><a href="category.html#">4</a></li>
-                                    <li><a href="category.html#">5</a></li>
-                                    <li><a href="category.html#"><i class="fa fa-angle-right"></i></a></li>
+                                    <li class="active"><a href="<?php echo $root; ?>category">1</a></li>
+                                    <li><a href="<?php echo $root; ?>category">2</a></li>
+                                    <li><a href="<?php echo $root; ?>category">3</a></li>
+                                    <li><a href="<?php echo $root; ?>category">4</a></li>
+                                    <li><a href="<?php echo $root; ?>category">5</a></li>
+                                    <li><a href="<?php echo $root; ?>category"><i class="fa fa-angle-right"></i></a></li>
                                 </ul>
                             </div>
                             <div class="pull-right view-count-box hidden-xs"><span class="separator">view:</span>
@@ -717,8 +717,8 @@ include 'inc/menu.inc.php';
                                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
                                             class="fa fa-angle-down"></i></button>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="category.html#">15</a></li>
-                                        <li><a href="category.html#">30</a></li>
+                                        <li><a href="<?php echo $root; ?>category">15</a></li>
+                                        <li><a href="<?php echo $root; ?>category">30</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -735,27 +735,27 @@ include 'inc/menu.inc.php';
                                     <div id="category-list-1" class="collapse in">
                                         <div class="panel-body">
                                             <ul class="category-filter-list jscrollpane">
-                                                <li><a href="category.html#">Mobile Phones (341)</a></li>
-                                                <li><a href="category.html#">Smartphones (55)</a></li>
-                                                <li><a href="category.html#">Communicators (24)</a></li>
-                                                <li><a href="category.html#">CDMA Phones (14)</a></li>
-                                                <li><a href="category.html#">Accessories (83)</a></li>
-                                                <li><a href="category.html#">Chargers (8)</a></li>
-                                                <li><a href="category.html#">Memory Cards (6)</a></li>
-                                                <li><a href="category.html#">Protectors (12)</a></li>
-                                                <li><a href="category.html#">ravelsim (5)</a></li>
-                                                <li><a href="category.html#">CDMA Phones (14)</a></li>
-                                                <li><a href="category.html#">Accessories (83)</a></li>
-                                                <li><a href="category.html#">Chargers (8)</a></li>
-                                                <li><a href="category.html#">Memory Cards (6)</a></li>
-                                                <li><a href="category.html#">Protectors (12)</a></li>
-                                                <li><a href="category.html#">ravelsim (5)</a></li>
-                                                <li><a href="category.html#">CDMA Phones (14)</a></li>
-                                                <li><a href="category.html#">Accessories (83)</a></li>
-                                                <li><a href="category.html#">Chargers (8)</a></li>
-                                                <li><a href="category.html#">Memory Cards (6)</a></li>
-                                                <li><a href="category.html#">Protectors (12)</a></li>
-                                                <li><a href="category.html#">ravelsim (5)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Mobile Phones (341)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Smartphones (55)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Communicators (24)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">CDMA Phones (14)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Accessories (83)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Chargers (8)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Memory Cards (6)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Protectors (12)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">ravelsim (5)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">CDMA Phones (14)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Accessories (83)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Chargers (8)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Memory Cards (6)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Protectors (12)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">ravelsim (5)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">CDMA Phones (14)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Accessories (83)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Chargers (8)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Memory Cards (6)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Protectors (12)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">ravelsim (5)</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -768,11 +768,11 @@ include 'inc/menu.inc.php';
                                     <div id="category-list-2" class="collapse in">
                                         <div class="panel-body">
                                             <ul class="category-filter-list jscrollpane">
-                                                <li><a href="category.html#">Samsung (50)</a></li>
-                                                <li><a href="category.html#">Apple (80)</a></li>
-                                                <li><a href="category.html#">HTC (20)</a></li>
-                                                <li><a href="category.html#">Motoroloa (20)</a></li>
-                                                <li><a href="category.html#">Nokia (11)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Samsung (50)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Apple (80)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">HTC (20)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Motoroloa (20)</a></li>
+                                                <li><a href="<?php echo $root; ?>category">Nokia (11)</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -790,9 +790,9 @@ include 'inc/menu.inc.php';
                                                     class="sm-separator">to</span> <input type="text"
                                                                                           id="price-range-high">
                                             </div>
-                                            <div id="price-range-btns"><a href="category.html#"
+                                            <div id="price-range-btns"><a href="<?php echo $root; ?>category"
                                                                           class="btn btn-custom-2 btn-sm">Ok</a> <a
-                                                    href="category.html#" class="btn btn-custom-2 btn-sm">Clear</a>
+                                                    href="<?php echo $root; ?>category" class="btn btn-custom-2 btn-sm">Clear</a>
                                             </div>
                                         </div>
                                     </div>
@@ -805,35 +805,35 @@ include 'inc/menu.inc.php';
                                     <div id="category-list-4" class="collapse in">
                                         <div class="panel-body">
                                             <ul class="filter-color-list clearfix">
-                                                <li><a href="category.html#" data-bgcolor="#fff"
+                                                <li><a href="<?php echo $root; ?>category" data-bgcolor="#fff"
                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category.html#" data-bgcolor="#ffff33"
+                                                <li><a href="<?php echo $root; ?>category" data-bgcolor="#ffff33"
                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category.html#" data-bgcolor="#ff9900"
+                                                <li><a href="<?php echo $root; ?>category" data-bgcolor="#ff9900"
                                                        class="filter-color-box"></a></li>
-                                                <li class="last-md"><a href="category.html#" data-bgcolor="#ff9999"
+                                                <li class="last-md"><a href="<?php echo $root; ?>category" data-bgcolor="#ff9999"
                                                                        class="filter-color-box"></a></li>
-                                                <li class="last-lg"><a href="category.html#" data-bgcolor="#99cc33"
+                                                <li class="last-lg"><a href="<?php echo $root; ?>category" data-bgcolor="#99cc33"
                                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category.html#" data-bgcolor="#339933"
+                                                <li><a href="<?php echo $root; ?>category" data-bgcolor="#339933"
                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category.html#" data-bgcolor="#ff0000"
+                                                <li><a href="<?php echo $root; ?>category" data-bgcolor="#ff0000"
                                                        class="filter-color-box"></a></li>
-                                                <li class="last-md"><a href="category.html#" data-bgcolor="#ff3366"
+                                                <li class="last-md"><a href="<?php echo $root; ?>category" data-bgcolor="#ff3366"
                                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category.html#" data-bgcolor="#cc33ff"
+                                                <li><a href="<?php echo $root; ?>category" data-bgcolor="#cc33ff"
                                                        class="filter-color-box"></a></li>
-                                                <li class="last-lg"><a href="category.html#" data-bgcolor="#9966cc"
+                                                <li class="last-lg"><a href="<?php echo $root; ?>category" data-bgcolor="#9966cc"
                                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category.html#" data-bgcolor="#99ccff"
+                                                <li><a href="<?php echo $root; ?>category" data-bgcolor="#99ccff"
                                                        class="filter-color-box"></a></li>
-                                                <li class="last-md"><a href="category.html#" data-bgcolor="#3333cc"
+                                                <li class="last-md"><a href="<?php echo $root; ?>category" data-bgcolor="#3333cc"
                                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category.html#" data-bgcolor="#999999"
+                                                <li><a href="<?php echo $root; ?>category" data-bgcolor="#999999"
                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category.html#" data-bgcolor="#663300"
+                                                <li><a href="<?php echo $root; ?>category" data-bgcolor="#663300"
                                                        class="filter-color-box"></a></li>
-                                                <li class="last-lg"><a href="category.html#" data-bgcolor="#000"
+                                                <li class="last-lg"><a href="<?php echo $root; ?>category" data-bgcolor="#000"
                                                                        class="filter-color-box"></a></li>
                                             </ul>
                                         </div>
@@ -849,7 +849,7 @@ include 'inc/menu.inc.php';
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item5.jpg" alt="item5">
                                             </figure>
-                                            <h5><a href="category.html#">Jacket Suiting Blazer</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category">Jacket Suiting Blazer</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -861,7 +861,7 @@ include 'inc/menu.inc.php';
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item1.jpg" alt="item1">
                                             </figure>
-                                            <h5><a href="category.html#">Gap Graphic Cuffed</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category">Gap Graphic Cuffed</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -873,7 +873,7 @@ include 'inc/menu.inc.php';
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item2.jpg" alt="item2">
                                             </figure>
-                                            <h5><a href="category.html#">Women's Lauren Dress</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category">Women's Lauren Dress</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -887,7 +887,7 @@ include 'inc/menu.inc.php';
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item3.jpg" alt="item3">
                                             </figure>
-                                            <h5><a href="category.html#">Swiss Mobile Phone</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category">Swiss Mobile Phone</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -899,7 +899,7 @@ include 'inc/menu.inc.php';
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item4.jpg" alt="item4">
                                             </figure>
-                                            <h5><a href="category.html#">Zwinzed HeadPhones</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category">Zwinzed HeadPhones</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -911,7 +911,7 @@ include 'inc/menu.inc.php';
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item7.jpg" alt="item7">
                                             </figure>
-                                            <h5><a href="category.html#">Kless Man Suit</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category">Kless Man Suit</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -925,7 +925,7 @@ include 'inc/menu.inc.php';
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item4.jpg" alt="item4">
                                             </figure>
-                                            <h5><a href="category.html#">Gap Graphic Cuffed</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category">Gap Graphic Cuffed</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -937,7 +937,7 @@ include 'inc/menu.inc.php';
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item6.jpg" alt="item6">
                                             </figure>
-                                            <h5><a href="category.html#">Women's Lauren Dress</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category">Women's Lauren Dress</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -953,11 +953,11 @@ include 'inc/menu.inc.php';
                         <div class="widget banner-slider-container">
                             <div class="banner-slider flexslider">
                                 <ul class="banner-slider-list clearfix">
-                                    <li><a href="category.html#"><img src="<?php echo $root; ?>assets/images/banner1.jpg" alt="Banner 1"></a>
+                                    <li><a href="<?php echo $root; ?>category"><img src="<?php echo $root; ?>assets/images/banner1.jpg" alt="Banner 1"></a>
                                     </li>
-                                    <li><a href="category.html#"><img src="<?php echo $root; ?>assets/images/banner2.jpg" alt="Banner 2"></a>
+                                    <li><a href="<?php echo $root; ?>category"><img src="<?php echo $root; ?>assets/images/banner2.jpg" alt="Banner 2"></a>
                                     </li>
-                                    <li><a href="category.html#"><img src="<?php echo $root; ?>assets/images/banner3.jpg" alt="Banner 3"></a>
+                                    <li><a href="<?php echo $root; ?>category"><img src="<?php echo $root; ?>assets/images/banner3.jpg" alt="Banner 3"></a>
                                     </li>
                                 </ul>
                             </div>
