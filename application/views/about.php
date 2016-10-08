@@ -14,14 +14,14 @@ include 'inc/menu.inc.php';
         <div id="option-panel-btn"></div>
         <div id="option-panel-container">
             <ul id="option-panel-tabs-container" class="clearfix">
-                <li class="active"><a href="aboutus.html#panel-layout" data-toggle="tab" data-panel-title="Layout"></a>
+                <li class="active"><a href="<?php echo $root; ?>aboutpanel-layout" data-toggle="tab" data-panel-title="Layout"></a>
                 </li>
-                <li><a href="aboutus.html#panel-home" data-toggle="tab" data-panel-title="Background Settings"></a></li>
-                <li><a href="aboutus.html#panel-color" data-toggle="tab" data-panel-title="Color Settings"></a></li>
-                <li><a href="aboutus.html#panel-font" data-toggle="tab" data-panel-title="Font Settings"></a></li>
-                <li><a id="option-close" href="aboutus.html#"></a></li>
+                <li><a href="<?php echo $root; ?>aboutpanel-home" data-toggle="tab" data-panel-title="Background Settings"></a></li>
+                <li><a href="<?php echo $root; ?>aboutpanel-color" data-toggle="tab" data-panel-title="Color Settings"></a></li>
+                <li><a href="<?php echo $root; ?>aboutpanel-font" data-toggle="tab" data-panel-title="Font Settings"></a></li>
+                <li><a id="option-close" href="<?php echo $root; ?>about"></a></li>
             </ul>
-            <div id="option-panel-title" class="clearfix"><span>Layout</span> <a href="aboutus.html#"
+            <div id="option-panel-title" class="clearfix"><span>Layout</span> <a href="<?php echo $root; ?>about"
                                                                                  id="option-panel-reset">Reset</a></div>
             <div id="option-panel-content" class="tab-content">
                 <div class="tab-pane fade in active" id="panel-layout">
@@ -270,7 +270,7 @@ include 'inc/menu.inc.php';
                     <div class="col-md-3 col-sm-3 col-xs-6 service-box-container">
                         <div class="services-box">
                             <div class="service-icon service-icon-responsive"></div>
-                            <h3><a href="aboutus.html#">Responcive Design</a> <span
+                            <h3><a href="<?php echo $root; ?>about">Responcive Design</a> <span
                                     class="small-bottom-border"></span></h3>
 
                             <p>Cras pellentesque, nisi ac tempus pellentesque, orci sem commodo urna,amet egestas
@@ -279,7 +279,7 @@ include 'inc/menu.inc.php';
                     <div class="col-md-3 col-sm-3 col-xs-6 service-box-container">
                         <div class="services-box">
                             <div class="service-icon service-icon-panel"></div>
-                            <h3><a href="aboutus.html#">Powerful Amin Panel</a> <span
+                            <h3><a href="<?php echo $root; ?>about">Powerful Amin Panel</a> <span
                                     class="small-bottom-border"></span></h3>
 
                             <p>Etiam dapibus mattis sapien, blandit molestie nunc venenatis ut. Phasellus imperdiet
@@ -288,7 +288,7 @@ include 'inc/menu.inc.php';
                     <div class="col-md-3 col-sm-3 col-xs-6 service-box-container">
                         <div class="services-box">
                             <div class="service-icon service-icon-sliders"></div>
-                            <h3><a href="aboutus.html#">Awesome Sliders</a> <span
+                            <h3><a href="<?php echo $root; ?>about">Awesome Sliders</a> <span
                                     class="small-bottom-border"></span></h3>
 
                             <p>Duis a dignissim nulla. Phasellus lacinia aliquam lorem, a consequat erat interdum
@@ -297,7 +297,7 @@ include 'inc/menu.inc.php';
                     <div class="col-md-3 col-sm-3 col-xs-6 service-box-container">
                         <div class="services-box">
                             <div class="service-icon service-icon-support"></div>
-                            <h3><a href="aboutus.html#">Premium Support</a> <span
+                            <h3><a href="<?php echo $root; ?>about">Premium Support</a> <span
                                     class="small-bottom-border"></span></h3>
 
                             <p>Pellentesque ut libero in nibh aliquet pretium eget elementum felis. Integer dapibus
@@ -322,7 +322,7 @@ include 'inc/menu.inc.php';
                             habitant morbi tristique senectus. Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Vivamus tempor dictum ornare.Ut tincidunt velit nec ligula ornare bibendum.
                             Aliquam ac sagittis metus. Suspendise eu nunc pulvinar,varius libero, eleifend nunc
-                            pellentesque mauris. <a href="aboutus.html#">Buy Venedor Template!</a></p>
+                            pellentesque mauris. <a href="<?php echo $root; ?>about">Buy Venedor Template!</a></p>
 
                         <div class="visible-xs md-margin"></div>
                     </div>
@@ -459,16 +459,16 @@ include 'inc/menu.inc.php';
 
                                     <div class="team-member-extra clearfix">
                                         <ul class="social-links clearfix pull-left">
-                                            <li class="smaller-social-icons"><a href="aboutus.html#"
+                                            <li class="smaller-social-icons"><a href="<?php echo $root; ?>about"
                                                                                 class="social-icon icon-facebook-sm"></a>
                                             </li>
-                                            <li class="smaller-social-icons"><a href="aboutus.html#"
+                                            <li class="smaller-social-icons"><a href="<?php echo $root; ?>about"
                                                                                 class="social-icon icon-twitter-sm"></a>
                                             </li>
-                                            <li class="smaller-social-icons"><a href="aboutus.html#"
+                                            <li class="smaller-social-icons"><a href="<?php echo $root; ?>about"
                                                                                 class="social-icon icon-dribbble-sm"></a>
                                             </li>
-                                            <li class="smaller-social-icons"><a href="aboutus.html#"
+                                            <li class="smaller-social-icons"><a href="<?php echo $root; ?>about"
                                                                                 class="social-icon icon-email-sm"></a>
                                             </li>
                                         </ul>
@@ -537,22 +537,22 @@ include 'inc/menu.inc.php';
                     </div>
                     <div class="sm-margin"></div>
                     <div class="row">
-                        <div class="brand-slider owl-carousel"><a href="aboutus.html#"><img
+                        <div class="brand-slider owl-carousel"><a href="<?php echo $root; ?>about"><img
                                     src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 1"></a> <a
-                                href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 2"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 3"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 4"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 5"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 6"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 7"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 8"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 9"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 10"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 11"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 12"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 13"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 14"></a>
-                            <a href="aboutus.html#"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 15"></a>
+                                href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 2"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 3"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 4"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 5"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 6"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 7"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 8"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 9"></a>
+                            <a href="v"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 10"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 11"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 12"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 13"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 14"></a>
+                            <a href="<?php echo $root; ?>about"><img src="<?php echo $root; ?>assets/images/brands/brand-logo.png" alt="Brand Logo 15"></a>
                         </div>
                     </div>
                 </div>
