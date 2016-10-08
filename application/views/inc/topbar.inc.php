@@ -57,7 +57,7 @@
                             <div class="header-text-container pull-right"><p class="header-text">Welcome to Venedor!</p>
 
                                 <p class="header-link"><a href="index.html#">login</a>&nbsp;or&nbsp;<a
-                                        href="index.html#">create an account</a></p></div>
+                                        href="<?php echo $root; ?>register">create an account</a></p></div>
                         </div>
                     </div>
                 </div>

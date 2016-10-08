@@ -264,7 +264,7 @@ include 'inc/menu.inc.php';
                     <p class="title-desc">If you already have an account, please login at <a
                             href="register-account.html#">login page</a>.</p></header>
                 <div class="xs-margin"></div>
-                <form action="register-account.html#" id="register-form">
+                <form method="post" action="<?php echo $root; ?>register" id="register-form">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <fieldset><h2 class="sub-title">YOUR PERSONAL DETAILS</h2>
