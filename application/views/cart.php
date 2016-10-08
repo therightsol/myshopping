@@ -1,24 +1,22 @@
 <?php
-
 include 'inc/head.inc.php';
 include 'inc/topbar.inc.php';
 include 'inc/header.inc.php';
 include 'inc/menu.inc.php';
-
 ?>
 <div id="option-panel">
     <div id="option-panel-wrapper">
         <div id="option-panel-btn"></div>
         <div id="option-panel-container">
             <ul id="option-panel-tabs-container" class="clearfix">
-                <li class="active"><a href="cart.html#panel-layout" data-toggle="tab" data-panel-title="Layout"></a>
+                <li class="active"><a href="<?php echo $root; ?>cart" data-toggle="tab" data-panel-title="Layout"></a>
                 </li>
                 <li><a href="cart.html#panel-home" data-toggle="tab" data-panel-title="Background Settings"></a></li>
                 <li><a href="cart.html#panel-color" data-toggle="tab" data-panel-title="Color Settings"></a></li>
                 <li><a href="cart.html#panel-font" data-toggle="tab" data-panel-title="Font Settings"></a></li>
-                <li><a id="option-close" href="cart.html#"></a></li>
+                <li><a id="option-close" href="<?php echo $root; ?>cart"></a></li>
             </ul>
-            <div id="option-panel-title" class="clearfix"><span>Layout</span> <a href="cart.html#"
+            <div id="option-panel-title" class="clearfix"><span>Layout</span> <a href="<?php echo $root; ?>cart"
                                                                                  id="option-panel-reset">Reset</a></div>
             <div id="option-panel-content" class="tab-content">
                 <div class="tab-pane fade in active" id="panel-layout">
@@ -274,9 +272,9 @@ include 'inc/menu.inc.php';
                             <tbody>
                             <tr>
                                 <td class="item-name-col">
-                                    <figure><a href="cart.html#"><img src="<?php echo $root; ?>assets/images/products/compare1.jpg"
+                                    <figure><a href="<?php echo $root; ?>cart"><img src="<?php echo $root; ?>assets/images/products/compare1.jpg"
                                                                       alt="Lowlands Lace Blouse"></a></figure>
-                                    <header class="item-name"><a href="cart.html#">Lowlands Lace Blouse</a></header>
+                                    <header class="item-name"><a href="<?php echo $root; ?>cart">Lowlands Lace Blouse</a></header>
                                     <ul>
                                         <li>Color: White</li>
                                         <li>Size: SM</li>
@@ -286,20 +284,20 @@ include 'inc/menu.inc.php';
                                 <td class="item-price-col"><span class="item-price-special">$1175</span></td>
                                 <td>
                                     <div class="custom-quantity-input"><input type="text" name="quantity" value="1">
-                                        <a href="cart.html#" onclick="return!1"
+                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
                                            class="quantity-btn quantity-input-up"><i class="fa fa-angle-up"></i></a>
-                                        <a href="cart.html#" onclick="return!1"
+                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
                                            class="quantity-btn quantity-input-down"><i class="fa fa-angle-down"></i></a>
                                     </div>
                                 </td>
                                 <td class="item-total-col"><span class="item-price-special">$1175</span> <a
-                                        href="cart.html#" class="close-button"></a></td>
+                                        href="<?php echo $root; ?>cart" class="close-button"></a></td>
                             </tr>
                             <tr>
                                 <td class="item-name-col">
-                                    <figure><a href="cart.html#"><img src="<?php echo $root; ?>assets/images/products/compare2.jpg"
+                                    <figure><a href="<?php echo $root; ?>cart"><img src="<?php echo $root; ?>assets/images/products/compare2.jpg"
                                                                       alt="Samsung Galaxy Ace"></a></figure>
-                                    <header class="item-name"><a href="cart.html#">Samsung Galaxy Ace</a></header>
+                                    <header class="item-name"><a href="<?php echo $root; ?>cart">Samsung Galaxy Ace</a></header>
                                     <ul>
                                         <li>Color: Black</li>
                                         <li>Size: XL</li>
@@ -309,20 +307,20 @@ include 'inc/menu.inc.php';
                                 <td class="item-price-col"><span class="item-price-special">$1475</span></td>
                                 <td>
                                     <div class="custom-quantity-input"><input type="text" name="quantity" value="1">
-                                        <a href="cart.html#" onclick="return!1"
+                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
                                            class="quantity-btn quantity-input-up"><i class="fa fa-angle-up"></i></a>
-                                        <a href="cart.html#" onclick="return!1"
+                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
                                            class="quantity-btn quantity-input-down"><i class="fa fa-angle-down"></i></a>
                                     </div>
                                 </td>
                                 <td class="item-total-col"><span class="item-price-special">$1475</span> <a
-                                        href="cart.html#" class="close-button"></a></td>
+                                        href="<?php echo $root; ?>cart" class="close-button"></a></td>
                             </tr>
                             <tr>
                                 <td class="item-name-col">
-                                    <figure><a href="cart.html#"><img src="<?php echo $root; ?>assets/images/products/compare3.jpg"
+                                    <figure><a href="<?php echo $root; ?>cart"><img src="<?php echo $root; ?>assets/images/products/compare3.jpg"
                                                                       alt="Iphone Case Cover Original"></a></figure>
-                                    <header class="item-name"><a href="cart.html#">Iphone Case Cover Original</a>
+                                    <header class="item-name"><a href="<?php echo $root; ?>cart">Iphone Case Cover Original</a>
                                     </header>
                                     <ul>
                                         <li>Color: White</li>
@@ -333,14 +331,14 @@ include 'inc/menu.inc.php';
                                 <td class="item-price-col"><span class="item-price-special">$399</span></td>
                                 <td>
                                     <div class="custom-quantity-input"><input type="text" name="quantity" value="3">
-                                        <a href="cart.html#" onclick="return!1"
+                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
                                            class="quantity-btn quantity-input-up"><i class="fa fa-angle-up"></i></a>
-                                        <a href="cart.html#" onclick="return!1"
+                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
                                            class="quantity-btn quantity-input-down"><i class="fa fa-angle-down"></i></a>
                                     </div>
                                 </td>
                                 <td class="item-total-col"><span class="item-price-special">$1197</span> <a
-                                        href="cart.html#" class="close-button"></a></td>
+                                        href="<?php echo $root; ?>cart" class="close-button"></a></td>
                             </tr>
                             </tbody>
                         </table>
@@ -351,14 +349,14 @@ include 'inc/menu.inc.php';
                     <div class="col-md-8 col-sm-12 col-xs-12 lg-margin">
                         <div class="tab-container left clearfix">
                             <ul class="nav-tabs">
-                                <li class="active"><a href="cart.html#shipping" data-toggle="tab">Shipping &amp;
+                                <li class="active"><a href="<?php echo $root; ?>cart" data-toggle="tab">Shipping &amp;
                                         Taxes</a></li>
-                                <li><a href="cart.html#discount" data-toggle="tab">Discount Code</a></li>
-                                <li><a href="cart.html#gift" data-toggle="tab">Gift voucher</a></li>
+                                <li><a href="<?php echo $root; ?>cart" data-toggle="tab">Discount Code</a></li>
+                                <li><a href="<?php echo $root; ?>cart" data-toggle="tab">Gift voucher</a></li>
                             </ul>
                             <div class="tab-content clearfix">
                                 <div class="tab-pane active" id="shipping">
-                                    <form action="cart.html#" id="shipping-form"><p class="shipping-desc">Enter your
+                                    <form action="<?php echo $root; ?>cart" id="shipping-form"><p class="shipping-desc">Enter your
                                             destination to get a shipping estimate.</p>
 
                                         <div class="form-group"><label for="select-country" class="control-label">Country&#42;</label>
@@ -399,7 +397,7 @@ include 'inc/menu.inc.php';
                                 </div>
                                 <div class="tab-pane" id="discount"><p>Enter your discount coupon code here.</p>
 
-                                    <form action="cart.html#">
+                                    <form action="<?php echo $root; ?>cart">
                                         <div class="input-group"><input type="text" required class="form-control"
                                                                         placeholder="Coupon code"></div>
                                         <input type="submit" class="btn btn-custom-2" value="APPLY COUPON"></form>
@@ -435,7 +433,7 @@ include 'inc/menu.inc.php';
                             </tfoot>
                         </table>
                         <div class="md-margin"></div>
-                        <a href="cart.html#" class="btn btn-custom-2">CONTINUE SHOPPING</a> <a href="cart.html#"
+                        <a href="<?php echo $root; ?>cart" class="btn btn-custom-2">CONTINUE SHOPPING</a> <a href="<?php echo $root; ?>cart"
                                                                                                class="btn btn-custom">CHECKOUT</a>
                     </div>
                 </div>
@@ -453,7 +451,7 @@ include 'inc/menu.inc.php';
                     <div class="similiar-items-slider owl-carousel">
                         <div class="item item-hover">
                             <div class="item-image-wrapper">
-                                <figure class="item-image-container"><a href="product.html"><img
+                                <figure class="item-image-container"><a href="<?php echo $root; ?>product"><img
                                             src="<?php echo $root; ?>assets/images/products/item3.jpg" alt="item1" class="item-image"> <img
                                             src="<?php echo $root; ?>assets/images/products/item3-hover.jpg" alt="item1  Hover"
                                             class="item-image-hover"></a></figure>
@@ -466,20 +464,20 @@ include 'inc/menu.inc.php';
                                         <div class="ratings-result" data-result="80"></div>
                                     </div>
                                     <span class="ratings-amount">5 Reviews</span></div>
-                                <h3 class="item-name"><a href="product.html">Phasellus consequat</a></h3>
+                                <h3 class="item-name"><a href="<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="cart.html#" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
-                                    <div class="item-action-inner"><a href="cart.html#"
+                                    <div class="item-action-inner"><a href="<?php echo $root; ?>cart"
                                                                       class="icon-button icon-like">Favourite</a> <a
-                                            href="cart.html#" class="icon-button icon-compare">Checkout</a></div>
+                                            href="<?php echo $root; ?>cart" class="icon-button icon-compare">Checkout</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="item item-hover">
                             <div class="item-image-wrapper">
-                                <figure class="item-image-container"><a href="product.html"><img
+                                <figure class="item-image-container"><a href="<?php echo $root; ?>product"><img
                                             src="<?php echo $root; ?>assets/images/products/item1.jpg" alt="item1" class="item-image"> <img
                                             src="<?php echo $root; ?>assets/images/products/item1-hover.jpg" alt="item1  Hover"
                                             class="item-image-hover"></a></figure>
@@ -491,20 +489,20 @@ include 'inc/menu.inc.php';
                                         <div class="ratings-result" data-result="99"></div>
                                     </div>
                                     <span class="ratings-amount">4 Reviews</span></div>
-                                <h3 class="item-name"><a href="product.html">Phasellus consequat</a></h3>
+                                <h3 class="item-name"><a href="<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="cart.html#" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
-                                    <div class="item-action-inner"><a href="cart.html#"
+                                    <div class="item-action-inner"><a href="<?php echo $root; ?>cart"
                                                                       class="icon-button icon-like">Favourite</a> <a
-                                            href="cart.html#" class="icon-button icon-compare">Checkout</a></div>
+                                            href="<?php echo $root; ?>cart" class="icon-button icon-compare">Checkout</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="item item-hover">
                             <div class="item-image-wrapper">
-                                <figure class="item-image-container"><a href="product.html"><img
+                                <figure class="item-image-container"><a href="<?php echo $root; ?>product"><img
                                             src="<?php echo $root; ?>assets/images/products/item4.jpg" alt="item1" class="item-image"> <img
                                             src="<?php echo $root; ?>assets/images/products/item4-hover.jpg" alt="item1  Hover"
                                             class="item-image-hover"></a></figure>
@@ -517,20 +515,20 @@ include 'inc/menu.inc.php';
                                         <div class="ratings-result" data-result="75"></div>
                                     </div>
                                     <span class="ratings-amount">2 Reviews</span></div>
-                                <h3 class="item-name"><a href="product.html">Phasellus consequat</a></h3>
+                                <h3 class="item-name"><a href="<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="cart.html#" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
-                                    <div class="item-action-inner"><a href="cart.html#"
+                                    <div class="item-action-inner"><a href="<?php echo $root; ?>cart"
                                                                       class="icon-button icon-like">Favourite</a> <a
-                                            href="cart.html#" class="icon-button icon-compare">Checkout</a></div>
+                                            href="<?php echo $root; ?>cart" class="icon-button icon-compare">Checkout</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="item item-hover">
                             <div class="item-image-wrapper">
-                                <figure class="item-image-container"><a href="product.html"><img
+                                <figure class="item-image-container"><a href="<?php echo $root; ?>product"><img
                                             src="<?php echo $root; ?>assets/images/products/item10.jpg" alt="item1" class="item-image"> <img
                                             src="<?php echo $root; ?>assets/images/products/item10-hover.jpg" alt="item1  Hover"
                                             class="item-image-hover"></a></figure>
@@ -543,20 +541,20 @@ include 'inc/menu.inc.php';
                                         <div class="ratings-result" data-result="65"></div>
                                     </div>
                                     <span class="ratings-amount">4 Reviews</span></div>
-                                <h3 class="item-name"><a href="product.html">Phasellus consequat</a></h3>
+                                <h3 class="item-name"><a href=<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="cart.html#" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
-                                    <div class="item-action-inner"><a href="cart.html#"
+                                    <div class="item-action-inner"><a href="<?php echo $root; ?>cart"
                                                                       class="icon-button icon-like">Favourite</a> <a
-                                            href="cart.html#" class="icon-button icon-compare">Checkout</a></div>
+                                            href="<?php echo $root; ?>cart" class="icon-button icon-compare">Checkout</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="item item-hover">
                             <div class="item-image-wrapper">
-                                <figure class="item-image-container"><a href="product.html"><img
+                                <figure class="item-image-container"><a href="<?php echo $root; ?>product"><img
                                             src="<?php echo $root; ?>assets/images/products/item5.jpg" alt="item1" class="item-image"> <img
                                             src="<?php echo $root; ?>assets/images/products/item5-hover.jpg" alt="item1  Hover"
                                             class="item-image-hover"></a></figure>
@@ -568,20 +566,20 @@ include 'inc/menu.inc.php';
                                         <div class="ratings-result" data-result="40"></div>
                                     </div>
                                     <span class="ratings-amount">3 Reviews</span></div>
-                                <h3 class="item-name"><a href="product.html">Phasellus consequat</a></h3>
+                                <h3 class="item-name"><a href="<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="cart.html#" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
-                                    <div class="item-action-inner"><a href="cart.html#"
+                                    <div class="item-action-inner"><a href="<?php echo $root; ?>cart"
                                                                       class="icon-button icon-like">Favourite</a> <a
-                                            href="cart.html#" class="icon-button icon-compare">Checkout</a></div>
+                                            href="<?php echo $root; ?>cart" class="icon-button icon-compare">Checkout</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="item item-hover">
                             <div class="item-image-wrapper">
-                                <figure class="item-image-container"><a href="product.html"><img
+                                <figure class="item-image-container"><a href="<?php echo $root; ?>product"><img
                                             src="<?php echo $root; ?>assets/images/products/item7.jpg" alt="item1" class="item-image"> <img
                                             src="<?php echo $root; ?>assets/images/products/item7-hover.jpg" alt="item1  Hover"
                                             class="item-image-hover"></a></figure>
@@ -589,14 +587,14 @@ include 'inc/menu.inc.php';
                             </div>
                             <div class="item-meta-container">
                                 <div class="ratings-container"></div>
-                                <h3 class="item-name"><a href="product.html">Phasellus consequat</a></h3>
+                                <h3 class="item-name"><a href="<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="cart.html#" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
-                                    <div class="item-action-inner"><a href="cart.html#"
+                                    <div class="item-action-inner"><a href="<?php echo $root; ?>productcart"
                                                                       class="icon-button icon-like">Favourite</a> <a
-                                            href="cart.html#" class="icon-button icon-compare">Checkout</a></div>
+                                            href="<?php echo $root; ?>productcart" class="icon-button icon-compare">Checkout</a></div>
                                 </div>
                             </div>
                         </div>

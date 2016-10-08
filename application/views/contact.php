@@ -279,7 +279,7 @@
                         <div class="col-md-8 col-sm-8 col-xs-12"><h2 class="sub-title">LEAVE COMMENT</h2>
 
                             <div class="row">
-                                <form action="contact.html#" id="contact-form">
+                                <form method="post" action="<?php echo $root; ?>contact" id="contact-form">
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="input-group"><span class="input-group-addon"><span
                                                 class="input-icon input-icon-user"></span><span class="input-text">Name&#42;</span></span>
