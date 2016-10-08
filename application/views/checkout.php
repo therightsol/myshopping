@@ -19,9 +19,9 @@ include 'inc/menu.inc.php';
                 </li>
                 <li><a href="checkout.html#panel-color" data-toggle="tab" data-panel-title="Color Settings"></a></li>
                 <li><a href="checkout.html#panel-font" data-toggle="tab" data-panel-title="Font Settings"></a></li>
-                <li><a id="option-close" href="checkout.html#"></a></li>
+                <li><a id="option-close" href="<?php echo $root; ?>checkout"></a></li>
             </ul>
-            <div id="option-panel-title" class="clearfix"><span>Layout</span> <a href="checkout.html#"
+            <div id="option-panel-title" class="clearfix"><span>Layout</span> <a href="<?php echo $root; ?>checkout"
                                                                                  id="option-panel-reset">Reset</a></div>
             <div id="option-panel-content" class="tab-content">
                 <div class="tab-pane fade in active" id="panel-layout">
@@ -263,7 +263,7 @@ include 'inc/menu.inc.php';
                     <p class="title-desc">Quisque elementum nibh at dolor pellentesque, a eleifend libero
                         pharetra.</p></header>
                 <div class="xs-margin"></div>
-                <form action="checkout.html#" id="checkout-form">
+                <form action="<?php echo $root; ?>checkout" id="checkout-form">
                     <div class="panel-group custom-accordion" id="checkout">
                         <div class="panel">
                             <div class="accordion-header">
@@ -311,7 +311,7 @@ include 'inc/menu.inc.php';
                                                         class="input-text">Password&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
                                                     placeholder="Your Password"></div>
-                                                <span class="help-block text-right"><a href="checkout.html#">Forgot your
+                                                <span class="help-block text-right"><a href="<?php echo $root; ?>checkout">Forgot your
                                                         password?</a></span>
 
                                             <div class="input-group custom-checkbox sm-margin top-10px"><input
@@ -320,7 +320,7 @@ include 'inc/menu.inc.php';
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="checkout.html#" class="btn btn-custom-2">CONTINUE</a></div>
+                                    <a href="<?php echo $root; ?>checkout" class="btn btn-custom-2">CONTINUE</a></div>
                             </div>
                         </div>
                         <div class="panel">
@@ -447,9 +447,9 @@ include 'inc/menu.inc.php';
                                             <div class="input-group custom-checkbox md-margin"><input
                                                     type="checkbox"> <span class="checbox-container"><i
                                                         class="fa fa-check"></i></span> I have reed and agree to the <a
-                                                    href="checkout.html#">Privacy Policy</a>.
+                                                    href="<?php echo $root; ?>checkout">Privacy Policy</a>.
                                             </div>
-                                            <a href="checkout.html#" class="btn btn-custom-2">CONTINUE</a></div>
+                                            <a href="<?php echo $root; ?>checkout" class="btn btn-custom-2">CONTINUE</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -502,10 +502,10 @@ include 'inc/menu.inc.php';
                                             <tbody>
                                             <tr>
                                                 <td class="item-name-col">
-                                                    <figure><a href="checkout.html#"><img
+                                                    <figure><a href="<?php echo $root; ?>checkout"><img
                                                                 src="<?php echo $root; ?>assets/images/products/compare1.jpg"
                                                                 alt="Lowlands Lace Blouse"></a></figure>
-                                                    <header class="item-name"><a href="checkout.html#">Lowlands Lace
+                                                    <header class="item-name"><a href="<?php echo $root; ?>checkout">Lowlands Lace
                                                             Blouse</a></header>
                                                     <ul>
                                                         <li>Color: White</li>
@@ -519,23 +519,23 @@ include 'inc/menu.inc.php';
                                                     <div class="custom-quantity-input"><input type="text"
                                                                                               name="quantity"
                                                                                               value="1"> <a
-                                                            href="checkout.html#" onclick="return!1"
+                                                            href="<?php echo $root; ?>checkout" onclick="return!1"
                                                             class="quantity-btn quantity-input-up"><i
-                                                                class="fa fa-angle-up"></i></a> <a href="checkout.html#"
+                                                                class="fa fa-angle-up"></i></a> <a href="<?php echo $root; ?>checkout"
                                                                                                    onclick="return!1"
                                                                                                    class="quantity-btn quantity-input-down"><i
                                                                 class="fa fa-angle-down"></i></a></div>
                                                 </td>
                                                 <td class="item-total-col"><span
                                                         class="item-price-special">$1175</span> <a
-                                                        href="checkout.html#" class="close-button"></a></td>
+                                                        href="<?php echo $root; ?>checkout" class="close-button"></a></td>
                                             </tr>
                                             <tr>
                                                 <td class="item-name-col">
-                                                    <figure><a href="checkout.html#"><img
+                                                    <figure><a href="<?php echo $root; ?>checkout"><img
                                                                 src="<?php echo $root; ?>assets/images/products/compare2.jpg"
                                                                 alt="Samsung Galaxy Ace"></a></figure>
-                                                    <header class="item-name"><a href="checkout.html#">Samsung
+                                                    <header class="item-name"><a href="<?php echo $root; ?>checkout">Samsung
                                                             Galaxy Ace</a></header>
                                                     <ul>
                                                         <li>Color: Black</li>
@@ -549,16 +549,16 @@ include 'inc/menu.inc.php';
                                                     <div class="custom-quantity-input"><input type="text"
                                                                                               name="quantity"
                                                                                               value="1"> <a
-                                                            href="checkout.html#" onclick="return!1"
+                                                            href="<?php echo $root; ?>checkout" onclick="return!1"
                                                             class="quantity-btn quantity-input-up"><i
-                                                                class="fa fa-angle-up"></i></a> <a href="checkout.html#"
+                                                                class="fa fa-angle-up"></i></a> <a href="<?php echo $root; ?>checkout"
                                                                                                    onclick="return!1"
                                                                                                    class="quantity-btn quantity-input-down"><i
                                                                 class="fa fa-angle-down"></i></a></div>
                                                 </td>
                                                 <td class="item-total-col"><span
                                                         class="item-price-special">$1475</span> <a
-                                                        href="checkout.html#" class="close-button"></a></td>
+                                                        href="<?php echo $root; ?>checkout" class="close-button"></a></td>
                                             </tr>
                                             <tr>
                                                 <td class="checkout-table-title" colspan="4">Subtotal:</td>
