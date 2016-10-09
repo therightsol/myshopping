@@ -9,7 +9,7 @@
                                 <li><a href="<?php echo $root; ?>" title="My Wishlist"><span
                                         class="top-icon top-icon-pencil"></span><span
                                         class="hide-for-xs">My Wishlist</span></a></li>
-                                <li><a href="<?php echo $root; ?>" title="My Account"><span
+                                <li><a href="<?php echo $root; ?>login" title="My Account"><span
                                         class="top-icon top-icon-user"></span><span
                                         class="hide-for-xs">My Account</span></a></li>
                                 <li><a href="<?php echo $root; ?>cart

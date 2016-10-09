@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 col-sm-5 col-xs-12 logo-container"><h1 class="logo clearfix"><span>Responsive eCommerce Template</span>
-                        <a href="index.html" title="Venedor eCommerce Template"><img src="<?php echo $root; ?>assets/images/logo.png"
+                        <a href="<?php echo $root; ?>home" title="Venedor eCommerce Template"><img src="<?php echo $root; ?>assets/images/logo.png"
                                                                                      alt="Venedor Commerce Template"
                                                                                      width="238" height="76"></a></h1>
                     </div>
