@@ -647,7 +647,7 @@
                                     <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="item item-hover">
                                             <div class="item-image-wrapper">
-                                                <figure class="item-image-container"><a href="product.html"><img
+                                                <figure class="item-image-container"><a href="<?php echo $root; ?>single"><img
                                                         src="<?php echo $root ; ?>assets/images/products/item1.jpg" alt="item1" class="item-image">
                                                     <img src="<?php echo $root ; ?>assets/images/products/item1-hover.jpg" alt="item1  Hover"
                                                          class="item-image-hover"></a></figure>
@@ -1417,11 +1417,11 @@
 
                                 <div class="latest-posts-slider flexslider sidebarslider">
                                     <ul class="latest-posts-list clearfix">
-                                        <li><a href="single.html">
+                                        <li><a href="<?php echo $root; ?>single">
                                             <figure class="latest-posts-media-container"><img class="img-responsive"
                                                                                               src="<?php echo $root ; ?>assets/images/blog/post1-small.jpg"
                                                                                               alt="lats post"></figure>
-                                        </a><h4><a href="single.html">35% Discount on second purchase!</a></h4>
+                                        </a><h4><a href="<?php echo $root; ?>single">35% Discount on second purchase!</a></h4>
 
                                             <p>Sed blandit nulla nec nunc ullamcorper tristique. Mauris adipiscing
                                                 cursus ante ultricies dictum sed lobortis.</p>
@@ -1431,11 +1431,11 @@
                                                 <div class="pull-right">12.05.2013</div>
                                             </div>
                                         </li>
-                                        <li><a href="single.html">
+                                        <li><a href="<?php echo $root; ?>single">
                                             <figure class="latest-posts-media-container"><img class="img-responsive"
                                                                                               src="<?php echo $root ; ?>assets/images/blog/post2-small.jpg"
                                                                                               alt="lats post"></figure>
-                                        </a><h4><a href="single.html">Free shipping for regular customers.</a></h4>
+                                        </a><h4><a href="<?php echo $root; ?>single">Free shipping for regular customers.</a></h4>
 
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque fuga
                                                 officia in molestiae easint..</p>
@@ -1445,7 +1445,7 @@
                                                 <div class="pull-right">10.05.2013</div>
                                             </div>
                                         </li>
-                                        <li><a href="single.html">
+                                        <li><a href="<?php echo $root; ?>single">
                                             <figure class="latest-posts-media-container"><img class="img-responsive"
                                                                                               src="<?php echo $root ; ?>assets/images/blog/post3-small.jpg"
                                                                                               alt="lats post"></figure>
