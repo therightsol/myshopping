@@ -7,29 +7,19 @@
 
 ?>
 
-
-
-<!DOCTYPE html><!--[if IE 8]>
-<html class="ie8"><![endif]--><!--[if IE 9]>
-<html class="ie9"><![endif]--><!--[if !IE]><!-->
-<html><!--<![endif]-->
-
-
-<body>
-<!-- This is test by RAMISH AHMED BUTT -->
 <div id="option-panel">
     <div id="option-panel-wrapper">
         <div id="option-panel-btn"></div>
         <div id="option-panel-container">
             <ul id="option-panel-tabs-container" class="clearfix">
-                <li class="active"><a href="contact.html#panel-layout" data-toggle="tab" data-panel-title="Layout"></a>
+                <li class="active"><a href="<?php echo $root; ?>homepanel-layout" data-toggle="tab" data-panel-title="Layout"></a>
                 </li>
-                <li><a href="contact.html#panel-home" data-toggle="tab" data-panel-title="Background Settings"></a></li>
-                <li><a href="contact.html#panel-color" data-toggle="tab" data-panel-title="Color Settings"></a></li>
-                <li><a href="contact.html#panel-font" data-toggle="tab" data-panel-title="Font Settings"></a></li>
-                <li><a id="option-close" href="contact.html#"></a></li>
+                <li><a href="<?php echo $root; ?>homepanel-home" data-toggle="tab" data-panel-title="Background Settings"></a></li>
+                <li><a href="<?php echo $root; ?>homepanel-color" data-toggle="tab" data-panel-title="Color Settings"></a></li>
+                <li><a href="<?php echo $root; ?>homepanel-font" data-toggle="tab" data-panel-title="Font Settings"></a></li>
+                <li><a id="option-close" href="<?php echo $root; ?>home"></a></li>
             </ul>
-            <div id="option-panel-title" class="clearfix"><span>Layout</span> <a href="contact.html#"
+            <div id="option-panel-title" class="clearfix"><span>Layout</span> <a href="<?php echo $root; ?>home"
                                                                                  id="option-panel-reset">Reset</a></div>
             <div id="option-panel-content" class="tab-content">
                 <div class="tab-pane fade in active" id="panel-layout">
@@ -76,72 +66,75 @@
                             <div id="body-background-pattern" class="collapse">
                                 <div class="panel-body">
                                     <ul class="clearfix pattern-box-list">
-                                        <li><img data-src="images/patterns/pattern1.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern1.png" alt="pattern 1"></li>
-                                        <li><img data-src="images/patterns/pattern2.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern2.png" alt="pattern 2"></li>
-                                        <li><img data-src="images/patterns/pattern3.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern3.png" alt="pattern 3"></li>
-                                        <li><img data-src="images/patterns/pattern4.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern4.png" alt="pattern 4"></li>
-                                        <li><img data-src="images/patterns/pattern5.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern5.png" alt="pattern 5"></li>
-                                        <li><img data-src="images/patterns/pattern6.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern6.png" alt="pattern 6"></li>
-                                        <li><img data-src="images/patterns/pattern7.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern7.png" alt="pattern 7"></li>
-                                        <li><img data-src="images/patterns/pattern8.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern8.png" alt="pattern 8"></li>
-                                        <li><img data-src="images/patterns/pattern9.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern9.png" alt="pattern 9"></li>
-                                        <li><img data-src="images/patterns/pattern10.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern10.png" alt="pattern 10"></li>
-                                        <li><img data-src="images/patterns/pattern11.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern11.png" alt="pattern 11"></li>
-                                        <li><img data-src="images/patterns/pattern12.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern12.png" alt="pattern 12"></li>
-                                        <li><img data-src="images/patterns/pattern13.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern13.png" alt="pattern 13"></li>
-                                        <li><img data-src="images/patterns/pattern14.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern14.png" alt="pattern 14"></li>
-                                        <li><img data-src="images/patterns/pattern15.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern15.png" alt="pattern 15"></li>
-                                        <li><img data-src="images/patterns/pattern16.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern16.png" alt="pattern 16"></li>
-                                        <li><img data-src="images/patterns/pattern17.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern17.png" alt="pattern 17"></li>
-                                        <li><img data-src="images/patterns/pattern18.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern18.png" alt="pattern 18"></li>
-                                        <li><img data-src="images/patterns/pattern19.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern19.png" alt="pattern 19"></li>
-                                        <li><img data-src="images/patterns/pattern20.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern20.png" alt="pattern 20"></li>
-                                        <li><img data-src="images/patterns/pattern21.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern21.png" alt="pattern 21"></li>
-                                        <li><img data-src="images/patterns/pattern22.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern22.png" alt="pattern 22"></li>
-                                        <li><img data-src="images/patterns/pattern23.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern23.png" alt="pattern 23"></li>
-                                        <li><img data-src="images/patterns/pattern24.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern24.png" alt="pattern 24"></li>
-                                        <li><img data-src="images/patterns/pattern25.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern25.png" alt="pattern 25"></li>
-                                        <li><img data-src="images/patterns/pattern26.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern26.png" alt="pattern 26"></li>
-                                        <li><img data-src="images/patterns/pattern27.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern27.png" alt="pattern 27"></li>
-                                        <li><img data-src="images/patterns/pattern28.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern28.png" alt="pattern 28"></li>
-                                        <li><img data-src="images/patterns/pattern29.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern29.png" alt="pattern 29"></li>
-                                        <li><img data-src="images/patterns/pattern30.png"
-                                                 src="<?php echo $root; ?>assets/images/patterns/pattern30.png" alt="pattern 30"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern1.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern1.png" alt="pattern 1"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern2.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern2.png" alt="pattern 2"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern3.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern3.png" alt="pattern 3"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern4.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern4.png" alt="pattern 4"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern5.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern5.png" alt="pattern 5"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern6.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern6.png" alt="pattern 6"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern7.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern7.png" alt="pattern 7"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern8.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern8.png" alt="pattern 8"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern9.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern9.png" alt="pattern 9"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern10.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern10.png" alt="pattern 10"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern11.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern11.png" alt="pattern 11"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern12.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern12.png" alt="pattern 12"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern13.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern13.png" alt="pattern 13"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern14.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern14.png" alt="pattern 14"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern15.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern15.png" alt="pattern 15"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern16.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern16.png" alt="pattern 16"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern17.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern17.png" alt="pattern 17"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern18.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern18.png" alt="pattern 18"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern19.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern19.png" alt="pattern 19"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern20.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern20.png" alt="pattern 20"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern21.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern21.png" alt="pattern 21"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern22.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern22.png" alt="pattern 22"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern23.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern23.png" alt="pattern 23"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern24.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern24.png" alt="pattern 24"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern25.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern25.png" alt="pattern 25"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern26.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern26.png" alt="pattern 26"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern27.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern27.png" alt="pattern 27"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern28.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern28.png" alt="pattern 28"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern29.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern29.png" alt="pattern 29"></li>
+                                        <li><img data-src="<?php echo $root ; ?>assets/images/patterns/pattern30.png"
+                                                 src="<?php echo $root ; ?>assets/images/patterns/pattern30.png" alt="pattern 30"></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!--This is just a test.. By Assad Khan-->
+
                 <div class="tab-pane fade" id="panel-color">
                     <div id="panel-color-accordion" class="panel-group custom-accordion sm-accordion">
                         <div class="panel">
@@ -176,17 +169,17 @@
                             <div class="collapse in" id="first-font-container"><select class="form-control"
                                                                                        name="first-font"
                                                                                        id="first-font">
-                                <option value="Arial">Arial</option>
-                                <option value="Open Sans">Open Sans</option>
-                                <option value="PT Sans">PT Sans</option>
-                                <option value="Lato">Lato</option>
-                                <option value="Roboto">Roboto</option>
-                                <option value="Droid Sans">Droid Sans</option>
-                                <option value="Ubuntu">Ubuntu</option>
-                                <option value="Arvo">Arvo</option>
-                                <option value="Droid Serif">Ubuntu</option>
-                                <option value="Nunito">Nunito</option>
-                            </select></div>
+                                    <option value="Arial">Arial</option>
+                                    <option value="Open Sans">Open Sans</option>
+                                    <option value="PT Sans">PT Sans</option>
+                                    <option value="Lato">Lato</option>
+                                    <option value="Roboto">Roboto</option>
+                                    <option value="Droid Sans">Droid Sans</option>
+                                    <option value="Ubuntu">Ubuntu</option>
+                                    <option value="Arvo">Arvo</option>
+                                    <option value="Droid Serif">Ubuntu</option>
+                                    <option value="Nunito">Nunito</option>
+                                </select></div>
                         </div>
                         <div class="panel">
                             <div class="accordion-header">
@@ -196,18 +189,18 @@
                             <div class="collapse" id="second-font-container"><select class="form-control"
                                                                                      name="second-font"
                                                                                      id="second-font">
-                                <option value="Oswald">Oswald</option>
-                                <option value="Gudea">Gudea</option>
-                                <option value="Open Sans">Open Sans</option>
-                                <option value="PT Sans">PT Sans</option>
-                                <option value="Lato">Lato</option>
-                                <option value="Roboto">Roboto</option>
-                                <option value="Droid Sans">Droid Sans</option>
-                                <option value="Ubuntu">Ubuntu</option>
-                                <option value="Arvo">Arvo</option>
-                                <option value="Droid Serif">Droid Serif</option>
-                                <option value="Nunito">Nunito</option>
-                            </select></div>
+                                    <option value="Oswald">Oswald</option>
+                                    <option value="Gudea">Gudea</option>
+                                    <option value="Open Sans">Open Sans</option>
+                                    <option value="PT Sans">PT Sans</option>
+                                    <option value="Lato">Lato</option>
+                                    <option value="Roboto">Roboto</option>
+                                    <option value="Droid Sans">Droid Sans</option>
+                                    <option value="Ubuntu">Ubuntu</option>
+                                    <option value="Arvo">Arvo</option>
+                                    <option value="Droid Serif">Droid Serif</option>
+                                    <option value="Nunito">Nunito</option>
+                                </select></div>
                         </div>
                         <div class="panel">
                             <div class="accordion-header">
@@ -216,17 +209,17 @@
                                    data-parent="#panel-font-accordion"></a></div>
                             <div class="collapse" id="third-font-container"><select class="form-control"
                                                                                     name="third-font" id="third-font">
-                                <option value="PT Sans">PT Sans</option>
-                                <option value="Gudea">Gudea</option>
-                                <option value="Open Sans">Open Sans</option>
-                                <option value="Lato">Lato</option>
-                                <option value="Roboto">Roboto</option>
-                                <option value="Droid Sans">Droid Sans</option>
-                                <option value="Ubuntu">Ubuntu</option>
-                                <option value="Arvo">Arvo</option>
-                                <option value="Droid Serif">Droid Serif</option>
-                                <option value="Nunito">Nunito</option>
-                            </select></div>
+                                    <option value="PT Sans">PT Sans</option>
+                                    <option value="Gudea">Gudea</option>
+                                    <option value="Open Sans">Open Sans</option>
+                                    <option value="Lato">Lato</option>
+                                    <option value="Roboto">Roboto</option>
+                                    <option value="Droid Sans">Droid Sans</option>
+                                    <option value="Ubuntu">Ubuntu</option>
+                                    <option value="Arvo">Arvo</option>
+                                    <option value="Droid Serif">Droid Serif</option>
+                                    <option value="Nunito">Nunito</option>
+                                </select></div>
                         </div>
                         <div class="panel">
                             <div class="accordion-header">
@@ -236,17 +229,17 @@
                             <div class="collapse" id="fourth-font-container"><select class="form-control"
                                                                                      name="fourth-font"
                                                                                      id="fourth-font">
-                                <option value="Gudea">Gudea</option>
-                                <option value="Open Sans">Open Sans</option>
-                                <option value="PT Sans">PT Sans</option>
-                                <option value="Lato">Lato</option>
-                                <option value="Roboto">Roboto</option>
-                                <option value="Droid Sans">Droid Sans</option>
-                                <option value="Ubuntu">Ubuntu</option>
-                                <option value="Arvo">Arvo</option>
-                                <option value="Droid Serif">Droid Serif</option>
-                                <option value="Nunito">Nunito</option>
-                            </select></div>
+                                    <option value="Gudea">Gudea</option>
+                                    <option value="Open Sans">Open Sans</option>
+                                    <option value="PT Sans">PT Sans</option>
+                                    <option value="Lato">Lato</option>
+                                    <option value="Roboto">Roboto</option>
+                                    <option value="Droid Sans">Droid Sans</option>
+                                    <option value="Ubuntu">Ubuntu</option>
+                                    <option value="Arvo">Arvo</option>
+                                    <option value="Droid Serif">Droid Serif</option>
+                                    <option value="Nunito">Nunito</option>
+                                </select></div>
                         </div>
                     </div>
                 </div>
@@ -260,7 +253,7 @@
         <div id="breadcrumb-container">
             <div class="container">
                 <ul class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?php echo $root; ?>home">Home</a></li>
                     <li class="active">Contact Us</li>
                 </ul>
             </div>
@@ -353,8 +346,4 @@ include "inc/footer.inc.php";
 include "inc/footerfiles.inc.php";
 
 ?>
-
-
-</body>
-</html>
 
