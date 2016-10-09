@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-4 col-xs-12 widget"><h3>MY ACCOUNT</h3>
                         <ul class="links">
-                            <li><a href="index.html#">My account</a></li>
+                            <li><a href="<?php echo $root; ?>login">My account</a></li>
                             <li><a href="index.html#">Personal information</a></li>
                             <li><a href="index.html#">Addresses</a></li>
                             <li><a href="index.html#">Discount</a></li>
@@ -31,9 +31,9 @@
                     </div>
                     <div class="col-md-3 col-sm-4 col-xs-12 widget"><h3>INFORMATION</h3>
                         <ul class="links">
-                            <li><a href="index.html#">New products</a></li>
+                            <li><a href="<?php echo $root; ?>products">New products</a></li>
                             <li><a href="index.html#">Top sellers</a></li>
-                            <li><a href="index.html#">Specials</a></li>
+                            <li><a href="<?php echo $root; ?>products">Specials</a></li>
                             <li><a href="index.html#">Manufacturers</a></li>
                             <li><a href="index.html#">Suppliers</a></li>
                             <li><a href="index.html#">Our stores</a></li>
@@ -65,14 +65,14 @@
                 <div class="row">
                     <div class="col-md-7 col-sm-7 col-xs-12 footer-social-links-container">
                         <ul class="social-links clearfix">
-                            <li><a href="index.html#" class="social-icon icon-facebook"></a></li>
-                            <li><a href="index.html#" class="social-icon icon-twitter"></a></li>
+                            <li><a href="<?php echo $root; ?>www.facebook.com" class="social-icon icon-facebook"></a></li>
+                            <li><a href="<?php echo $root; ?>www.twitter.com" class="social-icon icon-twitter"></a></li>
                             <li><a href="index.html#" class="social-icon icon-rss"></a></li>
                             <li><a href="index.html#" class="social-icon icon-delicious"></a></li>
                             <li><a href="index.html#" class="social-icon icon-linkedin"></a></li>
-                            <li><a href="index.html#" class="social-icon icon-flickr"></a></li>
-                            <li><a href="index.html#" class="social-icon icon-skype"></a></li>
-                            <li><a href="index.html#" class="social-icon icon-email"></a></li>
+                            <li><a href="<?php echo $root; ?>www.flickr.com" class="social-icon icon-flickr"></a></li>
+                            <li><a href=<?php echo $root; ?>www.skype.com" class="social-icon icon-skype"></a></li>
+                            <li><a href="<?php echo $root; ?>www.gmail.com" class="social-icon icon-email"></a></li>
                         </ul>
                     </div>
                     <div class="col-md-5 col-sm-5 col-xs-12 footer-text-container"><p>&copy; 2014 Powered by Company&trade;.

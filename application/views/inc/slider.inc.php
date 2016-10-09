@@ -14,7 +14,7 @@
                              data-start="600" data-endspeed="550">Performance &amp; Design. Taken right<br>to the edge.
                         </div>
                         <div class="tp-caption lfr ltr" data-x="695" data-y="332" data-speed="1600" data-start="900"
-                             data-endspeed="800"><a href="index.html#" class="btn btn-custom-2">Learn More</a></div>
+                             data-endspeed="800"><a href="<?php echo $root; ?>home" class="btn btn-custom-2">Learn More</a></div>
                         <div class="tp-caption lfl ltl" data-x="center" data-y="bottom" data-hoffset="-230"
                              data-speed="2000" data-start="500" data-endspeed="800"><img
                                 src="<?php echo $root; ?>assets/images/homeslider/slide1_1.png" alt="Slide 1_1"></div>
@@ -33,7 +33,7 @@
                             and stunning 5" display.
                         </div>
                         <div class="tp-caption lfr ltr" data-x="755" data-y="360" data-speed="1600" data-start="1350"
-                             data-endspeed="800"><a href="index.html#" class="btn btn-custom-2">Learn More</a></div>
+                             data-endspeed="800"><a href="<?php echo $root; ?>home" class="btn btn-custom-2">Learn More</a></div>
                         <div class="tp-caption rev-price randomrotate randomrotateout" data-x="360" data-y="55"
                              data-speed="1200" data-start="2000" data-endspeed="400">$1150
                         </div>
@@ -65,7 +65,7 @@
                             as never before.
                         </div>
                         <div class="tp-caption sfr str" data-x="20" data-y="190" data-speed="600" data-start="1900"
-                             data-endspeed="400"><a href="index.html#" class="btn btn-custom-2">Learn More</a></div>
+                             data-endspeed="400"><a href="<?php echo $root; ?>home" class="btn btn-custom-2">Learn More</a></div>
                     </li>
                 </ul>
             </div>

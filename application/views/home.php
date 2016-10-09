@@ -169,17 +169,17 @@
                             <div class="collapse in" id="first-font-container"><select class="form-control"
                                                                                        name="first-font"
                                                                                        id="first-font">
-                                <option value="Arial">Arial</option>
-                                <option value="Open Sans">Open Sans</option>
-                                <option value="PT Sans">PT Sans</option>
-                                <option value="Lato">Lato</option>
-                                <option value="Roboto">Roboto</option>
-                                <option value="Droid Sans">Droid Sans</option>
-                                <option value="Ubuntu">Ubuntu</option>
-                                <option value="Arvo">Arvo</option>
-                                <option value="Droid Serif">Ubuntu</option>
-                                <option value="Nunito">Nunito</option>
-                            </select></div>
+                                    <option value="Arial">Arial</option>
+                                    <option value="Open Sans">Open Sans</option>
+                                    <option value="PT Sans">PT Sans</option>
+                                    <option value="Lato">Lato</option>
+                                    <option value="Roboto">Roboto</option>
+                                    <option value="Droid Sans">Droid Sans</option>
+                                    <option value="Ubuntu">Ubuntu</option>
+                                    <option value="Arvo">Arvo</option>
+                                    <option value="Droid Serif">Ubuntu</option>
+                                    <option value="Nunito">Nunito</option>
+                                </select></div>
                         </div>
                         <div class="panel">
                             <div class="accordion-header">
@@ -189,18 +189,18 @@
                             <div class="collapse" id="second-font-container"><select class="form-control"
                                                                                      name="second-font"
                                                                                      id="second-font">
-                                <option value="Oswald">Oswald</option>
-                                <option value="Gudea">Gudea</option>
-                                <option value="Open Sans">Open Sans</option>
-                                <option value="PT Sans">PT Sans</option>
-                                <option value="Lato">Lato</option>
-                                <option value="Roboto">Roboto</option>
-                                <option value="Droid Sans">Droid Sans</option>
-                                <option value="Ubuntu">Ubuntu</option>
-                                <option value="Arvo">Arvo</option>
-                                <option value="Droid Serif">Droid Serif</option>
-                                <option value="Nunito">Nunito</option>
-                            </select></div>
+                                    <option value="Oswald">Oswald</option>
+                                    <option value="Gudea">Gudea</option>
+                                    <option value="Open Sans">Open Sans</option>
+                                    <option value="PT Sans">PT Sans</option>
+                                    <option value="Lato">Lato</option>
+                                    <option value="Roboto">Roboto</option>
+                                    <option value="Droid Sans">Droid Sans</option>
+                                    <option value="Ubuntu">Ubuntu</option>
+                                    <option value="Arvo">Arvo</option>
+                                    <option value="Droid Serif">Droid Serif</option>
+                                    <option value="Nunito">Nunito</option>
+                                </select></div>
                         </div>
                         <div class="panel">
                             <div class="accordion-header">
@@ -209,17 +209,17 @@
                                    data-parent="#panel-font-accordion"></a></div>
                             <div class="collapse" id="third-font-container"><select class="form-control"
                                                                                     name="third-font" id="third-font">
-                                <option value="PT Sans">PT Sans</option>
-                                <option value="Gudea">Gudea</option>
-                                <option value="Open Sans">Open Sans</option>
-                                <option value="Lato">Lato</option>
-                                <option value="Roboto">Roboto</option>
-                                <option value="Droid Sans">Droid Sans</option>
-                                <option value="Ubuntu">Ubuntu</option>
-                                <option value="Arvo">Arvo</option>
-                                <option value="Droid Serif">Droid Serif</option>
-                                <option value="Nunito">Nunito</option>
-                            </select></div>
+                                    <option value="PT Sans">PT Sans</option>
+                                    <option value="Gudea">Gudea</option>
+                                    <option value="Open Sans">Open Sans</option>
+                                    <option value="Lato">Lato</option>
+                                    <option value="Roboto">Roboto</option>
+                                    <option value="Droid Sans">Droid Sans</option>
+                                    <option value="Ubuntu">Ubuntu</option>
+                                    <option value="Arvo">Arvo</option>
+                                    <option value="Droid Serif">Droid Serif</option>
+                                    <option value="Nunito">Nunito</option>
+                                </select></div>
                         </div>
                         <div class="panel">
                             <div class="accordion-header">
@@ -229,17 +229,17 @@
                             <div class="collapse" id="fourth-font-container"><select class="form-control"
                                                                                      name="fourth-font"
                                                                                      id="fourth-font">
-                                <option value="Gudea">Gudea</option>
-                                <option value="Open Sans">Open Sans</option>
-                                <option value="PT Sans">PT Sans</option>
-                                <option value="Lato">Lato</option>
-                                <option value="Roboto">Roboto</option>
-                                <option value="Droid Sans">Droid Sans</option>
-                                <option value="Ubuntu">Ubuntu</option>
-                                <option value="Arvo">Arvo</option>
-                                <option value="Droid Serif">Droid Serif</option>
-                                <option value="Nunito">Nunito</option>
-                            </select></div>
+                                    <option value="Gudea">Gudea</option>
+                                    <option value="Open Sans">Open Sans</option>
+                                    <option value="PT Sans">PT Sans</option>
+                                    <option value="Lato">Lato</option>
+                                    <option value="Roboto">Roboto</option>
+                                    <option value="Droid Sans">Droid Sans</option>
+                                    <option value="Ubuntu">Ubuntu</option>
+                                    <option value="Arvo">Arvo</option>
+                                    <option value="Droid Serif">Droid Serif</option>
+                                    <option value="Nunito">Nunito</option>
+                                </select></div>
                         </div>
                     </div>
                 </div>
