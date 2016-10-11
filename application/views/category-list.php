@@ -256,7 +256,7 @@
 
                         <p>Aenean dictum libero vitae magna sagittis, eu convallis dolor blandit. Fusce consectetur
                             tincidunt pretium. Etiam non tellus massa. Aenean tincidunt in augue nec tempus. Nulla
-                            porta libero sit amet lorem pellentesque posuere...</p><a href="category-list.html#"
+                            porta libero sit amet lorem pellentesque posuere...</p><a href="<?php echo $root; ?>category_list"
                                                                                       class="btn btn-custom">LEARN
                             MORE</a></div>
                 </div>
@@ -266,8 +266,8 @@
     <div id="category-breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="category-list.html#">Electronics</a></li>
+                <li><a href="<?php echo $root; ?>home">Home</a></li>
+                <li><a href="<?php echo $root; ?>category_list">Electronics</a></li>
                 <li class="active">Mobile</li>
             </ul>
         </div>
@@ -286,24 +286,24 @@
                                         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
                                                 class="fa fa-angle-down"></i></button>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="category-list.html#">Date</a></li>
-                                            <li><a href="category-list.html#">Name</a></li>
+                                            <li><a href="<?php echo $root; ?>category_list">Date</a></li>
+                                            <li><a href="<?php echo $root; ?>category_list">Name</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="view-box"><a href="category.html" class="icon-button icon-grid"><i
-                                            class="fa fa-th-large"></i></a> <a href="category-list.html"
+                                <div class="view-box"><a href="<?php echo $root; ?>category_list" class="icon-button icon-grid"><i
+                                            class="fa fa-th-large"></i></a> <a href="<?php echo $root; ?>category_list"
                                                                                class="active icon-button icon-list"><i
                                             class="fa fa-th-list"></i></a></div>
                             </div>
                             <div class="toolbox-pagination clearfix">
                                 <ul class="pagination">
-                                    <li class="active"><a href="category-list.html#">1</a></li>
-                                    <li><a href="category-list.html#">2</a></li>
-                                    <li><a href="category-list.html#">3</a></li>
-                                    <li><a href="category-list.html#">4</a></li>
-                                    <li><a href="category-list.html#">5</a></li>
-                                    <li><a href="category-list.html#"><i class="fa fa-angle-right"></i></a></li>
+                                    <li class="active"><a href="<?php echo $root; ?>category_list">1</a></li>
+                                    <li><a href="<?php echo $root; ?>category_list">2</a></li>
+                                    <li><a href="<?php echo $root; ?>category_list">3</a></li>
+                                    <li><a href="<?php echo $root; ?>category_list">4</a></li>
+                                    <li><a href="<?php echo $root; ?>category_list">5</a></li>
+                                    <li><a href="<?php echo $root; ?>category_list"><i class="fa fa-angle-right"></i></a></li>
                                 </ul>
                                 <div class="view-count-box"><span class="separator">view:</span>
 
@@ -312,8 +312,8 @@
                                         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
                                                 class="fa fa-angle-down"></i></button>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="category-list.html#">15</a></li>
-                                            <li><a href="category-list.html#">30</a></li>
+                                            <li><a href="<?php echo $root; ?>category_list">15</a></li>
+                                            <li><a href="<?php echo $root; ?>category_list">30</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -323,7 +323,7 @@
                         <div class="category-item-container category-list-container">
                             <div class="item item-list clearfix">
                                 <div class="item-image-container">
-                                    <figure><a href="product.html"><img src="<?php echo $root; ?>assets/images/products/item1.jpg" alt="item1"
+                                    <figure><a href="<?php echo $root; ?>products"><img src="<?php echo $root; ?>assets/images/products/item1.jpg" alt="item1"
                                                                         class="item-image"> <img
                                                 src="<?php echo $root; ?>assets/images/products/item1-hover.jpg" alt="item1  Hover"
                                                 class="item-image-hover"></a></figure>
@@ -331,7 +331,7 @@
                                                 class="sub-price">.99</span></span> <span class="item-price">$160<span
                                                 class="sub-price">.99</span></span></div>
                                     <span class="new-rect">New</span> <span class="discount-rect">-15%</span></div>
-                                <div class="item-meta-container"><h3 class="item-name"><a href="product.html">Phasellus
+                                <div class="item-meta-container"><h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus
                                             consequat</a></h3>
 
                                     <div class="ratings-container">
@@ -344,25 +344,25 @@
                                         urna posuere, vestibulum enim sit amet, mollis augue. Fusce eu fermentum
                                         nunc. Pellentesque a volutpat ipsum...</p>
 
-                                    <div class="item-action"><a href="category-list.html#"
+                                    <div class="item-action"><a href="<?php echo $root; ?>category_list"
                                                                 class="item-add-btn"><span class="icon-cart-text">Add to Cart</span></a>
 
-                                        <div class="item-action-inner"><a href="category-list.html#"
+                                        <div class="item-action-inner"><a href="<?php echo $root; ?>category_list"
                                                                           class="icon-button icon-like">Favourite</a>
-                                            <a href="category-list.html#"
+                                            <a href="<?php echo $root; ?>category_list"
                                                class="icon-button icon-compare">Checkout</a></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item item-list clearfix">
                                 <div class="item-image-container">
-                                    <figure><a href="product.html"><img src="<?php echo $root; ?>assets/images/products/item5.jpg"
+                                    <figure><a href="<?php echo $root; ?>product><img src="<?php echo $root; ?>assets/images/products/item5.jpg"
                                                                         alt="Phone 2" class="item-image"> <img
                                                 src="<?php echo $root; ?>assets/images/products/item5-hover.jpg" alt="Phone 2 Hover"
                                                 class="item-image-hover"></a></figure>
                                     <div class="item-price-container"><span class="item-price">$199</span></div>
                                     <span class="discount-rect">-30%</span></div>
-                                <div class="item-meta-container"><h3 class="item-name"><a href="product.html">Phasellus
+                                <div class="item-meta-container"><h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus
                                             consequat</a></h3>
 
                                     <div class="ratings-container">
@@ -375,26 +375,26 @@
                                         urna posuere, vestibulum enim sit amet, mollis augue. Fusce eu fermentum
                                         nunc. Pellentesque a volutpat ipsum...</p>
 
-                                    <div class="item-action"><a href="category-list.html#"
+                                    <div class="item-action"><a href="<?php echo $root; ?>category_list"
                                                                 class="item-add-btn"><span class="icon-cart-text">Add to Cart</span></a>
 
-                                        <div class="item-action-inner"><a href="category-list.html#"
+                                        <div class="item-action-inner"><a href="<?php echo $root; ?>category_list"
                                                                           class="icon-button icon-like">Favourite</a>
-                                            <a href="category-list.html#"
+                                            <a href="<?php echo $root; ?>category_list"
                                                class="icon-button icon-compare">Checkout</a></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item item-list clearfix">
                                 <div class="item-image-container">
-                                    <figure><a href="product.html"><img src="<?php echo $root; ?>assets/images/products/item4.jpg" alt="Item 4"
+                                    <figure><a href="<?php echo $root; ?>products"><img src="<?php echo $root; ?>assets/images/products/item4.jpg" alt="Item 4"
                                                                         class="item-image"> <img
                                                 src="<?php echo $root; ?>assets/images/products/item4-hover.jpg" alt="Item 4 Hover"
                                                 class="item-image-hover"></a></figure>
                                     <div class="item-price-container"><span class="item-price">$99<span
                                                 class="sub-price">.75</span></span></div>
                                     <span class="new-rect">New</span></div>
-                                <div class="item-meta-container"><h3 class="item-name"><a href="product.html">Phasellus
+                                <div class="item-meta-container"><h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus
                                             consequat</a></h3>
 
                                     <div class="ratings-container">
@@ -407,26 +407,26 @@
                                         urna posuere, vestibulum enim sit amet, mollis augue. Fusce eu fermentum
                                         nunc. Pellentesque a volutpat ipsum...</p>
 
-                                    <div class="item-action"><a href="category-list.html#"
+                                    <div class="item-action"><a href="<?php echo $root; ?>category_list"
                                                                 class="item-add-btn"><span class="icon-cart-text">Add to Cart</span></a>
 
-                                        <div class="item-action-inner"><a href="category-list.html#"
+                                        <div class="item-action-inner"><a href="<?php echo $root; ?>category_list"
                                                                           class="icon-button icon-like">Favourite</a>
-                                            <a href="category-list.html#"
+                                            <a href="<?php echo $root; ?>category_list"
                                                class="icon-button icon-compare">Checkout</a></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item item-list clearfix">
                                 <div class="item-image-container">
-                                    <figure><a href="product.html"><img src="<?php echo $root; ?>assets/images/products/item3.jpg" alt="Item 3"
+                                    <figure><a href="<?php echo $root; ?>products"><img src="<?php echo $root; ?>assets/images/products/item3.jpg" alt="Item 3"
                                                                         class="item-image"> <img
                                                 src="<?php echo $root; ?>assets/images/products/item3-hover.jpg" alt="Item 3 Hover"
                                                 class="item-image-hover"></a></figure>
                                     <div class="item-price-container"><span class="item-price">$99<span
                                                 class="sub-price">.75</span></span></div>
                                 </div>
-                                <div class="item-meta-container"><h3 class="item-name"><a href="product.html">Phasellus
+                                <div class="item-meta-container"><h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus
                                             consequat</a></h3>
 
                                     <div class="ratings-container">
@@ -439,19 +439,19 @@
                                         urna posuere, vestibulum enim sit amet, mollis augue. Fusce eu fermentum
                                         nunc. Pellentesque a volutpat ipsum...</p>
 
-                                    <div class="item-action"><a href="category-list.html#"
+                                    <div class="item-action"><a href="<?php echo $root; ?>category_list"
                                                                 class="item-add-btn"><span class="icon-cart-text">Add to Cart</span></a>
 
-                                        <div class="item-action-inner"><a href="category-list.html#"
+                                        <div class="item-action-inner"><a href="<?php echo $root; ?>category_list"
                                                                           class="icon-button icon-like">Favourite</a>
-                                            <a href="category-list.html#"
+                                            <a href="<?php echo $root; ?>category_list"
                                                class="icon-button icon-compare">Checkout</a></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item item-list clearfix">
                                 <div class="item-image-container">
-                                    <figure><a href="product.html"><img src="<?php echo $root; ?>assets/images/products/item8.jpg" alt="item1"
+                                    <figure><a href="<?php echo $root; ?>products"><img src="<?php echo $root; ?>assets/images/products/item8.jpg" alt="item1"
                                                                         class="item-image"> <img
                                                 src="<?php echo $root; ?>assets/images/products/item8-hover.jpg" alt="item1  Hover"
                                                 class="item-image-hover"></a></figure>
@@ -459,7 +459,7 @@
                                                 class="sub-price">.99</span></span> <span class="item-price">$160<span
                                                 class="sub-price">.99</span></span></div>
                                     <span class="new-rect">New</span> <span class="discount-rect">-15%</span></div>
-                                <div class="item-meta-container"><h3 class="item-name"><a href="product.html">Phasellus
+                                <div class="item-meta-container"><h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus
                                             consequat</a></h3>
 
                                     <div class="ratings-container">
@@ -472,26 +472,26 @@
                                         urna posuere, vestibulum enim sit amet, mollis augue. Fusce eu fermentum
                                         nunc. Pellentesque a volutpat ipsum...</p>
 
-                                    <div class="item-action"><a href="category-list.html#"
+                                    <div class="item-action"><a href="<?php echo $root; ?>category_list"
                                                                 class="item-add-btn"><span class="icon-cart-text">Add to Cart</span></a>
 
-                                        <div class="item-action-inner"><a href="category-list.html#"
+                                        <div class="item-action-inner"><a href="<?php echo $root; ?>category_list"
                                                                           class="icon-button icon-like">Favourite</a>
-                                            <a href="category-list.html#"
+                                            <a href="<?php echo $root; ?>category_list"
                                                class="icon-button icon-compare">Checkout</a></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item item-list clearfix">
                                 <div class="item-image-container">
-                                    <figure><a href="product.html"><img src="<?php echo $root; ?>assets/images/products/item9.jpg" alt="item1"
+                                    <figure><a href="<?php echo $root; ?>products"><img src="<?php echo $root; ?>assets/images/products/item9.jpg" alt="item1"
                                                                         class="item-image"> <img
                                                 src="<?php echo $root; ?>assets/images/products/item9-hover.jpg" alt="item1  Hover"
                                                 class="item-image-hover"></a></figure>
                                     <div class="item-price-container"><span class="item-price">$160<span
                                                 class="sub-price">.99</span></span></div>
                                 </div>
-                                <div class="item-meta-container"><h3 class="item-name"><a href="product.html">Phasellus
+                                <div class="item-meta-container"><h3 class="item-name"><a href="<?php echo $root; ?>products">Phasellus
                                             consequat</a></h3>
 
                                     <div class="ratings-container">
@@ -504,12 +504,12 @@
                                         urna posuere, vestibulum enim sit amet, mollis augue. Fusce eu fermentum
                                         nunc. Pellentesque a volutpat ipsum...</p>
 
-                                    <div class="item-action"><a href="category-list.html#"
+                                    <div class="item-action"><a href="<?php echo $root; ?>category_list"
                                                                 class="item-add-btn"><span class="icon-cart-text">Add to Cart</span></a>
 
-                                        <div class="item-action-inner"><a href="category-list.html#"
+                                        <div class="item-action-inner"><a href="<?php echo $root; ?>category_list"
                                                                           class="icon-button icon-like">Favourite</a>
-                                            <a href="category-list.html#"
+                                            <a href="<?php echo $root; ?>category_list"
                                                class="icon-button icon-compare">Checkout</a></div>
                                     </div>
                                 </div>
@@ -518,12 +518,12 @@
                         <div class="pagination-container clearfix">
                             <div class="pull-right">
                                 <ul class="pagination">
-                                    <li class="active"><a href="category-list.html#">1</a></li>
-                                    <li><a href="category-list.html#">2</a></li>
-                                    <li><a href="category-list.html#">3</a></li>
-                                    <li><a href="category-list.html#">4</a></li>
-                                    <li><a href="category-list.html#">5</a></li>
-                                    <li><a href="category-list.html#"><i class="fa fa-angle-right"></i></a></li>
+                                    <li class="active"><a href="<?php echo $root; ?>category_list">1</a></li>
+                                    <li><a href="<?php echo $root; ?>category_list">2</a></li>
+                                    <li><a href="<?php echo $root; ?>category_list">3</a></li>
+                                    <li><a href="<?php echo $root; ?>category_list">4</a></li>
+                                    <li><a href="<?php echo $root; ?>category_list">5</a></li>
+                                    <li><a href="<?php echo $root; ?>category_list"><i class="fa fa-angle-right"></i></a></li>
                                 </ul>
                             </div>
                             <div class="pull-right view-count-box hidden-xs"><span class="separator">view:</span>
@@ -533,8 +533,8 @@
                                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i
                                             class="fa fa-angle-down"></i></button>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="category-list.html#">15</a></li>
-                                        <li><a href="category-list.html#">30</a></li>
+                                        <li><a href="<?php echo $root; ?>category_list">15</a></li>
+                                        <li><a href="<?php echo $root; ?>category_list">30</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -551,27 +551,27 @@
                                     <div id="category-list-1" class="collapse in">
                                         <div class="panel-body">
                                             <ul class="category-filter-list jscrollpane">
-                                                <li><a href="category-list.html#">Mobile Phones (341)</a></li>
-                                                <li><a href="category-list.html#">Smartphones (55)</a></li>
-                                                <li><a href="category-list.html#">Communicators (24)</a></li>
-                                                <li><a href="category-list.html#">CDMA Phones (14)</a></li>
-                                                <li><a href="category-list.html#">Accessories (83)</a></li>
-                                                <li><a href="category-list.html#">Chargers (8)</a></li>
-                                                <li><a href="category-list.html#">Memory Cards (6)</a></li>
-                                                <li><a href="category-list.html#">Protectors (12)</a></li>
-                                                <li><a href="category-list.html#">ravelsim (5)</a></li>
-                                                <li><a href="category-list.html#">CDMA Phones (14)</a></li>
-                                                <li><a href="category-list.html#">Accessories (83)</a></li>
-                                                <li><a href="category-list.html#">Chargers (8)</a></li>
-                                                <li><a href="category-list.html#">Memory Cards (6)</a></li>
-                                                <li><a href="category-list.html#">Protectors (12)</a></li>
-                                                <li><a href="category-list.html#">ravelsim (5)</a></li>
-                                                <li><a href="category-list.html#">CDMA Phones (14)</a></li>
-                                                <li><a href="category-list.html#">Accessories (83)</a></li>
-                                                <li><a href="category-list.html#">Chargers (8)</a></li>
-                                                <li><a href="category-list.html#">Memory Cards (6)</a></li>
-                                                <li><a href="category-list.html#">Protectors (12)</a></li>
-                                                <li><a href="category-list.html#">ravelsim (5)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Mobile Phones (341)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Smartphones (55)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Communicators (24)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">CDMA Phones (14)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Accessories (83)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Chargers (8)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Memory Cards (6)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Protectors (12)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">ravelsim (5)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">CDMA Phones (14)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Accessories (83)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Chargers (8)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Memory Cards (6)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Protectors (12)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">ravelsim (5)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">CDMA Phones (14)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Accessories (83)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Chargers (8)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Memory Cards (6)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Protectors (12)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">ravelsim (5)</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -584,11 +584,11 @@
                                     <div id="category-list-2" class="collapse in">
                                         <div class="panel-body">
                                             <ul class="category-filter-list jscrollpane">
-                                                <li><a href="category-list.html#">Samsung (50)</a></li>
-                                                <li><a href="category-list.html#">Apple (80)</a></li>
-                                                <li><a href="category-list.html#">HTC (20)</a></li>
-                                                <li><a href="category-list.html#">Motoroloa (20)</a></li>
-                                                <li><a href="category-list.html#">Nokia (11)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Samsung (50)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Apple (80)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">HTC (20)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Motoroloa (20)</a></li>
+                                                <li><a href="<?php echo $root; ?>category_list">Nokia (11)</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -606,9 +606,9 @@
                                                     class="sm-separator">to</span> <input type="text"
                                                                                           id="price-range-high">
                                             </div>
-                                            <div id="price-range-btns"><a href="category-list.html#"
+                                            <div id="price-range-btns"><a href="<?php echo $root; ?>category_list"
                                                                           class="btn btn-custom-2 btn-sm">Ok</a> <a
-                                                    href="category-list.html#"
+                                                    href="<?php echo $root; ?>category_list"
                                                     class="btn btn-custom-2 btn-sm">Clear</a></div>
                                         </div>
                                     </div>
@@ -621,40 +621,40 @@
                                     <div id="category-list-4" class="collapse in">
                                         <div class="panel-body">
                                             <ul class="filter-color-list clearfix">
-                                                <li><a href="category-list.html#" data-bgcolor="#fff"
+                                                <li><a href="<?php echo $root; ?>category_list" data-bgcolor="#fff"
                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category-list.html#" data-bgcolor="#ffff33"
+                                                <li><a href="<?php echo $root; ?>category_list" data-bgcolor="#ffff33"
                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category-list.html#" data-bgcolor="#ff9900"
+                                                <li><a href="<?php echo $root; ?>category_list" data-bgcolor="#ff9900"
                                                        class="filter-color-box"></a></li>
-                                                <li class="last-md"><a href="category-list.html#"
+                                                <li class="last-md"><a href="<?php echo $root; ?>category_list"
                                                                        data-bgcolor="#ff9999"
                                                                        class="filter-color-box"></a></li>
-                                                <li class="last-lg"><a href="category-list.html#"
+                                                <li class="last-lg"><a href="<?php echo $root; ?>category_list"
                                                                        data-bgcolor="#99cc33"
                                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category-list.html#" data-bgcolor="#339933"
+                                                <li><a href="<?php echo $root; ?>category_list" data-bgcolor="#339933"
                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category-list.html#" data-bgcolor="#ff0000"
+                                                <li><a href="<?php echo $root; ?>category_list" data-bgcolor="#ff0000"
                                                        class="filter-color-box"></a></li>
-                                                <li class="last-md"><a href="category-list.html#"
+                                                <li class="last-md"><a href="<?php echo $root; ?>category_list"
                                                                        data-bgcolor="#ff3366"
                                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category-list.html#" data-bgcolor="#cc33ff"
+                                                <li><a href="<?php echo $root; ?>category_list" data-bgcolor="#cc33ff"
                                                        class="filter-color-box"></a></li>
-                                                <li class="last-lg"><a href="category-list.html#"
+                                                <li class="last-lg"><a href="<?php echo $root; ?>category_list"
                                                                        data-bgcolor="#9966cc"
                                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category-list.html#" data-bgcolor="#99ccff"
+                                                <li><a href="<?php echo $root; ?>category_list" data-bgcolor="#99ccff"
                                                        class="filter-color-box"></a></li>
-                                                <li class="last-md"><a href="category-list.html#"
+                                                <li class="last-md"><a href="<?php echo $root; ?>category_list"
                                                                        data-bgcolor="#3333cc"
                                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category-list.html#" data-bgcolor="#999999"
+                                                <li><a href="<?php echo $root; ?>category_list" data-bgcolor="#999999"
                                                        class="filter-color-box"></a></li>
-                                                <li><a href="category-list.html#" data-bgcolor="#663300"
+                                                <li><a href="<?php echo $root; ?>category_list" data-bgcolor="#663300"
                                                        class="filter-color-box"></a></li>
-                                                <li class="last-lg"><a href="category-list.html#"
+                                                <li class="last-lg"><a href="<?php echo $root; ?>category_list"
                                                                        data-bgcolor="#000"
                                                                        class="filter-color-box"></a></li>
                                             </ul>
@@ -671,7 +671,7 @@
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item5.jpg" alt="item5">
                                             </figure>
-                                            <h5><a href="category-list.html#">Jacket Suiting Blazer</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category_list">Jacket Suiting Blazer</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -683,7 +683,7 @@
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item1.jpg" alt="item1">
                                             </figure>
-                                            <h5><a href="category-list.html#">Gap Graphic Cuffed</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category_list">Gap Graphic Cuffed</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -695,7 +695,7 @@
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item2.jpg" alt="item2">
                                             </figure>
-                                            <h5><a href="category-list.html#">Women's Lauren Dress</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category_list">Women's Lauren Dress</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -709,7 +709,7 @@
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item3.jpg" alt="item3">
                                             </figure>
-                                            <h5><a href="category-list.html#">Swiss Mobile Phone</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category_list">Swiss Mobile Phone</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -721,7 +721,7 @@
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item4.jpg" alt="item4">
                                             </figure>
-                                            <h5><a href="category-list.html#">Zwinzed HeadPhones</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category_list">Zwinzed HeadPhones</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -733,7 +733,7 @@
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item7.jpg" alt="item7">
                                             </figure>
-                                            <h5><a href="category-list.html#">Kless Man Suit</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category_list">Kless Man Suit</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -747,7 +747,7 @@
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item4.jpg" alt="item4">
                                             </figure>
-                                            <h5><a href="category-list.html#">Gap Graphic Cuffed</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category_list">Gap Graphic Cuffed</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -759,7 +759,7 @@
                                         <div class="featured-product clearfix">
                                             <figure><img src="<?php echo $root; ?>assets/images/products/thumbnails/item6.jpg" alt="item6">
                                             </figure>
-                                            <h5><a href="category-list.html#">Women's Lauren Dress</a></h5>
+                                            <h5><a href="<?php echo $root; ?>category_list">Women's Lauren Dress</a></h5>
 
                                             <div class="ratings-container">
                                                 <div class="ratings">
@@ -775,11 +775,11 @@
                         <div class="widget banner-slider-container">
                             <div class="banner-slider flexslider">
                                 <ul class="banner-slider-list clearfix">
-                                    <li><a href="category-list.html#"><img src="<?php echo $root; ?>assets/images/banner1.jpg" alt="Banner 1"></a>
+                                    <li><a href="<?php echo $root; ?>category_list"><img src="<?php echo $root; ?>assets/images/banner1.jpg" alt="Banner 1"></a>
                                     </li>
-                                    <li><a href="category-list.html#"><img src="<?php echo $root; ?>assets/images/banner2.jpg" alt="Banner 2"></a>
+                                    <li><a href="<?php echo $root; ?>category_list"><img src="<?php echo $root; ?>assets/images/banner2.jpg" alt="Banner 2"></a>
                                     </li>
-                                    <li><a href="category-list.html#"><img src="<?php echo $root; ?>assets/images/banner3.jpg" alt="Banner 3"></a>
+                                    <li><a href="<?php echo $root; ?>category_list"><img src="<?php echo $root; ?>assets/images/banner3.jpg" alt="Banner 3"></a>
                                     </li>
                                 </ul>
                             </div>
