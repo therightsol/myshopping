@@ -120,7 +120,7 @@
                                             <li><a href="<?php echo $root; ?>checkout">Checkout</a></li>
                                             <li><a href="<?php echo $root; ?>about">About Us</a></li>
                                             <li><a href="<?php echo $root; ?>register">Register Account</a></li>
-                                            <li><a href="<?php echo $root; ?>compare-product">Compare Products</a></li>
+                                            <li><a href="<?php echo $root; ?>compare_product">Compare Products</a></li>
                                             <li><a href="<?php echo $root; ?>login">Login</a></li>
                                             <li><a href="<?php echo $root; ?>e404">404 Page</a></li>
                                         </ul>

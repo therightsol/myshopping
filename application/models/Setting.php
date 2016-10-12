@@ -10,3 +10,6 @@ class Setting extends CI_Model{
     public $value = '';
     public $createdAt = null;
     public $updatedAt = null;
+
+
+}
