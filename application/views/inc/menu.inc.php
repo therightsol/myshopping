@@ -29,52 +29,52 @@
                                             <div class="col-5"><a href="<?php echo $root; ?>category"
                                                                   class="mega-menu-title">Clothing</a>
                                                 <ul class="mega-menu-list clearfix">
-                                                    <li><a href="<?php echo $root; ?>home">Dresses</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Jeans &amp; Trousers</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Blouses &amp; Shirts</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Tops &amp; T-Shirts</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Jackets &amp; Coats</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Skirts</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Dresses</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Jeans &amp; Trousers</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Blouses &amp; Shirts</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Tops &amp; T-Shirts</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Jackets &amp; Coats</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Skirts</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-5"><a href="<?php echo $root; ?>category" class="mega-menu-title">Shoes</a>
                                                 <ul class="mega-menu-list clearfix">
-                                                    <li><a href="<?php echo $root; ?>home">Formal Shoes</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Casual Shoes</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Sandals</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Boots</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Wide Fit</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Slippers</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Formal Shoes</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Casual Shoes</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Sandals</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Boots</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Wide Fit</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Slippers</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-5"><a href="<?php echo $root; ?>category" class="mega-menu-title">Accessories</a>
                                                 <ul class="mega-menu-list clearfix">
-                                                    <li><a href="<?php echo $root; ?>home">Bags &amp; Purses</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Belts</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Gloves</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Jewellery</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Sunglasses</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Hair Accessories</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Bags &amp; Purses</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Belts</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Gloves</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Jewellery</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Sunglasses</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Hair Accessories</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-5"><a href="<?php echo $root; ?>category"
                                                                   class="mega-menu-title">Sports</a>
                                                 <ul class="mega-menu-list clearfix">
-                                                    <li><a href="<?php echo $root; ?>home">Sport Tops &amp; Vests</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Swimwear</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Footwear</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Sports Underwear</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Bags</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Sport Tops &amp; Vests</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Swimwear</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Footwear</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Sports Underwear</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Bags</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-5"><a href="<?php echo $root; ?>category"
                                                                   class="mega-menu-title">Maternity</a>
                                                 <ul class="mega-menu-list clearfix">
-                                                    <li><a href="<?php echo $root; ?>home">Tops &amp; Skirts</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Dresses</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Trousers &amp; Shorts</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Knitwear</a></li>
-                                                    <li><a href="<?php echo $root; ?>home">Jackets &amp; Coats</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Tops &amp; Skirts</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Dresses</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Trousers &amp; Shorts</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Knitwear</a></li>
+                                                    <li><a href="<?php echo $root; ?>category_list">Jackets &amp; Coats</a></li>
                                                 </ul>
                                             </div>
                                         </div>
