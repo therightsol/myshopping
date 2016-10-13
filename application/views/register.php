@@ -7,6 +7,8 @@ include 'inc/menu.inc.php';
 
 ?>
 
+
+
     <div id="option-panel">
         <div id="option-panel-wrapper">
             <div id="option-panel-btn"></div>
@@ -263,7 +265,23 @@ include 'inc/menu.inc.php';
 
                     <p class="title-desc">If you already have an account, please login at <a
                             href="<?php echo $root; ?>login">login page</a>.</p></header>
-                <div class="xs-margin"></div>
+                <div class="xs-margin">
+
+
+                    <?php
+
+                        if (isset($validation_errors)){
+                            ?>
+                            <div class="alert alert-danger">
+                                <?php echo $validation_errors; ?>
+                            </div>
+                            <?php
+                        }
+
+                    ?>
+
+
+                </div>
                 <form method="post" action="<?php echo $root; ?>register" id="register-form">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -277,10 +295,20 @@ include 'inc/menu.inc.php';
                                             class="input-icon input-icon-user"></span><span class="input-text">Last Name&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
                                            placeholder="Your Last Name" name="lname"></div>
+
+
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-email"></span><span class="input-text">Email&#42;</span></span>
+                                    <?php
+                                    if (form_error('email')){
+                                        echo form_error('email');
+                                    }
+                                    ?>
                                     <input type="text" required class="form-control input-lg"
-                                           placeholder="Your Email" name="email"></div>
+                                           placeholder="Your Email" name="email">
+
+
+                                </div>
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-phone"></span><span class="input-text">Telephone&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
