@@ -267,62 +267,89 @@ include 'inc/menu.inc.php';
                             href="<?php echo $root; ?>login">login page</a>.</p></header>
                 <div class="xs-margin">
 
-
-                    <?php
-
-                        if (isset($validation_errors)){
-                            ?>
-                            <div class="alert alert-danger">
-                                <?php echo $validation_errors; ?>
-                            </div>
-                            <?php
-                        }
-
-                    ?>
-
-
                 </div>
                 <form method="post" action="<?php echo $root; ?>register" id="register-form">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <fieldset><h2 class="sub-title">YOUR PERSONAL DETAILS</h2>
 
+                                <div class="text-danger">
+                                    <?php
+                                         if(form_error ('fname')){
+                                             echo form_error ('fname');
+                                         }
+                                    ?>
+                                </div>
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-user"></span><span class="input-text">First Name&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
                                            placeholder="Your First Name" name="fname"></div>
+
+                                <div class="text-danger">
+                                    <?php
+                                    if(form_error ('lname')){
+                                        echo form_error ('lname');
+                                    }
+                                    ?>
+                                </div>
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-user"></span><span class="input-text">Last Name&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
                                            placeholder="Your Last Name" name="lname"></div>
 
-
-                                <div class="input-group"><span class="input-group-addon"><span
-                                            class="input-icon input-icon-email"></span><span class="input-text">Email&#42;</span></span>
+                                <div class="text-danger">
                                     <?php
                                     if (form_error('email')){
                                         echo form_error('email');
                                     }
                                     ?>
+                                </div>
+                                <div class="input-group"><span class="input-group-addon"><span
+                                            class="input-icon input-icon-email"></span><span class="input-text">Email&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
                                            placeholder="Your Email" name="email">
-
-
+                                </div>
+                                <div class="text-danger">
+                                    <?php
+                                    if(form_error ('phone')){
+                                        echo form_error ('phone');
+                                    }
+                                    ?>
                                 </div>
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-phone"></span><span class="input-text">Telephone&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
                                            placeholder="Your Telephone" name="phone"></div>
+                                <div class="text-danger">
+                                    <?php
+                                    if(form_error ('fax')){
+                                        echo form_error ('fax');
+                                    }
+                                    ?>
+                                </div>
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-fax"></span><span class="input-text">Fax</span></span>
                                     <input type="text" class="form-control input-lg" placeholder="Your Fax" name="fax"></div>
                             </fieldset>
                             <fieldset><h2 class="sub-title">YOUR PASSWORD</h2>
-
+                                <div class="text-danger">
+                                    <?php
+                                    if(form_error ('pass1')){
+                                        echo form_error ('pass1');
+                                    }
+                                    ?>
+                                </div>
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-password"></span><span class="input-text">Password&#42;</span></span>
                                     <input type="password" required class="form-control input-lg"
                                            placeholder="Your Password" name="pass1"></div>
+                                <div class="text-danger">
+                                    <?php
+                                    if(form_error ('pass2')){
+                                        echo form_error ('pass2');
+                                    }
+                                    ?>
+                                </div>
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-password"></span><span class="input-text">Password&#42;</span></span>
                                     <input type="password" required class="form-control input-lg"
@@ -332,24 +359,66 @@ include 'inc/menu.inc.php';
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <fieldset><h2 class="sub-title">YOUR ADDRESS</h2>
 
+                                <div class="text-danger">
+                                    <?php
+                                    if(form_error ('company')){
+                                        echo form_error ('company');
+                                    }
+                                    ?>
+                                </div>
+
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-company"></span><span class="input-text">Company&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
                                            placeholder="Your Company" name="company"></div>
+                                <div class="text-danger">
+                                    <?php
+                                    if(form_error ('address1')){
+                                        echo form_error ('address1');
+                                    }
+                                    ?>
+                                </div>
+
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-address"></span><span class="input-text">Address 1&#42;</span></span>
                                     <input type="text" class="form-control input-lg" placeholder="Your Address" name="address1">
                                 </div>
+                                <div class="text-danger">
+                                    <?php
+                                    if(form_error ('address2')){
+                                        echo form_error ('address2');
+                                    }
+                                    ?>
+                                </div>
+
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-address"></span><span class="input-text">Address 2&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
                                            placeholder="Your Address" name="address2"></div>
+
+                                <div class="text-danger">
+                                    <?php
+                                    if(form_error ('city')){
+                                        echo form_error ('city');
+                                    }
+                                    ?>
+                                </div>
+
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-city"></span><span
                                             class="input-text">City&#42;</span></span> <input type="text" required
                                                                                               class="form-control input-lg"
                                                                                               placeholder="Your City" name="city">
                                 </div>
+
+                                <div class="text-danger">
+                                    <?php
+                                    if(form_error ('pcode')){
+                                        echo form_error ('pcode');
+                                    }
+                                    ?>
+                                </div>
+
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-postcode"></span><span class="input-text">Post Code&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"

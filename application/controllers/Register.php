@@ -28,9 +28,59 @@ class Register extends CI_Controller {
                     'field' => 'pass2',
                     'label' => 'Confirm Password',
                     'rules' => 'required|min_length[7]|max_length[35]|matches[pass1]'
-                )
-                
+                ),
+                array(
+                    'field' => 'fname',
+                    'label' => 'First Name',
+                    'rules' => 'required|min_length[7]'
+                ),
+                array(
+                    'field' => 'lname',
+                    'label' => 'Last Name',
+                    'rules' => 'required|min_length[7]'
+                ),
+                array(
+                    'field' => 'phone',
+                    'label' => 'Phone No#',
+                    'rules' => 'required|min_length[11]'
+                ),
+                array(
+                    'field' => 'fax',
+                    'label' => 'FAX No#',
+                    'rules' => 'required'
+                ),
+                array(
+                    'field' => 'company',
+                    'label' => 'Company Name',
+                    'rules' => 'required'
+                ),
+                array(
+                    'field' => 'address1',
+                    'label' => 'Your Address',
+                    'rules' => 'required'
+                ),
+                array(
+                    'field' => 'address2',
+                    'label' => 'Your Address',
+                    'rules' => 'required|matches[address]'
+                ),
+                array(
+                    'field' => 'pcode',
+                    'label' => 'Passcode',
+                    'rules' => 'required'
+                ),
+                array(
+                    'field' => 'fax',
+                    'label' => 'FAX No#',
+                    'rules' => 'required|min_length[11]'
+                ),
+                array(
+                    'field' => 'city',
+                    'label' => 'City Name',
+                    'rules' => 'required'
+                ),
             );
+
 
 
             $this->form_validation->set_rules( $rules );
