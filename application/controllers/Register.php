@@ -41,13 +41,13 @@ class Register extends CI_Controller {
                 ),
                 array(
                     'field' => 'phone',
-                    'label' => 'Phone No#',
-                    'rules' => 'required|min_length[11]'
+                    'label' => 'Telephone',
+                    'rules' => 'required|min_length[11]|numeric'
                 ),
                 array(
                     'field' => 'fax',
-                    'label' => 'FAX No#',
-                    'rules' => 'required'
+                    'label' => 'FAX',
+                    'rules' => 'required|numeric'
                 ),
                 array(
                     'field' => 'company',
@@ -66,13 +66,13 @@ class Register extends CI_Controller {
                 ),
                 array(
                     'field' => 'pcode',
-                    'label' => 'Passcode',
-                    'rules' => 'required'
+                    'label' => 'Post Code',
+                    'rules' => 'required|numeric'
                 ),
                 array(
                     'field' => 'fax',
-                    'label' => 'FAX No#',
-                    'rules' => 'required|min_length[11]'
+                    'label' => 'FAX',
+                    'rules' => 'required|min_length[11]|numeric'
                 ),
                 array(
                     'field' => 'city',
