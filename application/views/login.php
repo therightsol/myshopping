@@ -279,13 +279,43 @@ include 'inc/menu.inc.php';
                         <p>If you have an account with us, please log in.</p>
 
                         <div class="xs-margin"></div>
-                        <form id="login-form" method="get" action="login.html#">
+                        <form id="login-form" method="post" action="<?php echo $root; ?>login">
+
+                            <div class="text-danger" >
+
+                                <?php
+
+                                    if(form_error('loginmail')){
+
+                                        echo form_error('loginmail');
+
+                                    }
+
+                                ?>
+
+                            </div>
+
                             <div class="input-group"><span class="input-group-addon"><span
                                         class="input-icon input-icon-email"></span><span
                                         class="input-text">Email&#42;</span></span> <input type="text" required
                                                                                            class="form-control input-lg"
                                                                                            placeholder="Your Email" name="loginmail">
                             </div>
+
+                            <div class="text-danger">
+
+                                <?php
+
+                                if(form_error('loginpass')){
+
+                                    echo form_error('loginpass');
+
+                                }
+
+                                ?>
+
+                            </div>
+
                             <div class="input-group xs-margin"><span class="input-group-addon"><span
                                         class="input-icon input-icon-password"></span><span class="input-text">Password&#42;</span></span>
                                 <input type="password" required class="form-control input-lg"
