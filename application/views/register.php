@@ -280,10 +280,13 @@ include 'inc/menu.inc.php';
                                          }
                                     ?>
                                 </div>
+
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-user"></span><span class="input-text">First Name&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
                                            placeholder="Your First Name" name="fname"></div>
+
+
 
                                 <div class="text-danger">
                                     <?php
