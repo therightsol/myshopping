@@ -56,18 +56,18 @@ class Register extends CI_Controller {
                 ),
                 array(
                     'field' => 'address1',
-                    'label' => 'Your Address',
+                    'label' => 'Address1',
                     'rules' => 'required'
                 ),
                 array(
                     'field' => 'address2',
-                    'label' => 'Your Address',
-                    'rules' => 'required|matches[address]'
+                    'label' => 'Address2',
+                    'rules' => 'required'
                 ),
                 array(
                     'field' => 'pcode',
                     'label' => 'Post Code',
-                    'rules' => 'required|numeric'
+                    'rules' => 'required|alpha_numeric'
                 ),
                 array(
                     'field' => 'fax',
