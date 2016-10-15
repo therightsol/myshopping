@@ -268,7 +268,7 @@ include 'inc/menu.inc.php';
                 <div class="xs-margin">
 
                 </div>
-                <form method="post" action="<?php echo $root; ?>register" id="register-form">
+                <form  method="post" action="<?php echo $root; ?>register" id="register-form">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <fieldset><h2 class="sub-title">YOUR PERSONAL DETAILS</h2>
@@ -307,10 +307,28 @@ include 'inc/menu.inc.php';
                                     }
                                     ?>
                                 </div>
+
+
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-email"></span><span class="input-text">Email&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
                                            placeholder="Your Email" name="email">
+                                </div>
+
+
+                                <div class="text-danger">
+                                    <?php
+                                    if (form_error('username')){
+                                        echo form_error('username');
+                                    }
+                                    ?>
+                                </div>
+
+
+                                <div class="input-group"><span class="input-group-addon"><span
+                                            class="input-icon input-icon-user"></span><span class="input-text">Email&#42;</span></span>
+                                    <input type="text" required class="form-control input-lg"
+                                           placeholder="Username" name="username">
                                 </div>
                                 <div class="text-danger">
                                     <?php

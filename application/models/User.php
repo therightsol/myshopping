@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class User extends CI_Model{
+class User extends MY_Model{
     const  pk = 'id';
     const tablename = "users";
 

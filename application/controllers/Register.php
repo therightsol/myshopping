@@ -79,6 +79,12 @@ class Register extends CI_Controller {
                     'label' => 'City Name',
                     'rules' => 'required'
                 ),
+
+                array(
+                    'field' => 'username',
+                    'label' => 'Username',
+                    'rules' => 'required|min_length[3]|max_length[25]'
+                )
             );
 
 
@@ -87,6 +93,23 @@ class Register extends CI_Controller {
 
             if (! $this->form_validation->run() == FALSE ){
                 //continue
+
+                $this->load->model('user');
+                // 1) check is user and email address available or not
+
+                $username = $this->input->post('username', True);
+                $email = $this->input->post('email', True);
+
+                $isRecordAvailable = $this->checkIsAvailable(array('username' => $username, 'email' => $email));
+
+                if (! $isRecordAvailable){
+                    // you can now create record
+                    echo 'continue....';
+                }else {
+                    echo 'Sorry, user already exists';
+                }
+
+
             }else {
 
                 // Show errors
@@ -105,7 +128,30 @@ class Register extends CI_Controller {
         */
         }
 
+    }
+
+    private function checkIsAvailable( array $arr ){
+        $is_record_available = array ();
+        foreach( $arr as $key => $value ){
+            $is_record_available[$key] = $this->user->getRecord($value, $key);
+
+        }
+
+        if(!array_filter($is_record_available)) {
+            return false;
+        }
+
+        return true;
+        //$this->debug($is_record_available, true);
+    }
 
 
+    /*
+     * Debug function
+     */
+    private function debug( $val, $die = false ){
+        echo '<tt><pre>' . var_export($val, True) . '</pre></tt>';
+
+        if ($die) exit('<hr />Exit from Debug in Register.php Controller.');
     }
 }
