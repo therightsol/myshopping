@@ -15,29 +15,29 @@ class Register extends CI_Controller {
                 array(
                     'field' => 'email',
                     'label' => 'E-mail',
-                    'rules' => 'required|valid_email'
+                    'rules' => 'required|valid_email|max_length[255]'
                 ),
 
                 array(
                     'field' => 'pass1',
                     'label' => 'Password',
-                    'rules' => 'required|min_length[7]|max_length[35]'
+                    'rules' => 'required|min_length[7]|max_length[255]'
                 ),
 
                 array(
                     'field' => 'pass2',
                     'label' => 'Confirm Password',
-                    'rules' => 'required|min_length[7]|max_length[35]|matches[pass1]'
+                    'rules' => 'required|min_length[7]|max_length[255]|matches[pass1]'
                 ),
                 array(
                     'field' => 'fname',
                     'label' => 'First Name',
-                    'rules' => 'required|min_length[7]'
+                    'rules' => 'required|min_length[7]|max_length[100]'
                 ),
                 array(
                     'field' => 'lname',
                     'label' => 'Last Name',
-                    'rules' => 'required|min_length[7]'
+                    'rules' => 'required|min_length[7]|max_length[100]'
                 ),
                 array(
                     'field' => 'phone',
@@ -83,7 +83,7 @@ class Register extends CI_Controller {
                 array(
                     'field' => 'username',
                     'label' => 'Username',
-                    'rules' => 'required|min_length[3]|max_length[25]'
+                    'rules' => 'required|min_length[3]|max_length[255]'
                 )
             );
 
@@ -91,7 +91,7 @@ class Register extends CI_Controller {
 
             $this->form_validation->set_rules( $rules );
 
-            if (! $this->form_validation->run() == FALSE ){
+            if ( $this->form_validation->run() == FALSE ){
                 //continue
 
                 $this->load->model('user');
