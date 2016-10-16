@@ -91,7 +91,7 @@ class Register extends CI_Controller {
 
             $this->form_validation->set_rules( $rules );
 
-            if ( $this->form_validation->run() == FALSE ){
+            if (! $this->form_validation->run() == FALSE ){
                 //continue
 
                 $this->load->model('user');
