@@ -4,6 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Register extends CI_Controller {
     public function index(){
 
+        $data['userexists'] = false;
+
         $this->load->library('form_validation');
 
 
@@ -91,7 +93,7 @@ class Register extends CI_Controller {
 
             $this->form_validation->set_rules( $rules );
 
-            if (! $this->form_validation->run() == FALSE ){
+            if ( $this->form_validation->run() == FALSE ){
                 //continue
 
                 $this->load->model('user');
@@ -102,14 +104,42 @@ class Register extends CI_Controller {
 
                 $isRecordAvailable = $this->checkIsAvailable(array('username' => $username, 'email' => $email));
 
+
+
                 if (! $isRecordAvailable){
                     // you can now create record
-                    echo 'continue....';
+
+
+                    /* Getting values from form*/
+
+                    $password = $this->input->post('pass2', True);
+                    $encryptedPass = password_hash($password, PASSWORD_BCRYPT, array('cost'=>12));
+
+                    $this->user->email = $email;
+                    $this->user->password = $encryptedPass;
+                    $this->user->username = $username;
+
+                    $result = $this->user->insertRecord();
+
+                    if ($result){
+                        echo 'User successfully registered';
+                    }else {
+                        echo ' Sorry! there are some internal problem';
+                    }
+
+
+                    /*$firstName = $this->input->post('fname', True);
+                    $firstName = $this->input->post('fname', True);
+                    $firstName = $this->input->post('fname', True);
+                    $firstName = $this->input->post('fname', True);
+                    $firstName = $this->input->post('fname', True);*/
+
+
+
                 }else {
-                    echo 'Sorry, user already exists';
+                    $data['userexists'] = true;
+                    $this->load->view('register', $data);
                 }
-
-
             }else {
 
                 // Show errors
@@ -119,7 +149,7 @@ class Register extends CI_Controller {
                 $this->load->view('register', $data);
             }
         }else {
-           $this->load->view('register');
+           $this->load->view('register', $data);
             /*$pass='alishan';
             echo $pass . '<br>' ;
 
@@ -137,11 +167,11 @@ class Register extends CI_Controller {
 
         }
 
-        if(!array_filter($is_record_available)) {
-            return false;
+        if(array_filter($is_record_available)) {
+            return true;
         }
 
-        return true;
+        return false;
         //$this->debug($is_record_available, true);
     }
 
