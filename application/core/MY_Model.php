@@ -210,7 +210,7 @@ class MY_Model extends CI_Model {
      * @param type $tableName, string that contain the table name.
      * @return type, return how many rows are in that table.
      */
-    public function getNumber_of_rows($tableName, $columnName = FALSE, $where_value = FALSE, $customQuery = FALSE, $columAndvalues = FALSE, $tableName = FALSE ){
+    public function getNumber_of_rows($tableName, $columnName = FALSE, $where_value = FALSE, $customQuery = FALSE, $columAndvalues = FALSE ){
 
         // if there is any special case, in which we want to fetch data with custom query.
         // then we will use customQuery as True. and so, this block of code will execute.

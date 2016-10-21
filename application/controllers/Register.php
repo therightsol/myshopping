@@ -86,6 +86,11 @@ class Register extends CI_Controller {
                     'field' => 'username',
                     'label' => 'Username',
                     'rules' => 'required|min_length[3]|max_length[255]'
+                ),
+                array(
+                    'field' => 'checkbox',
+                    'label' => 'Check Box',
+                    'rules' => 'required'
                 )
             );
 
