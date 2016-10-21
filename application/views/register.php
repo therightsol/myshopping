@@ -268,7 +268,7 @@ include 'inc/menu.inc.php';
                 <div class="xs-margin">
 
                 </div>
-                <form  method="post" action="<?php echo $root; ?>register" id="register-form">
+                <form method="post" action="<?php echo $root; ?>register" id="register-form">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <fieldset><h2 class="sub-title">YOUR PERSONAL DETAILS</h2>
