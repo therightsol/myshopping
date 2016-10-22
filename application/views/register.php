@@ -29,15 +29,15 @@ include 'inc/panel.inc.php';
                 </div>
 <<<<<<< HEAD
                 <form method="post" action="<?php echo $root; ?>register" id="register-form">
+
+                    <?php if ($userexists): ?>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="alert alert-danger">Sorry ! user already exist.<br />Please choose another username.</div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
 =======
-                
-                <?php if ($userexists): ?>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="alert alert-danger">Sorry ! user already exist. <br />Please choose another username.</div>
-        </div>
-    </div>
-    <?php endif; ?>
                 <form novalidate  method="post" action="<?php echo $root; ?>register" id="register-form">
 >>>>>>> origin/master
                     <div class="row">
@@ -79,7 +79,6 @@ include 'inc/panel.inc.php';
                                     ?>
                                 </div>
 
-
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-email"></span><span class="input-text">Email&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
@@ -94,7 +93,6 @@ include 'inc/panel.inc.php';
                                     }
                                     ?>
                                 </div>
-
 
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-user"></span><span class="input-text">Username&#42;</span></span>

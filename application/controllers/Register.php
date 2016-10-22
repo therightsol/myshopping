@@ -5,6 +5,7 @@ class Register extends CI_Controller {
     public function index(){
 
         $data['userexists'] = false;
+        $data['emailexists'] = false;
 
         $this->load->library('form_validation');
 
@@ -149,7 +150,7 @@ class Register extends CI_Controller {
 
 
 
-                }else {
+                }else{
                     $data['userexists'] = true;
                     $this->load->view('register', $data);
                 }
