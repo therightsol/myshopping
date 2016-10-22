@@ -117,12 +117,27 @@ class Register extends CI_Controller {
 
                     /* Getting values from form*/
 
+                    $firstName = $this->input->post('fname', True);
+                    $lastName = $this->input->post('lname', True);
+                    /*$phone = $this->input->post('phone', True);
+                    $fax = $this->input->post('fax', True);
+                    $company = $this->input->post('company', True);
+                    $address1 = $this->input->post('address1', True);
+                    $address2 = $this->input->post('address2', True);
+                    $city = $this->input->post('city', True);
+                    $passCode = $this->input->post('pcode', True);
+                    $country = $this->input->post('country', True);
+                    $state = $this->input->post('state', True);*/
+
                     $password = $this->input->post('pass2', True);
                     $encryptedPass = password_hash($password, PASSWORD_BCRYPT, array('cost'=>12));
+
 
                     $this->user->email = $email;
                     $this->user->password = $encryptedPass;
                     $this->user->username = $username;
+                    $this->user->firstname = $firstName;
+                    $this->user->lastname = $lastName;
 
                     $result = $this->user->insertRecord();
 
@@ -131,13 +146,6 @@ class Register extends CI_Controller {
                     }else {
                         echo ' Sorry! there are some internal problem';
                     }
-
-
-                    /*$firstName = $this->input->post('fname', True);
-                    $firstName = $this->input->post('fname', True);
-                    $firstName = $this->input->post('fname', True);
-                    $firstName = $this->input->post('fname', True);
-                    $firstName = $this->input->post('fname', True);*/
 
 
 
