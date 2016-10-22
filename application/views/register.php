@@ -97,9 +97,9 @@ include 'inc/panel.inc.php';
 
 
                                 <div class="input-group"><span class="input-group-addon"><span
-                                            class="input-icon input-icon-user"></span><span class="input-text">Email&#42;</span></span>
+                                            class="input-icon input-icon-user"></span><span class="input-text">Username&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
-                                           placeholder="Username" name="username">
+                                           placeholder="Your Username" name="username">
                                 </div>
                                 <div class="text-danger">
                                     <?php
