@@ -143,8 +143,11 @@ class Register extends CI_Controller {
                     $result = $this->user->insertRecord();
 
                     if ($result){
-                        echo 'User successfully registered';
-                    }else {
+                        echo '<h1 style="text-align: center; color: green;"> User successfully registered </h1>';
+
+                    }
+
+                    else{
                         echo ' Sorry! there are some internal problem';
                     }
 

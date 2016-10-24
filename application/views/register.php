@@ -28,7 +28,7 @@ include 'inc/panel.inc.php';
 
                 </div>
 <<<<<<< HEAD
-                <form method="post" action="<?php echo $root; ?>register" id="register-form">
+                <form novalidate method="post" action="<?php echo $root; ?>register" id="register-form">
 
                     <?php if ($userexists): ?>
                         <div class="row">
@@ -246,13 +246,6 @@ include 'inc/panel.inc.php';
 
                                 <div class="input-desc-box"><span class="separator icon-box">&plus;</span>I wish to
                                     subscribe to the Venedor newsletter.
-                                </div>
-                                <div class="text-danger">
-                                    <?php
-                                    if(form_error ('checkbox')){
-                                        echo form_error ('checkbox');
-                                    }
-                                    ?>
                                 </div>
                                 <div class="input-group custom-checkbox"><input type="checkbox" name="checkbox"> <span
                                         class="checbox-container"><i class="fa fa-check"></i></span> I have reed and
