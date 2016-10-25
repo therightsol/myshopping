@@ -140,16 +140,28 @@ class Register extends CI_Controller {
                     $this->user->firstname = $firstName;
                     $this->user->lastname = $lastName;
 
+                    // id of newly created record in users table
                     $result = $this->user->insertRecord();
 
                     if ($result){
-                        echo 'User successfully registered';
+                        $this->load->model('usersmeta');
+
+                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->metakey = 'telephoneNumber';
+                        $this->usersmeta->metavalue = $this->input->post('phone', True);
+                        $this->usersmeta->uid = $result;
+
+                        $result = $this->usersmeta->insertRecord();
+
+                        if ($result){
+
+                            echo 'User successfully registered';
+                        }else {
+                            echo ' Sorry! there are some internal problem';
+                        }
                     }else {
                         echo ' Sorry! there are some internal problem';
                     }
-
-
-
                 }else{
                     $data['userexists'] = true;
                     $this->load->view('register', $data);
