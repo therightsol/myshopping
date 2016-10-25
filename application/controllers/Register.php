@@ -5,6 +5,8 @@ class Register extends CI_Controller {
     public function index(){
 
         $data['userexists'] = false;
+        $data['success'] = false;
+        $data['failure'] = false;
         $data['emailexists'] = false;
 
         $this->load->library('form_validation');
@@ -155,9 +157,14 @@ class Register extends CI_Controller {
 
                         if ($result){
 
-                            echo 'User successfully registered';
+                            // echo 'User successfully registered';
+                            $data['success'] = true;
+                            $this->load->view('register', $data);
+
                         }else {
-                            echo ' Sorry! there are some internal problem';
+                            //echo ' Sorry! there are some internal problem';
+                            $data['failure'] = true;
+                            $this->load->view('register', $data);
                         }
                     }else {
                         echo ' Sorry! there are some internal problem';

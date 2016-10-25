@@ -37,6 +37,22 @@ include 'inc/panel.inc.php';
                             </div>
                         </div>
                     <?php endif; ?>
+
+                    <?php if ($success): ?>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="alert alert-info">Congratulations ! user added Successfully .</div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ($failure): ?>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="alert alert-danger">Congratulations ! user added Successfully .</div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
 =======
                 <form novalidate  method="post" action="<?php echo $root; ?>register" id="register-form">
 >>>>>>> origin/master
