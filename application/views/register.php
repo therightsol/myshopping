@@ -263,6 +263,11 @@ include 'inc/panel.inc.php';
                                 <div class="input-desc-box"><span class="separator icon-box">&plus;</span>I wish to
                                     subscribe to the Venedor newsletter.
                                 </div>
+                                <?php
+                                if (form_error('error')){
+                                    echo '<div class="danger alert-danger"> Please check the check box before submit</div>';
+                                }
+                                ?>
                                 <div class="input-group custom-checkbox"><input type="checkbox" name="checkbox"> <span
                                         class="checbox-container"><i class="fa fa-check"></i></span> I have reed and
                                     agree to the <a href="<?php echo $root; ?>privacy">Privacy Policy</a>.

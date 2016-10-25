@@ -146,22 +146,12 @@ class Register extends CI_Controller {
                     $result = $this->user->insertRecord();
 
                     if ($result){
-<<<<<<< HEAD
-                        echo '<h1 style="text-align: center; color: green;"> User successfully registered </h1>';
-
-                    }
-
-                    else{
-                        echo ' Sorry! there are some internal problem';
-                    }
-=======
                         $this->load->model('usersmeta');
 
                         $this->usersmeta->uid = $result;
                         $this->usersmeta->metakey = 'telephoneNumber';
                         $this->usersmeta->metavalue = $this->input->post('phone', True);
                         $this->usersmeta->uid = $result;
->>>>>>> origin/master
 
                         $result = $this->usersmeta->insertRecord();
 
@@ -171,7 +161,11 @@ class Register extends CI_Controller {
                             $data['success'] = true;
                             $this->load->view('register', $data);
 
-                        }else {
+                        } elseif(!isset($_POST['checkbox'])){
+                            $check['error'] = "Please check before submit";
+                            $this->load->view('register', $check);
+                        }
+                    else {
                             //echo ' Sorry! there are some internal problem';
                             $data['failure'] = true;
                             $this->load->view('register', $data);
@@ -186,13 +180,13 @@ class Register extends CI_Controller {
             }else {
 
                 // Show errors
-                
+
                 $data['validation_errors'] = validation_errors();
 
                 $this->load->view('register', $data);
             }
         }else {
-           $this->load->view('register', $data);
+            $this->load->view('register', $data);
             /*$pass='alishan';
             echo $pass . '<br>' ;
 
