@@ -2,10 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class Usersmeta extends CI_Model{
+class Usersmeta extends MY_Model{
 
-    const pk = 'id';
-    const tablename = 'usersmetas';
+    const DB_TablePK = 'id';
+    const DB_TableName = 'usersmetas';
 
     public $uid = '';
     public $metakey = '';

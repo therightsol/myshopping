@@ -5,6 +5,8 @@ class Register extends CI_Controller {
     public function index(){
 
         $data['userexists'] = false;
+        $data['success'] = false;
+        $data['failure'] = false;
         $data['emailexists'] = false;
 
         $this->load->library('form_validation');
@@ -140,9 +142,11 @@ class Register extends CI_Controller {
                     $this->user->firstname = $firstName;
                     $this->user->lastname = $lastName;
 
+                    // id of newly created record in users table
                     $result = $this->user->insertRecord();
 
                     if ($result){
+<<<<<<< HEAD
                         echo '<h1 style="text-align: center; color: green;"> User successfully registered </h1>';
 
                     }
@@ -150,9 +154,31 @@ class Register extends CI_Controller {
                     else{
                         echo ' Sorry! there are some internal problem';
                     }
+=======
+                        $this->load->model('usersmeta');
 
+                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->metakey = 'telephoneNumber';
+                        $this->usersmeta->metavalue = $this->input->post('phone', True);
+                        $this->usersmeta->uid = $result;
+>>>>>>> origin/master
 
+                        $result = $this->usersmeta->insertRecord();
 
+                        if ($result){
+
+                            // echo 'User successfully registered';
+                            $data['success'] = true;
+                            $this->load->view('register', $data);
+
+                        }else {
+                            //echo ' Sorry! there are some internal problem';
+                            $data['failure'] = true;
+                            $this->load->view('register', $data);
+                        }
+                    }else {
+                        echo ' Sorry! there are some internal problem';
+                    }
                 }else{
                     $data['userexists'] = true;
                     $this->load->view('register', $data);
