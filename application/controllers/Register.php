@@ -153,6 +153,46 @@ class Register extends CI_Controller {
                         $this->usersmeta->metavalue = $this->input->post('phone', True);
                         $this->usersmeta->uid = $result;
 
+                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->metakey = 'fax';
+                        $this->usersmeta->metavalue = $this->input->post('fax', True);
+                        $this->usersmeta->uid = $result;
+
+                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->metakey = 'companyname';
+                        $this->usersmeta->metavalue = $this->input->post('company', True);
+                        $this->usersmeta->uid = $result;
+
+                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->metakey = 'address_1';
+                        $this->usersmeta->metavalue = $this->input->post('address1', True);
+                        $this->usersmeta->uid = $result;
+
+                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->metakey = 'address_2';
+                        $this->usersmeta->metavalue = $this->input->post('address2', True);
+                        $this->usersmeta->uid = $result;
+
+                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->metakey = 'city_name';
+                        $this->usersmeta->metavalue = $this->input->post('city', True);
+                        $this->usersmeta->uid = $result;
+
+                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->metakey = 'post_code';
+                        $this->usersmeta->metavalue = $this->input->post('pcode', True);
+                        $this->usersmeta->uid = $result;
+
+                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->metakey = 'country_name';
+                        $this->usersmeta->metavalue = $this->input->post('country', True);
+                        $this->usersmeta->uid = $result;
+
+                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->metakey = 'region/state';
+                        $this->usersmeta->metavalue = $this->input->post('state', True);
+                        $this->usersmeta->uid = $result;
+
                         $result = $this->usersmeta->insertRecord();
 
                         if ($result){
