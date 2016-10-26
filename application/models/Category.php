@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Category extends CI_Model{
 
-    const pk = 'id';
-    const tablename = 'categories';
+    const DB_TablePK = 'id';
+    const DB_TableName = 'categories';
 
     public $category = '';
     public $image = '';

@@ -3,8 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 class Creditcard_detail extends CI_Model{
-    const  pk = 'id';
-    const tablename = "creditcard_details";
+    const  DB_TablePK = 'id';
+    const DB_TableName = "creditcard_details";
 
     public $cc_number = '';
     public $bankname = "";

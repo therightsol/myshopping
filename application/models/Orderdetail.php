@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Orderdetail extends CI_Model{
 
-    const pk = 'id';
-    const tablename = 'orderdetails';
+    const DB_TablePK = 'id';
+    const DB_TableName = 'orderdetails';
 
     public $oid = '';
     public $pid = '';

@@ -37,12 +37,12 @@ class Register extends CI_Controller {
                 array(
                     'field' => 'fname',
                     'label' => 'First Name',
-                    'rules' => 'required|min_length[7]|max_length[100]'
+                    'rules' => 'required|min_length[4]|max_length[100]'
                 ),
                 array(
                     'field' => 'lname',
                     'label' => 'Last Name',
-                    'rules' => 'required|min_length[7]|max_length[100]'
+                    'rules' => 'required|min_length[4]|max_length[100]'
                 ),
                 array(
                     'field' => 'phone',

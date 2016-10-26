@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Product extends CI_Model{
 
-    const pk = 'id';
-    const tablename = 'products';
+    const DB_TablePK = 'id';
+    const DB_TableName = 'products';
 
     public $title = '';
     public $description = '';

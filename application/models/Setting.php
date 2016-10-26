@@ -3,8 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 class Setting extends CI_Model{
-    const  pk = 'id';
-    const tablename = "settings";
+    const  DB_TablePK = 'id';
+    const DB_TableName = "settings";
 
     public $key = "";
     public $value = '';

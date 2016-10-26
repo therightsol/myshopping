@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Order extends CI_Model{
 
-    const pk = 'id';
-    const tablename = 'orders';
+    const DB_TablePK = 'id';
+    const DB_TableName = 'orders';
 
     public $givenBy_uid = '';
     public $invoiceNumber = '';

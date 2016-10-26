@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Productmeta extends CI_Model{
 
-    const pk = 'id';
-    const tablename = 'productmetas';
+    const DB_TablePK = 'id';
+    const DB_TableName = 'productmetas';
 
     public $pid = '';
     public $metakey = '';
