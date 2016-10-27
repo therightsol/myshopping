@@ -49,7 +49,7 @@ include 'inc/panel.inc.php';
                     <?php if ($failure): ?>
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="alert alert-danger">Congratulations ! user added Successfully .</div>
+                                <div class="alert alert-danger">Sorry  ! There is some internal Problem .</div>
                             </div>
                         </div>
                     <?php endif; ?>
