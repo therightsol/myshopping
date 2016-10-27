@@ -149,7 +149,7 @@ class Register extends CI_Controller {
                         $this->load->model('usersmeta');
 
                         $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'telephoneNumber';
+                        $this->usersmeta->metakey = 'telephoneNum';
                         $this->usersmeta->metavalue = $this->input->post('phone', True);
                         $this->usersmeta->uid = $result;
 
@@ -164,12 +164,12 @@ class Register extends CI_Controller {
                         $this->usersmeta->uid = $result;
 
                         $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'addressOne';
+                        $this->usersmeta->metakey = 'firstAddress';
                         $this->usersmeta->metavalue = $this->input->post('address1', True);
                         $this->usersmeta->uid = $result;
 
                         $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'addressTwo';
+                        $this->usersmeta->metakey = 'secondAddress';
                         $this->usersmeta->metavalue = $this->input->post('address2', True);
                         $this->usersmeta->uid = $result;
 
@@ -189,9 +189,11 @@ class Register extends CI_Controller {
                         $this->usersmeta->uid = $result;
 
                         $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'region/state';
+                        $this->usersmeta->metakey = 'regionOrstate';
                         $this->usersmeta->metavalue = $this->input->post('state', True);
                         $this->usersmeta->uid = $result;
+
+
 
                         $result = $this->usersmeta->insertRecord();
 
