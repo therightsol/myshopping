@@ -203,8 +203,8 @@ class Register extends CI_Controller {
                             $data['success'] = true;
                             $this->load->view('register', $data);
 
-                        } elseif(!isset($_POST['checkbox'])){
-                            $check['error'] = "Please check before submit";
+                        } elseif(! isset($_POST['checkbox'])){
+                            $check['checkbox' ] = "Please check before submit";
                             $this->load->view('register', $check);
                         }
                     else {

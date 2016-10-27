@@ -264,7 +264,7 @@ include 'inc/panel.inc.php';
                                     subscribe to the Venedor newsletter.
                                 </div>
                                 <?php
-                                if (form_error('error')){
+                                if (form_error('checkbox')){
                                     echo '<div class="danger alert-danger"> Please check the check box before submit</div>';
                                 }
                                 ?>
