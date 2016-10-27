@@ -148,17 +148,54 @@ class Register extends CI_Controller {
                     if ($result){
                         $this->load->model('usersmeta');
 
-                        $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'telephoneNum';
-                        $this->usersmeta->metavalue = $this->input->post('phone', True);
-                        $this->usersmeta->uid = $result;
+                        $metaRec = array (
+                            array(
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'telephoneNum',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('phone', True),
+                            ),
+                            array(
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'fax',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('fax', True)
+                            ),
+                            array(
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'companyName',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('company', True)
+                            )
+                        );
 
-                        $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'fax';
-                        $this->usersmeta->metavalue = $this->input->post('fax', True);
-                        $this->usersmeta->uid = $result;
 
-                        $this->usersmeta->uid = $result;
+                        //$numRows = $this->usersmeta->insertBatch( $metaRec );
+
+                        /*$numRows = count($metaRec);
+                        if ($numRows == count($metaRec)){
+
+                            // Send Email
+                            $body = "<h1>Welcome to MyShopping</h1><br />"
+                                . "You are successfully registered. Please verify your account.";
+                                // @todo verification will pending untill next 4 lectures.
+                            $is_email_sent = $this->send_email('myshoppinglhr@gmail.com', $email, 'Verify your account - MyShopping', $body );
+                            var_export($is_email_sent);*/
+
+
+
+                            // @todo show this to register page -- pending to Ubaid Ullah
+                            echo "You are successfully registered.";
+
+
+
+
+                        }else {
+                            // @todo show related errors / internal error
+                        }
+
+
+
+
+
+                        /*$this->usersmeta->uid = $result;
                         $this->usersmeta->metakey = 'companyName';
                         $this->usersmeta->metavalue = $this->input->post('company', True);
                         $this->usersmeta->uid = $result;
@@ -191,11 +228,9 @@ class Register extends CI_Controller {
                         $this->usersmeta->uid = $result;
                         $this->usersmeta->metakey = 'regionOrstate';
                         $this->usersmeta->metavalue = $this->input->post('state', True);
-                        $this->usersmeta->uid = $result;
+                        $this->usersmeta->uid = $result;*/
 
 
-
-                        $result = $this->usersmeta->insertRecord();
 
                         if ($result){
 
@@ -263,4 +298,26 @@ class Register extends CI_Controller {
 
         if ($die) exit('<hr />Exit from Debug in Register.php Controller.');
     }
+
+
+    /* Send Email */
+
+    private function send_email( $from, $to, $subject, $body){
+        $this->load->library('email');
+
+
+        $result = $this->email
+            ->from($from)
+            ->reply_to($from)    // Optional, an account where a human being reads.
+            ->to($to)
+            ->subject($subject)
+            ->message($body)
+            ->send();
+
+        echo $this->email->print_debugger();
+
+        return $result;
+
+    }
+
 }
