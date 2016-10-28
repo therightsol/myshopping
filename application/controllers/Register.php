@@ -177,7 +177,7 @@ class Register extends CI_Controller {
                                 . "You are successfully registered. Please verify your account.";
                                 // @todo verification will pending untill next 4 lectures.
                             $is_email_sent = $this->send_email('myshoppinglhr@gmail.com', $email, 'Verify your account - MyShopping', $body );
-                            var_export($is_email_sent);*/
+                            var_export($is_email_sent);
 
 
 
@@ -189,7 +189,7 @@ class Register extends CI_Controller {
 
                         }else {
                             // @todo show related errors / internal error
-                        }
+                        }*/
 
 
 
@@ -263,7 +263,7 @@ class Register extends CI_Controller {
                 $this->load->view('register', $data);
             }
         }else {
-            $this->load->view('register', $data);
+            $this->load->view('register' , $data);
             /*$pass='alishan';
             echo $pass . '<br>' ;
 
