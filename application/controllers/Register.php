@@ -1,8 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Register extends CI_Controller {
-    public function index(){
+class Register extends CI_Controller
+{
+    public function index()
+    {
 
         $data['userexists'] = false;
         $data['success'] = false;
@@ -12,11 +14,11 @@ class Register extends CI_Controller {
         $this->load->library('form_validation');
 
 
-        if (filter_input_array(INPUT_POST)){
+        if (filter_input_array(INPUT_POST)) {
 
 
             // 1) set rules / define rules /
-            $rules = array (
+            $rules = array(
                 array(
                     'field' => 'email',
                     'label' => 'E-mail',
@@ -98,10 +100,9 @@ class Register extends CI_Controller {
             );
 
 
+            $this->form_validation->set_rules($rules);
 
-            $this->form_validation->set_rules( $rules );
-
-            if ( $this->form_validation->run() == True ){
+            if ($this->form_validation->run() == True) {
                 //continue
 
                 $this->load->model('user');
@@ -113,8 +114,7 @@ class Register extends CI_Controller {
                 $isRecordAvailable = $this->checkIsAvailable(array('username' => $username, 'email' => $email));
 
 
-
-                if (! $isRecordAvailable){
+                if (!$isRecordAvailable) {
                     // you can now create record
 
 
@@ -122,18 +122,8 @@ class Register extends CI_Controller {
 
                     $firstName = $this->input->post('fname', True);
                     $lastName = $this->input->post('lname', True);
-                    /*$phone = $this->input->post('phone', True);
-                    $fax = $this->input->post('fax', True);
-                    $company = $this->input->post('company', True);
-                    $address1 = $this->input->post('address1', True);
-                    $address2 = $this->input->post('address2', True);
-                    $city = $this->input->post('city', True);
-                    $passCode = $this->input->post('pcode', True);
-                    $country = $this->input->post('country', True);
-                    $state = $this->input->post('state', True);*/
-
                     $password = $this->input->post('pass2', True);
-                    $encryptedPass = password_hash($password, PASSWORD_BCRYPT, array('cost'=>12));
+                    $encryptedPass = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
 
 
                     $this->user->email = $email;
@@ -142,13 +132,16 @@ class Register extends CI_Controller {
                     $this->user->firstname = $firstName;
                     $this->user->lastname = $lastName;
 
+
+                    $this->user->createdAt = date('Y-m-d H:i:s');
+
                     // id of newly created record in users table
                     $result = $this->user->insertRecord();
 
-                    if ($result){
+                    if ($result) {
                         $this->load->model('usersmeta');
 
-                        $metaRec = array (
+                        $metaRec = array(
                             array(
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'telephoneNum',
@@ -163,53 +156,21 @@ class Register extends CI_Controller {
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'companyName',
                                 'metavalue' => $this->usersmeta->metavalue = $this->input->post('company', True)
-                            )
+                            ),
+                            array(
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'firstAddress',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('address1', True)
+                            ),
+                            array(
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'secondAddress',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('address2', True)
+                            ),
                         );
 
-
-                        //$numRows = $this->usersmeta->insertBatch( $metaRec );
-
-                        /*$numRows = count($metaRec);
-                        if ($numRows == count($metaRec)){
-
-                            // Send Email
-                            $body = "<h1>Welcome to MyShopping</h1><br />"
-                                . "You are successfully registered. Please verify your account.";
-                                // @todo verification will pending untill next 4 lectures.
-                            $is_email_sent = $this->send_email('myshoppinglhr@gmail.com', $email, 'Verify your account - MyShopping', $body );
-                            var_export($is_email_sent);
-
-
-
-                            // @todo show this to register page -- pending to Ubaid Ullah
-                            echo "You are successfully registered.";
-
-
-
-
-                        }else {
-                            // @todo show related errors / internal error
-                        }*/
-
-
-
-
-
-                        /*$this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'companyName';
-                        $this->usersmeta->metavalue = $this->input->post('company', True);
-                        $this->usersmeta->uid = $result;
-
-                        $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'firstAddress';
-                        $this->usersmeta->metavalue = $this->input->post('address1', True);
-                        $this->usersmeta->uid = $result;
-
-                        $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'secondAddress';
-                        $this->usersmeta->metavalue = $this->input->post('address2', True);
-                        $this->usersmeta->uid = $result;
-
+                        /*
+                        @todo Asad please add these to the above array
                         $this->usersmeta->uid = $result;
                         $this->usersmeta->metakey = 'cityName';
                         $this->usersmeta->metavalue = $this->input->post('city', True);
@@ -228,57 +189,80 @@ class Register extends CI_Controller {
                         $this->usersmeta->uid = $result;
                         $this->usersmeta->metakey = 'regionOrstate';
                         $this->usersmeta->metavalue = $this->input->post('state', True);
-                        $this->usersmeta->uid = $result;*/
+                        $this->usersmeta->uid = $result;
 
 
+                        // @todo ASAD please insert DATE / TIME stamp in Database, at which time the record is inserted.
+                        // @todo for this step look how I inserted date / time above in user's table
 
-                        if ($result){
 
-                            // echo 'User successfully registered';
-                            $data['success'] = true;
-                            $this->load->view('register', $data);
+                        */
 
+
+                        $numRows = $this->usersmeta->insertBatch($metaRec);
+
+                        // Debugging
+                        /*var_export($numRows);
+                        echo '<hr />';
+                        var_export(count($metaRec));
+                        exit();*/
+
+                        if ($numRows == count($metaRec)) {
+
+                            // Send Email
+                            $body = "<h1>Welcome to MyShopping</h1><br />"
+                                . "You are successfully registered. Please verify your account.";
+                            // @todo verification will pending untill next 4 lectures.
+                            $is_email_sent = $this->send_email('myshoppinglhr@gmail.com', $email, 'Verify your account - MyShopping', $body);
+
+
+                            exit('hiii');
+
+                            if ($is_email_sent) {
+
+                                // email sent now show success
+                                $data['success'] = true;
+                                $this->load->view('register', $data);
+
+                            } else {
+                                // email not sent  show error
+                                // @todo show related errors / internal error to front side {email not sent } : Obaid Ullah
+
+                            }
+                        } else {
+                            // the batch operation is not equals to count value. it means some values not inserted and that is an error
+                            // @todo show related errors / internal error to front side : Obaid Ullah
                         }
-                    else {
-                            //echo ' Sorry! there are some internal problem';
-                            $data['failure'] = true;
-                            $this->load->view('register', $data);
-                        }
-                    }else {
+                    } else {
+                        // $result means data not inserted
+                        // @todo show related errors / internal error to front side : Obaid Ullah
+
                         echo ' Sorry! there are some internal problem';
                     }
-                }else{
+                } else {
                     $data['userexists'] = true;
                     $this->load->view('register', $data);
                 }
-            }else {
-
-                // Show errors
-
+            } else {
+                // Show validation errors
                 $data['validation_errors'] = validation_errors();
-
                 $this->load->view('register', $data);
             }
-        }else {
-            $this->load->view('register' , $data);
-            /*$pass='alishan';
-            echo $pass . '<br>' ;
-
-            echo 'md5 Pass' . md5($pass) . '<br/>';
-            echo 'hashed Pass -- ' . password_hash($pass, PASSWORD_BCRYPT, array('cost' => 12)) . '<br/>';
-        */
+        } else {
+            $this->load->view('register', $data);
         }
 
     }
 
-    private function checkIsAvailable( array $arr ){
-        $is_record_available = array ();
-        foreach( $arr as $key => $value ){
+    private function checkIsAvailable(array $arr)
+    {
+        $is_record_available = array();
+        foreach ($arr as $key => $value) {
             $is_record_available[$key] = $this->user->getRecord($value, $key);
 
         }
 
-        if(array_filter($is_record_available)) {
+        if (array_filter($is_record_available)) {
             return true;
         }
 
@@ -290,7 +274,8 @@ class Register extends CI_Controller {
     /*
      * Debug function
      */
-    private function debug( $val, $die = false ){
+    private function debug($val, $die = false)
+    {
         echo '<tt><pre>' . var_export($val, True) . '</pre></tt>';
 
         if ($die) exit('<hr />Exit from Debug in Register.php Controller.');
@@ -299,19 +284,20 @@ class Register extends CI_Controller {
 
     /* Send Email */
 
-    private function send_email( $from, $to, $subject, $body){
+    private function send_email($from, $to, $subject, $body)
+    {
         $this->load->library('email');
 
 
         $result = $this->email
             ->from($from)
-            ->reply_to($from)    // Optional, an account where a human being reads.
+            ->reply_to($from)// Optional, an account where a human being reads.
             ->to($to)
             ->subject($subject)
             ->message($body)
             ->send();
 
-        echo $this->email->print_debugger();
+        //echo $this->email->print_debugger();
 
         return $result;
 
