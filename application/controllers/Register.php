@@ -92,7 +92,7 @@ class Register extends CI_Controller {
                 ),
                 array(
                     'field' => 'checkbox',
-                    'label' => 'Check Box',
+                    'label' => 'Checkbox',
                     'rules' => 'required'
                 )
             );
@@ -101,7 +101,7 @@ class Register extends CI_Controller {
 
             $this->form_validation->set_rules( $rules );
 
-            if ( $this->form_validation->run() == FALSE ){
+            if ( $this->form_validation->run() == True ){
                 //continue
 
                 $this->load->model('user');
@@ -238,9 +238,6 @@ class Register extends CI_Controller {
                             $data['success'] = true;
                             $this->load->view('register', $data);
 
-                        } elseif(! isset($_POST['checkbox'])){
-                            $check['checkbox' ] = "Please check before submit";
-                            $this->load->view('register', $check);
                         }
                     else {
                             //echo ' Sorry! there are some internal problem';
