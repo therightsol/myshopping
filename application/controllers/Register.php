@@ -167,7 +167,37 @@ class Register extends CI_Controller
                                 'metakey' => $this->usersmeta->metakey = 'secondAddress',
                                 'metavalue' => $this->usersmeta->metavalue = $this->input->post('address2', True)
                             ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'cityName',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('city', True)
+
+                            ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'postCode',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('pcode', True)
+
+                            ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'countryName',
+                                $this->usersmeta->metavalue = $this->input->post('country', True)
+
+                            ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'region/state',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('state', True)
+
+                            ),
                         );
+
+                        $this->usersmeta->createdAt = date('Y-m-d H:i:s');
 
                         /*
                         @todo Asad please add these to the above array
