@@ -100,6 +100,7 @@ class Register extends CI_Controller
             );
 
 
+
             $this->form_validation->set_rules($rules);
 
             if ($this->form_validation->run() == True) {
@@ -132,11 +133,13 @@ class Register extends CI_Controller
                     $this->user->firstname = $firstName;
                     $this->user->lastname = $lastName;
 
+                    date_default_timezone_set('ASIA/KARACHI');
 
                     $this->user->createdAt = date('Y-m-d H:i:s');
 
                     // id of newly created record in users table
                     $result = $this->user->insertRecord();
+
 
                     if ($result) {
                         $this->load->model('usersmeta');
@@ -150,6 +153,7 @@ class Register extends CI_Controller
                             array(
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'fax',
+/*                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s'),*/
                                 'metavalue' => $this->usersmeta->metavalue = $this->input->post('fax', True)
                             ),
                             array(
@@ -210,7 +214,7 @@ class Register extends CI_Controller
 
                         */
 
-                        $this->usersmeta->createdAt = date('Y-m-d H:i:s');
+
 
 
                         $numRows = $this->usersmeta->insertBatch($metaRec);
@@ -220,6 +224,7 @@ class Register extends CI_Controller
                         echo '<hr />';
                         var_export(count($metaRec));
                         exit();*/
+                        //$numRows = count($metaRec);
 
                         if ($numRows == count($metaRec)) {
 
