@@ -145,7 +145,7 @@ class Register extends CI_Controller
                             array(
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'telephoneNum',
-                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('phone', True),
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('phone', True)
                             ),
                             array(
                                 'uid' => $this->usersmeta->uid = $result,
@@ -185,7 +185,7 @@ class Register extends CI_Controller
 
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'countryName',
-                                $this->usersmeta->metavalue = $this->input->post('country', True)
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('country', True)
 
                             ),
                             array(
@@ -194,32 +194,14 @@ class Register extends CI_Controller
                                 'metakey' => $this->usersmeta->metakey = 'region/state',
                                 'metavalue' => $this->usersmeta->metavalue = $this->input->post('state', True)
 
-                            ),
+                            )
                         );
 
-                        $this->usersmeta->createdAt = date('Y-m-d H:i:s');
+
 
                         /*
                         @todo Asad please add these to the above array
-                        $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'cityName';
-                        $this->usersmeta->metavalue = $this->input->post('city', True);
-                        $this->usersmeta->uid = $result;
 
-                        $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'postCode';
-                        $this->usersmeta->metavalue = $this->input->post('pcode', True);
-                        $this->usersmeta->uid = $result;
-
-                        $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'countryName';
-                        $this->usersmeta->metavalue = $this->input->post('country', True);
-                        $this->usersmeta->uid = $result;
-
-                        $this->usersmeta->uid = $result;
-                        $this->usersmeta->metakey = 'regionOrstate';
-                        $this->usersmeta->metavalue = $this->input->post('state', True);
-                        $this->usersmeta->uid = $result;
 
 
                         // @todo ASAD please insert DATE / TIME stamp in Database, at which time the record is inserted.
@@ -227,6 +209,8 @@ class Register extends CI_Controller
 
 
                         */
+
+                        $this->usersmeta->createdAt = date('Y-m-d H:i:s');
 
 
                         $numRows = $this->usersmeta->insertBatch($metaRec);
