@@ -235,7 +235,8 @@ class Register extends CI_Controller
                             $is_email_sent = $this->send_email('myshoppinglhr@gmail.com', $email, 'Verify your account - MyShopping', $body);
 
 
-                            exit('hiii');
+                            /*var_export($data);
+                            exit();*/
 
                             if ($is_email_sent) {
 
@@ -246,7 +247,8 @@ class Register extends CI_Controller
                             } else {
                                 // email not sent  show error
                                 // @todo show related errors / internal error to front side {email not sent } : Obaid Ullah
-
+                                $data['failure'] = true;
+                                $this->load->view('register', $data);
                             }
                         } else {
                             // the batch operation is not equals to count value. it means some values not inserted and that is an error

@@ -37,11 +37,18 @@ include 'inc/panel.inc.php';
                             </div>
                         </div>
                     <?php endif; ?>
+                    <?php if ($failure): ?>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="alert alert-danger">Sorry ! Email not sent .<br />There may be some problem in Email server.</div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
 
                     <?php if ($success): ?>
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="alert alert-info">Congratulations ! user added Successfully .</div>
+                                <div class="alert alert-info">Email sent <br/> Please Verify the Link to continue  .</div>
                             </div>
                         </div>
                     <?php endif; ?>
@@ -53,7 +60,7 @@ include 'inc/panel.inc.php';
                             </div>
                         </div>
                     <?php endif; ?>
-=======
+      <?php if (! $success): ?>
                 <form novalidate  method="post" action="<?php echo $root; ?>register" id="register-form">
 >>>>>>> origin/master
                     <div class="row">
@@ -282,6 +289,7 @@ include 'inc/panel.inc.php';
                         </div>
                     </div>
                 </form>
+      <?php endif; ?>
             </div>
         </div>
     </div>

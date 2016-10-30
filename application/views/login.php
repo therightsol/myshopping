@@ -38,8 +38,22 @@ include 'inc/panel.inc.php';
                     <div class="col-md-6 col-sm-6 col-xs-12"><h2>Registered Customers</h2>
 
                         <p>If you have an account with us, please log in.</p>
+                        <?php if ($msg): ?>
+                            <h1 style="color:blue;"> <?php echo $_POST['loginmail'] ; ?> <br/><br/>! You are Signed in Successfully. </h1>
 
+                        <?php endif; ?>
+
+
+                        <?php if ($error_unique): ?>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="alert alert-danger">Sorry ! Email Provided is not correct.<br />Please Try Again.</div>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                         <div class="xs-margin"></div>
+
+                        <?php if (! $msg): ?>
                         <form id="login-form" method="post" action="<?php echo $root; ?>login">
 
                             <div class="text-danger" >
@@ -85,6 +99,8 @@ include 'inc/panel.inc.php';
                                         password?</a></span>
                             <button type="submit" class="btn btn-custom-2">LOGIN</button>
                         </form>
+                        <?php endif; ?>
+
                         <div class="sm-margin"></div>
                     </div>
                 </div>
