@@ -71,7 +71,7 @@ include 'inc/panel.inc.php';
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-user"></span><span class="input-text">First Name&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
-                                           placeholder="Your First Name" name="fname"></div>
+                                           placeholder="Your First Name" value="<?php echo set_value('fname'); ?>" name="fname"></div>
 
 
 
@@ -85,7 +85,7 @@ include 'inc/panel.inc.php';
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-user"></span><span class="input-text">Last Name&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
-                                           placeholder="Your Last Name" name="lname"></div>
+                                           placeholder="Your Last Name" value="<?php echo set_value('lname'); ?>" name="lname"></div>
 
                                 <div class="text-danger">
                                     <?php
@@ -98,7 +98,7 @@ include 'inc/panel.inc.php';
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-email"></span><span class="input-text">Email&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
-                                           placeholder="Your Email" name="email">
+                                           placeholder="Your Email" value="<?php echo set_value('email'); ?>" name="email">
                                 </div>
 
 
@@ -125,7 +125,7 @@ include 'inc/panel.inc.php';
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-phone"></span><span class="input-text">Telephone&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
-                                           placeholder="Your Telephone" name="phone"></div>
+                                           placeholder="Your Telephone" value="<?php echo set_value('phone'); ?>" name="phone"></div>
                                 <div class="text-danger">
                                     <?php
                                     if(form_error ('fax')){
@@ -135,7 +135,8 @@ include 'inc/panel.inc.php';
                                 </div>
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-fax"></span><span class="input-text">Fax</span></span>
-                                    <input type="text" class="form-control input-lg" placeholder="Your Fax" name="fax"></div>
+                                    <input type="text" class="form-control input-lg" placeholder="Your Fax"
+                                           value="<?php echo set_value('fax'); ?>" name="fax"></div>
                             </fieldset>
                             <fieldset><h2 class="sub-title">YOUR PASSWORD</h2>
                                 <div class="text-danger">
@@ -176,7 +177,7 @@ include 'inc/panel.inc.php';
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-company"></span><span class="input-text">Company&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
-                                           placeholder="Your Company" name="company"></div>
+                                           placeholder="Your Company" value="<?php echo set_value('company'); ?>" name="company"></div>
                                 <div class="text-danger">
                                     <?php
                                     if(form_error ('address1')){
@@ -187,7 +188,8 @@ include 'inc/panel.inc.php';
 
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-address"></span><span class="input-text">Address 1&#42;</span></span>
-                                    <input type="text" class="form-control input-lg" placeholder="Your Address" name="address1">
+                                    <input type="text" class="form-control input-lg" placeholder="Your Address"
+                                           value="<?php echo set_value('address1'); ?>" name="address1">
                                 </div>
                                 <div class="text-danger">
                                     <?php
@@ -200,7 +202,8 @@ include 'inc/panel.inc.php';
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-address"></span><span class="input-text">Address 2&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
-                                           placeholder="Your Address" name="address2"></div>
+                                           placeholder="Your Address"
+                                           value="<?php echo set_value('address2'); ?>" name="address2"></div>
 
                                 <div class="text-danger">
                                     <?php
@@ -213,8 +216,8 @@ include 'inc/panel.inc.php';
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-city"></span><span
                                             class="input-text">City&#42;</span></span> <input type="text" required
-                                                                                              class="form-control input-lg"
-                                                                                              placeholder="Your City" name="city">
+                                            class="form-control input-lg" placeholder="Your City"
+                                          value="<?php echo set_value('city'); ?>" name="city">
                                 </div>
 
                                 <div class="text-danger">
@@ -228,7 +231,7 @@ include 'inc/panel.inc.php';
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-postcode"></span><span class="input-text">Post Code&#42;</span></span>
                                     <input type="text" required class="form-control input-lg"
-                                           placeholder="Your Post Code" name="pcode"></div>
+                                           placeholder="Your Post Code" value="<?php echo set_value('pcode'); ?>" name="pcode"></div>
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-country"></span><span class="input-text">Country*</span></span>
 
