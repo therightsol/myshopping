@@ -112,7 +112,7 @@ include 'inc/panel.inc.php';
 
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-user"></span><span class="input-text">Username&#42;</span></span>
-                                    <input  type="text" required class="form-control input-lg"
+                                    <input  type="text" required class="form-control input-lg" id="uname"
                                            placeholder="Your Username" value="<?php echo set_value('username'); ?>" name="username">
                                 </div>
                                 <div class="text-danger">

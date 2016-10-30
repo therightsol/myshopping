@@ -45,3 +45,29 @@
         hideTimerBar: "on"
     })
 });</script>
+
+<script>
+
+    JQuery(document).ready(function($){
+
+        $('#uname').blur(function(){
+
+        console.log($('#uname').val);
+
+            var username = $(this).val();
+
+            if(username.length > 2){
+
+                var url = ./veiws/register.php;
+
+                var data = {'name': username};
+
+
+
+            }
+
+        });
+
+    });
+
+</script>
