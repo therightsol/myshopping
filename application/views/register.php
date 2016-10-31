@@ -242,21 +242,63 @@ include 'inc/panel.inc.php';
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-country"></span><span class="input-text">Country*</span></span>
 
+                                    <?php
+
+                                    $options = array(
+
+                                    'uk' => 'United Kingdom',
+                                    'bra' => 'Brazil',
+                                    'fra' => 'France',
+                                    'it' => 'Italy',
+                                    'spn' => 'Spain'
+
+
+                                    );
+
+                                    $value_selected = array('United Kingdom','Brazil','France','Italy','Spain');
+
+                                     form_dropdown('country' , $options , 'France');
+
+                                    ?>
+
                                     <div class="large-selectbox form-control clearfix"><select id="country" name="country"
                                                                                   class="selectbox">
-                                            <option value="United Kingdom">United Kingdom</option>
+
+
+                                            <option value="<?php echo form_dropdown('country' , $options , $this->input->post('country'));?>">United Kingdom</option>
                                             <option value="Brazil">Brazil</option>
-                                            <option value="France">France</option>
+                                            <option value="France" >France</option>
                                             <option value="Italy">Italy</option>
                                             <option value="Spain">Spain</option>
+
                                         </select></div>
                                 </div>
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-region"></span><span class="input-text">Region / State&#42;</span></span>
 
+                                    <?php
+
+                                    $options = array(
+
+                                        'ca' => 'California',
+                                        'tex' => 'Texas',
+                                        'new' => 'New York',
+                                        'nar' => 'Narnia',
+                                        'jum' => 'Jumanji'
+
+
+                                    );
+
+                                    $value_selected = array('California','Texas','New York','Narnia','Jumanji');
+
+                                    form_dropdown('country' , $options , $value_selected);
+
+                                    ?>
+
                                     <div class="large-selectbox form-control clearfix"><select id="state" name="state"
                                                                                   class="selectbox">
-                                            <option value="California">California</option>
+                                            
+                                            <option value="<?php echo form_dropdown('state' , $options , $this->input->post('state'));?>">California</option>
                                             <option value="Texas">Texas</option>
                                             <option value="NewYork">NewYork</option>
                                             <option value="Narnia">Narnia</option>

@@ -96,8 +96,24 @@ class Register extends CI_Controller
                     'field' => 'checkbox',
                     'label' => 'Checkbox',
                     'rules' => 'required'
+                ),
+                array(
+
+                    'field' => 'country',
+                    'label' => 'Country',
+                    'rules' => 'required'
+
+                ),
+                array(
+
+                    'field' => 'state',
+                    'label' => 'Region/State',
+                    'rules' => 'required'
+
                 )
             );
+
+
 
 
 
