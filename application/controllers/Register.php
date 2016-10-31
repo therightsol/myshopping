@@ -148,55 +148,63 @@ class Register extends CI_Controller
                             array(
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'telephoneNum',
-                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('phone', True)
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('phone', True),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
                             ),
                             array(
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'fax',
-/*                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s'),*/
-                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('fax', True)
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('fax', True),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
                             ),
                             array(
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'companyName',
-                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('company', True)
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('company', True),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
                             ),
                             array(
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'firstAddress',
-                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('address1', True)
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('address1', True),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
                             ),
                             array(
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'secondAddress',
-                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('address2', True)
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('address2', True),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
                             ),
                             array(
 
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'cityName',
-                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('city', True)
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('city', True),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
 
                             ),
                             array(
 
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'postCode',
-                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('pcode', True)
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('pcode', True),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
 
                             ),
                             array(
 
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'countryName',
-                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('country', True)
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('country', True),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
 
                             ),
                             array(
 
                                 'uid' => $this->usersmeta->uid = $result,
                                 'metakey' => $this->usersmeta->metakey = 'region/state',
-                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('state', True)
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('state', True),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
 
                             )
                         );
