@@ -4,6 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
     public function index(){
+        
+        $data['active_page'] = 'login';
 
 
         $this->load->library('form_validation');
@@ -42,17 +44,38 @@ class Login extends CI_Controller {
                 $this->load->view ('login', $data);*/
                 $this->load->model('user');
                 $email = $this->input->post('loginmail', True);
-                $password = $this->input->post('loginpass', True);
-                $encryptedPass = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
 
-                $isRecordAvailable = $this->checkIsAvailable(array('password' => $password, 'email' => $email));
+                $isRecordAvailable = $this->checkIsAvailable( array ( 'email' => $email ) );
 
                 if ($isRecordAvailable) {
                     //echo " continue, your username and password Matched". "<br/>";
                     // var_export($_POST);
-                    $data['msg'] = true;
-                    $this->load->view ('login', $data);
 
+                    // user is available now check is password is same as provided
+                    $password = $this->input->post('loginpass', True);
+
+                    $user = $this->user->getRecord( $email, 'email' );
+
+                    $is_pass_match = password_verify($password, $user->password);
+                   //$this->debug($user);exit;
+
+                    
+                    if ($is_pass_match){
+                        // Now login
+                        
+                        $this->session->set_userdata('username', $user->username);
+                        $this->session->set_userdata('email', $user->email);
+                        $this->session->set_userdata('usertype', $user->usertype);
+
+                        redirect('home');
+                        
+
+                    }else{
+                        // @todo show error
+                        // provided password OR email was wrong
+                        //$data['msg'] = true;
+                        //$this->load->view ('login', $data);
+                    }
                 }
                 else {
                    // echo "Sorry Username and password not matched";

@@ -9,6 +9,14 @@ body {
     background-color: #dcdcdc
 }
 
+.active{
+    background: crimson;
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
 .pattern1 {
     background: url(../images/patterns/pattern1.png)
 }

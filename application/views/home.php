@@ -4,9 +4,19 @@
 <!-- This is test by RAMISH AHMED BUTT -->
 <?php include 'inc/topbar.inc.php'; ?>
 <?php include 'inc/header.inc.php'; ?>
-<?php include 'inc/menu.inc.php'; ?>
+<?php include 'inc/load_menu_file.php'; ?>
 <?php include 'inc/slider.inc.php'; ?>
 <?php include 'inc/panel.inc.php'?>
+<!--
+--><?php /*$is_user_loggedIn = $this->session->userdata('username');
+
+if ( $is_user_loggedIn && !empty ($is_user_loggedIn)):
+*/?>
+
+
+
+
+?>
 <div id="wrapper">
 
     <section id="content">
@@ -1280,4 +1290,8 @@
     include 'inc/footerfiles.inc.php';
 ?>
 </html>
-
+<!--
+--><?php /*else:
+        redirect('login');
+        endif;
+*/?>
