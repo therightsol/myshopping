@@ -1,6 +1,6 @@
 <?php
-include '../include/head.inc.php';
-include '../include/wrapper.inc.php';
+include 'inc/head.inc.php';
+include 'inc/wrapper.inc.php';
 ?>
         <!-- Page Content -->
         <div id="page-wrapper">
@@ -17,7 +17,7 @@ include '../include/wrapper.inc.php';
         </div>
         <!-- /#page-wrapper -->
 <?php
-include '../include/jsfooterlink.inc.php';
+include 'inc/jsfooterlink.inc.php';
 ?>
 
 

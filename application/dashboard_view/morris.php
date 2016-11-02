@@ -1,6 +1,6 @@
 <?php
-include '../include/head.inc.php';
-include '../include/wrapper.inc.php';
+include 'inc/head.inc.php';
+include 'inc/wrapper.inc.php';
 ?>
 
         <div id="page-wrapper">

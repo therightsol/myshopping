@@ -164,5 +164,5 @@ include 'inc/wrapper.inc.php';
 
     <!-- Page-Level Demo Scripts - Notifications - Use for reference -->
 <?php
-include '../include/jsfooterlink.inc.php';
+include 'inc/jsfooterlink.inc.php';
 ?>
