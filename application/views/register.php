@@ -104,7 +104,7 @@ include 'inc/panel.inc.php';
 
                                 <div class="input-group"><span class="input-group-addon"><span
                                             class="input-icon input-icon-email"></span><span class="input-text">Email&#42;</span></span>
-                                    <input type="text" required class="form-control input-lg"
+                                    <input type="text" id="email" required class="form-control input-lg"
                                            placeholder="Your Email" value="<?php echo set_value('email'); ?>" name="email">
                                 </div>
 

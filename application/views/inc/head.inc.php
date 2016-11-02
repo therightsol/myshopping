@@ -28,6 +28,7 @@
           href="http://newsmartwave.net/html/venedor/green/images/icons/apple-icon-72x72.png">
     <script src="<?php echo $root; ?>assets/js/jquery-3.1.0.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD3RzzpCYVvydltOx2hRPRB9XS6FSOM-NI"></script>
+    <script src="<?php echo $root;?>assets/js/ajax.js"">></script>
 
     <script>
         function initialize() {

@@ -329,23 +329,6 @@ class Register extends CI_Controller
 
     /* Send Email */
 
-    private function send_email($from, $to, $subject, $body)
-    {
-        $this->load->library('email');
 
-
-        $result = $this->email
-            ->from($from)
-            ->reply_to($from)// Optional, an account where a human being reads.
-            ->to($to)
-            ->subject($subject)
-            ->message($body)
-            ->send();
-
-        //echo $this->email->print_debugger();
-
-        return $result;
-
-    }
 
 }
