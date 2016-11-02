@@ -1,10 +1,10 @@
 <?php
 
 include 'inc/head.inc.php';
-include 'inc/topbar.inc.php';
+include 'inc/anonymous_topbar.inc';
 include 'inc/header.inc.php';
-include 'inc/menu.inc.php';
-include 'inc/panel.inc.php';
+include 'inc/anonymous_menu.inc';
+
 ?>
 
 <section id="content">
@@ -44,10 +44,17 @@ include 'inc/panel.inc.php';
                         <?php endif; ?>
 
 
-                        <?php if ($error_unique): ?>
+                        <?php if ($error_email_login): ?>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="alert alert-danger">Sorry ! Email Provided is not correct.<br />Please Try Again.</div>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($error_password_login): ?>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="alert alert-danger">Sorry ! Password Provided is not correct.<br />Please Try Again.</div>
                                 </div>
                             </div>
                         <?php endif; ?>

@@ -1,10 +1,12 @@
 <?php
 
 include 'inc/head.inc.php';
-include 'inc/topbar.inc.php';
-include 'inc/header.inc.php';
-include 'inc/menu.inc.php';
-include 'inc/panel.inc.php';
+include 'inc/load_menu_file.php';
+
+$error_Rg001 = false;
+$error_Rg002 = false;
+
+
 
 ?>
 
@@ -49,6 +51,22 @@ include 'inc/panel.inc.php';
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="alert alert-info">Email sent <br/> Please Verify the Link to continue  .</div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ($error_Rg001): ?>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="alert alert-danger">ERROR Rg001 <br/> Some Values not inserted  .</div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ($error_Rg002): ?>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="alert alert-danger">ERROR Rg002 <br/> Values not inserted into Users  .</div>
                             </div>
                         </div>
                     <?php endif; ?>

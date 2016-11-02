@@ -68,7 +68,7 @@
                             </div>
                         </li>
 
-                        <li class="mega-menu-container"><a href="<?php echo $root; ?>products">Product</a>
+                                <li class="mega-menu-container"><a href="<?php echo $root; ?>products">Product</a>
 
 
                             <div class="mega-menu clearfix">
@@ -81,8 +81,8 @@
                             </div>
                         </li>
 
-                        <li><a href="<?php echo $root; ?>about">About Us</a></li>
-                        <li><a href="<?php echo $root; ?>contact">Contact Us</a></li>
+                                 <li><a href="<?php echo $root; ?>about">About Us</a></li>
+                                <li><a href="<?php echo $root; ?>contact">Contact Us</a></li>
                     </ul>
                 </nav>
                 <div id="quick-access">

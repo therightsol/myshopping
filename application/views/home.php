@@ -2,11 +2,11 @@
 
 <body>
 <!-- This is test by RAMISH AHMED BUTT -->
-<?php include 'inc/topbar.inc.php'; ?>
-<?php include 'inc/header.inc.php'; ?>
+
 <?php include 'inc/load_menu_file.php'; ?>
+
 <?php include 'inc/slider.inc.php'; ?>
-<?php include 'inc/panel.inc.php'?>
+
 <!--
 --><?php /*$is_user_loggedIn = $this->session->userdata('username');
 

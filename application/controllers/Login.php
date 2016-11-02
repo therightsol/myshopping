@@ -15,6 +15,8 @@ class Login extends CI_Controller {
         $data['error_noData'] = false;
         $data['msg'] = false;
         $data['validate'] = false;
+        $data['error_email_login'] = false;
+        $data['error_password_login'] = false;
 
 
         if(filter_input_array(INPUT_POST)){
@@ -71,6 +73,8 @@ class Login extends CI_Controller {
                         
 
                     }else{
+                        $data['error_password_login'] = true;
+                        $this->load->view ('login', $data);
                         // @todo show error
                         // provided password OR email was wrong
                         //$data['msg'] = true;
@@ -78,11 +82,11 @@ class Login extends CI_Controller {
                     }
                 }
                 else {
+                    $data['error_email_login'] = true;
+                    $this->load->view('login', $data);
                    // echo "Sorry Username and password not matched";
                     // var_export($_POST);
-                    $data['msg'] = false;
-                    $data['error_unique'] = true;
-                    $this->load->view('login', $data);
+
 
                 }
 

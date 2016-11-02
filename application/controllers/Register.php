@@ -275,14 +275,18 @@ class Register extends CI_Controller
                                 $this->load->view('register', $data);
                             }
                         } else {
+                            $data['error_R001'] = true;
+                            $this->load->view('register', $data);
                             // the batch operation is not equals to count value. it means some values not inserted and that is an error
                             // @todo show related errors / internal error to front side : Obaid Ullah
                         }
                     } else {
+                        $data['error_R002'] = true;
+                        $this->load->view('register', $data);
                         // $result means data not inserted
                         // @todo show related errors / internal error to front side : Obaid Ullah
 
-                        echo ' Sorry! there are some internal problem';
+
                     }
                 } else {
                     $data['userexists'] = true;

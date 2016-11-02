@@ -83,6 +83,7 @@
 
                         <li><a href="<?php echo $root; ?>about">About Us</a></li>
                         <li><a href="<?php echo $root; ?>contact">Contact Us</a></li>
+                        <li><a href="<?php echo $root; ?>home">Dashboard</a></li>
                     </ul>
                 </nav>
                 <div id="quick-access">
