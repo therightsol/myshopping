@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo $root; ?>../dashboard.php">SB Admin v2.0</a>
+            <a class="navbar-brand" href="<?php echo $root; ?>dashboard">SB Admin v2.0</a>
         </div>
         <ul class="nav navbar-top-links navbar-right">
             <li class="dropdown">
@@ -27,7 +27,7 @@
                                         <em>Yesterday</em>
                                     </span>
                             </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend.</div>
                         </a>
                     </li>
                     <li class="divider"></li>
@@ -39,7 +39,7 @@
                                         <em>Yesterday</em>
                                     </span>
                             </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend.</div>
                         </a>
                     </li>
                     <li class="divider"></li>
@@ -51,7 +51,7 @@
                                         <em>Yesterday</em>
                                     </span>
                             </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend.</div>
                         </a>
                     </li>
                     <li class="divider"></li>
@@ -214,7 +214,7 @@
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="../dashboardlogin.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    <li><a href="<?php echo $root; ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -228,7 +228,7 @@
                 <ul class="nav" id="side-menu">
                     <li class="sidebar-search">
                         <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
+                            <input type="text" class="form-control" placeholder="Search.">
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button">
                                         <i class="fa fa-search"></i>
@@ -238,46 +238,46 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="<?php echo $root; ?>../../dashboard_view/dashboard.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        <a href="<?php echo $root; ?>//dashboard_view/dashboard.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo $root; ?>../flot.php">Flot Charts</a>
+                                <a href="<?php echo $root; ?>/flot.php">Flot Charts</a>
                             </li>
                             <li>
-                                <a href="<?php echo $root; ?>../morris.php">Morris.js Charts</a>
+                                <a href="<?php echo $root; ?>/morris.php">Morris.js Charts</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="<?php echo $root; ?>../tables.php"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        <a href="<?php echo $root; ?>/tables.php"><i class="fa fa-table fa-fw"></i> Tables</a>
                     </li>
                     <li>
-                        <a href="<?php echo $root; ?>../forms.php"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        <a href="<?php echo $root; ?>/forms.php"><i class="fa fa-edit fa-fw"></i> Forms</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo $root; ?>../panels-wells.php">Panels and Wells</a>
+                                <a href="<?php echo $root; ?>/panels-wells.php">Panels and Wells</a>
                             </li>
                             <li>
-                                <a href="<?php echo $root; ?>../buttons.php">Buttons</a>
+                                <a href="<?php echo $root; ?>/buttons.php">Buttons</a>
                             </li>
                             <li>
-                                <a href="<?php echo $root; ?>../notifications.php">Notifications</a>
+                                <a href="<?php echo $root; ?>/notifications.php">Notifications</a>
                             </li>
                             <li>
-                                <a href="<?php echo $root; ?>../typography.php">Typography</a>
+                                <a href="<?php echo $root; ?>/typography.php">Typography</a>
                             </li>0
                             <li>
-                                <a href="<?php echo $root; ?>../icons.php"> Icons</a>
+                                <a href="<?php echo $root; ?>/icons.php"> Icons</a>
                             </li>
                             <li>
-                                <a href="<?php echo $root; ?>../grid.php">Grid</a>
+                                <a href="<?php echo $root; ?>/grid.php">Grid</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -316,10 +316,10 @@
                         <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="active" href="<?php echo $root; ?>../blank.php">Blank Page</a>
+                                <a class="active" href="<?php echo $root; ?>/blank.php">Blank Page</a>
                             </li>
                             <li>
-                                <a href=".<?php echo $root; ?>../login.php">Login Page</a>
+                                <a href="<?php echo $root; ?>/dashboard/dashboardlogin">Login Page</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

@@ -5,14 +5,13 @@ class Dashboard extends CI_Controller
 {
     public function index()
     {
-
-        $data['login'] = 'dashboardlogin.php';
-        $this->load->view('dashboard', $data);
+        $data = array();
+        $this->load->view('dashboard/dashboard', $data);
     }
 
-    public function login()
+    public function dashboardlogin()
     {
-        $this->load->view('dashboardlogin');
+        $this->load->view('dashboard/dashboardlogin');
     }
 
     public function logout()
