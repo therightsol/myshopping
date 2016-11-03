@@ -21,9 +21,16 @@
 
                     <p class="title-desc">Quisque elementum nibh at dolor pellentesque, a eleifend libero
                         pharetra.</p></header>
+
+
+
                 <div class="xs-margin"></div>
-                <form action="<?php echo $root; ?>checkout" id="checkout-form">
+                <form novalidate method="post" action="<?php echo $root; ?>checkout" id="checkout-form">
+                    <?php   if (!$is_user_login):  ?>
                     <div class="panel-group custom-accordion" id="checkout">
+
+
+
                         <div class="panel">
                             <div class="accordion-header">
                                 <div class="accordion-title">1 Step: <span>Checkout Option</span></div>
@@ -58,18 +65,32 @@
                                             <p>If you have an account with us, please log in.</p>
 
                                             <div class="xs-margin"></div>
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('email')){
+                                                    echo form_error ('email');
+                                                }
+                                                ?>
+                                            </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-email"></span><span
                                                         class="input-text">Email&#42;</span></span> <input type="text"
                                                                                                            required
                                                                                                            class="form-control input-lg"
-                                                                                                           placeholder="Your Email">
+                                                                                                           placeholder="Your Email" name="login_email">
+                                            </div>
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('password')){
+                                                    echo form_error ('password');
+                                                }
+                                                ?>
                                             </div>
                                             <div class="input-group xs-margin"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-password"></span><span
                                                         class="input-text">Password&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your Password"></div>
+                                                    placeholder="Your Password" name="login_password"></div>
                                                 <span class="help-block text-right"><a href="<?php echo $root; ?>checkout">Forgot your
                                                         password?</a></span>
 
@@ -81,7 +102,11 @@
                                     </div>
                                     <a href="<?php echo $root; ?>checkout" class="btn btn-custom-2">CONTINUE</a></div>
                             </div>
-                        </div>
+                        </div>          <!--checkout options-->
+<?php endif; ?>
+
+
+
                         <div class="panel">
                             <div class="accordion-header">
                                 <div class="accordion-title">2 Step: <span>Billing Information</span></div>
@@ -92,33 +117,83 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12"><h2 class="checkout-title">Your
                                                 personal details</h2>
 
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('fname')){
+                                                    echo form_error ('fname');
+                                                }
+                                                ?>
+                                            </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-user"></span><span
                                                         class="input-text">First Name&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your First Name"></div>
+                                                    placeholder="Your First Name" value="<?php echo set_value('fname'); ?>" name="fname"></div>
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('lname')){
+                                                    echo form_error ('lname');
+                                                }
+                                                ?>
+                                            </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-user"></span><span
                                                         class="input-text">Last Name&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your Last Lame"></div>
+                                                    placeholder="Your Last Lame" value="<?php echo set_value('lname'); ?>" name="lname"></div>
+
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('email')){
+                                                    echo form_error ('email');
+                                                }
+                                                ?>
+                                            </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-email"></span><span
                                                         class="input-text">Email&#42;</span></span> <input type="text"
                                                                                                            required
                                                                                                            class="form-control input-lg"
-                                                                                                           placeholder="Your Email">
+                                                                                                           placeholder="Your Email" value="<?php echo set_value('email'); ?>" name="email">
+                                            </div>
+
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('phone')){
+                                                    echo form_error ('phone');
+                                                }
+                                                ?>
                                             </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-phone"></span><span
                                                         class="input-text">Telephone&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your Telephone"></div>
+                                                    placeholder="Your Telephone" value="<?php echo set_value('phone'); ?>" name="phone"></div>
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('fax')){
+                                                    echo form_error ('fax');
+                                                }
+                                                ?>
+                                            </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-fax"></span><span
                                                         class="input-text">Fax</span></span> <input type="text"
                                                                                                     class="form-control input-lg"
-                                                                                                    placeholder="Your Fax">
+                                                                                                    placeholder="Your Fax" value="<?php echo set_value('fax'); ?>" name="fax">
+                                            </div>
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('company')){
+                                                    echo form_error ('company');
+                                                }
+                                                ?>
                                             </div>
                                             <div class="input-group xlg-margin"><span
                                                     class="input-group-addon"><span
@@ -126,26 +201,43 @@
                                                         class="input-text">Company&#42;</span></span> <input type="text"
                                                                                                              required
                                                                                                              class="form-control input-lg"
-                                                                                                             placeholder="Your Company">
+                                                                                                             placeholder="Your Company" value="<?php echo set_value('company'); ?>" name="company">
+                                            </div>
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('pass1')){
+                                                    echo form_error ('pass1');
+                                                }
+                                                ?>
                                             </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-password"></span><span
                                                         class="input-text">Password&#42;</span></span> <input
                                                     type="password" required class="form-control input-lg"
-                                                    placeholder="Your Password"></div>
+                                                    placeholder="Your Password" value="<?php echo set_value('pass1'); ?>" name="pass1"></div>
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('pass2')){
+                                                    echo form_error ('pass2');
+                                                }
+                                                ?>
+                                            </div>
                                             <div class="input-group xlg-margin"><span
                                                     class="input-group-addon"><span
                                                         class="input-icon input-icon-password"></span><span
                                                         class="input-text">Password&#42;</span></span> <input
                                                     type="password" required class="form-control input-lg"
-                                                    placeholder="Your Password"></div>
+                                                    placeholder="Your Password" value="<?php echo set_value('pass2'); ?>" name="pass2"></div>
+
                                             <div class="input-group custom-checkbox sm-margin"><input
-                                                    type="checkbox"> <span class="checbox-container"><i
+                                                    type="checkbox" name="checkbox_newsletter"> <span class="checbox-container"><i
                                                         class="fa fa-check"></i></span> I wish to subscribe to the
                                                 Venedor newsletter.
                                             </div>
                                             <div class="input-group custom-checkbox sm-margin"><input
-                                                    type="checkbox"> <span class="checbox-container"><i
+                                                    type="checkbox" name="checkbox_address"> <span class="checbox-container"><i
                                                         class="fa fa-check"></i></span> My delivery and billing
                                                 addresses are the same.
                                             </div>
@@ -153,28 +245,71 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12"><h2 class="checkout-title">Your
                                                 Address</h2>
 
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('address1')){
+                                                    echo form_error ('address1');
+                                                }
+                                                ?>
+                                            </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-address"></span><span
                                                         class="input-text">Address 1&#42;</span></span> <input
                                                     type="text" class="form-control input-lg"
-                                                    placeholder="Your Address"></div>
+                                                    placeholder="Your Address" value="<?php echo set_value('address1'); ?>" name="address1"></div>
+
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('address2')){
+                                                    echo form_error ('address2');
+                                                }
+                                                ?>
+                                            </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-address"></span><span
                                                         class="input-text">Address 2&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your Address"></div>
+                                                    placeholder="Your Address" value="<?php echo set_value('address2'); ?>" name="address2"></div>
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('city')){
+                                                    echo form_error ('city');
+                                                }
+                                                ?>
+                                            </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-city"></span><span
                                                         class="input-text">City&#42;</span></span> <input type="text"
                                                                                                           required
                                                                                                           class="form-control input-lg"
-                                                                                                          placeholder="Your City">
+                                                                                                          placeholder="Your City" value="<?php echo set_value('city'); ?>" name="city">
+                                            </div>
+
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('postcode')){
+                                                    echo form_error ('postcode');
+                                                }
+                                                ?>
                                             </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-postcode"></span><span
                                                         class="input-text">Post Code&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your Post Code"></div>
+                                                    placeholder="Your Post Code" value="<?php echo set_value('postcode'); ?>" name="postcode"></div>
+
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('country')){
+                                                    echo form_error ('country');
+                                                }
+                                                ?>
+                                            </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-country"></span><span
                                                         class="input-text">Country*</span></span>
@@ -188,6 +323,16 @@
                                                         <option value="Italy">Italy</option>
                                                         <option value="Spain">Spain</option>
                                                     </select></div>
+                                            </div>
+
+
+
+                                            <div class="text-danger">
+                                                <?php
+                                                if(form_error ('state')){
+                                                    echo form_error ('state');
+                                                }
+                                                ?>
                                             </div>
                                             <div class="input-group"><span class="input-group-addon"><span
                                                         class="input-icon input-icon-region"></span><span
@@ -205,14 +350,17 @@
                                             </div>
                                             <div class="input-group custom-checkbox md-margin"><input
                                                     type="checkbox"> <span class="checbox-container"><i
-                                                        class="fa fa-check"></i></span> I have reed and agree to the <a
+                                                        class="fa fa-check" name="checkbox_agree"></i></span> I have reed and agree to the <a
                                                     href="<?php echo $root; ?>checkout">Privacy Policy</a>.
                                             </div>
                                             <a href="<?php echo $root; ?>checkout" class="btn btn-custom-2">CONTINUE</a></div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>      <!--billing informatin-->
+
+
+
                         <div class="panel">
                             <div class="accordion-header">
                                 <div class="accordion-title">3 Step: <span>Delivery Details</span></div>
@@ -221,7 +369,9 @@
                             <div id="delivery-details" class="collapse">
                                 <div class="panel-body"><p>Details about delivery</p></div>
                             </div>
-                        </div>
+                        </div>         <!--Delievery details-->
+
+
                         <div class="panel">
                             <div class="accordion-header">
                                 <div class="accordion-title">4 Step: <span>Delivery Method</span></div>
@@ -230,7 +380,9 @@
                             <div id="delivery-method" class="collapse">
                                 <div class="panel-body"><p>Choose your delivery method.</p></div>
                             </div>
-                        </div>
+                        </div>          <!--deleivery method-->
+
+
                         <div class="panel">
                             <div class="accordion-header">
                                 <div class="accordion-title">5 Step: <span>Payment Method</span></div>
@@ -239,7 +391,9 @@
                             <div id="payment-method" class="collapse">
                                 <div class="panel-body"><p>Choose your payment method.</p></div>
                             </div>
-                        </div>
+                        </div>          <!--payment method-->
+
+
                         <div class="panel">
                             <div class="accordion-header">
                                 <div class="accordion-title">6 Step: <span>Confirm Order</span></div>
@@ -347,7 +501,7 @@
                                                                    value="CONFIRM ORDER"></div>
                                 </div>
                             </div>
-                        </div>
+                        </div>              <!--confirm order-->
                     </div>
                 </form>
                 <div class="xlg-margin"></div>
