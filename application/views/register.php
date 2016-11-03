@@ -1,7 +1,11 @@
-<?php
+<?php include 'inc/head.inc.php'; ?>
 
-include 'inc/head.inc.php';
-include 'inc/load_menu_file.php';
+    <body>
+<!-- This is test by RAMISH AHMED BUTT -->
+
+<?php include 'inc/load_menu_file.php'; ?>
+
+<?php
 
 $error_Rg001 = false;
 $error_Rg002 = false;

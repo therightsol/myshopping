@@ -1,8 +1,9 @@
 <?php include 'inc/head.inc.php'; ?>
-<?php include 'inc/topbar.inc.php'; ?>
-<?php include 'inc/header.inc.php'; ?>
-<?php include 'inc/menu.inc.php'; ?>
-<?php include 'inc/panel.inc.php'?>
+
+    <body>
+<!-- This is test by RAMISH AHMED BUTT -->
+
+<?php include 'inc/load_menu_file.php'; ?>
 
 <section id="content">
     <div id="breadcrumb-container">
