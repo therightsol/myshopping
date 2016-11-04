@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo $root; ?>dashboard">SB Admin v2.0</a>
+            <a class=F"navbar-brand" href="<?php echo $root; ?>dashboard">SB Admin v2.0</a>
         </div>
         <ul class="nav navbar-top-links navbar-right">
             <li class="dropdown">
@@ -28,6 +28,7 @@
                                     </span>
                             </div>
                             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend.</div>
+                        </a>
                         </a>
                     </li>
                     <li class="divider"></li>
@@ -238,93 +239,38 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="<?php echo $root; ?>//dashboard_view/dashboard.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-cog fa-fw"></i> Website Settings <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo $root; ?>/flot.php">Flot Charts</a>
+                                <a href="<?php echo $root; ?>dasboard/setting">Settings </a>
                             </li>
                             <li>
-                                <a href="<?php echo $root; ?>/morris.php">Morris.js Charts</a>
+                                <a href="<?php echo $root; ?>"> Product <span class="fa arrow"></span> </a>
+                            <ul class="nav nav-secnd-left">
+                                <li>
+                                    <a href="#">ADD Product</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete Product</a>
+                                </li>
+                                <li>
+                                    <a href="#">  Update Product</a>
+                                </li>
+                                <li>
+                                    <a href="#">Create Product</a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li>
+                                <a href="<?php echo $root; ?>dashboard/dashboardlogin">Login Page</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
-                    <li>
-                        <a href="<?php echo $root; ?>/tables.php"><i class="fa fa-table fa-fw"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo $root; ?>/forms.php"><i class="fa fa-edit fa-fw"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="<?php echo $root; ?>/panels-wells.php">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $root; ?>/buttons.php">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $root; ?>/notifications.php">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $root; ?>/typography.php">Typography</a>
-                            </li>0
-                            <li>
-                                <a href="<?php echo $root; ?>/icons.php"> Icons</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $root; ?>/grid.php">Grid</a>
-                            </li>
+
+
                         </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="active" href="<?php echo $root; ?>/blank.php">Blank Page</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $root; ?>/dashboard/dashboardlogin">Login Page</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                </ul>
+
             </div>
             <!-- /.sidebar-collapse -->
         </div>

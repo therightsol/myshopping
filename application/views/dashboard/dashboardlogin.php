@@ -1,5 +1,5 @@
 <?php
-include 'inc/head.inc.php';
+include 'inc/dashhead.inc.php';
 ?>
 
     <div class="container">

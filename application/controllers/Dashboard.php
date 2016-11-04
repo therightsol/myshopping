@@ -11,7 +11,7 @@ class Dashboard extends CI_Controller
 
     public function dashboardlogin()
     {
-        $this->load->view('dashboard/dashboardlogin');
+        $this->load->view('dashboard/dashboardlogin ');
     }
 
     public function logout()
@@ -21,12 +21,12 @@ class Dashboard extends CI_Controller
 
     public function settings()
     {
-        $this->load->view('settings');
+        $this->load->view('dasboard/setting');
     }
 
     public function add_product()
     {
-        $this->load->view('add_product');
+        $this->load->view('dasboard/add_product');
     }
 
     public function view_all_products()
