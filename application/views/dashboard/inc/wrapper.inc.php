@@ -248,7 +248,7 @@
                                 <a href="<?php echo $root; ?>"> Product <span class="fa arrow"></span> </a>
                             <ul class="nav nav-secnd-left">
                                 <li>
-                                    <a href="#">ADD Product</a>
+                                    <a href="<?php echo $root; ?>dashboard/add_product">ADD Product</a>
                                 </li>
                                 <li>
                                     <a href="#">Delete Product</a>
