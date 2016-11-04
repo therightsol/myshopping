@@ -30,29 +30,37 @@
                         <div class="col-md-8 col-sm-8 col-xs-12"><h2 class="sub-title">LEAVE COMMENT</h2>
 
                             <div class="row">
-                                <form method="post" action="<?php echo $root; ?>contact" id="contact-form">
+                                <form novalidate method="post" action="<?php echo $root; ?>contact" id="contact-form">
                                     <div class="col-md-6 col-sm-12 col-xs-12">
+                                      
+
                                         <div class="input-group"><span class="input-group-addon"><span
                                                 class="input-icon input-icon-user"></span><span class="input-text">Name&#42;</span></span>
+
                                             <input type="text" name="contact-name" id="contact-name" required
                                                    class="form-control input-lg" placeholder="Your Name"></div>
+
                                         <div class="input-group"><span class="input-group-addon"><span
                                                 class="input-icon input-icon-email"></span><span class="input-text">Email&#42;</span></span>
                                             <input type="email" name="contact-email" id="contact-email" required
                                                    class="form-control input-lg" placeholder="Your Email"></div>
+
                                         <div class="input-group"><span class="input-group-addon"><span
                                                 class="input-icon input-icon-subject"></span><span class="input-text">Subject&#42;</span></span>
                                             <input type="text" name="contact-subject" id="contact-subject" required
                                                    class="form-control input-lg" placeholder="Subject"></div>
                                         <p class="item-desc">Your email address will not be published. Required fields
                                             are marked *</p></div>
+
                                     <div class="col-md-6 col-sm-12 col-xs-12">
+
                                         <div class="input-group textarea-container"><span
                                                 class="input-group-addon"><span
                                                 class="input-icon input-icon-message"></span><span class="input-text">Your Comment</span></span><textarea
                                                 name="contact-message" id="contact-message" class="form-control"
                                                 cols="30" rows="6" placeholder="Your Message"></textarea></div>
                                         <input type="submit" value="SUBMIT" class="btn btn-custom-2 md-margin"></div>
+
                                 </form>
                             </div>
                         </div>
