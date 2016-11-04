@@ -212,7 +212,7 @@
                 <ul class="dropdown-menu dropdown-user">
                     <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                    <li><a href="<?php echo $root; ?>dashboard/dashboard"><i class="fa fa-gear fa-fw"></i> Settings</a>
                     </li>
                     <li class="divider"></li>
                     <li><a href="<?php echo $root; ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -242,7 +242,7 @@
                         <a href="#"><i class="fa fa-cog fa-fw"></i> Website Settings <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo $root; ?>dasboard/setting">Settings </a>
+                                <a href="<?php echo $root; ?>dashboard/setting"> Settings </a>
                             </li>
                             <li>
                                 <a href="<?php echo $root; ?>"> Product <span class="fa arrow"></span> </a>
@@ -261,13 +261,13 @@
                                 </li>
                             </ul>
                             </li>
-                            <li>
-                                <a href="<?php echo $root; ?>dashboard/dashboardlogin">Login Page</a>
-                            </li>
                         </ul>
+
                         <!-- /.nav-second-level -->
                     </li>
-
+                    <li>
+                        <a href="<?php echo $root; ?>dashboard/dashboardlogin">Login Page</a>
+                    </li>
 
                         </ul>
 
