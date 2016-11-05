@@ -3,7 +3,10 @@
 <body>
 <!-- This is test by RAMISH AHMED BUTT -->
 
-<?php include 'inc/load_menu_file.php'; ?>
+<?php include 'inc/load_menu_file.php';
+
+
+?>
 
 <section id="content">
     <div id="breadcrumb-container">
@@ -21,7 +24,13 @@
 
                     <p class="title-desc">Quisque elementum nibh at dolor pellentesque, a eleifend libero
                         pharetra.</p></header>
-
+                <?php if ($guest): ?>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="alert alert-danger">Dear Guest ! <br />Please Enter Your Billing Information.</div>
+                        </div>
+                    </div>
+                <?php endif; ?>
 
 
                 <div class="xs-margin"></div>
@@ -91,7 +100,7 @@
                                                         class="input-text">Password&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
                                                     placeholder="Your Password" name="login_password"></div>
-                                                <span class="help-block text-right"><a href="<?php echo $root; ?>checkout">Forgot your
+                                            <span class="help-block text-right"><a href="<?php echo $root; ?>checkout">Forgot your
                                                         password?</a></span>
 
                                             <div class="input-group custom-checkbox sm-margin top-10px"><input
@@ -103,7 +112,7 @@
                                     <a href="<?php echo $root; ?>checkout" class="btn btn-custom-2">CONTINUE</a></div>
                             </div>
                         </div>          <!--checkout options-->
-<?php endif; ?>
+                        <?php endif; ?>
 
 
 
@@ -129,7 +138,7 @@
                                                         class="input-icon input-icon-user"></span><span
                                                         class="input-text">First Name&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your First Name" value="<?php echo set_value('fname'); ?>" name="fname"></div>
+                                                    placeholder="Your First Name" value="<?php if ($is_user_login){ echo $fname ;} else {set_value('fname'); } ?>" name="fname"></div>
 
                                             <div class="text-danger">
                                                 <?php
@@ -142,7 +151,7 @@
                                                         class="input-icon input-icon-user"></span><span
                                                         class="input-text">Last Name&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your Last Lame" value="<?php echo set_value('lname'); ?>" name="lname"></div>
+                                                    placeholder="Your Last Lame" value="<?php if ($is_user_login){ echo $lname ;} else {set_value('lname'); } ?>" name="lname"></div>
 
 
                                             <div class="text-danger">
@@ -157,7 +166,7 @@
                                                         class="input-text">Email&#42;</span></span> <input type="text"
                                                                                                            required
                                                                                                            class="form-control input-lg"
-                                                                                                           placeholder="Your Email" value="<?php echo set_value('email'); ?>" name="email">
+                                                                                                           placeholder="Your Email" value="<?php if ($is_user_login){ echo $email ;} else {set_value('email'); } ?>" name="email">
                                             </div>
 
 
@@ -350,8 +359,8 @@
                                             </div>
                                             <div class="input-group custom-checkbox md-margin"><input
                                                     type="checkbox"> <span class="checbox-container"><i
-                                                        class="fa fa-check" name="checkbox_agree"></i></span> I have reed and agree to the <a
-                                                    href="<?php echo $root; ?>checkout">Privacy Policy</a>.
+                                                        class="fa fa-check" name="checkbox_agree"></i></span> Entered Data is Correct <a
+                                                    href="<?php echo $root; ?>checkout"></a>.
                                             </div>
                                             <a href="<?php echo $root; ?>checkout" class="btn btn-custom-2">CONTINUE</a></div>
                                     </div>
