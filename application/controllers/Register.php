@@ -354,5 +354,17 @@ class Register extends CI_Controller
 
     }
 
+    public function ajax_check_user_availability( $username ){
+
+        $this->load->model( 'user' );
+        $rec = $this->user->getRecord($username, 'username');
+
+        if ( $rec )
+            echo false;
+        else
+            echo true;
+
+    }
+
 
 }

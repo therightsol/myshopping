@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/owl.carousel.css">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $root; ?>assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+
+
     <link rel="icon" type="image/png" href="http://newsmartwave.net/html/venedor/green/images/icons/icon.png">
     <link rel="apple-touch-icon" sizes="57x57"
           href="http://newsmartwave.net/html/venedor/green/images/icons/apple-icon-57x57.png">
@@ -28,7 +31,9 @@
           href="http://newsmartwave.net/html/venedor/green/images/icons/apple-icon-72x72.png">
     <script src="<?php echo $root; ?>assets/js/jquery-3.1.0.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD3RzzpCYVvydltOx2hRPRB9XS6FSOM-NI"></script>
-    <script src="<?php echo $root;?>assets/js/ajax.js"">></script>
+    <script src="<?php echo $root;?>assets/js/ajax.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
 
     <script>
         function initialize() {
