@@ -15,13 +15,15 @@ include 'inc/wrapper.inc.php';
 
 <?php endif; ?>
 
-<form class="form-horizontal">
+<form method="post" action="<?php echo $root; ?>dashboard/add_product" class="form-horizontal">
     <fieldset>
 
         <!-- Form Name -->
         <legend>Add Product</legend>
 
         <!-- Text input-->
+
+        <div class="text-danger">
         <?php if(form_error('pname')){
 
             echo form_error('pname');
@@ -29,6 +31,22 @@ include 'inc/wrapper.inc.php';
         }
 
         ?>
+
+        </div>
+
+        <?php if($success) : ?>
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="alert alert-success">Product added successfully.</div>
+
+            </div>
+
+        </div>
+
+        <?php endif; ?>
 
         <div class="form-group">
             <label class="col-md-4 control-label" for="name">Product Name</label>
@@ -38,13 +56,16 @@ include 'inc/wrapper.inc.php';
             </div>
         </div>
 
-        <?php if(form_error('purchase')){
+        <div class="text-danger">
+            <?php if(form_error('purchase')){
 
-            echo form_error('purchase');
+                echo form_error('purchase');
 
-        }
+            }
 
-        ?>
+            ?>
+
+        </div>
 
         <div class="form-group">
             <label class="col-md-4 control-label" for="pprice">Purchase Price</label>
@@ -54,13 +75,16 @@ include 'inc/wrapper.inc.php';
             </div>
         </div>
 
-        <?php if(form_error('sale')){
+        <div class="text-danger">
+            <?php if(form_error('sale')){
 
-            echo form_error('sale');
+                echo form_error('sale');
 
-        }
+            }
 
-        ?>
+            ?>
+
+        </div>
 
 
         <div class="form-group">
@@ -71,13 +95,16 @@ include 'inc/wrapper.inc.php';
             </div>
         </div>
 
-        <?php if(form_error('discount')){
+        <div class="text-danger">
+            <?php if(form_error('discount')){
 
-            echo form_error('discount');
+                echo form_error('discount');
 
-        }
+            }
 
-        ?>
+            ?>
+
+        </div>
 
         <div class="form-group">
             <label class="col-md-4 control-label" for="dprice">Discounted Price</label>
@@ -87,13 +114,16 @@ include 'inc/wrapper.inc.php';
             </div>
         </div>
 
-        <?php if(form_error('tax')){
+        <div class="text-danger">
+            <?php if(form_error('tax')){
 
-            echo form_error('tax');
+                echo form_error('tax');
 
-        }
+            }
 
-        ?>
+            ?>
+
+        </div>
 
         <div class="form-group">
             <label class="col-md-4 control-label" for="tax">Tax</label>
@@ -103,13 +133,16 @@ include 'inc/wrapper.inc.php';
             </div>
         </div>
 
-        <?php if(form_error('textarea')){
+        <div class="text-danger">
+            <?php if(form_error('textarea')){
 
-            echo form_error('textarea');
+                echo form_error('textarea');
 
-        }
+            }
 
-        ?>
+            ?>
+
+        </div>
 
         <!-- Textarea -->
         <div class="form-group">

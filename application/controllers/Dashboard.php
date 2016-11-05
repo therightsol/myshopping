@@ -22,7 +22,8 @@ class Dashboard extends CI_Controller
     public function setting()
     {
 
-        $data['form_errors'] = true;
+        $data['form_errors'] = false;
+        $data['success'] = false;
 
         $this->load->library('form_validation');
 
@@ -88,6 +89,8 @@ class Dashboard extends CI_Controller
     public function add_product()
     {
 
+
+        $data['success'] = false;
         $data['form_errors'] = false;
 
         $this->load->library('form_validation');
@@ -132,9 +135,9 @@ class Dashboard extends CI_Controller
 
             $this->form_validation->set_rules($rules);
 
-            if ($this->form_validation->run() == true) {
+            if ($this->form_validation->run() == False) {
 
-                $this->load - model('product');
+                $this->load->model('product');
 
                 $productName = $this->input->post('pname', true);
                 $purchasePrice = $this->input->post('purchase', true);
@@ -143,16 +146,25 @@ class Dashboard extends CI_Controller
                 $tax = $this->input->post('tax', true);
                 $textarea = $this->input->post('textarea', true);
 
-                date_default_timezone_get('ASIA/KARACHI');
+                $this->product->title = $productName;
+                $this->product->purchaseprice = $purchasePrice;
+                $this->product->saleprice = $salePrice;
+                $this->product->discountpercent = $discountedPrice;
+                $this->product->tax = $tax;
+                $this->product->description = $textarea;
+
+                date_default_timezone_set('ASIA/KARACHI');
 
                 $this->product->createdAt = date('Y-m-d H:i:s');
 
                 $result = $this->product->insertRecord();
-                var_export($result);
+//                var_export($result);
 
                 if ($result) {
 
-                    echo 'Product Added Successfully';
+//                    echo 'Product Added Successfully';
+                    $data['success'] = true;
+                    $this->load->view('dashboard/add_product' , $data);
 
                 } else {
 
@@ -162,14 +174,17 @@ class Dashboard extends CI_Controller
 
             } else {
 
-                echo 'THere are some errors';
+//                echo 'THere are some errors';
+
+                $data['validation_errors'] = validation_errors();
+                $this->load->view('dashboard/add_product', $data);
 
             }
 
 
         } else {
 
-            echo ' there is some error in inputs';
+//            echo ' there is some error in inputs';
 
             $data['form_errors'] = true;
 
