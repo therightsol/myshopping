@@ -21,7 +21,68 @@ class Dashboard extends CI_Controller
 
     public function setting()
     {
-        $this->load->view('dashboard/setting');
+
+        $data['form_errors'] = true;
+
+        $this->load->library('form_validation');
+
+        if (filter_input_array(INPUT_POST)) {
+
+
+            $rules = array(
+
+                array(
+                    'field' => 'id',
+                    'label' => 'Product ID',
+                    'rules' => 'required'
+                ),
+                array(
+                    'field' => 'value',
+                    'label' => ' Value',
+                    'rules' => 'required'
+                ),
+            );
+
+            $this->form_validation->set_rules($rules);
+
+            if ($this->form_validation->run() == true) {
+
+                $this->load - model('Setting');
+
+                $productName = $this->input->post('id', true);
+                $purchasePrice = $this->input->post('value', true);
+
+                date_default_timezone_get('ASIA/KARACHI');
+
+                $this->product->createdAt = date('Y-m-d H:i:s');
+
+                $result = $this->product->insertRecord();
+                var_export($result);
+
+                if ($result) {
+
+                    echo 'Website Settings are changed';
+
+                } else {
+
+                    echo 'Sorry ';
+
+                }
+            } else {
+
+                echo 'THere are some errors';
+            }
+
+        } else {
+
+            echo ' there is some error in inputs';
+
+            $data['form_errors'] = true;
+
+            $this->load->view('dashboard/setting', $data);
+
+        }
+
     }
 
     public function add_product()
@@ -31,10 +92,10 @@ class Dashboard extends CI_Controller
 
         $this->load->library('form_validation');
 
-        if(filter_input_array(INPUT_POST)){
+        if (filter_input_array(INPUT_POST)) {
 
 
-            $rules= array(
+            $rules = array(
 
                 array(
                     'field' => 'pname',
@@ -71,16 +132,16 @@ class Dashboard extends CI_Controller
 
             $this->form_validation->set_rules($rules);
 
-            if($this->form_validation->run() == true){
+            if ($this->form_validation->run() == true) {
 
-                $this->load-model('product');
+                $this->load - model('product');
 
-                $productName = $this->input->post('pname' , true);
-                $purchasePrice = $this->input->post('purchase' , true);
-                $salePrice = $this->input->post('sale' , true);
-                $discountedPrice = $this->input->post('discount' , true);
-                $tax = $this->input->post('tax' , true);
-                $textarea = $this->input->post('textarea' , true);
+                $productName = $this->input->post('pname', true);
+                $purchasePrice = $this->input->post('purchase', true);
+                $salePrice = $this->input->post('sale', true);
+                $discountedPrice = $this->input->post('discount', true);
+                $tax = $this->input->post('tax', true);
+                $textarea = $this->input->post('textarea', true);
 
                 date_default_timezone_get('ASIA/KARACHI');
 
@@ -89,31 +150,30 @@ class Dashboard extends CI_Controller
                 $result = $this->product->insertRecord();
                 var_export($result);
 
-                if($result){
+                if ($result) {
 
                     echo 'Product Added Successfully';
 
-                }else{
+                } else {
 
                     echo 'Sorry Product not added';
 
                 }
 
-            }else{
+            } else {
 
                 echo 'THere are some errors';
 
             }
 
 
-
-        }else{
+        } else {
 
             echo ' there is some error in inputs';
 
             $data['form_errors'] = true;
 
-            $this->load->view('dashboard/add_product' , $data);
+            $this->load->view('dashboard/add_product', $data);
 
         }
 

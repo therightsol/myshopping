@@ -9,6 +9,7 @@
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
     <!-- Bootstrap Core CSS -->
     <?php $root = base_url(); ?>
+    <link rel="stylesheet" href="<?php echo $root; ?>dashboardassets/css/settingcss.css">
     <link href="<?php echo $root ?>dashboardassets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
     <link href="<?php echo $root ?>dashboardassets/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -16,7 +17,7 @@
     <link href="<?php echo $root ?>dashboardassets/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="<?php echo $root ?>dashboardassets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="<?php echo $root; ?>dashboardassets/css/custom.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

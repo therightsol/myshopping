@@ -2,20 +2,39 @@
 include 'inc/dashhead.inc.php';
 include 'inc/wrapper.inc.php';
 ?>
+
+<?php if($form_errors) : ?>
+
+    <div class="row">
+
+        <p>There are some errors</p>
+
+    </div>
+
+<?php endif; ?>
+
 <div class="container">
     <div class="row">
         <div class="col sm-12 col-md-12 col-lg-12 setting-form">
-            <form class="form-horizontal">
+            <form class="form-horizontal setting-form">
+
+         <div class="text-danger">
+          <?php
+          if(form_error('id')){
+              echo form_error('id');
+          }
+          ?>
+         </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label">ID </label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control">
+                        <input type="text" name="id" class="form-control">
                     </div>
                     <label class="col-sm-2 control-label" style="margin-top: 20px">Value </label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" style="margin-top: 20px">
                     </div>
-                    <button type="button" class="btn btn-success" style="margin-top: 20px;margin-left: 160px">SUBMIT</button>
+                    <button type="submit" class="btn btn-success" style="margin-top: 20px;margin-left: 160px">SUBMIT</button>
                 </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class Setting extends CI_Model{
+class Setting extends My_Model{
     const  DB_TablePK = 'id';
     const DB_TableName = "settings";
 
