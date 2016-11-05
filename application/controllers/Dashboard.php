@@ -48,17 +48,16 @@ class Dashboard extends CI_Controller
 
             if ($this->form_validation->run() == true) {
 
-                $this->load - model('Setting');
+                $this->load->model('setting');
 
-                $productName = $this->input->post('id', true);
-                $purchasePrice = $this->input->post('value', true);
+                $productid = $this->input->post('id', true);
+                $value = $this->input->post('value', true);
 
                 date_default_timezone_get('ASIA/KARACHI');
 
-                $this->product->createdAt = date('Y-m-d H:i:s');
+                $this->setting->createdAt = date('Y-m-d H:i:s');
 
-                $result = $this->product->insertRecord();
-                var_export($result);
+                $result = $this->setting->insertRecord();
 
                 if ($result) {
 

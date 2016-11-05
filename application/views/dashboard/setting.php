@@ -3,16 +3,6 @@ include 'inc/dashhead.inc.php';
 include 'inc/wrapper.inc.php';
 ?>
 
-<?php if($form_errors) : ?>
-
-    <div class="row">
-
-        <p>There are some errors</p>
-
-    </div>
-
-<?php endif; ?>
-
 <div class="container">
     <div class="row">
         <div class="col sm-12 col-md-12 col-lg-12 setting-form">
