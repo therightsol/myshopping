@@ -24,7 +24,9 @@
 
                     <p class="title-desc">Quisque elementum nibh at dolor pellentesque, a eleifend libero
                         pharetra.</p></header>
-                <?php if ($guest): ?>
+
+
+                <?php if (isset($guest) && $guest): ?>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="alert alert-danger">Dear Guest ! <br />Please Enter Your Billing Information.</div>
@@ -32,13 +34,21 @@
                     </div>
                 <?php endif; ?>
 
+                <?php if (isset($is_user_login) && $is_user_login): ?>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="alert alert-info">Dear User <?php echo $username ; ?>  <br/>Proceed to Checkout .</div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
 
                 <div class="xs-margin"></div>
                 <form novalidate method="post" action="<?php echo $root; ?>checkout" id="checkout-form">
-                    <?php   if (!$is_user_login):  ?>
+
                     <div class="panel-group custom-accordion" id="checkout">
 
-
+                        <?php if(isset($is_user_login) && ! $is_user_login): ?>
 
                         <div class="panel">
                             <div class="accordion-header">
@@ -138,7 +148,7 @@
                                                         class="input-icon input-icon-user"></span><span
                                                         class="input-text">First Name&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your First Name" value="<?php if ($is_user_login){ echo $fname ;} else {set_value('fname'); } ?>" name="fname"></div>
+                                                    placeholder="Your First Name" value="<?php if($id){echo $firstname ;} else {  echo set_value('fname');} ?>" name="fname"></div>
 
                                             <div class="text-danger">
                                                 <?php
@@ -151,7 +161,7 @@
                                                         class="input-icon input-icon-user"></span><span
                                                         class="input-text">Last Name&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your Last Lame" value="<?php if ($is_user_login){ echo $lname ;} else {set_value('lname'); } ?>" name="lname"></div>
+                                                    placeholder="Your Last Lame" value="<?php if($id){echo $lastname ;} else {  echo set_value('lname');} ?>" name="lname"></div>
 
 
                                             <div class="text-danger">
@@ -166,7 +176,7 @@
                                                         class="input-text">Email&#42;</span></span> <input type="text"
                                                                                                            required
                                                                                                            class="form-control input-lg"
-                                                                                                           placeholder="Your Email" value="<?php if ($is_user_login){ echo $email ;} else {set_value('email'); } ?>" name="email">
+                                                                                                           placeholder="Your Email" value="<?php if($id){echo $email ;} else {  echo set_value('email');} ?>" name="email">
                                             </div>
 
 
@@ -512,6 +522,7 @@
                             </div>
                         </div>              <!--confirm order-->
                     </div>
+
                 </form>
                 <div class="xlg-margin"></div>
             </div>

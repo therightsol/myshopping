@@ -6,14 +6,7 @@ class Checkout extends CI_Controller {
     public function index()
     {
         $this->load->library('form_validation');
-        if ($this->session->userdata('username')) {
-            $data['is_user_login'] = true;
-            $data['guest'] = false;
-        }
-        else {
-            $data['is_user_login'] = false;
-            $data['guest'] = true;
-        }
+
 
         // if ($this->session->userdata('username')) {
 
@@ -109,80 +102,67 @@ class Checkout extends CI_Controller {
             $this->form_validation->set_rules($rules);
 
 
-            if (! $this->form_validation->run() == True ) {
+            if ($this->form_validation->run() == false ) {
                 //continue
-
+                echo "form validation not true";
+                $data['is_user_login'] = true;
 
                 $this->load->model('user');
+                $this->load->model('usersmeta');
 
                 $un = $this->session->userdata('username');
 
                 $user = $this->user->getRecord ($un, 'username');
 
+$user = (array) $user;
+              $id = $user['id'];
+                $metaRec = $this->usersmeta->getRecord ($id, 'uid');
+                $metaRec= (array) $metaRec ;
+
+                $merge = array_merge($user + $data + $metaRec);
+
+                $this->load->view ('checkout', $merge);
+                $this->debug($merge); exit ;
 
 
 
-//if id is unique we want just one row to be returned
 
 
 
-                /* if ($isRecordAvailable) {
-                     echo " continue, your username and password Matched". "<br/>";
-                     // var_export($_POST);
 
-                     // user is available now check is password is same as provided
-                     $password = $this->input->post('loginpass', True);
-
-                     $user = $this->user->getRecord( $email, 'email' );
-
-                     $is_pass_match = password_verify($password, $user->password);
-                     //$this->debug($user);exit;
-
-
-                     if ($is_pass_match){
-                         // Now login
-
-                         $this->session->set_userdata('username', $user->username);
-                         $this->session->set_userdata('email', $user->email);
-                         $this->session->set_userdata('usertype', $user->usertype);
-
-                         redirect('home');*/
-
-
-                if ($this->session->userdata('username')) {
-                    $data['is_user_login'] = true;
-                    $data['fname'] = $user->firstname;
-                    $data['lname'] = $user->lastname;
-                    $data['email'] = $user->email;
-
-                    $this->load->view('checkout', $data);
-                }
-                else {
-                    $data['is_user_login'] = false;
-                    $data['fname'] = "";
-                    $data['lname'] = "";
-                    $data['email'] = "";
-                    $this->load->view('checkout', $data);
-                }
-
-
-            } else {
-                echo "Show validation errors";
-                /*$data['validation_errors'] = validation_errors();
-                $this->load->view('checkout', $data);*/
             }
 
+            else
+
+            {
+                echo "Show validation errors,   form validation true";
+                $data['validation_errors'] = validation_errors();
+                $this->load->view('checkout', $data);
+
+            }
+
+        }
+        else
+        {
+            echo "filter input array else ..........";
+
+            if ($this->session->userdata('username')) {
+                $data['is_user_login'] = true;
+                $data['username'] = $this->session->userdata('username');
 
 
 
+                $data['guest'] = false;
+                echo "login user";
+            }
+            else {
+                $data['is_user_login'] = false;
+                $data['guest'] = true;
+                echo "guest";
+            }
 
+            $this->load->view ('checkout', $data);
 
-
-        } else {
-            /* $data['is_user_login'] = false;
-              $data['guest'] = true;*/
-            $this->load->view('checkout');
-            //echo "main page";
         }
 
 
