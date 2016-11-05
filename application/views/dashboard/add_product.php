@@ -40,7 +40,7 @@ include 'inc/wrapper.inc.php';
 
             <div class="col-md-12">
 
-                <div class="alert alert-success">Product added successfully.</div>
+                <div class="alert alert-success"><?php echo'Product added successfully.'; ?>.</div>
 
             </div>
 
@@ -134,12 +134,12 @@ include 'inc/wrapper.inc.php';
         </div>
 
         <div class="text-danger">
+
             <?php if(form_error('textarea')){
 
                 echo form_error('textarea');
 
             }
-
             ?>
 
         </div>
