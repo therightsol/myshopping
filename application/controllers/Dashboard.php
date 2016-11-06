@@ -21,68 +21,58 @@ class Dashboard extends CI_Controller
 
     public function setting()
     {
-
-        $data['form_errors'] = false;
         $data['success'] = false;
+        $data['form_errors'] = false;
 
         $this->load->library('form_validation');
 
         if (filter_input_array(INPUT_POST)) {
-
-
             $rules = array(
-
                 array(
-                    'field' => 'id',
-                    'label' => 'Product ID',
+                    'field' => 'key',
+                    'label' => 'Product Key',
                     'rules' => 'required'
                 ),
                 array(
                     'field' => 'value',
-                    'label' => ' Value',
+                    'label' => 'Value',
                     'rules' => 'required'
-                ),
+                )
             );
-
             $this->form_validation->set_rules($rules);
-
             if ($this->form_validation->run() == true) {
 
                 $this->load->model('setting');
 
-                $productid = $this->input->post('id', true);
+                $productkey = $this->input->post('key', true);
                 $value = $this->input->post('value', true);
 
-                date_default_timezone_get('ASIA/KARACHI');
+                $this->setting->key = $productkey;
+                $this->setting->value = $value;
+
+                date_default_timezone_set('ASIA/KARACHI');
 
                 $this->setting->createdAt = date('Y-m-d H:i:s');
 
                 $result = $this->setting->insertRecord();
-
+                 //var_export($result);
                 if ($result) {
-
-                    echo 'Website Settings are changed';
-
+                    //echo 'settings saved successfully';
+                    $data['success'] = true;
+                    $this->load->view('dashboard/setting' , $data);
                 } else {
-
                     echo 'Sorry ';
-
                 }
             } else {
-
-                echo 'THere are some errors';
+                //echo 'THere are some errors';
+                $data['validation_errors'] = validation_errors();
+                $this->load->view('dashboard/setting', $data);
             }
-
         } else {
-
-            echo ' there is some error in inputs';
-
+            //echo ' there is some error in inputs';
             $data['form_errors'] = true;
-
             $this->load->view('dashboard/setting', $data);
-
         }
-
     }
 
     public function add_product()

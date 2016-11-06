@@ -2,34 +2,46 @@
 include 'inc/dashhead.inc.php';
 include 'inc/wrapper.inc.php';
 ?>
-
-<div class="container">
-    <div class="row">
-        <div class="col sm-12 col-md-12 col-lg-12 setting-form">
-            <form class="form-horizontal setting-form">
-
-         <div class="text-danger">
-          <?php
-          if(form_error('id')){
-              echo form_error('id');
-          }
-          ?>
-         </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">ID </label>
-                    <div class="col-sm-10">
-                        <input type="text" name="id" class="form-control">
+<div id="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-3">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Settings</h3>
                     </div>
-                    <label class="col-sm-2 control-label" style="margin-top: 20px">Value </label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" style="margin-top: 20px">
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="text-danger">
+                                <?php if(form_error('key')){
+
+                                    echo form_error('key');
+                                }
+                                ?>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="KEY" name="key" type="text" autofocus>
+                                </div>
+                                <div class="text-danger">
+                                    <?php if(form_error('value')){
+
+                                        echo form_error('value');
+                                    }
+                                    ?>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Value" name="value" type="text" value="">
+                                </div>
+                                <input type="SUBMIT" class="btn btn-lg btn-success btn-block" />
+                            </fieldset>
+                        </form>
                     </div>
-                    <button type="submit" class="btn btn-success" style="margin-top: 20px;margin-left: 160px">SUBMIT</button>
                 </div>
+            </div>
         </div>
     </div>
-</div>
 
+</div>
 <?php
 include 'inc/jsfooterlink.inc.php';
 ?>
