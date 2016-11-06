@@ -4,7 +4,7 @@ include 'inc/wrapper.inc.php';
 ?>
 
 <!-- This Add product Page -->
-
+<div id="page-wrapper">
 <?php if($form_errors) : ?>
 
 <div class="row">
@@ -21,7 +21,28 @@ include 'inc/wrapper.inc.php';
         <!-- Form Name -->
         <legend>Add Product</legend>
 
+
         <!-- Text input-->
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="name">Product Title</label>
+            <div class="col-md-6">
+                <input id="ptitle" name="ptitle" type="text" placeholder="Product Title" class="form-control input-md">
+
+            </div>
+            <span id="slug-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="name">Slug</label>
+            <div class="col-md-6">
+                <input id="pSlug" name="pSlug" type="text" readonly placeholder="" class="form-control input-md">
+
+            </div>
+        </div>
+
+
+
 
         <div class="text-danger">
         <?php if(form_error('pname')){
@@ -109,8 +130,11 @@ include 'inc/wrapper.inc.php';
         <div class="form-group">
             <label class="col-md-4 control-label" for="dprice">Discounted Price</label>
             <div class="col-md-6">
-                <input id="dprice" name="discount" type="text" placeholder="Price" class="form-control input-md">
+                <div class="input-group">
+                    <input id="dprice" name="discount" type="text" placeholder="Price" class="form-control input-md">
 
+                    <span class="input-group-addon" id="basic-addon1">%</span>
+                </div>
             </div>
         </div>
 
@@ -171,7 +195,48 @@ include 'inc/wrapper.inc.php';
     </fieldset>
 </form>
 
+</div>
 
+<script>
+    jQuery(document).ready(function ( $ ){
+        var slug = '';
+        var titleElem = $('#ptitle');
+        var elemSlug = $('#pSlug');
+        var elem_slugMessage = $('#slug-message');
+
+        titleElem.on('change keyup', function (){
+
+           var title = $(this).val();
+           title = jQuery.trim(title);
+
+           slug = title.replace(/  +/g, ' ');       // replacing multiple spaces into one space
+           slug = slug.replace(/ /gi, '-');             // replacing spaces into dashes
+           /*console.info(slug); */
+           elemSlug.val(slug);
+       });
+
+        titleElem.change(function ( $ ) {
+            //console.log( slug);
+
+            jQuery.ajax({
+                url: "<?php echo $root; ?>dashboard/ajax_is_slug_available/" + slug
+            }).done(function( is_available ) {
+                //console.log(is_available);
+                if ( is_available ){
+                    titleElem.parent().removeClass('has-error');
+                    elemSlug.parent().removeClass('has-error');
+
+                    elem_slugMessage.html('');
+                }else {
+                    titleElem.parent().addClass('has-error');
+                    elemSlug.parent().addClass('has-error');
+
+                    elem_slugMessage.addClass('text-danger').html('This title is already exists. Please change title');
+                }
+            });
+        });
+    });
+</script>
 
 
 <?php

@@ -92,39 +92,39 @@ class Dashboard extends CI_Controller
                 array(
                     'field' => 'pname',
                     'label' => 'Product Name',
-                    'rules' => 'required|min_length[7]|max_length[255]'
+                    'rules' => 'required|min_length[3]|max_length[255]'
                 ),
                 array(
                     'field' => 'purchase',
                     'label' => 'Purchase Price',
-                    'rules' => 'required|min_length[2]|max_length[9]'
+                    'rules' => 'required|min_length[1]|numeric|callback_is_valid_amount'
                 ),
                 array(
                     'field' => 'sale',
                     'label' => 'Sale Price',
-                    'rules' => 'required|min_length[2]|max_length[9]'
+                    'rules' => 'required|min_length[1]|numeric|callback_is_valid_amount'
                 ),
                 array(
                     'field' => 'discount',
                     'label' => 'Discounted Price',
-                    'rules' => 'required|min_length[2]|max_length[3]'
+                    'rules' => 'required|min_length[1]|numeric|callback_is_valid_discount'
                 ),
                 array(
                     'field' => 'tax',
                     'label' => 'Tax',
-                    'rules' => 'required|min_length[2]|max_length[5]'
+                    'rules' => 'required|min_length[1]|numeric|callback_is_valid_amount'
                 ),
                 array(
                     'field' => 'textarea',
                     'label' => 'Text Area',
-                    'rules' => 'required||min_length[100]'
+                    'rules' => ''
                 ),
 
             );
 
             $this->form_validation->set_rules($rules);
 
-            if ($this->form_validation->run() == False) {
+            if (! $this->form_validation->run() == False) {
 
                 $this->load->model('product');
 
@@ -141,6 +141,8 @@ class Dashboard extends CI_Controller
                 $this->product->discountpercent = $discountedPrice;
                 $this->product->tax = $tax;
                 $this->product->description = $textarea;
+                $this->product->slug = $this->input->post('pSlug', True);
+                $this->product->status = 1; // Add 1 as published, 2 as draft in product statuses DB on ur side
 
                 date_default_timezone_set('ASIA/KARACHI');
 
@@ -162,8 +164,7 @@ class Dashboard extends CI_Controller
                 }
 
             } else {
-
-//                echo 'THere are some errors';
+                // validation errors
 
                 $data['validation_errors'] = validation_errors();
                 $this->load->view('dashboard/add_product', $data);
@@ -172,10 +173,7 @@ class Dashboard extends CI_Controller
 
 
         } else {
-
-//            echo ' there is some error in inputs';
-
-            $data['form_errors'] = true;
+            // not post method
 
             $this->load->view('dashboard/add_product', $data);
 
@@ -187,4 +185,48 @@ class Dashboard extends CI_Controller
     {
         $this->load->view('view_all_products');
     }
+
+
+    // by ali shan
+    public function ajax_is_slug_available( $slug = '' ){
+        $this->load->model('product');
+
+        $rec = $this->product->getRecord($slug, 'slug');
+
+        //var_export($rec);
+        //echo $this->db->last_query() ;
+        if ( $rec && !empty ($rec) ){
+            echo false;
+            return;
+        }
+
+
+        echo true;
+    }
+
+    // by ali shan
+    public function is_valid_amount($str)
+    {
+        $exp = explode('.', $str);
+        if ( is_array($exp) && isset($exp[0]) && strlen( $exp[0] ) > 9){
+            $this->form_validation->set_message('is_valid_amount', 'Please enter valid and acceptable amount in %s');
+            return FALSE;
+        }
+
+        return true;
+    }
+
+
+    // by ali shan
+    public function is_valid_discount($str)
+    {
+        $exp = explode('.', $str);
+        if ( is_array($exp) && isset($exp[0]) && strlen( $exp[0] ) > 2){
+            $this->form_validation->set_message('is_valid_discount', 'Please enter valid and acceptable discount from 1 to 99 in %s');
+            return FALSE;
+        }
+
+        return true;
+    }
+
 }
