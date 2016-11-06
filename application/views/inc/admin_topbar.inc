@@ -55,9 +55,10 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="header-text-container pull-right"><p class="header-text">Welcome to Venedor!</p>
+                    <!--<div class="header-text-container pull-right"><p class="header-text">Welcome to Venedor!</p>-->
+                    <div class="header-text-container pull-right"><p class="header-link"><a href="<?php echo $root; ?>dashboard">Dashboard  | </a><?php ?></p>
 
-                        <p class="header-link"><a href="<?php echo $root; ?>logout">logout</a>&nbsp;| <?php echo $this->session->userdata('username'); ?></p></div>
+                        <p class="header-link"><a href="<?php echo $root; ?>logout"> logout</a>&nbsp;| <?php echo $this->session->userdata('username'); ?></p></div>
                 </div>
             </div>
         </div>

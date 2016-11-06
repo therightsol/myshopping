@@ -50,78 +50,78 @@
 
                         <?php if(isset($is_user_login) && ! $is_user_login): ?>
 
-                        <div class="panel">
-                            <div class="accordion-header">
-                                <div class="accordion-title">1 Step: <span>Checkout Option</span></div>
-                                <a class="accordion-btn opened" data-toggle="collapse"
-                                   data-target="#checkout-option"></a></div>
-                            <div id="checkout-option" class="collapse in">
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-12"><h2 class="checkout-title">New
-                                                Customer</h2>
+                            <div class="panel">
+                                <div class="accordion-header">
+                                    <div class="accordion-title">1 Step: <span>Checkout Option</span></div>
+                                    <a class="accordion-btn opened" data-toggle="collapse"
+                                       data-target="#checkout-option"></a></div>
+                                <div id="checkout-option" class="collapse in">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12"><h2 class="checkout-title">New
+                                                    Customer</h2>
 
-                                            <p>Register with us for future convenience:</p>
+                                                <p>Register with us for future convenience:</p>
 
-                                            <div class="xs-margin"></div>
-                                            <div class="input-group custom-checkbox sm-margin"><input
-                                                    type="checkbox"> <span class="checbox-container"><i
-                                                        class="fa fa-check"></i></span> Checkout as Guest
-                                            </div>
-                                            <div class="input-group custom-checkbox sm-margin"><input
-                                                    type="checkbox"> <span class="checbox-container"><i
-                                                        class="fa fa-check"></i></span> Register
-                                            </div>
-                                            <p>By creating an account with our store, you will be able to move
-                                                through the checkout process faster, store multiple shipping
-                                                addresses, view and track your orders in your account and more.</p>
+                                                <div class="xs-margin"></div>
+                                                <div class="input-group custom-checkbox sm-margin"><input
+                                                        type="checkbox"> <span class="checbox-container"><i
+                                                            class="fa fa-check"></i></span> Checkout as Guest
+                                                </div>
+                                                <div class="input-group custom-checkbox sm-margin"><input
+                                                        type="checkbox"> <span class="checbox-container"><i
+                                                            class="fa fa-check"></i></span> Register
+                                                </div>
+                                                <p>By creating an account with our store, you will be able to move
+                                                    through the checkout process faster, store multiple shipping
+                                                    addresses, view and track your orders in your account and more.</p>
 
-                                            <div class="md-margin"></div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12"><h2 class="checkout-title">
-                                                Registered Customers</h2>
+                                                <div class="md-margin"></div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12"><h2 class="checkout-title">
+                                                    Registered Customers</h2>
 
-                                            <p>If you have an account with us, please log in.</p>
+                                                <p>If you have an account with us, please log in.</p>
 
-                                            <div class="xs-margin"></div>
-                                            <div class="text-danger">
-                                                <?php
-                                                if(form_error ('email')){
-                                                    echo form_error ('email');
-                                                }
-                                                ?>
-                                            </div>
-                                            <div class="input-group"><span class="input-group-addon"><span
-                                                        class="input-icon input-icon-email"></span><span
-                                                        class="input-text">Email&#42;</span></span> <input type="text"
-                                                                                                           required
-                                                                                                           class="form-control input-lg"
-                                                                                                           placeholder="Your Email" name="login_email">
-                                            </div>
-                                            <div class="text-danger">
-                                                <?php
-                                                if(form_error ('password')){
-                                                    echo form_error ('password');
-                                                }
-                                                ?>
-                                            </div>
-                                            <div class="input-group xs-margin"><span class="input-group-addon"><span
-                                                        class="input-icon input-icon-password"></span><span
-                                                        class="input-text">Password&#42;</span></span> <input
-                                                    type="text" required class="form-control input-lg"
-                                                    placeholder="Your Password" name="login_password"></div>
-                                            <span class="help-block text-right"><a href="<?php echo $root; ?>checkout">Forgot your
+                                                <div class="xs-margin"></div>
+                                                <div class="text-danger">
+                                                    <?php
+                                                    if(form_error ('email')){
+                                                        echo form_error ('email');
+                                                    }
+                                                    ?>
+                                                </div>
+                                                <div class="input-group"><span class="input-group-addon"><span
+                                                            class="input-icon input-icon-email"></span><span
+                                                            class="input-text">Email&#42;</span></span> <input type="text"
+                                                                                                               required
+                                                                                                               class="form-control input-lg"
+                                                                                                               placeholder="Your Email" name="login_email">
+                                                </div>
+                                                <div class="text-danger">
+                                                    <?php
+                                                    if(form_error ('password')){
+                                                        echo form_error ('password');
+                                                    }
+                                                    ?>
+                                                </div>
+                                                <div class="input-group xs-margin"><span class="input-group-addon"><span
+                                                            class="input-icon input-icon-password"></span><span
+                                                            class="input-text">Password&#42;</span></span> <input
+                                                        type="text" required class="form-control input-lg"
+                                                        placeholder="Your Password" name="login_password"></div>
+                                                <span class="help-block text-right"><a href="<?php echo $root; ?>checkout">Forgot your
                                                         password?</a></span>
 
-                                            <div class="input-group custom-checkbox sm-margin top-10px"><input
-                                                    type="checkbox"> <span class="checbox-container"><i
-                                                        class="fa fa-check"></i></span> Remember my password
+                                                <div class="input-group custom-checkbox sm-margin top-10px"><input
+                                                        type="checkbox"> <span class="checbox-container"><i
+                                                            class="fa fa-check"></i></span> Remember my password
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <a href="<?php echo $root; ?>checkout" class="btn btn-custom-2">CONTINUE</a></div>
-                            </div>
-                        </div>          <!--checkout options-->
+                                        <a href="<?php echo $root; ?>checkout" class="btn btn-custom-2">CONTINUE</a></div>
+                                </div>
+                            </div>          <!--checkout options-->
                         <?php endif; ?>
 
 
@@ -191,7 +191,7 @@
                                                         class="input-icon input-icon-phone"></span><span
                                                         class="input-text">Telephone&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your Telephone" value="<?php echo set_value('phone'); ?>" name="phone"></div>
+                                                    placeholder="Your Telephone" value="<?php if($id){echo $telephoneNum ;} else {  echo set_value('phone');} ?>" name="phone"></div>
 
                                             <div class="text-danger">
                                                 <?php
@@ -204,7 +204,7 @@
                                                         class="input-icon input-icon-fax"></span><span
                                                         class="input-text">Fax</span></span> <input type="text"
                                                                                                     class="form-control input-lg"
-                                                                                                    placeholder="Your Fax" value="<?php echo set_value('fax'); ?>" name="fax">
+                                                                                                    placeholder="Your Fax" value="<?php if($id){echo $fax ;} else {  echo set_value('fax');} ?>" name="fax">
                                             </div>
 
                                             <div class="text-danger">
@@ -220,7 +220,7 @@
                                                         class="input-text">Company&#42;</span></span> <input type="text"
                                                                                                              required
                                                                                                              class="form-control input-lg"
-                                                                                                             placeholder="Your Company" value="<?php echo set_value('company'); ?>" name="company">
+                                                                                                             placeholder="Your Company" value="<?php if($id){echo $companyName ;} else {  echo set_value('company');} ?>" name="company">
                                             </div>
 
                                             <div class="text-danger">
@@ -234,7 +234,7 @@
                                                         class="input-icon input-icon-password"></span><span
                                                         class="input-text">Password&#42;</span></span> <input
                                                     type="password" required class="form-control input-lg"
-                                                    placeholder="Your Password" value="<?php echo set_value('pass1'); ?>" name="pass1"></div>
+                                                    placeholder="Your Password" value="<?php if($id){echo "" ;} else {  echo set_value('pass');} ?>" name="pass1"></div>
 
                                             <div class="text-danger">
                                                 <?php
@@ -248,7 +248,7 @@
                                                         class="input-icon input-icon-password"></span><span
                                                         class="input-text">Password&#42;</span></span> <input
                                                     type="password" required class="form-control input-lg"
-                                                    placeholder="Your Password" value="<?php echo set_value('pass2'); ?>" name="pass2"></div>
+                                                    placeholder="Your Password" value="<?php if($id){echo "" ;} else {  echo set_value('pass2');} ?>" name="pass2"></div>
 
                                             <div class="input-group custom-checkbox sm-margin"><input
                                                     type="checkbox" name="checkbox_newsletter"> <span class="checbox-container"><i
@@ -276,7 +276,7 @@
                                                         class="input-icon input-icon-address"></span><span
                                                         class="input-text">Address 1&#42;</span></span> <input
                                                     type="text" class="form-control input-lg"
-                                                    placeholder="Your Address" value="<?php echo set_value('address1'); ?>" name="address1"></div>
+                                                    placeholder="Your Address" value="<?php if($id){echo $firstAddress ;} else {  echo set_value('address1');} ?>" name="address1"></div>
 
 
                                             <div class="text-danger">
@@ -290,7 +290,7 @@
                                                         class="input-icon input-icon-address"></span><span
                                                         class="input-text">Address 2&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your Address" value="<?php echo set_value('address2'); ?>" name="address2"></div>
+                                                    placeholder="Your Address" value="<?php if($id){echo $secondAddress ;} else {  echo set_value('address2');} ?>" name="address2"></div>
 
                                             <div class="text-danger">
                                                 <?php
@@ -304,7 +304,7 @@
                                                         class="input-text">City&#42;</span></span> <input type="text"
                                                                                                           required
                                                                                                           class="form-control input-lg"
-                                                                                                          placeholder="Your City" value="<?php echo set_value('city'); ?>" name="city">
+                                                                                                          placeholder="Your City" value="<?php if($id){echo $cityName ;} else {  echo set_value('city');} ?>" name="city">
                                             </div>
 
 
@@ -319,7 +319,7 @@
                                                         class="input-icon input-icon-postcode"></span><span
                                                         class="input-text">Post Code&#42;</span></span> <input
                                                     type="text" required class="form-control input-lg"
-                                                    placeholder="Your Post Code" value="<?php echo set_value('postcode'); ?>" name="postcode"></div>
+                                                    placeholder="Your Post Code" value="<?php if($id){echo $postCode ;} else {  echo set_value('postcode');} ?>" name="postcode"></div>
 
 
                                             <div class="text-danger">

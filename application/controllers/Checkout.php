@@ -104,30 +104,33 @@ class Checkout extends CI_Controller {
 
             if ($this->form_validation->run() == false ) {
                 //continue
-                echo "form validation not true";
+               // echo "form validation not true";
                 $data['is_user_login'] = true;
 
                 $this->load->model('user');
                 $this->load->model('usersmeta');
 
                 $un = $this->session->userdata('username');
-
                 $user = $this->user->getRecord ($un, 'username');
+                $user = (array) $user;
 
-$user = (array) $user;
-              $id = $user['id'];
-                $metaRec = $this->usersmeta->getRecord ($id, 'uid');
+                $id = $user['id'];
+                $metaRec = $this->usersmeta->getRecord ($id, 'uid', true);
                 $metaRec= (array) $metaRec ;
 
-                $merge = array_merge($user + $data + $metaRec);
+                $data['telephoneNum'] =  ($metaRec[0]['metavalue']);
+                $data['fax'] =  ($metaRec[1]['metavalue']);
+                $data['companyName'] =  ($metaRec[2]['metavalue']);
+                $data['firstAddress'] =  ($metaRec[3]['metavalue']);
+                $data['secondAddress'] =  ($metaRec[4]['metavalue']);
+                $data['cityName'] =  ($metaRec[5]['metavalue']);
+                $data['postCode'] =  ($metaRec[6]['metavalue']);
+                $data['countryName'] =  ($metaRec[7]['metavalue']);
+                $data['region/state'] =  ($metaRec[8]['metavalue']);
+
+                $merge = array_merge($user + $data);
 
                 $this->load->view ('checkout', $merge);
-                $this->debug($merge); exit ;
-
-
-
-
-
 
 
             }
@@ -135,7 +138,7 @@ $user = (array) $user;
             else
 
             {
-                echo "Show validation errors,   form validation true";
+               //echo "Show validation errors,   form validation true";
                 $data['validation_errors'] = validation_errors();
                 $this->load->view('checkout', $data);
 
@@ -144,21 +147,24 @@ $user = (array) $user;
         }
         else
         {
-            echo "filter input array else ..........";
+           // echo "filter input array else ..........";
 
             if ($this->session->userdata('username')) {
                 $data['is_user_login'] = true;
+                $data['id'] = null;
+
                 $data['username'] = $this->session->userdata('username');
 
 
 
                 $data['guest'] = false;
-                echo "login user";
+                //echo "login user";
             }
             else {
                 $data['is_user_login'] = false;
                 $data['guest'] = true;
-                echo "guest";
+                $data['id'] = null;
+                //echo "guest";
             }
 
             $this->load->view ('checkout', $data);
@@ -180,4 +186,6 @@ $user = (array) $user;
 
         if ($die) exit('<hr />Exit from Debug in Register.php Controller.');
     }
+
+
 }
