@@ -2,28 +2,7 @@
 <project version="4">
   <component name="PublishConfigData" serverName="My shopping">
     <serverData>
-      <paths name="ABN[TechPlus]">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="FTP - TechPlus">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="MominAutoSales">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="PPMA">
+      <paths name="My shopping">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

@@ -246,19 +246,19 @@
                             </li>
                         </ul>
                     <li>
-                        <a href="<?php echo $root; ?>"> Product <span class="fa arrow"></span> </a>
+                        <a href="<?php echo $root; ?>"><i class="fa fa-shopping-cart fa-fw"></i> Product <span class="fa arrow"></span> </a>
                         <ul class="nav nav-secnd-left">
                             <li>
-                                <a href="<?php echo $root; ?>dashboard/add_product">ADD Product</a>
+                                <a href="<?php echo $root; ?>dashboard/add_product">Add Product</a>
                             </li>
                             <li>
-                                <a href="#">Delete Product</a>
+                                <a href="<?php echo $root; ?>dashboard/delete_product">Delete Product</a>
                             </li>
                             <li>
-                                <a href="#">  Update Product</a>
+                                <a href="<?php echo $root; ?>dashboard/update_product">  Update Product</a>
                             </li>
                             <li>
-                                <a href="#">Create Product</a>
+                                <a href="<?php echo $root; ?>dashboard/view_product">View Product</a>
                             </li>
                         </ul>
                     </li>

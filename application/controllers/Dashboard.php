@@ -181,9 +181,19 @@ class Dashboard extends CI_Controller
 
     }
 
-    public function view_all_products()
+    public function delete_product()
     {
-        $this->load->view('view_all_products');
+        $this->load->view('dashboard/delete_product');
+    }
+
+    public function update_product()
+    {
+        $this->load->view('dashboard/update_product');
+    }
+
+    public function view_product()
+    {
+        $this->load->view('dashboard/view_product');
     }
 
 
