@@ -32,19 +32,36 @@
                             <div class="row">
                                 <form novalidate method="post" action="<?php echo $root; ?>contact" id="contact-form">
                                     <div class="col-md-6 col-sm-12 col-xs-12">
-                                      
-
+                                        <div class="text-danger">
+                                            <?php if(form_error('contact-name')){
+                                                echo form_error('contact-name');
+                                            }
+                                            ?>
+                                        </div>
                                         <div class="input-group"><span class="input-group-addon"><span
                                                 class="input-icon input-icon-user"></span><span class="input-text">Name&#42;</span></span>
 
                                             <input type="text" name="contact-name" id="contact-name" required
                                                    class="form-control input-lg" placeholder="Your Name"></div>
 
+                                        <div class="text-danger">
+                                            <?php if(form_error('contact-email')){
+                                                echo form_error('contact-email');
+                                            }
+                                            ?>
+                                        </div>
+
                                         <div class="input-group"><span class="input-group-addon"><span
                                                 class="input-icon input-icon-email"></span><span class="input-text">Email&#42;</span></span>
                                             <input type="email" name="contact-email" id="contact-email" required
                                                    class="form-control input-lg" placeholder="Your Email"></div>
 
+                                        <div class="text-danger">
+                                            <?php if(form_error('contact-subject')){
+                                                echo form_error('contact-subject');
+                                            }
+                                            ?>
+                                        </div>
                                         <div class="input-group"><span class="input-group-addon"><span
                                                 class="input-icon input-icon-subject"></span><span class="input-text">Subject&#42;</span></span>
                                             <input type="text" name="contact-subject" id="contact-subject" required
@@ -53,6 +70,13 @@
                                             are marked *</p></div>
 
                                     <div class="col-md-6 col-sm-12 col-xs-12">
+
+                                        <div class="text-danger">
+                                            <?php if(form_error('contact-message')){
+                                                echo form_error('contact-message');
+                                            }
+                                            ?>
+                                        </div>
 
                                         <div class="input-group textarea-container"><span
                                                 class="input-group-addon"><span

@@ -227,15 +227,12 @@ class Register extends CI_Controller
                         @todo Asad please add these to the above array
 
 
-
                         // @todo ASAD please insert DATE / TIME stamp in Database, at which time the record is inserted.
                         // @todo for this step look how I inserted date / time above in user's table
 
 
+
                         */
-
-
-
 
                         $numRows = $this->usersmeta->insertBatch($metaRec);
 
