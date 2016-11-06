@@ -11,7 +11,7 @@ include 'inc/wrapper.inc.php';
                         <h3 class="panel-title">Settings</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" method="post">
                             <fieldset>
                                 <div class="text-danger">
                                 <?php if(form_error('key')){
