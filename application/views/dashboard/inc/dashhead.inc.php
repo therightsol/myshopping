@@ -13,6 +13,9 @@
     <link href="<?php echo $root ?>dashboardassets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
     <link href="<?php echo $root ?>dashboardassets/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+
     <!-- Custom CSS -->
     <link href="<?php echo $root ?>dashboardassets/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -23,6 +26,9 @@
     <!--[if lt IE 9]>
     <script src="<?php echo $root; ?>https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="<?php echo $root; ?>https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
 
     <![endif]-->
 </head>

@@ -28,3 +28,11 @@
     $("[data-toggle=popover]")
         .popover()
 </script>
+
+<script>
+    jQuery(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
+
+
