@@ -1,0 +1,13 @@
+.logo {
+    min-height:200px;
+    color:#afb1b5;
+}
+.logo h2{
+    color: black;
+}
+.logo>img {
+    margin-top: 30px;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    height: 120px;
+}
