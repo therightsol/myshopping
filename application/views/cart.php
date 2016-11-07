@@ -1,9 +1,30 @@
-<?php include 'inc/head.inc.php'; ?>
+<?php
+include 'inc/head.inc.php';
+include 'inc/topbar.inc.php';
+include 'inc/header.inc.php';
+include 'inc/menu.inc.php';
+include 'inc/panel.inc.php';
+?>
 
-<body>
-<!-- This is test by RAMISH AHMED BUTT -->
+<script type="text/javascript">
 
-<?php include 'inc/load_menu_file.php'; ?>
+    $(document).ready(function () {
+        $('#bttclose').click(function () {
+            $('.closepro').hide();
+        });
+
+        $('#bttclose1').click(function () {
+            $('.closepro1').hide();
+        })
+
+        ;$('#bttclose2').click(function () {
+            $('.closepro2').hide();
+        });
+    });
+
+</script>
+
+
 
 <section id="content">
     <div id="breadcrumb-container">
@@ -34,11 +55,11 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
+                            <tr class="closepro" >
                                 <td class="item-name-col">
-                                    <figure><a href="<?php echo $root; ?>cart"><img src="<?php echo $root; ?>assets/images/products/compare1.jpg"
+                                    <figure><a href=""><img src="<?php echo $root; ?>assets/images/products/compare1.jpg"
                                                                       alt="Lowlands Lace Blouse"></a></figure>
-                                    <header class="item-name"><a href="<?php echo $root; ?>cart">Lowlands Lace Blouse</a></header>
+                                    <header class="item-name"><a href="">Lowlands Lace Blouse</a></header>
                                     <ul>
                                         <li>Color: White</li>
                                         <li>Size: SM</li>
@@ -48,16 +69,16 @@
                                 <td class="item-price-col"><span class="item-price-special">$1175</span></td>
                                 <td>
                                     <div class="custom-quantity-input"><input type="text" name="quantity" value="1">
-                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
+                                        <a href="" onclick="return!1"
                                            class="quantity-btn quantity-input-up"><i class="fa fa-angle-up"></i></a>
-                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
+                                        <a href="" onclick="return!1"
                                            class="quantity-btn quantity-input-down"><i class="fa fa-angle-down"></i></a>
                                     </div>
                                 </td>
-                                <td class="item-total-col"><span class="item-price-special">$1175</span> <a
-                                        href="<?php echo $root; ?>cart" class="close-button"></a></td>
+                                <td class="item-total-col"><span class="item-price-special">$1175</span>
+                                    <span id="bttclose" class="close-button"></span>aur </td>
                             </tr>
-                            <tr>
+                            <tr class="closepro1">
                                 <td class="item-name-col">
                                     <figure><a href="<?php echo $root; ?>cart"><img src="<?php echo $root; ?>assets/images/products/compare2.jpg"
                                                                       alt="Samsung Galaxy Ace"></a></figure>
@@ -77,10 +98,12 @@
                                            class="quantity-btn quantity-input-down"><i class="fa fa-angle-down"></i></a>
                                     </div>
                                 </td>
-                                <td class="item-total-col"><span class="item-price-special">$1475</span> <a
-                                        href="<?php echo $root; ?>cart" class="close-button"></a></td>
-                            </tr>
-                            <tr>
+                                <td class="item-total-col">
+                                    <span class="item-price-special">$1475</span>
+                                    <span id="bttclose1" class="close-button"></span>
+                                </td>
+                            </tr >
+                            <tr class="closepro2">
                                 <td class="item-name-col">
                                     <figure><a href="<?php echo $root; ?>cart"><img src="<?php echo $root; ?>assets/images/products/compare3.jpg"
                                                                       alt="Iphone Case Cover Original"></a></figure>
@@ -101,8 +124,7 @@
                                            class="quantity-btn quantity-input-down"><i class="fa fa-angle-down"></i></a>
                                     </div>
                                 </td>
-                                <td class="item-total-col"><span class="item-price-special">$1197</span> <a
-                                        href="<?php echo $root; ?>cart" class="close-button"></a></td>
+                                <td class="item-total-col"><span class="item-price-special">$1197</span> <span class="close-button" id="bttclose2"></span></td>
                             </tr>
                             </tbody>
                         </table>
@@ -230,7 +252,7 @@
                                     <span class="ratings-amount">5 Reviews</span></div>
                                 <h3 class="item-name"><a href="<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>addproduct" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
                                     <div class="item-action-inner"><a href="<?php echo $root; ?>cart"
@@ -255,7 +277,7 @@
                                     <span class="ratings-amount">4 Reviews</span></div>
                                 <h3 class="item-name"><a href="<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>addproduct" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
                                     <div class="item-action-inner"><a href="<?php echo $root; ?>cart"
@@ -281,7 +303,7 @@
                                     <span class="ratings-amount">2 Reviews</span></div>
                                 <h3 class="item-name"><a href="<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>addproduct" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
                                     <div class="item-action-inner"><a href="<?php echo $root; ?>cart"
@@ -307,7 +329,7 @@
                                     <span class="ratings-amount">4 Reviews</span></div>
                                 <h3 class="item-name"><a href=<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>addproduct" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
                                     <div class="item-action-inner"><a href="<?php echo $root; ?>cart"
@@ -332,7 +354,7 @@
                                     <span class="ratings-amount">3 Reviews</span></div>
                                 <h3 class="item-name"><a href="<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>addproduct" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
                                     <div class="item-action-inner"><a href="<?php echo $root; ?>cart"
@@ -353,7 +375,7 @@
                                 <div class="ratings-container"></div>
                                 <h3 class="item-name"><a href="<?php echo $root; ?>product">Phasellus consequat</a></h3>
 
-                                <div class="item-action"><a href="<?php echo $root; ?>cart" class="item-add-btn"><span
+                                <div class="item-action"><a href="<?php echo $root; ?>addproduct" class="item-add-btn"><span
                                             class="icon-cart-text">Add to Cart</span></a>
 
                                     <div class="item-action-inner"><a href="<?php echo $root; ?>productcart"
