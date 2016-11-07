@@ -193,6 +193,26 @@ class Dashboard extends CI_Controller
 
     public function view_product()
     {
+
+        $this->load->model( 'product' );
+
+        $title = $this->input->post('ptitle' , true);
+
+        $get = $this->product->getRecord('ptitle' , $title);
+
+        if($get){
+
+            echo 'This is value';
+
+        }else{
+
+            echo 'no value';
+
+        }
+
+//        var_export($view);
+
+
         $this->load->view('dashboard/view_product');
     }
 

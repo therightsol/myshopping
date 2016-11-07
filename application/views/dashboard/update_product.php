@@ -10,7 +10,7 @@ include 'inc/wrapper.inc.php';
         <fieldset>
 
             <!-- Form Name -->
-            <legend>Add Product</legend>
+            <legend style="text-align: center;">Update Product</legend>
 
 
             <!-- Text input-->
@@ -25,18 +25,9 @@ include 'inc/wrapper.inc.php';
             </div>
 
             <div class="form-group">
-                <label class="col-md-4 control-label" for="name">Slug</label>
+                <label class="col-md-4 control-label" for="name">Update Name</label>
                 <div class="col-md-6">
-                    <input id="pSlug" name="pSlug" type="text" readonly placeholder="" class="form-control input-md">
-
-                </div>
-            </div>
-
-
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="name">Product Name</label>
-                <div class="col-md-6">
-                    <input id="name" name="pname" type="text" placeholder="Name" class="form-control input-md">
+                    <input id="name" name="pname" type="text" placeholder="Product Name" class="form-control input-md">
 
                 </div>
             </div>
@@ -44,18 +35,18 @@ include 'inc/wrapper.inc.php';
 
 
             <div class="form-group">
-                <label class="col-md-4 control-label" for="pprice">Purchase Price</label>
+                <label class="col-md-4 control-label" for="pprice">Update Price</label>
                 <div class="col-md-6">
-                    <input id="pprice" name="purchase" type="text" placeholder="Price" class="form-control input-md">
+                    <input id="pprice" name="purchase" type="text" placeholder="Purchase Price" class="form-control input-md">
 
                 </div>
             </div>
 
 
             <div class="form-group">
-                <label class="col-md-4 control-label" for="sprice">Sale Price</label>
+                <label class="col-md-4 control-label" for="sprice">Update Price</label>
                 <div class="col-md-6">
-                    <input id="sprice" name="sale" type="text" placeholder="Price" class="form-control input-md">
+                    <input id="sprice" name="sale" type="text" placeholder="Sale Price" class="form-control input-md">
 
                 </div>
             </div>
@@ -63,10 +54,10 @@ include 'inc/wrapper.inc.php';
 
 
             <div class="form-group">
-                <label class="col-md-4 control-label" for="dprice">Discounted Price</label>
+                <label class="col-md-4 control-label" for="dprice">Update Discounted Price</label>
                 <div class="col-md-6">
                     <div class="input-group">
-                        <input id="dprice" name="discount" type="text" placeholder="Price" class="form-control input-md">
+                        <input id="dprice" name="discount" type="text" placeholder="Discount Rate" class="form-control input-md">
 
                         <span class="input-group-addon" id="basic-addon1">%</span>
                     </div>
@@ -78,7 +69,7 @@ include 'inc/wrapper.inc.php';
             <div class="form-group">
                 <label class="col-md-4 control-label" for="tax">Tax</label>
                 <div class="col-md-6">
-                    <input id="tax" name="tax" type="text" placeholder="Name" class="form-control input-md">
+                    <input id="tax" name="tax" type="text" placeholder="Tax" class="form-control input-md">
 
                 </div>
             </div>
