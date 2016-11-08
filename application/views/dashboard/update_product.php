@@ -10,7 +10,7 @@ include 'inc/wrapper.inc.php';
         <fieldset>
 
             <!-- Form Name -->
-            <legend style="text-align: center;">Update Product</legend>
+            <h1 style="text-align: center;">Update Product</h1>
 
 
             <!-- Text input-->

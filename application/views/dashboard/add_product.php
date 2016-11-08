@@ -19,7 +19,7 @@ include 'inc/wrapper.inc.php';
     <fieldset>
 
         <!-- Form Name -->
-        <legend>Add Product</legend>
+        <h1 style="text-align: center;">Add Products</h1>
 
 
         <!-- Text input-->

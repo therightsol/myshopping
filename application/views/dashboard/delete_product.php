@@ -9,7 +9,7 @@ include 'inc/wrapper.inc.php';
 
             <div class="col-md-12">
 
-                <h1>Delete Product</h1>
+                <h1 style="text-align: center;">Delete Product</h1>
 
                 <div style="padding: 0 2%">
                     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -18,11 +18,11 @@ include 'inc/wrapper.inc.php';
                             <th>Title</th>
                             <th>Purchased Price</th>
                             <th>Sale Price</th>
-                            <th>Discount</th>
+                            <th>Discount %</th>
                             <th>Status</th>
                             <th>Tax</th>
                             <th>Images</th>
-                            <th>Added</th>
+                            <th>Added Date</th>
                         </tr>
                         </thead>
                         <tfoot>
@@ -30,18 +30,25 @@ include 'inc/wrapper.inc.php';
                             <th>Title</th>
                             <th>Purchased Price</th>
                             <th>Sale Price</th>
-                            <th>Discount</th>
+                            <th>Discount %</th>
                             <th>Status</th>
                             <th>Tax</th>
                             <th>Images</th>
-                            <th>Added</th>
+                            <th>Added Date</th>
                         </tr>
                         </tfoot>
                         <tbody>
 
                         <tr>
 
-                            <td></td>
+                            <td>Nokia 6300</td>
+                            <td>7000</td>
+                            <td>7500</td>
+                            <td>10</td>
+                            <td>Published</td>
+                            <td>100</td>
+                            <td>images.jpg</td>
+                            <td>8/11/2016</td>
 
                         </tr>
 
