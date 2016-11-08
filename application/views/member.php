@@ -147,7 +147,7 @@ include 'inc/memberhead.php'
                     <div role="tabpanel" class="tab-pane" id="tab5">
                         <p>
                         <h1>
-                            SHIPPING ADDRESS
+                           MY ORDER
                             <hr>
                         </h1>
                         <h2 style="text-align: center">
@@ -158,7 +158,7 @@ include 'inc/memberhead.php'
                     <div role="tabpanel" class="tab-pane" id="tab6">
                         <p>
                         <h1>
-                            SHIPPING ADDRESS
+                          PRIVACY
                             <hr>
                         </h1>
                         <h2 style="text-align: center">
@@ -166,7 +166,22 @@ include 'inc/memberhead.php'
                         </h2>
                         </p>
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="tab7"></div>
+                    <div role="tabpanel" class="tab-pane" id="tab7">
+                        <p>
+                            <h1>
+                            DELETE ACCOUNT
+                            <hr>
+                        </h1>
+                        <div>
+                            <h3>
+                                Are You Sure To Want To Delete Your Account
+                            </h3>
+                        </div>
+                        <button type="submit" class="btn btn-danger">
+                            DELETE ACCOUNT
+                        </button>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
