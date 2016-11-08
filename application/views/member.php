@@ -70,7 +70,7 @@ include 'inc/memberhead.php'
                             UPDATE PASSWORD
                             <hr>
                         </h1>
-                        <form action="" method="post">
+                        <form action="<?php echo $root; ?>member/update_password" method="post">
                             <div>
                                 <label for="oldpass"> Old Passwrd *</label>
                                 <input type="password" class="form-control" name="opass" style="width: 40%;" PLACEHOLDER="Please Enter Your OLd Password">
@@ -177,9 +177,11 @@ include 'inc/memberhead.php'
                                 Are You Sure To Want To Delete Your Account
                             </h3>
                         </div>
-                        <button type="submit" class="btn btn-danger">
-                            DELETE ACCOUNT
-                        </button>
+                        <form method="post" action="<?php echo $root; ?>member/delete_account">
+                            <button type="submit" class="btn btn-danger">
+                                DELETE ACCOUNT
+                            </button>
+                        </form>
                         </p>
                     </div>
                 </div>
