@@ -4,7 +4,6 @@ include 'inc/head.inc.php';
 include 'inc/anonymous_topbar.inc';
 include 'inc/header.inc.php';
 include 'inc/anonymous_menu.inc';
-
 ?>
 
 <section id="content">

@@ -1,5 +1,7 @@
 <?php
-include 'inc/memberhead.php'
+include 'inc/head.inc.php';
+include 'inc/load_menu_file.php';
+include 'inc/memberhead.php';
 ?>
 
 <div class="container">
@@ -59,7 +61,7 @@ include 'inc/memberhead.php'
                                 </label>
                                 <input type="password" name="pass" id="phone" style="width:40%;" class="form-control" placeholder="Your Password ">
                             </div>
-                            <button type="submit" class="btn btn-info" style="margin-top: 20px">SUBMIT</button>
+                            <button type="submit" class="btn btn-success" style="margin-top: 20px">SUBMIT</button>
 
                         </form>
                         </p>
@@ -83,7 +85,7 @@ include 'inc/memberhead.php'
                                 <label for="cnpass" style="margin-top: 10px;"> Confirm New Password *</label>
                                 <input type="password" class="form-control" name="cnpass" style="width:40%;" PLACEHOLDER="Please Enter Your OLd Password">
                             </div>
-                            <button type="submit" class="btn btn-info" style="margin-top: 10px"> SUBMIT </button>
+                            <button type="submit" class="btn btn-success" style="margin-top: 10px"> SUBMIT </button>
                         </form>
                         </p>
                     </div>
@@ -128,7 +130,7 @@ include 'inc/memberhead.php'
                         <br>
                         <input type="text" id="city" class="form-control" name="city" style="width: 60%;"  placeholder="Enter Your City Name">
                         </div>
-                        <button type="submit" class="btn btn-info" style="margin-top:10px;">SUBMIT</button>
+                        <button type="submit" class="btn btn-success" style="margin-top:10px;">SUBMIT</button>
                         <p>
                         </p>
                     </div>
@@ -178,14 +180,20 @@ include 'inc/memberhead.php'
                             </h3>
                         </div>
                         <form method="post" action="<?php echo $root; ?>member/delete_account">
-                            <button type="submit" class="btn btn-danger">
+                            <input type="password" class="form-control" style="width:40%;" placeholder="Enter Your Password">
+                            <button type="submit" class="btn btn-danger" style="margin-top: 20px">
                                 DELETE ACCOUNT
                             </button>
                         </form>
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
 	</div>
 </div>
+<?php
+
+include 'inc/footer.inc.php';
+include 'inc/footerfiles.inc.php';
+
+?>
