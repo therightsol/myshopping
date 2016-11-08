@@ -4,13 +4,9 @@ include 'inc/wrapper.inc.php';
 ?>
 
     <div id="page-wrapper">
-
         <div class="row">
-
             <div class="col-md-12">
-
                 <h1 style="text-align: center;">Delete Product</h1>
-
                 <div style="padding: 0 2%">
                     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
