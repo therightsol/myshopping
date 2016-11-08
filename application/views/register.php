@@ -122,6 +122,8 @@ $error_Rg002 = false;
                                         echo form_error('email');
                                     }
                                     ?>
+                                    <div id="e_notAvail" class="text-danger" style="display: none;"></div>
+                                    <div id="e_Avail"  class="text-info" style="display: none;"></div>
                                 </div>
 
                                 <div class="input-group"><span class="input-group-addon"><span
@@ -851,14 +853,14 @@ include 'inc/footerfiles.inc.php';
 
 ?>
 
-<script>
+<!--<script>
         jQuery(document).ready( function ( $ ) {
             $('#uname').blur( function (){
 
                 var username = $(this).val();
 
                 $.ajax({
-                    url: "<?php echo $root; ?>register/ajax_check_user_availability/" + username,
+                    url: "<?php /*echo $root; */?>register/ajax_check_user_availability/" + username,
 
                 }).done(function( response ) {
                     if ( response ){
@@ -871,9 +873,29 @@ include 'inc/footerfiles.inc.php';
                 });
             });
         });
+</script>-->
+
+<script>
+    jQuery(document).ready( function ( $ ) {
+        $('#email').blur( function (){
+
+            var email = $(this).val();
+
+            $.ajax({
+                url: "<?php echo $root; ?>register/ajax_check_email_availability/" + email,
+
+            }).done(function( response ) {
+                if ( response ){
+                    $('#e_Avail').html('User is availabale').show(500);
+                    $('#e_notAvail').html('').hide();
+                }else {
+                    $('#e_notAvail').html('User is not availabale').show(500);
+                    $('#e_Avail').html('').hide();
+                }
+            });
+        });
+    });
 </script>
-
-
 
 
     <script>
