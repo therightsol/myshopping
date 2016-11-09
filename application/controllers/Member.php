@@ -11,39 +11,80 @@ class Member extends CI_Controller
     }
 
     public function update_password(){
+        $this->load->library('form_validation');
+
         if (filter_input_array(INPUT_POST)){
             // @todo -- Pending validations -- for - Asad
 
-            $password = $this->input->post('npass', true);
+            $rules = array(
 
-            //@todo validation that password has requried length and it matches with confirm
+                array(
 
-            $hashedPass = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
+                    'field' => 'opass',
+                    'label' => 'Password',
+                    'rules' => 'required'
 
-            $this->load->model('user');
+                ),
+                array(
 
+                    'field' => 'npass',
+                    'label' => 'New Password',
+                    'rules' => 'required'
 
-            // $username = $this->session->userdata('username');
-            $username = 'ramishlhr'; // delete this line
+                ),
+                array(
 
-            $colName = 'username';
-            $updateData = array (
-              'password'    =>  $hashedPass,
-              'firstname'    =>  'AAAAA'
+                    'field' => 'cpass',
+                    'label' => 'Confirm Password',
+                    'rules' => 'required'
+
+                )
+
             );
-            $result = $this->user->updateRecord($colName, $updateData, $username);
-
-if ($result){
-    // @todo show proper response
-    echo 'YOur password has been updated';
-}
 
 
-        }
+            $this->form_validation->set_rules($rules);
 
-        else {
-            $this->index();
-        }
+            if($this->form_validation->run() == true){
+
+                $old = $this->input->post('opass' , true);
+
+                $password = $this->input->post('npass', true);
+
+                //@todo validation that password has requried length and it matches with confirm
+
+                $hashedPass = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
+
+                $this->load->model('user');
+
+
+                // $username = $this->session->userdata('username');
+                $username = 'ramishlhr'; // delete this line
+
+                $colName = 'username';
+                $updateData = array (
+                    'password'    =>  $hashedPass,
+                    'firstname'    =>  'AAAAA'
+                );
+                $result = $this->user->updateRecord($colName, $updateData, $username);
+
+                if ($result){
+                    // @todo show proper response
+                    echo 'YOur password has been updated';
+                }
+
+
+            }
+
+            else {
+                $this->index();
+            }
+
+            }
+
+
+
+
     }
 
     public function delete_account(){
