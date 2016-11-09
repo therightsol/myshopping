@@ -271,4 +271,82 @@ class MY_Model extends CI_Model {
         return $query->result_array();
     }
 
+
+    /**
+     *
+     */
+    public function get_user_with_usersmeta_easy(){
+        $q = "select um.id, u.id, u.username, u.email, u.firstname, u.lastname, ut.type, "
+            . " GROUP_CONCAT( CONCAT(um.metakey,'|',um.metavalue) SEPARATOR ';' ) as meta_record "
+            . " from usersmetas um , usertypes ut inner JOIN users u "
+            . " where um.uid = 8 and u.id = 8 and ut.id = (select users.usertype from users where users.id = 8)";
+
+
+        $q_result = $this->db->query( $q );
+        return $q_result->result_array();
+    }
+
+    /**
+     * @param array $select_col_names
+     * @param $colname_conc
+     * @param $colname_conc_val
+     * @param $joiningToken
+     * @param $seperator
+     * @param $virtualTable
+     * @param array $fromTables
+     * @param $innerJoinColName
+     * @param array $whereColNames
+     * @param $nested_Query
+     * @return mixed
+     */
+    public function get_user_with_usersmeta_hard(array $select_col_names, $colname_conc,
+                                                 $colname_conc_val, $joiningToken, $seperator,
+                                                 $virtualTable, array $fromTables, $innerJoinColName,
+                                                 array $whereColNames, $nested_Query)
+    {
+        $q = "select ";
+
+        foreach( $select_col_names as $key => $c_names){
+            $q .= $c_names . ' , ';
+        }
+
+        $q .= " GROUP_CONCAT( CONCAT( " . $colname_conc . ' , "' . $joiningToken . '" , ' . $colname_conc_val . ' ) ';
+        $q .= " SEPARATOR '" . $seperator . "' ) as " . $virtualTable . " from ";
+
+        $count = count($fromTables);
+        $i = 0;
+        var_export($count);
+        foreach($fromTables as $key => $c_names){
+            if ($i < $count-1){
+                $q .= $c_names . ', ';
+            }else {
+                $q .= $c_names;
+            }
+            $i++;
+        }
+
+        $q .= " inner JOIN " . $innerJoinColName . " where ";
+
+        $count = count ( $whereColNames );
+        $i = 0;
+        foreach($whereColNames as $c_name => $c_val){
+
+            if ($c_val == 'has-query'){
+                $c_val = '( ' . $nested_Query . ' )';
+            }
+
+
+            if ( $i < $count-1){
+                $q .= $c_name . ' = ' . $c_val . ' and ' ;
+                $i++;
+                continue;
+            }
+
+            $q .= $c_name . ' = ' . $c_val;
+            $i++;
+        }
+
+        $q_result = $this->db->query($q);
+        return $q_result->result_array();
+    }
 } ?>

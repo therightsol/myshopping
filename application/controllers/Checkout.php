@@ -110,8 +110,60 @@ class Checkout extends CI_Controller {
                 $this->load->model('user');
                 $this->load->model('usersmeta');
 
-                $un = $this->session->userdata('username');
-                $user = $this->user->getRecord ($un, 'username');
+                //$un = $this->session->userdata('username');
+
+
+                $r = $this->user->get_user_with_usersmeta_easy();       // fetch record where user id = 8
+
+                $meta = $r[0]['meta_record'];
+                $meta = explode(';', $meta);
+
+                $metaVal = array();
+                foreach ($meta as $key => $value){
+                    $temp = explode('|', $value);
+                    $metaVal[$temp[0]] = $temp[1];
+                }
+
+                unset($r[0]['meta_record']);
+
+                $r = array_merge($r[0], $metaVal);
+
+
+                $this->debug($r, false);
+
+                echo '<hr />';
+
+                $uid = 6;
+
+                $r = $this->user->get_user_with_usersmeta_hard(
+                    array ( 'u.id', 'u.username', 'u.email', 'u.password', 'ut.type', 'um.id'),
+                    'um.metakey', 'um.metavalue', '|', ';', 'meta_record',
+                    array( 'usersmetas um', 'usertypes ut'),
+                    'users u',
+                    array('um.uid' => $uid, 'u.id' => $uid, 'ut.id' => 'has-query'),
+                    'select users.usertype from users where users.id = ' . $uid
+                );
+                $meta = $r[0]['meta_record'];
+                $meta = explode(';', $meta);
+
+                $metaVal = array();
+                foreach ($meta as $key => $value){
+                    $temp = explode('|', $value);
+                    $metaVal[$temp[0]] = $temp[1];
+                }
+
+                unset($r[0]['meta_record']);
+
+                $r = array_merge($r[0], $metaVal);
+                $this->debug($r, false);
+
+
+                /* -- Debugging -- */
+                //echo $this->db->last_query();
+                $this->output->enable_profiler(true);
+
+
+                /*$user = $this->user->getRecord ($un, 'username');
                 $user = (array) $user;
 
                 $id = $user['id'];
@@ -130,7 +182,7 @@ class Checkout extends CI_Controller {
 
                 $merge = array_merge($user + $data);
 
-                $this->load->view ('checkout', $merge);
+                $this->load->view ('checkout', $merge);*/
 
 
             }
