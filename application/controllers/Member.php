@@ -11,6 +11,9 @@ class Member extends CI_Controller
     }
 
     public function update_password(){
+
+        $data['validation_errors']= false;
+
         $this->load->library('form_validation');
 
         if (filter_input_array(INPUT_POST)){
@@ -71,16 +74,24 @@ class Member extends CI_Controller
                 if ($result){
                     // @todo show proper response
                     echo 'YOur password has been updated';
+
+                }else {
+                    $this->index();
                 }
 
 
+            }else{
+
+                $data['validation_errors'] = validation_errors();
+                $this->load->view( 'member/update_password' , $data );
+
             }
 
-            else {
-                $this->index();
-            }
 
-            }
+
+            } else {
+            $this->load->view('member/update_password', $data);
+        }
 
 
 

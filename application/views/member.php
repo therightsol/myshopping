@@ -73,14 +73,41 @@ include 'inc/memberhead.php';
                             <hr>
                         </h1>
                         <form action="<?php echo $root; ?>member/update_password" method="post">
+
+                            <div class="text-danger">
+                                <?php
+                                if(form_error ('opass')){
+                                    echo form_error ('opass');
+                                }
+                                ?>
+                            </div>
+
                             <div>
                                 <label for="oldpass"> Old Passwrd *</label>
                                 <input type="password" class="form-control" name="opass" style="width: 40%;" PLACEHOLDER="Please Enter Your OLd Password">
                             </div>
+
+                            <div class="text-danger">
+                                <?php
+                                if(form_error ('npass')){
+                                    echo form_error ('npass');
+                                }
+                                ?>
+                            </div>
+
                             <div>
                                 <label for="npass" style="margin-top: 10px;"> New Password *</label>
                                 <input type="password" class="form-control" name="npass" style="width:40%;" PLACEHOLDER="Please Enter Your OLd Password">
                             </div>
+
+                            <div class="text-danger">
+                                <?php
+                                if(form_error ('cpass')){
+                                    echo form_error ('cpass');
+                                }
+                                ?>
+                            </div>
+
                             <div>
                                 <label for="cnpass" style="margin-top: 10px;"> Confirm New Password *</label>
                                 <input type="password" class="form-control" name="cnpass" style="width:40%;" PLACEHOLDER="Please Enter Your OLd Password">
