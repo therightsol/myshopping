@@ -68,45 +68,46 @@ include 'inc/memberhead.php';
                     </div>
                     <div role="tabpanel" class="tab-pane" id="tab2">
                         <p>
+
+                        <?php
+
+                            $is_user_loggedin = $this->session->userdata('username');
+
+                        if($is_user_loggedin && !empty($is_user_loggedin)) : ?>
+
                             <h1>
                             UPDATE PASSWORD
-                            <hr>
+                            <hr />
                         </h1>
                         <form action="<?php echo $root; ?>member/update_password" method="post">
 
-                            <div class="text-danger">
-                                <?php
-                                if(form_error ('opass')){
-                                    echo form_error ('opass');
-                                }
-                                ?>
+                            <?php if($not_updated) : ?>
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+
+                                    <div class="alert alert-danger">Password not updated.</div>
+
+                                </div>
+
+
                             </div>
+
+                            <?php endif; ?>
+
 
                             <div>
                                 <label for="oldpass"> Old Passwrd *</label>
                                 <input type="password" class="form-control" name="opass" style="width: 40%;" PLACEHOLDER="Please Enter Your OLd Password">
                             </div>
 
-                            <div class="text-danger">
-                                <?php
-                                if(form_error ('npass')){
-                                    echo form_error ('npass');
-                                }
-                                ?>
-                            </div>
 
                             <div>
                                 <label for="npass" style="margin-top: 10px;"> New Password *</label>
                                 <input type="password" class="form-control" name="npass" style="width:40%;" PLACEHOLDER="Please Enter Your OLd Password">
                             </div>
 
-                            <div class="text-danger">
-                                <?php
-                                if(form_error ('cpass')){
-                                    echo form_error ('cpass');
-                                }
-                                ?>
-                            </div>
 
                             <div>
                                 <label for="cnpass" style="margin-top: 10px;"> Confirm New Password *</label>
@@ -116,6 +117,12 @@ include 'inc/memberhead.php';
                         </form>
                         </p>
                     </div>
+
+                    <?php else: redirect('login');
+
+                     endif;
+                     ?>
+
                     <div role="tabpanel" class="tab-pane" id="tab3">
                         <p>
                         <h1>
