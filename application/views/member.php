@@ -94,7 +94,7 @@ include 'inc/memberhead.php';
 
                             </div>
 
-                            <?php endif; ?>
+                            <?php  endif; ?>
 
 
                             <div>
