@@ -196,13 +196,22 @@ class Dashboard extends CI_Controller
 
         $this->load->model( 'product' );
 
-        $title = $this->input->post('ptitle' , true);
+       // $title = $this->input->post('ptitle' , true);
 
-        $get = $this->product->getRecord('ptitle' , $title);
+        $q = $this->db->get('products');
+        $data = $q->result_array();
 
-        if($get){
+        if($data){
 
             echo 'This is value';
+            $r['id'] = $data[0]['id'];
+            $r['title'] = $data[0]['title'];
+            $r['description'] = $data[0]['description'];
+
+            $this->debug($r);
+            exit;
+            $this->load->view('dashboard/view_product', $r);
+
 
         }else{
 
@@ -210,10 +219,10 @@ class Dashboard extends CI_Controller
 
         }
 
-//        var_export($view);
-
-
-        $this->load->view('dashboard/view_product');
+        $data['id'] = $data[0]['id'];
+        $data['title'] = $data[0]['title'];
+        $data['description'] = $data[0]['description'];
+       $this->load->view('dashboard/view_product', $data);
     }
 
 
@@ -257,6 +266,13 @@ class Dashboard extends CI_Controller
         }
 
         return true;
+    }
+
+    private function debug($val, $die = false)
+    {
+        echo '<tt><pre>' . var_export($val, True) . '</pre></tt>';
+
+        if ($die) exit('<hr />Exit from Debug in Register.php Controller.');
     }
 
 }

@@ -41,42 +41,30 @@ include 'inc/wrapper.inc.php';
                     </tr>
                     </tfoot>
                     <tbody>
-                    <tr>
+                    <?php
+                    if($r) {
 
-                        <td>Nokia 6300</td>
-                        <td>Published</td>
-                        <td>7000</td>
-                        <td>7500</td>
-                        <td>10</td>
-                        <td>100</td>
-                        <td>images.jpg</td>
-                        <td>8/11/2016</td>
+                        // if(count($data) > 0){
+                        foreach ($r as $row) {
+                            echo '<tr>';
+                            echo '<td>' . $row['id'] . '</td>';
+                            echo '<td>' . $row['title'] . '</td>';
+                            echo '<td>' . $row['description'] . '</td>';
+                            echo '<td width=250>';
+                            echo '<a class="btn" href="<?php echo $root; ?>dashboard/view_product?id=' . $row['id'] . '">Read</a>';
+                            echo '&nbsp;';
+                            echo '<a class="btn" href="<?php echo $root; ?>dashboard/view_product?id=' . $row['id'] . '">Update</a>';
+                            echo '&nbsp;';
+                            echo '<a class="btn" href="<?php echo $root; ?>dashboard/view_product?id=' . $row['id'] . '">Delete</a>';
+                            echo '</td>';
+                            echo '</tr>';
+                        }
 
-                    </tr>
+                    }
 
-                    <tr><td>Motorola Moto G</td>
-                        <td>Dratf</td>
-                        <td>15000</td>
-                        <td>16000</td>
-                        <td>5</td>
-                        <td>100</td>
-                        <td>images.jpg</td>
-                        <td>8/11/2016</td>
 
-                    </tr>
 
-                    <tr>
-
-                        <td>Htc One M8</td>
-                        <td>Published</td>
-                        <td>36000</td>
-                        <td>37000</td>
-                        <td>10</td>
-                        <td>100</td>
-                        <td>images.jpg</td>
-                        <td>8/11/2016</td>
-
-                    </tr>
+                    ?>
 
                     </tbody>
                 </table>
