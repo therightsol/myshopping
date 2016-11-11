@@ -3,45 +3,63 @@ include 'inc/dashhead.inc.php';
 include 'inc/wrapper.inc.php';
 ?>
 <div id="page-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-3">
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Settings</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form role="form" method="post">
-                            <fieldset>
-                                <div class="text-danger">
-                                <?php if(form_error('key')){
+    <div class="row">
+        <div class="col-md-12">
+            <h1 style="text-align: center;">AVAILABLE SETTINGS</h1>
+            <div style="padding: 0 2%">
+                <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Sr #</th>
+                        <th>Key</th>
+                        <th>Value</th>
+                        <th>Created At</th>
+                        <th>Upadted At</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Sr #</th>
+                        <th>Key</th>
+                        <th>Value</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
 
-                                    echo form_error('key');
-                                }
-                                ?>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="KEY" name="key" type="text" autofocus>
-                                </div>
-                                <div class="text-danger">
-                                    <?php if(form_error('value')){
+                    <tr>
 
-                                        echo form_error('value');
-                                    }
-                                    ?>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Value" name="value" type="text" value="">
-                                </div>
-                                <input type="SUBMIT" class="btn btn-lg btn-success btn-block" />
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
+                        <td>Nokia 6300</td>
+                        <td>7000</td>
+                        <td>7500</td>
+                        <td>10</td>
+                        <td>Published</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
             </div>
+
         </div>
+
     </div>
 
 </div>
+
+
+
+
 <?php
 include 'inc/jsfooterlink.inc.php';
 ?>
