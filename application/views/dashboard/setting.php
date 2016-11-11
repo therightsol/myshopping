@@ -15,7 +15,7 @@ include 'inc/wrapper.inc.php';
                         <th>Value</th>
                         <th>Created At</th>
                         <th>Upadted At</th>
-                        <th></th>
+                        <th>Edit</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -25,9 +25,9 @@ include 'inc/wrapper.inc.php';
                         <th>Sr #</th>
                         <th>Key</th>
                         <th>Value</th>
-                        <th>Created At</th>
-                        <th>Updated At</th>
-                        <th></th>
+                        <th>Created Date</th>
+                        <th>Updated Date</th>
+                        <th>Edit</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -35,18 +35,15 @@ include 'inc/wrapper.inc.php';
                     <tbody>
 
                     <tr>
-
                         <td>Nokia 6300</td>
                         <td>7000</td>
                         <td>7500</td>
                         <td>10</td>
                         <td>Published</td>
+                        <td><a href="<?php echo $root?>dashboard/update_setting" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>EDIT</a></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-
                     </tr>
-
                     </tbody>
                 </table>
             </div>
