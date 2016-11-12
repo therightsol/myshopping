@@ -199,18 +199,28 @@ class Dashboard extends CI_Controller
        // $title = $this->input->post('ptitle' , true);
 
         $q = $this->db->get('products');
-        $data = $q->result_array();
+        $r = $q->result_array();
 
-        if($data){
 
+        $meta = $r[0]['updatedAt'];
+        $meta = explode(';', $meta);
+
+        $metaVal = array();
+        foreach ($meta as $key => $value){
+            $temp = explode('|', $value);
+            $metaVal[$temp[0]] = $temp[0];
+        }
+
+        unset($r[0]['updatedAt']);
+
+        $r = array_merge($r[0], $metaVal);
+
+
+
+        if($r){
             echo 'This is value';
-            $r['id'] = $data[0]['id'];
-            $r['title'] = $data[0]['title'];
-            $r['description'] = $data[0]['description'];
-
-            $this->debug($r);
-            exit;
-            $this->load->view('dashboard/view_product', $r);
+            $data = array('r' => $r);
+            $this->load->view('dashboard/view_product', $data);
 
 
         }else{
@@ -219,10 +229,8 @@ class Dashboard extends CI_Controller
 
         }
 
-        $data['id'] = $data[0]['id'];
-        $data['title'] = $data[0]['title'];
-        $data['description'] = $data[0]['description'];
-       $this->load->view('dashboard/view_product', $data);
+
+       $this->load->view('dashboard/view_product');
     }
 
 
