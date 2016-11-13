@@ -9,74 +9,64 @@ include 'inc/wrapper.inc.php';
 
         <div class="col-md-12">
 
-            <h1 style="text-align: center;">All Products</h1>
+            <h1 style="text-align: center;">All Products </h1>
 
             <div style="padding: 0 2%">
                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                     <tr>
 
-                        <th>Name</th>
-                        <th>Status</th>
+                        <th>S.no</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Slug</th>
                         <th>Purchase Price</th>
-                        <th>Sale Price</th>
-                        <th>Discounted %</th>
-                        <th>Tax</th>
-                        <th>Images</th>
-                        <th>Added Date</th>
+                        <th>Sales Price</th>
+                        <th>View Record</th>
+
 
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
 
-                        <th>Name</th>
-                        <th>Status</th>
+                        <th>S.no</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Slug</th>
                         <th>Purchase Price</th>
-                        <th>Sale Price</th>
-                        <th>Discounted %</th>
-                        <th>Tax</th>
-                        <th>Images</th>
-                        <th>Added Date</th>
+                        <th>Sales Price</th>
+                        <th>View Record</th>
+
                     </tr>
                     </tfoot>
                     <tbody>
+
+                    <?php $i = 1; ?>
+                    <?php  foreach ($r as $row): ?>
                     <tr>
 
-                        <td>Nokia 6300</td>
-                        <td>Published</td>
-                        <td>7000</td>
-                        <td>7500</td>
-                        <td>10</td>
-                        <td>100</td>
-                        <td>images.jpg</td>
-                        <td>8/11/2016</td>
+                        <td><?php echo $i;   ?></td>
 
-                    </tr>
+                        <td><?php echo $row['id'];   ?></td>
+                        <td><?php echo $row['title'];   ?></td>
+                        <td><?php echo $row['slug'];   ?></td>
+                        <td><?php echo $row['purchaseprice'];   ?></td>
+                        <td><?php echo $row['saleprice'];   ?></td>
+                        <!--<td><a class="btn" href="<?php /*$root; */?>view_specificRecord/<?php /*  echo $row['id'];   */?>">view record</a></td>-->
 
-                    <tr><td>Motorola Moto G</td>
-                        <td>Dratf</td>
-                        <td>15000</td>
-                        <td>16000</td>
-                        <td>5</td>
-                        <td>100</td>
-                        <td>images.jpg</td>
-                        <td>8/11/2016</td>
+                        <td><a href="<?php echo $root;?>dashboard/view_specificRecord/<?php   echo $row['id'];   ?>" class="btn btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>VIEW RECORD</a></td>
 
-                    </tr>
+                        </td>
 
-                    <tr>
 
-                        <td>Htc One M8</td>
-                        <td>Published</td>
-                        <td>36000</td>
-                        <td>37000</td>
-                        <td>10</td>
-                        <td>100</td>
-                        <td>images.jpg</td>
-                        <td>8/11/2016</td>
+                        </tr>
+                        <?php $i++ ; ?>
 
-                    </tr>
+                    <?php endforeach;?>
+
+
+
 
                     </tbody>
                 </table>

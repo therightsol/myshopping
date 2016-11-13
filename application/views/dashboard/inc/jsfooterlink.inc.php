@@ -16,6 +16,12 @@
 <script src="<?php echo $root ?>dashboardassets/vendor/flot-tooltip/jquery.flot.tooltip.min.js"></script>
 <script src="<?php echo $root ?>dashboardassets/data/flot-data.js"></script>
 
+<!--data tables-->
+
+
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
 <!-- Custom Theme JavaScript -->
 <script src="<?php echo $root ?>dashboardassets/js/sb-admin-2.js"></script>
 <script>

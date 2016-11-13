@@ -40,7 +40,13 @@ include 'inc/wrapper.inc.php';
 
             </div>
         </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="name">SKU</label>
+            <div class="col-md-6">
+                <input id="pSKU" name="pSKU" type="text"  placeholder="SKU" class="form-control input-md">
 
+            </div>
+        </div>
 
 
 

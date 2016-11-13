@@ -11,6 +11,9 @@ class Member extends CI_Controller
     }
 
     public function update_password(){
+
+        $data['not_updated']= false;
+
         $this->load->library('form_validation');
 
         if (filter_input_array(INPUT_POST)){
@@ -36,7 +39,7 @@ class Member extends CI_Controller
 
                     'field' => 'cpass',
                     'label' => 'Confirm Password',
-                    'rules' => 'required'
+                    'rules' => 'required|matches[npass]'
 
                 )
 
@@ -47,40 +50,76 @@ class Member extends CI_Controller
 
             if($this->form_validation->run() == true){
 
-                $old = $this->input->post('opass' , true);
-
-                $password = $this->input->post('npass', true);
-
-                //@todo validation that password has requried length and it matches with confirm
-
-                $hashedPass = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
-
                 $this->load->model('user');
 
 
-                // $username = $this->session->userdata('username');
-                $username = 'ramishlhr'; // delete this line
+                $session_pass = $this->session->userdata('password');
 
-                $colName = 'username';
-                $updateData = array (
-                    'password'    =>  $hashedPass,
-                    'firstname'    =>  'AAAAA'
-                );
-                $result = $this->user->updateRecord($colName, $updateData, $username);
+                $old = $this->input->post('opass' , true);
 
-                if ($result){
-                    // @todo show proper response
-                    echo 'YOur password has been updated';
+
+                if($old == $session_pass){
+//                    continue
+
+                    $new_password = $this->input->post('npass', true);
+
+
+                    $hashedPass = password_hash($new_password, PASSWORD_BCRYPT, array('cost' => 12));
+
+                    $colName = 'password';
+                    $where = $this->session->userdata('username');
+                    $updateData = array (
+                        'password'    =>  $hashedPass,
+                    );
+                    $result = $this->user->updateRecord($colName, $updateData, $where);
+
+                    var_export($result);
+
+                    if ($result){
+                        // @todo show proper response
+                        echo 'YOur password has been updated';
+
+                    }else {
+/*                        $data['not_updated']= true;
+                        $this->load->view('member/update_password' , $data);*/
+
+                        echo 'password not updated';
+
+                    }
+
+                }else{
+
+                    echo 'invalid password';
+
                 }
 
 
+                //@todo validation that password has requried length and it matches with confirm
+
+
+
+
+
+                // $username = $this->session->userdata('username');
+//                $username = 'ramishlhr';  delete this line
+
+
+
+
+
+
+            }else{
+
+                $data['validation_errors'] = validation_errors();
+                $this->load->view('member/update_password', $data);
+
             }
 
-            else {
-                $this->index();
-            }
 
-            }
+
+            } else {
+            $this->load->view('member/update_password' , $data);
+        }
 
 
 
@@ -89,8 +128,8 @@ class Member extends CI_Controller
 
     public function delete_account(){
             $this->load->model('user');
-        //$username = $this->session->userdata('username');
-        $username = 'ramishlhr';
+        $username = $this->session->userdata('username');
+//        $username = 'ramishlhr';
         $result = $this->user->deleteRecord('username', $username);
 
         if ($result){

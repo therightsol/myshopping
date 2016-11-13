@@ -1,0 +1,49 @@
+Ramish Ahmed 
+1)  dashboard index, created by team Pk (in footer) changed by TRS(The right soul), Center
+datatable in settings, first table > available settings> 
+columns-->   serial number, key value, created date, update date > button (edit in every row) when click other page
+setting / update/ setting/ this setting ID /  ==> key/uniquename/unique title, value> udpate-button
+want to create new/more setting, want to save settings.
+	some settigns: (title, companyname , admin email, company email) cann't change the keys but may change the value. 
+	echo company title @ SB Admin 2.0
+
+	Ramish : revised task -> redirect dashboard to dashboard login when not login.
+	02 days
+
+	<---------------------------------------- 11/11/2016 ------------------->
+
+---------
+Obaidullah
+----------
+		Add product, 
+		deltete produc,t sno, title, slug, purchase price, sale price, delte button, (delete via ajax)
+				input type hidden (ajax)
+					http header for refresh, how to refresh webpage in js
+                               .done, / if success  (refreshe)
+		update: same talble like delete. with delete button
+
+		view product; sample table copy paste with view button, product must open
+
+		add product *** priority
+		3 days
+
+	<-------------------------------- 13/11/2016 ----------------------------->
+
+------------
+ASAD
+------------
+		product page not contains fake products. must contain db products 
+		Add to cart button must works in jquery (on click fx, pick ID,> ajax > save into cart)
+		add data in product tables
+		view products on front end.
+		to clear 2 issues at least on git.
+		01 day.
+	<----------------------------    12/11/2016             ------------------------------>
+
+
+---------
+tomorrow
+---------
+
+>file upload
+>add to cart (ajax)
