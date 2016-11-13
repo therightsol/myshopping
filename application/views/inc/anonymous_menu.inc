@@ -88,8 +88,8 @@
                 <div id="quick-access">
                     <div class="dropdown-cart-menu-container pull-right">
                         <div class="btn-group dropdown-cart">
-                            <button type="button" class="btn btn-custom dropdown-toggle"
-                                    data-toggle="dropdown"><span class="cart-menu-icon"></span> 0 item(s)
+                            <button type="button" class="btn btn-custom dropdown-toggle" style="padding-right: 40px;"
+                                    data-toggle="dropdown"><span class="cart-menu-icon" ></span> <?php echo sizeof($this->session->userdata('cartData')); ?> - item(s)
                                 <span class="drop-price">- $0.00</span></button>
                             <div class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu"><p
                                     class="dropdown-cart-description">Recently added item(s).</p>

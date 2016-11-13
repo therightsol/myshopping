@@ -48,7 +48,7 @@
 
 <script>
 
-    JQuery(document).ready(function($){
+    jQuery(document).ready(function($){
 
         $('#uname').blur(function(){
 
@@ -58,7 +58,7 @@
 
             if(username.length > 2){
 
-                var url = ./veiws/register.php;
+                var url = "/veiws/register.php";
 
                 var data = {'name': username};
 

@@ -3,8 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
     public function index(){
+        $this->load->model('product');
+        $products = $this->product->getRecord();
 
-        $this->load->view('home');
+        $data['products'] = $products;
+
+        $this->load->view('home', $data);
     }
 
     public function view_products(){
@@ -24,6 +28,16 @@ class Home extends CI_Controller {
             echo 'sorry there is some errors';
 
         }
+
+    }
+
+    public function ajax_add_to_cart( $id ){
+
+        $cartData = $this->session->userdata('cartData');
+        $cartData[] = $id;
+        $this->session->set_userdata('cartData', $cartData);
+
+        echo true;
 
     }
 }

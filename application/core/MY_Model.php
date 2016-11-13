@@ -135,7 +135,7 @@ class MY_Model extends CI_Model {
     // SELECT * FROM username WHERE id = 5, -- (Specific user full record means, if user have multiple records (rows))
     public function getRecord($whereValue = False, $columnName = FALSE, $specific_user_fullRecord = False) {
 
-        if (!empty ($whereValue) && !empty($columnName)) {
+
             if ($whereValue) {
                 $query = $this->db->get_where($this::DB_TableName, array($columnName => $whereValue));
                 if ($specific_user_fullRecord) {
@@ -151,9 +151,7 @@ class MY_Model extends CI_Model {
 
             $query = $this->db->get($this::DB_TableName);
             return $query->result_array();
-        }
 
-        return null;
 
     }
     /**
