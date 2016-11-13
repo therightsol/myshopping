@@ -97,12 +97,12 @@ class Dashboard extends CI_Controller
                 array(
                     'field' => 'purchase',
                     'label' => 'Purchase Price',
-                    'rules' => 'required|min_length[1]|numeric|callback_is_valid_amount'
+                    'rules' => 'required|min_length[1]|numeric'
                 ),
                 array(
                     'field' => 'sale',
                     'label' => 'Sale Price',
-                    'rules' => 'required|min_length[1]|numeric|callback_is_valid_amount'
+                    'rules' => 'required|min_length[1]|numeric'
                 ),
                 array(
                     'field' => 'discount',
@@ -133,6 +133,8 @@ class Dashboard extends CI_Controller
                 $salePrice = $this->input->post('sale', true);
                 $discountedPrice = $this->input->post('discount', true);
                 $tax = $this->input->post('tax', true);
+                $sku = $this->input->post('pSKU', true);
+
                 $textarea = $this->input->post('textarea', true);
 
                 $this->product->title = $productName;
@@ -140,6 +142,8 @@ class Dashboard extends CI_Controller
                 $this->product->saleprice = $salePrice;
                 $this->product->discountpercent = $discountedPrice;
                 $this->product->tax = $tax;
+                $this->product->sku = $sku;
+
                 $this->product->description = $textarea;
                 $this->product->slug = $this->input->post('pSlug', True);
                 $this->product->status = 1; // Add 1 as published, 2 as draft in product statuses DB on ur side
@@ -180,66 +184,147 @@ class Dashboard extends CI_Controller
         }
 
     }
+    public function view_specificRecord($id)
+
+    {
+      $this->load->model('product');
+
+        $q = $this->product->getRecord( $id, 'id' );
+        $r = (array) $q;
+
+
+
+        if ($r) {
+
+
+
+
+            $this->load->view('dashboard/view_specificrecord', $r);
+
+
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/view_specificrecord', $data);
+
+        }
+
+
+
+
+
+    }
+
+
+
+    public function delete_specificRecord($id)
+
+    {
+        $this->load->model('product');
+        $user_id= $id;
+        $recordDeleted = $this->product->deleteRecord('id', $user_id);
+
+        if ($recordDeleted) {
+            redirect('dashboard/delete_product');
+            /*$q = $this->db->get('products');
+            $r = $q->result_array();
+            $data = array('r' => $r);
+            $this->load->view('dashboard/delete_product', $data);*/
+
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/delete_product', $data);
+
+        }
+    }
 
     public function delete_product()
-    {
-        $this->load->view('dashboard/delete_product');
-    }
-
-    public function update_product()
-    {
-        $this->load->view('dashboard/update_product');
-    }
-
-    public function view_product()
     {
 
         $this->load->model('product');
 
-<<<<<<< HEAD
-       // $title = $this->input->post('ptitle' , true);
 
         $q = $this->db->get('products');
         $r = $q->result_array();
 
-=======
-        $title = $this->input->post('ptitle', true);
 
-        $get = $this->product->getRecord('ptitle', $title);
+        if ($r) {
 
-        if ($get) {
->>>>>>> origin/master
-
-        $meta = $r[0]['updatedAt'];
-        $meta = explode(';', $meta);
-
-        $metaVal = array();
-        foreach ($meta as $key => $value){
-            $temp = explode('|', $value);
-            $metaVal[$temp[0]] = $temp[0];
-        }
-
-        unset($r[0]['updatedAt']);
-
-        $r = array_merge($r[0], $metaVal);
-
-
-
-        if($r){
-            echo 'This is value';
             $data = array('r' => $r);
-            $this->load->view('dashboard/view_product', $data);
+            $this->load->view('dashboard/delete_product', $data);
 
 
         } else {
-
-            echo 'no value';
+            $data['novalue'] = true;
+            $this->load->view('dashboard/delete_product', $data);
 
         }
 
-
-       $this->load->view('dashboard/view_product');
     }
+
+    public function update_product()
+    {
+
+        $this->load->model('product');
+
+
+        $q = $this->db->get('products');
+        $r = $q->result_array();
+
+
+        if ($r) {
+
+            $data = array('r' => $r);
+            $this->load->view('dashboard/update_product', $data);
+
+
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/update_product', $data);
+
+        }
+
+    }
+    public function view_update_specificRecord($id)
+
+    {
+        $this->load->model('product');
+        $q = $this->product->getRecord( $id, 'id' );
+        $r = (array) $q;
+        if ($r) {
+            $this->load->view('dashboard/update_specificRecord', $r);
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/update_specificRecord', $data);
+        }
+    }
+    public function update_specificProduct()
+
+    {
+        //
+
+    }
+
+       public function view_product()
+    {
+        $this->load->model('product');
+        $q = $this->db->get('products');
+        $r = $q->result_array();
+
+            if ($r) {
+                $data = array('r' => $r);
+                $this->load->view('dashboard/view_product', $data);
+
+            } else {
+                $data['novalue'] = true;
+                $this->load->view('dashboard/view_product', $data);
+            }
+        }
+
+
+
+
+
+
 
     // by ali shan
     public function ajax_is_slug_available($slug = '')
@@ -283,7 +368,7 @@ class Dashboard extends CI_Controller
         return true;
     }
 
-<<<<<<< HEAD
+
     private function debug($val, $die = false)
     {
         echo '<tt><pre>' . var_export($val, True) . '</pre></tt>';
@@ -291,7 +376,7 @@ class Dashboard extends CI_Controller
         if ($die) exit('<hr />Exit from Debug in Register.php Controller.');
     }
 
-=======
+
     public function update_setting()
     {
         $this->load->library('form_validation');
@@ -335,5 +420,5 @@ class Dashboard extends CI_Controller
             }
         }
     }
->>>>>>> origin/master
+
 }

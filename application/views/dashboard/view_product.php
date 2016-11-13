@@ -19,9 +19,11 @@ include 'inc/wrapper.inc.php';
                         <th>S.no</th>
                         <th>ID</th>
                         <th>Title</th>
-                        <th>Description</th>
-
+                        <th>Slug</th>
+                        <th>Purchase Price</th>
+                        <th>Sales Price</th>
                         <th>View Record</th>
+
 
                     </tr>
                     </thead>
@@ -31,20 +33,35 @@ include 'inc/wrapper.inc.php';
                         <th>S.no</th>
                         <th>ID</th>
                         <th>Title</th>
-                        <th>Description</th>
-
+                        <th>Slug</th>
+                        <th>Purchase Price</th>
+                        <th>Sales Price</th>
                         <th>View Record</th>
+
                     </tr>
                     </tfoot>
                     <tbody>
 
-
+                    <?php $i = 1; ?>
                     <?php  foreach ($r as $row): ?>
                     <tr>
-                       <td>1</td>
+
+                        <td><?php echo $i;   ?></td>
+
+                        <td><?php echo $row['id'];   ?></td>
+                        <td><?php echo $row['title'];   ?></td>
+                        <td><?php echo $row['slug'];   ?></td>
+                        <td><?php echo $row['purchaseprice'];   ?></td>
+                        <td><?php echo $row['saleprice'];   ?></td>
+                        <!--<td><a class="btn" href="<?php /*$root; */?>view_specificRecord/<?php /*  echo $row['id'];   */?>">view record</a></td>-->
+                        <td><a class="btn" href="<?php $root; ?>view_specificRecord/<?php   echo $row['id'];   ?>">view record</a>
+
+
+                        </td>
+
 
                         </tr>
-
+                        <?php $i++ ; ?>
 
                     <?php endforeach;?>
 
