@@ -107,7 +107,7 @@ class Dashboard extends CI_Controller
                 array(
                     'field' => 'discount',
                     'label' => 'Discounted Price',
-                    'rules' => 'required|min_length[1]|numeric|callback_is_valid_discount'
+                    'rules' => 'required|min_length[1]|numeric'
                 ),
                 array(
                     'field' => 'tax',
@@ -263,29 +263,18 @@ class Dashboard extends CI_Controller
 
     public function update_product()
     {
-
         $this->load->model('product');
-
-
         $q = $this->db->get('products');
         $r = $q->result_array();
-
-
         if ($r) {
-
             $data = array('r' => $r);
             $this->load->view('dashboard/update_product', $data);
-
-
         } else {
             $data['novalue'] = true;
             $this->load->view('dashboard/update_product', $data);
-
         }
-
     }
     public function view_update_specificRecord($id)
-
     {
         $this->load->model('product');
         $q = $this->product->getRecord( $id, 'id' );
@@ -298,10 +287,44 @@ class Dashboard extends CI_Controller
         }
     }
     public function update_specificProduct()
-
     {
         //
 
+        $this->load->model('product');
+
+        $colName = 'id';
+        $where = $this->input->post('p_id', true);
+
+
+        $titleupdate = $this->input->post('p_title', true);
+        $purchaseprice = $this->input->post('purchaseprice', true);
+        $saleprice = $this->input->post('saleprice', true);
+        $pdescription = $this->input->post('p_description', true);
+        $pdiscount = $this->input->post('pdiscount', true);
+        $p_sku = $this->input->post('p_sku', true);
+        /*$p_status = $this->input->post('p_status', true);*/
+        $p_tax = $this->input->post('p_tax', true);
+
+
+
+        $updateData = array (
+            'title'    =>  $titleupdate,
+            'purchaseprice'    =>  $purchaseprice,
+            'saleprice'    =>  $saleprice,
+            'description'    =>  $pdescription,
+            'discountpercent'    =>  $pdiscount,
+            'sku'    =>  $p_sku,
+            /*'status'    =>  $titleupdate,*/
+            'tax'    =>  $p_tax,
+
+
+        );
+        $result = $this->product->updateRecord($colName, $updateData, $where);
+        if ($result){
+            redirect('dashboard/update_product');
+        }else {
+            echo 'password not updated';
+        }
     }
 
        public function view_product()

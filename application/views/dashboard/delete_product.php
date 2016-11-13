@@ -54,8 +54,8 @@ include 'inc/wrapper.inc.php';
                             <td><?php echo $row['purchaseprice'];   ?></td>
                             <td><?php echo $row['saleprice'];   ?></td>
                             <!--<td><a class="btn" href="<?php /*$root; */?>view_specificRecord/<?php /*  echo $row['id'];   */?>">view record</a></td>-->
-                            <td><a class="btn" href="<?php $root; ?>delete_specificRecord/<?php   echo $row['id'];   ?>">Delete record</a>
 
+                            <td><a href="<?php echo $root;?>dashboard/delete_specificRecord/<?php   echo $row['id'];   ?>" class="btn btn-danger"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>DELETE RECORD</a></td>
 
                             </td>
 

@@ -54,8 +54,8 @@ include 'inc/wrapper.inc.php';
                         <td><?php echo $row['purchaseprice'];   ?></td>
                         <td><?php echo $row['saleprice'];   ?></td>
                         <!--<td><a class="btn" href="<?php /*$root; */?>view_specificRecord/<?php /*  echo $row['id'];   */?>">view record</a></td>-->
-                        <td><a class="btn" href="<?php $root; ?>view_specificRecord/<?php   echo $row['id'];   ?>">view record</a>
 
+                        <td><a href="<?php echo $root;?>dashboard/view_specificRecord/<?php   echo $row['id'];   ?>" class="btn btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>VIEW RECORD</a></td>
 
                         </td>
 

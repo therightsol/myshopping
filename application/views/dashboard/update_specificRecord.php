@@ -51,20 +51,13 @@ include 'inc/wrapper.inc.php';
 
 
 
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="tax">Tax</label>
-                <div class="col-md-6">
-                    <input id="tax" name="tax" type="text" value=<?php echo $tax; ?> class="form-control input-md">
-
-                </div>
-            </div>
 
 
             <!-- Textarea -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textarea">Description</label>
                 <div class="col-md-6">
-                    <textarea class="form-control" id= name="textarea"><?php echo $description; ?></textarea>
+                    <textarea class="form-control" id="" name="p_description"><?php echo $description; ?></textarea>
                 </div>
             </div>
 

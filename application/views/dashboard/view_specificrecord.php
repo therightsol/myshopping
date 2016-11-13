@@ -51,16 +51,7 @@ include 'inc/wrapper.inc.php';
 
 
 
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="tax">Tax</label>
-                <div class="col-md-6">
-                    <input id="tax" name="tax" type="text" value=<?php echo $tax; ?> class="form-control input-md">
-
-                </div>
-            </div>
-
-
-            <!-- Textarea -->
+                        <!-- Textarea -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textarea">Description</label>
                 <div class="col-md-6">
