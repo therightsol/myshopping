@@ -10,11 +10,11 @@ include 'inc/wrapper.inc.php';
                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                     <tr>
-                        <th>Sr #</th>
+                        <th>Sr No</th>
                         <th>Key</th>
                         <th>Value</th>
-                        <th>Created At</th>
-                        <th>Upadted At</th>
+                        <th></th>
+                        <th></th>
                         <th>Edit</th>
                         <th></th>
                         <th></th>
@@ -22,73 +22,31 @@ include 'inc/wrapper.inc.php';
                     </thead>
                     <tfoot>
                     <tr>
-                        <th>Sr #</th>
+                        <th>Sr No</th>
                         <th>Key</th>
                         <th>Value</th>
-                        <th>Created Date</th>
-                        <th>Updated Date</th>
+                        <th></th>
+                        <th></th>
                         <th>Edit</th>
                         <th></th>
                         <th></th>
                     </tr>
                     </tfoot>
                     <tbody>
-                    <?php $i =1 ?>
+                    <?php if (isset($r) && is_array($r)): $i = 1; ?>
+                    <?php  foreach ($r as $row): ?>
                     <tr>
-
-                        <td><?php echo $i ?></td>
-                        <td>7000</td>
-                        <td>7500</td>
-                        <td>10</td>
-                        <td>Published</td>
-                        <td><a href="<?php echo $root?>dashboard/update_setting" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>EDIT</a></td>
+                        <td><?php echo $i;   ?></td>
+                        <td><?php echo $row['key'];   ?></td>
+                        <td><?php echo $row['value'];   ?></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="<?php echo $root;?>dashboard/update_specificsetting/<?php   echo $row['key'];   ?>" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>EDIT</a></td>
                         <td></td>
                         <td></td>
                     </tr>
-                    <?php $i++ ; ?>
-                    <tr>
-                        <td><?php echo $i ?></td>
-                        <td>7000</td>
-                        <td>7500</td>
-                        <td>10</td>
-                        <td>Published</td>
-                        <td><a href="<?php echo $root?>dashboard/update_setting" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>EDIT</a></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <?php $i++ ; ?>
-                    <tr>
-                        <td><?php echo $i ?></td>
-                        <td>7000</td>
-                        <td>7500</td>
-                        <td>10</td>
-                        <td>Published</td>
-                        <td><a href="<?php echo $root?>dashboard/update_setting" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>EDIT</a></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <?php $i++ ; ?>
-                    <tr>
-                        <td><?php echo $i ?></td>
-                        <td>7000</td>
-                        <td>7500</td>
-                        <td>10</td>
-                        <td>Published</td>
-                        <td><a href="<?php echo $root?>dashboard/update_setting" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>EDIT</a></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <?php $i++ ; ?>
-                    <tr>
-                        <td><?php echo $i ?></td>
-                        <td>7000</td>
-                        <td>7500</td>
-                        <td>10</td>
-                        <td>Published</td>
-                        <td><a href="<?php echo $root?>dashboard/update_setting" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>EDIT</a></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                        <?php $i++ ; ?>
+                    <?php endforeach; endif;?>
                     </tbody>
                 </table>
             </div>
@@ -99,13 +57,13 @@ include 'inc/wrapper.inc.php';
             </div>
         </div>
     </div>
-
 </div>
+
 <div id="page-wrapper">
     <div class="">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
+                <div class=" panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">NEW SETTING </h3>
                     </div>
@@ -113,10 +71,10 @@ include 'inc/wrapper.inc.php';
                         <form role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="UNIQUE KEY" type="text">
+                                    <input class="form-control" placeholder="UNIQUE KEY" type="text" name="key">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="VALUE" name="text" type="text" value="">
+                                    <input class="form-control" placeholder="VALUE" name="value" type="text" value="" >
                                 </div>
 
                                 <!-- Change this to a button or input when using this as a form -->

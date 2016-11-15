@@ -44,10 +44,10 @@ class Dashboard extends CI_Controller
 
                 $this->load->model('setting');
 
-                $productkey = $this->input->post('key', true);
+                $key = $this->input->post('key', true);
                 $value = $this->input->post('value', true);
 
-                $this->setting->key = $productkey;
+                $this->setting->key = $key;
                 $this->setting->value = $value;
 
                 date_default_timezone_set('ASIA/KARACHI');
@@ -396,13 +396,34 @@ class Dashboard extends CI_Controller
             $q = $this->db->get('settings');
             $r = $q->result_array();
             if ($r) {
+
                 $data = array('r' => $r);
                 $this->load->view('dashboard/update_setting', $data);
-            } else {
+            }
+            else {
+
                 $data['novalue'] = true;
                 $this->load->view('dashboard/update_setting', $data);
             }
         }
     }
 
+    public function update_specificSetting()
+    {  $this->load->model('setting');
+
+        $colName = 'key';
+        $where = $this->input->post('key', true);
+        $value = $this->input->post('value', true);
+        $updateData = array(
+            'value' => $value,
+
+        );
+        $result = $this->setting->updateRecord($colName, $updateData, $where);
+        if ($result) {
+            redirect('dashboard/update_setting');
+        } else {
+
+            $this->load->view('dashboard/setting');
+        }
+    }
 }
