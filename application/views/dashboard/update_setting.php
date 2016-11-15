@@ -18,7 +18,7 @@ include 'inc/wrapper.inc.php';
                                     <input class="form-control" placeholder="KEY" type="text">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="VALUE" name="text" type="password" value="">
+                                    <input class="form-control" placeholder="VALUE" name="text" type="text" value="">
                                 </div>
 
                                 <!-- Change this to a button or input when using this as a form -->
