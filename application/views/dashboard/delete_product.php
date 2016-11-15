@@ -42,7 +42,8 @@ include 'inc/wrapper.inc.php';
                     </tfoot>
                     <tbody>
 
-                    <?php $i = 1; ?>
+                    <?php if (isset($r) && is_array($r)): $i = 1; ?>
+
                     <?php  foreach ($r as $row): ?>
                         <tr>
 
@@ -63,7 +64,7 @@ include 'inc/wrapper.inc.php';
                         </tr>
                         <?php $i++ ; ?>
 
-                    <?php endforeach;?>
+                    <?php endforeach; endif; ?>
 
 
 

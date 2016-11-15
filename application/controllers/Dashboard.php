@@ -240,7 +240,8 @@ class Dashboard extends CI_Controller
         $r = $q->result_array();
 
 
-        if ($r) {
+        var_export($r);
+        if ( is_array($r) && !empty($r)) {
 
             $data = array('r' => $r);
             $this->load->view('dashboard/delete_product', $data);
