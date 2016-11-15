@@ -15,10 +15,10 @@ include 'inc/wrapper.inc.php';
                         <form role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="KEY" type="text">
+                                    <input class="form-control" placeholder="KEY" type="text" name="key" <?php echo $key ?> >
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="VALUE" name="text" type="text" value="">
+                                    <input class="form-control" placeholder="VALUE" name="value" type="text" value="">
                                 </div>
 
                                 <!-- Change this to a button or input when using this as a form -->

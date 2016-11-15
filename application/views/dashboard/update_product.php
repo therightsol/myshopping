@@ -59,15 +59,9 @@ include 'inc/wrapper.inc.php';
 
                             </td>
 
-
                         </tr>
                         <?php $i++ ; ?>
-
                     <?php endforeach;?>
-
-
-
-
                     </tbody>
                 </table>
             </div>
