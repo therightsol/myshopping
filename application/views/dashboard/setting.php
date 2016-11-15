@@ -33,6 +33,7 @@ include 'inc/wrapper.inc.php';
                     </tr>
                     </tfoot>
                     <tbody>
+                    <?php $i =1 ?>
 
                     <tr>
                         <td>Nokia 6300</td>

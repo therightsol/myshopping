@@ -184,19 +184,17 @@ class Dashboard extends CI_Controller
         }
 
     }
+
     public function view_specificRecord($id)
 
     {
-      $this->load->model('product');
+        $this->load->model('product');
 
-        $q = $this->product->getRecord( $id, 'id' );
-        $r = (array) $q;
-
+        $q = $this->product->getRecord($id, 'id');
+        $r = (array)$q;
 
 
         if ($r) {
-
-
 
 
             $this->load->view('dashboard/view_specificrecord', $r);
@@ -209,18 +207,13 @@ class Dashboard extends CI_Controller
         }
 
 
-
-
-
     }
-
-
 
     public function delete_specificRecord($id)
 
     {
         $this->load->model('product');
-        $user_id= $id;
+        $user_id = $id;
         $recordDeleted = $this->product->deleteRecord('id', $user_id);
 
         if ($recordDeleted) {
@@ -274,11 +267,12 @@ class Dashboard extends CI_Controller
             $this->load->view('dashboard/update_product', $data);
         }
     }
+
     public function view_update_specificRecord($id)
     {
         $this->load->model('product');
-        $q = $this->product->getRecord( $id, 'id' );
-        $r = (array) $q;
+        $q = $this->product->getRecord($id, 'id');
+        $r = (array)$q;
         if ($r) {
             $this->load->view('dashboard/update_specificRecord', $r);
         } else {
@@ -286,6 +280,7 @@ class Dashboard extends CI_Controller
             $this->load->view('dashboard/update_specificRecord', $data);
         }
     }
+
     public function update_specificProduct()
     {
         //
@@ -306,48 +301,41 @@ class Dashboard extends CI_Controller
         $p_tax = $this->input->post('p_tax', true);
 
 
-
-        $updateData = array (
-            'title'    =>  $titleupdate,
-            'purchaseprice'    =>  $purchaseprice,
-            'saleprice'    =>  $saleprice,
-            'description'    =>  $pdescription,
-            'discountpercent'    =>  $pdiscount,
-            'sku'    =>  $p_sku,
+        $updateData = array(
+            'title' => $titleupdate,
+            'purchaseprice' => $purchaseprice,
+            'saleprice' => $saleprice,
+            'description' => $pdescription,
+            'discountpercent' => $pdiscount,
+            'sku' => $p_sku,
             /*'status'    =>  $titleupdate,*/
-            'tax'    =>  $p_tax,
+            'tax' => $p_tax,
 
 
         );
         $result = $this->product->updateRecord($colName, $updateData, $where);
-        if ($result){
+        if ($result) {
             redirect('dashboard/update_product');
-        }else {
+        } else {
             echo 'password not updated';
         }
     }
 
-       public function view_product()
+    public function view_product()
     {
         $this->load->model('product');
         $q = $this->db->get('products');
         $r = $q->result_array();
 
-            if ($r) {
-                $data = array('r' => $r);
-                $this->load->view('dashboard/view_product', $data);
+        if ($r) {
+            $data = array('r' => $r);
+            $this->load->view('dashboard/view_product', $data);
 
-            } else {
-                $data['novalue'] = true;
-                $this->load->view('dashboard/view_product', $data);
-            }
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/view_product', $data);
         }
-
-
-
-
-
-
+    }
 
     // by ali shan
     public function ajax_is_slug_available($slug = '')
@@ -402,44 +390,16 @@ class Dashboard extends CI_Controller
 
     public function update_setting()
     {
-        $this->load->library('form_validation');
-
-
-        if (filter_input_array(INPUT_POST)) {
-            $rules = array(
-                array(
-                    'field' => 'value',
-                    'label' => 'Value',
-                    'rules' => 'required'
-                )
-            );
-            $this->form_validation->set_rules($rules);
-
-
-            if ($this->form_validation->run() == false) {
-
-
-                $this->load->model('setting');
-                // $this->load->model('usersmeta');
-
-                $id = $this->session->settingdata('username');
-                $id = $this->setting->getRecord($id, 'id');
-                $value = $this->setting->getRecord($value, 'value');
-                $id = (array)$id;
-
-                $id = $id['id'];
-                $value = $value['value'];
-                $metaRec = $this->setting->getRecord($id, 'id', true);
-                $metaRec = $this->setting->getRecord($value, 'value', true);
-                $metaRec = (array)$metaRec;
-
-                $data['id'] = ($metaRec[0]['metavalue']);
-                $data['value'] = ($metaRec[1]['metavalue']);
-            }
-
-                else{
-                $this->load->view('dashboard/update_setting');
-
+        {
+            $this->load->model('setting');
+            $q = $this->db->get('settings');
+            $r = $q->result_array();
+            if ($r) {
+                $data = array('r' => $r);
+                $this->load->view('dashboard/update_setting', $data);
+            } else {
+                $data['novalue'] = true;
+                $this->load->view('dashboard/update_setting', $data);
             }
         }
     }
