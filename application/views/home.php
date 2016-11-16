@@ -16,7 +16,6 @@ if ( $is_user_loggedIn && !empty ($is_user_loggedIn)):
 
 
 
-
 <div id="wrapper">
 
     <section id="content">
