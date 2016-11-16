@@ -6,7 +6,7 @@ class Home extends CI_Controller {
 
         $this->load->model('product');
 
-        $products = $this->product->getrecord();
+        $products = $this->product->getRecord();
 
         $data['products'] = $products;
 
@@ -18,9 +18,11 @@ class Home extends CI_Controller {
 
         $this->load->model('product');
 
-        $tableName = $this->product->getrecord('title');
+        $tableName = $this->product->getRecord('title');
 
         $result = $this->get_all_Record_withTable($tableName);
+
+        var_export($result);
 
         if($result){
 
