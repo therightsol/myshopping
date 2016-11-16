@@ -8,8 +8,6 @@ class Home extends CI_Controller {
 
         $products = $this->product->getRecord();
 
-        var_export($products);
-
         $data['products'] = $products;
 
         $this->load->view('home' , $data);
@@ -24,7 +22,7 @@ class Home extends CI_Controller {
 
         $result = $this->get_all_Record_withTable($tableName);
 
-
+        var_export($result);
 
 
 
@@ -37,16 +35,6 @@ class Home extends CI_Controller {
             echo 'Sorry there is some error.';
 
         }
-
-    }
-
-    public function ajax_add_to_cart( $id ){
-
-        $cartData = $this->session->userdata('cartData');
-        $cartData[] = $id;
-        $this->session->set_userdata('cartData', $cartData);
-
-        echo true;
 
     }
 

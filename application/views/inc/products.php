@@ -1,5 +1,5 @@
 <?php
-if (isset($products) && is_array($products)):
+if (isset($products) && is_array($products) && !empty($products)):
 foreach ($products as $product):
     $price = $product['saleprice'];
     $price = explode('.', $price);
