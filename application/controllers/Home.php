@@ -8,6 +8,8 @@ class Home extends CI_Controller {
 
         $products = $this->product->getRecord();
 
+        var_export($products);
+
         $data['products'] = $products;
 
         $this->load->view('home' , $data);
