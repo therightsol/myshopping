@@ -24,6 +24,8 @@ class Home extends CI_Controller {
 
         var_export($result);
 
+
+
         if($result){
 
             echo 'This is Product view.';

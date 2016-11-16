@@ -119,6 +119,7 @@ class Register extends CI_Controller
                 //continue
 
                 $this->load->model('user');
+
                 // 1) check is user and email address available or not
 
                 $username = $this->input->post('username', True);
