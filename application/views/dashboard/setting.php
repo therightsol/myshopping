@@ -68,17 +68,33 @@ include 'inc/wrapper.inc.php';
                         <h3 class="panel-title">NEW SETTING </h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" method="post">
                             <fieldset>
+                                <div class="text-danger">
+                                    <?php if(form_error('key')){
+
+                                        echo form_error('key');
+
+                                    }
+
+                                    ?>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="UNIQUE KEY" type="text" name="key">
                                 </div>
+                                    <div class="text-danger">
+                                        <?php if(form_error('value')){
+
+                                            echo form_error('value');
+
+                                        }
+
+                                        ?>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="VALUE" name="value" type="text" value="" >
                                 </div>
 
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="" class="btn btn-lg btn-success btn-block">SAVE SETTING</a>
+                                <input type="submit" value="SAVE SETTING" class="btn btn-lg btn-success btn-block">
                             </fieldset>
                         </form>
                     </div>

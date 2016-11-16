@@ -8,11 +8,8 @@ include 'inc/wrapper.inc.php';
 <?php if($form_errors) : ?>
 
 <div class="row">
-
         <p>There are some errors</p>
-
 </div>
-
 <?php endif; ?>
 
 <form method="post" action="<?php echo $root; ?>dashboard/add_product" class="form-horizontal">

@@ -426,4 +426,81 @@ class Dashboard extends CI_Controller
             $this->load->view('dashboard/setting');
         }
     }
+
+    public function add_setting()
+    {
+
+
+        $data['success'] = false;
+        $data['form_errors'] = false;
+
+        $this->load->library('form_validation');
+
+        if (filter_input_array(INPUT_POST)) {
+
+
+            $rules = array(
+
+                array(
+                    'field' => 'key',
+                    'label' => 'KEY',
+                    'rules' => 'required'
+                ),
+                array(
+                    'field' => 'value',
+                    'label' => 'Setting Value',
+                    'rules' => 'required'
+                ),
+            );
+
+            $this->form_validation->set_rules($rules);
+
+            if (!$this->form_validation->run() == False) {
+
+                $this->load->model('setting');
+
+                $key = $this->input->post('key', true);
+                $value = $this->input->post('value', true);
+
+                $this->setting->key = $key;
+                $this->setting->value = $value;
+
+
+                date_default_timezone_set('ASIA/KARACHI');
+
+                $this->setting->createdAt = date('Y-m-d H:i:s');
+
+                $result = $this->setting->insertRecord();
+//                var_export($result);
+
+                if ($result) {
+
+//                    echo 'Product Added Successfully';
+                    $data['success'] = true;
+                    $this->load->view('dashboard/add_setting', $data);
+
+                } else {
+
+                    echo 'Sorry Setting not added';
+
+                }
+
+            } else {
+                // validation errors
+
+                $data['validation_errors'] = validation_errors();
+                $this->load->view('dashboard/add_setting', $data);
+
+            }
+
+
+        } else {
+            // not post method
+
+            $this->load->view('dashboard/add_setting', $data);
+
+        }
+
+    }
+
 }
