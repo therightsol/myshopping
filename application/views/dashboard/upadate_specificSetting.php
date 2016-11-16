@@ -4,7 +4,7 @@ include 'inc/wrapper.inc.php';
 ?>
 
     <div id="page-wrapper">
-        <form method="post" action="<?php echo $root; ?>dashboard/update_specificProduct" class="form-horizontal">
+        <form method="post" action="<?php echo $root; ?>dashboard/update_specificSetting" class="form-horizontal">
             <fieldset>
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="name">KEY</label>

@@ -71,24 +71,17 @@ include 'inc/wrapper.inc.php';
                         <form role="form" method="post">
                             <fieldset>
                                 <div class="text-danger">
-                                    <?php if(form_error('key')){
 
-                                        echo form_error('key');
-
-                                    }
-
-                                    ?>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="UNIQUE KEY" type="text" name="key">
                                 </div>
                                     <div class="text-danger">
-                                        <?php if(form_error('value')){
+                                        <?php
 
-                                            echo form_error('value');
 
-                                        }
 
                                         ?>
+                                    </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="VALUE" name="value" type="text" value="" >
                                 </div>

@@ -24,6 +24,19 @@ class Dashboard extends CI_Controller
         $data['success'] = false;
         $data['form_errors'] = false;
 
+        $this->load->model('setting');
+        $q = $this->db->get('settings');
+        $r = $q->result_array();
+
+        if ($r) {
+            $data = array('r' => $r);
+            $this->load->view('dashboard/setting', $data);
+
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/setting', $data);
+        }
+
         $this->load->library('form_validation');
 
         if (filter_input_array(INPUT_POST)) {
@@ -59,7 +72,8 @@ class Dashboard extends CI_Controller
                 if ($result) {
                     //echo 'settings saved successfully';
                     $data['success'] = true;
-                    $this->load->view('dashboard/setting', $data);
+                    //$this->load->view('dashboard', $data);
+                    redirect('dashboard/setting');
                 } else {
                     echo 'Sorry ';
                 }
@@ -337,7 +351,6 @@ class Dashboard extends CI_Controller
             $this->load->view('dashboard/view_product', $data);
         }
     }
-
     // by ali shan
     public function ajax_is_slug_available($slug = '')
     {
@@ -388,7 +401,6 @@ class Dashboard extends CI_Controller
         if ($die) exit('<hr />Exit from Debug in Register.php Controller.');
     }
 
-
     public function update_setting()
     {
         {
@@ -408,99 +420,19 @@ class Dashboard extends CI_Controller
         }
     }
 
-    public function update_specificSetting()
-    {  $this->load->model('setting');
-
-        $colName = 'key';
-        $where = $this->input->post('key', true);
-        $value = $this->input->post('value', true);
-        $updateData = array(
-            'value' => $value,
-
-        );
-        $result = $this->setting->updateRecord($colName, $updateData, $where);
-        if ($result) {
-            redirect('dashboard/update_setting');
-        } else {
-
-            $this->load->view('dashboard/setting');
-        }
-    }
-
-    public function add_setting()
+    public function view_update_specificSetting($key)
     {
-
-
-        $data['success'] = false;
-        $data['form_errors'] = false;
-
-        $this->load->library('form_validation');
-
-        if (filter_input_array(INPUT_POST)) {
-
-
-            $rules = array(
-
-                array(
-                    'field' => 'key',
-                    'label' => 'KEY',
-                    'rules' => 'required'
-                ),
-                array(
-                    'field' => 'value',
-                    'label' => 'Setting Value',
-                    'rules' => 'required'
-                ),
-            );
-
-            $this->form_validation->set_rules($rules);
-
-            if (!$this->form_validation->run() == False) {
-
-                $this->load->model('setting');
-
-                $key = $this->input->post('key', true);
-                $value = $this->input->post('value', true);
-
-                $this->setting->key = $key;
-                $this->setting->value = $value;
-
-
-                date_default_timezone_set('ASIA/KARACHI');
-
-                $this->setting->createdAt = date('Y-m-d H:i:s');
-
-                $result = $this->setting->insertRecord();
-//                var_export($result);
-
-                if ($result) {
-
-//                    echo 'Product Added Successfully';
-                    $data['success'] = true;
-                    $this->load->view('dashboard/add_setting', $data);
-
-                } else {
-
-                    echo 'Sorry Setting not added';
-
-                }
-
-            } else {
-                // validation errors
-
-                $data['validation_errors'] = validation_errors();
-                $this->load->view('dashboard/add_setting', $data);
-
-            }
-
-
+        $this->load->model('setting');
+        $q = $this->setting->getRecord($key, 'key');
+        $r = (array)$q;
+        if ($r) {
+            $this->load->view('dashboard/update_specificSetting, $r');
         } else {
-            // not post method
-
-            $this->load->view('dashboard/add_setting', $data);
-
+            $data['novalue'] = true;
+            $this->load->view('dashboard/update_specificSetting', $data);
         }
-
     }
+
+
 
 }
