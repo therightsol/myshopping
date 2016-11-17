@@ -9,6 +9,12 @@ class Home extends CI_Controller {
         $q = $this->db->get('products');
         $r = $q->result_array();
 
+
+        /*$result = $this->product->getRecord();
+
+        var_export($result);
+        exit;*/
+
         if ($r) {
             $data = array('r' => $r);
                   var_export($data);

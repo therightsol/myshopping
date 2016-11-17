@@ -107,10 +107,19 @@ include 'inc/wrapper.inc.php';
             <div class="form-group">
                 <label class="col-md-4 control-label" for="name">Updated AT</label>
                 <div class="col-md-6">
-                    <input id="p_updatedAT" name="p_updatedAT" type="text" value=<?php echo $updatedAt; ?> class="form-control input-md">
+                    <input id="p_updatedAT" name="p_updatedAT" type="text" value="<?php echo $updatedAt; ?>" class="form-control input-md">
 
                 </div>
             </div>
+
+
+            <!--<select name="statuses" id="">
+                <?php /*foreach($statuses as $status): */?>
+                <option value="<?php /*echo $status['id'] ; */?>">
+                    <?php /*echo $status['status']; */?>
+                </option>
+                <?php /*endforeach; */?>
+            </select>-->
 
 
 
