@@ -15,7 +15,7 @@ include 'inc/wrapper.inc.php';
                         <form role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="KEY" type="text" name="key" <?php echo $key ?> >
+                                    <input class="form-control" placeholder="KEY" type="text" name="key" >
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="VALUE" name="value" type="text" value="">

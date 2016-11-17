@@ -410,7 +410,7 @@ class Dashboard extends CI_Controller
             if ($r) {
 
                 $data = array('r' => $r);
-                $this->load->view('dashboard/update_setting', $data);
+                $this->load->view('dashboard/update_setting', $r);
             }
             else {
 
@@ -422,17 +422,26 @@ class Dashboard extends CI_Controller
 
     public function view_update_specificSetting($key)
     {
+        //
+
         $this->load->model('setting');
-        $q = $this->setting->getRecord($key, 'key');
-        $r = (array)$q;
-        if ($r) {
-            $this->load->view('dashboard/update_specificSetting, $r');
+
+        $colName = 'key';
+        $where = $this->input->post('key', true);
+
+
+        $value = $this->input->post('value', true);
+
+
+        $updateData = array(
+            'value' => $value,
+
+        );
+        $result = $this->setting->updateRecord($colName, $updateData, $where);
+        if ($result) {
+            redirect('dashboard/update_specificSetting');
         } else {
-            $data['novalue'] = true;
-            $this->load->view('dashboard/update_specificSetting', $data);
+            echo 'password not updated';
         }
     }
-
-
-
 }
