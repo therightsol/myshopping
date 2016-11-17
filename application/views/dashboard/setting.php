@@ -41,7 +41,7 @@ include 'inc/wrapper.inc.php';
                         <td><?php echo $row['value'];   ?></td>
                         <td></td>
                         <td></td>
-                        <td><a href="<?php echo $root;?>dashboard/update_setting/<?php   echo $row['key'];   ?>" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>EDIT</a></td>
+                        <td><a href="<?php echo $root;?>dashboard/view_update_specificSetting/<?php   echo $row['key'];   ?>" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>EDIT</a></td>
                         <td></td>
                         <td></td>
                     </tr>

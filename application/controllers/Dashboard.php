@@ -401,36 +401,17 @@ class Dashboard extends CI_Controller
         if ($die) exit('<hr />Exit from Debug in Register.php Controller.');
     }
 
-    public function update_setting()
-    {
-        {
-            $this->load->model('setting');
-            $q = $this->db->get('settings');
-            $r = $q->result_array();
-            if ($r) {
-
-                $data = array('r' => $r);
-                $this->load->view('dashboard/update_setting', $r);
-            }
-            else {
-
-                $data['novalue'] = true;
-                $this->load->view('dashboard/update_setting', $data);
-            }
-        }
-    }
-
-    public function view_update_specificSetting($key)
+    public function update_specificSetting()
     {
         //
 
         $this->load->model('setting');
 
         $colName = 'key';
-        $where = $this->input->post('key', true);
+        $where = $this->input->post('s_key', true);
 
 
-        $value = $this->input->post('value', true);
+        $value = $this->input->post('s_value', true);
 
 
         $updateData = array(
@@ -439,9 +420,25 @@ class Dashboard extends CI_Controller
         );
         $result = $this->setting->updateRecord($colName, $updateData, $where);
         if ($result) {
-            redirect('dashboard/update_specificSetting');
+            redirect('dashboard/setting');
         } else {
             echo 'password not updated';
         }
     }
+
+    public function view_update_specificSetting($key)
+    {
+        $this->load->model('setting');
+        $q = $this->setting->getRecord($key, 'key');
+        $r = (array)$q;
+        if ($r) {
+            $this->load->view('dashboard/update_specificSetting', $r);
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/update_specificSetting', $data);
+        }
+    }
+
+
+
 }
