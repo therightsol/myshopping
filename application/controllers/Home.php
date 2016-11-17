@@ -3,12 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
     public function index(){
+        $result = $this->load_cartData();
+        $data['cartData'] = $result;
 
         $this->load->model('product');
 
         $q = $this->db->get('products');
         $r = $q->result_array();
-
 
         /*$result = $this->product->getRecord();
 
@@ -56,6 +57,20 @@ class Home extends CI_Controller {
 
         }
 
+    }
+
+    private function load_cartData(){
+        $pids = $this->session->userdata('cartData');
+
+        $this->load->model('product');
+        //$this->product->getRecord($pids, 'id');
+
+        $result = array();
+        foreach($pids as $pid){
+            $result[] = $this->product->getRecord($pid, 'id')
+        }
+
+        return $result;
     }
 
 
