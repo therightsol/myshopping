@@ -6,13 +6,25 @@ class Home extends CI_Controller {
 
         $this->load->model('product');
 
-        $products = $this->product->getRecord();
+        $q = $this->db->get('products');
+        $r = $q->result_array();
 
-        var_export($products);
+        if ($r) {
+            $data = array('r' => $r);
+                  var_export($data);
+            $this->load->view('home', $data);
 
-        $data['products'] = $products;
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('home', $data);
+        }
 
-        $this->load->view('home' , $data);
+
+
+
+
+
+
 
     }
 
