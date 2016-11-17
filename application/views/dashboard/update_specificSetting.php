@@ -29,7 +29,7 @@ include 'inc/wrapper.inc.php';
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton"></label>
                     <div class="col-md-4">
-                        <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">UPDATE</button>
+                        <button style="margin-top: 10px;margin-left: 20px;" type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">UPDATE</button>
                     </div>
                 </div>
         </fieldset>
