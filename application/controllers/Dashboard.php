@@ -406,23 +406,25 @@ class Dashboard extends CI_Controller
         //
 
         $this->load->model('setting');
+        $this->debug($_POST);
+
+
 
         $colName = 'key';
-        $where = $this->input->post('s_key', true);
+        $where = $_POST['p_key'];
+        $value = $_POST['s_value'];
 
 
-        $value = $this->input->post('s_value', true);
+
+        $updateData = array('value' => $value);
 
 
-        $updateData = array(
-            'value' => $value,
-
-        );
         $result = $this->setting->updateRecord($colName, $updateData, $where);
         if ($result) {
             redirect('dashboard/setting');
         } else {
             echo 'password not updated';
+
         }
     }
 

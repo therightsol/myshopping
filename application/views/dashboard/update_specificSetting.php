@@ -10,7 +10,7 @@ include 'inc/wrapper.inc.php';
         <fieldset>
 
             <!-- Form Name -->
-            <h1 style="text-align: center;">Update Setting </h1>
+            <h1 style="text-align: center;">Update Settings </h1>
 
             <div class="form-group">
                 <label class="col-md-4 control-label" for="name">Key</label>
