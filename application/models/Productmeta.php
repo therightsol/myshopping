@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class Productmeta extends CI_Model{
+class Productmeta extends MY_Model{
 
     const DB_TablePK = 'id';
     const DB_TableName = 'productmetas';

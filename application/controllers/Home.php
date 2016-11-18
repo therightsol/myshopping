@@ -3,35 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
     public function index(){
-        $result = $this->load_cartData();
-        $data['cartData'] = $result;
 
         $this->load->model('product');
 
-        $q = $this->db->get('products');
-        $r = $q->result_array();
+        $products = $this->product->getRecord();
 
-        /*$result = $this->product->getRecord();
+        $data['products'] = $products;
 
-        var_export($result);
-        exit;*/
-
-        if ($r) {
-            $data = array('r' => $r);
-                  var_export($data);
-            $this->load->view('home', $data);
-
-        } else {
-            $data['novalue'] = true;
-            $this->load->view('home', $data);
-        }
-
-
-
-
-
-
-
+        $this->load->view('home' , $data);
 
     }
 
@@ -43,10 +22,6 @@ class Home extends CI_Controller {
 
         $result = $this->get_all_Record_withTable($tableName);
 
-        var_export($result);
-
-
-
         if($result){
 
             echo 'This is Product view.';
@@ -56,6 +31,14 @@ class Home extends CI_Controller {
             echo 'Sorry there is some error.';
 
         }
+
+        $this->load->model('productmeta');
+
+        $showMeta = $this->productmeta->getRecord();
+
+        $data['showMeta'] = $showMeta;
+
+        $this->load->view('home' , $data);
 
     }
 
@@ -67,7 +50,7 @@ class Home extends CI_Controller {
 
         $result = array();
         foreach($pids as $pid){
-            $result[] = $this->product->getRecord($pid, 'id')
+            $result[] = $this->product->getRecord($pid, 'id');
         }
 
         return $result;

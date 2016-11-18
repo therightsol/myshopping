@@ -1,15 +1,31 @@
 <?php
 if (isset($products) && is_array($products) && !empty($products)):
+
 foreach ($products as $product):
     $price = $product['saleprice'];
     $price = explode('.', $price);
     if (is_array($price)){
         $mainPrice = $price[0];
         $minPrice = $price[1];
+
     }else {
         $mainPrice = $product['saleprice'];
         $minPrice = 0;
     }
+
+    $discount = $product['discountpercent'];
+    if($discount){
+
+
+    }else{
+
+        $discount = $product['discountpercent'];
+
+    }
+
+
+
+
     ?>
 <div class="col-md-4 col-sm-6 col-xs-12">
     <div class="item item-hover">
@@ -28,7 +44,7 @@ foreach ($products as $product):
                     class="item-price">$<?php echo $mainPrice;  ?><span
                         class="sub-price">.<?php echo $minPrice; ?></span></span></div>
             <span class="new-rect">New</span> <span
-                class="discount-rect">-15%</span></div>
+                class="discount-rect"><?php echo $discount . '%'; ?></span></div>
         <div class="item-meta-container">
             <div class="ratings-container">
                 <div class="ratings">
