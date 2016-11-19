@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ali Shan
- * Date: 01-Nov-16
- * Time: 7:57 PM
- */
-
 $is_user_loggedIn = $this->session->userdata('username');
 
 if ($is_user_loggedIn && !empty($is_user_loggedIn)){
@@ -15,14 +8,14 @@ if ($is_user_loggedIn && !empty($is_user_loggedIn)){
         if ($user_type == 1){
             // user is admin
 
-            $this->load->view('dashboard');
+            $this->load->view('dashboard/dashboard');
 
-        }else if ($user_type == 2){
-
-            echo 'sorry';
+        }
+        else if ($user_type == 2){
+            $this->load->view('home');
         }
     }
-}else {
+} else {
 
-    redirect('dashboard/dashboardlogin');
+    $this->load->view('dashboard/dashboardlogin');
 }

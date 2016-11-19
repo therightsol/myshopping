@@ -24,8 +24,8 @@ include 'inc/dashhead.inc.php';
                                 </div>
                                 <div class="text-danger">
                                     <?php
-                                    if (form_error('loginmail')){
-                                        echo ('loginmail');
+                                    if (form_error('loginpass')){
+                                        echo ('loginpass');
                                     }
                                     ?>
                                 </div>

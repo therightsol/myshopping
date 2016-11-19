@@ -508,6 +508,20 @@ class Dashboard extends CI_Controller
         }
     }
 
+    private function checkIsAvailable(array $arr)
+    {
+        $is_record_available = array();
+        foreach ($arr as $key => $value) {
+            $is_record_available[$key] = $this->user->getRecord($value, $key);
 
+        }
+
+        if (array_filter($is_record_available)) {
+            return true;
+        }
+
+        return false;
+        //$this->debug($is_record_available, true);
+    }
 
 }
