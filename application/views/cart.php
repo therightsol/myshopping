@@ -1,9 +1,11 @@
-<?php
-include 'inc/head.inc.php';
-include 'inc/topbar.inc.php';
-include 'inc/header.inc.php';
-include 'inc/menu.inc.php';
-include 'inc/panel.inc.php';
+<?php include 'inc/head.inc.php'; ?>
+
+<body>
+<!-- This is test by RAMISH AHMED BUTT -->
+
+<?php include 'inc/load_menu_file.php';
+
+
 ?>
 
 <script type="text/javascript">
@@ -41,6 +43,9 @@ include 'inc/panel.inc.php';
                 <header class="content-title"><h1 class="title">Shopping Cart</h1>
 
                     <p class="title-desc">Just this week, you can use the free premium delivery.</p></header>
+
+                <?php if(($this->session->userdata('cartData')) && !empty($this->session->userdata('cartData'))): ?>
+
                 <div class="xs-margin"></div>
                 <div class="row">
                     <div class="col-md-12 table-responsive">
@@ -55,18 +60,26 @@ include 'inc/panel.inc.php';
                             </tr>
                             </thead>
                             <tbody>
+
+
+
+                            <?php
+
+                            $total = 0;
+                            foreach($r as $arr):  ?>
+
                             <tr class="closepro" >
                                 <td class="item-name-col">
                                     <figure><a href=""><img src="<?php echo $root; ?>assets/images/products/compare1.jpg"
                                                                       alt="Lowlands Lace Blouse"></a></figure>
-                                    <header class="item-name"><a href="">Lowlands Lace Blouse</a></header>
+                                    <header class="item-name"><a href=""><?php echo $arr['title'];   ?></a></header>
                                     <ul>
-                                        <li>Color: White</li>
+                                        <li><?php echo $arr['description'];   ?></li>
                                         <li>Size: SM</li>
                                     </ul>
                                 </td>
-                                <td class="item-code">MP125984154</td>
-                                <td class="item-price-col"><span class="item-price-special">$1175</span></td>
+                                <td class="item-code">   <?php echo $arr['sku'];  ?></td>
+                                <td class="item-price-col"><span class="item-price-special"> <?php echo $arr['saleprice'];  ?></span></td>
                                 <td>
                                     <div class="custom-quantity-input"><input type="text" name="quantity" value="1">
                                         <a href="" onclick="return!1"
@@ -75,57 +88,26 @@ include 'inc/panel.inc.php';
                                            class="quantity-btn quantity-input-down"><i class="fa fa-angle-down"></i></a>
                                     </div>
                                 </td>
-                                <td class="item-total-col"><span class="item-price-special">$1175</span>
-                                    <span id="bttclose" class="close-button"></span>aur </td>
+                                <td class="item-total-col"><span class="item-price-special"> <?php echo $arr['saleprice'];  ?></span>
+                                    <span id="bttclose" class="close-button"></span> </td>
                             </tr>
-                            <tr class="closepro1">
-                                <td class="item-name-col">
-                                    <figure><a href="<?php echo $root; ?>cart"><img src="<?php echo $root; ?>assets/images/products/compare2.jpg"
-                                                                      alt="Samsung Galaxy Ace"></a></figure>
-                                    <header class="item-name"><a href="<?php echo $root; ?>cart">Samsung Galaxy Ace</a></header>
-                                    <ul>
-                                        <li>Color: Black</li>
-                                        <li>Size: XL</li>
-                                    </ul>
-                                </td>
-                                <td class="item-code">MP125984154</td>
-                                <td class="item-price-col"><span class="item-price-special">$1475</span></td>
-                                <td>
-                                    <div class="custom-quantity-input"><input type="text" name="quantity" value="1">
-                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
-                                           class="quantity-btn quantity-input-up"><i class="fa fa-angle-up"></i></a>
-                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
-                                           class="quantity-btn quantity-input-down"><i class="fa fa-angle-down"></i></a>
-                                    </div>
-                                </td>
-                                <td class="item-total-col">
-                                    <span class="item-price-special">$1475</span>
-                                    <span id="bttclose1" class="close-button"></span>
-                                </td>
-                            </tr >
-                            <tr class="closepro2">
-                                <td class="item-name-col">
-                                    <figure><a href="<?php echo $root; ?>cart"><img src="<?php echo $root; ?>assets/images/products/compare3.jpg"
-                                                                      alt="Iphone Case Cover Original"></a></figure>
-                                    <header class="item-name"><a href="<?php echo $root; ?>cart">Iphone Case Cover Original</a>
-                                    </header>
-                                    <ul>
-                                        <li>Color: White</li>
-                                        <li>Size: SM</li>
-                                    </ul>
-                                </td>
-                                <td class="item-code">MP125984154</td>
-                                <td class="item-price-col"><span class="item-price-special">$399</span></td>
-                                <td>
-                                    <div class="custom-quantity-input"><input type="text" name="quantity" value="3">
-                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
-                                           class="quantity-btn quantity-input-up"><i class="fa fa-angle-up"></i></a>
-                                        <a href="<?php echo $root; ?>cart" onclick="return!1"
-                                           class="quantity-btn quantity-input-down"><i class="fa fa-angle-down"></i></a>
-                                    </div>
-                                </td>
-                                <td class="item-total-col"><span class="item-price-special">$1197</span> <span class="close-button" id="bttclose2"></span></td>
-                            </tr>
+
+
+
+                                <?php
+
+                                $percentDiscount = $arr['saleprice'] * ($arr['discountpercent']/100);
+                                $total+= $arr['saleprice'];
+
+
+                                ?>
+                            <?php endforeach;   ?>
+
+
+
+
+
+
                             </tbody>
                         </table>
                     </div>
@@ -200,11 +182,11 @@ include 'inc/panel.inc.php';
                             <tbody>
                             <tr>
                                 <td class="total-table-title">Subtotal:</td>
-                                <td>$434.50</td>
+                                <td><?php  echo $total ; ?></td>
                             </tr>
                             <tr>
-                                <td class="total-table-title">Shipping:</td>
-                                <td>$6.00</td>
+                                <td class="total-table-title">Discount :</td>
+                                <td><?php  echo $percentDiscount ; ?></td>
                             </tr>
                             <tr>
                                 <td class="total-table-title">TAX (0%):</td>
@@ -214,7 +196,7 @@ include 'inc/panel.inc.php';
                             <tfoot>
                             <tr>
                                 <td>Total:</td>
-                                <td>$440.50</td>
+                                <td><?php  echo $total - $percentDiscount ; ?></td>
                             </tr>
                             </tfoot>
                         </table>
@@ -223,9 +205,20 @@ include 'inc/panel.inc.php';
                                                                                                class="btn btn-custom">CHECKOUT</a>
                     </div>
                 </div>
+
+            <?php  endif; ?>
+
+
+
+
+
+
                 <div class="md-margin2x"></div>
                 <div class="similiar-items-container carousel-wrapper">
                     <header class="content-title">
+
+
+
                         <div class="title-bg"><h2 class="title">Similiar Products</h2></div>
                         <p class="title-desc">Note the similar products - after buying for more than $500 you can
                             get a discount.</p></header>

@@ -4,13 +4,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
     public function index(){
 
+
         $this->load->model('product');
 
         $products = $this->product->getRecord();
 
         $data['products'] = $products;
+        if (isset($_SESSION['cartData'])) {
+            $cartdata = $this->load_cartData();
+            $cartdata = json_decode(json_encode($cartdata), True);
+            $data['r'] = $cartdata;
+        }
 
         $this->load->view('home' , $data);
+
 
     }
 
@@ -56,5 +63,15 @@ class Home extends CI_Controller {
         return $result;
     }
 
+    public function ajax_add_to_cart( $id ){
+
+        $cartData = $this->session->userdata('cartData');
+        $cartData[] = $id;
+        $this->session->set_userdata('cartData', $cartData);
+
+
+        echo true;
+
+    }
 
 }
