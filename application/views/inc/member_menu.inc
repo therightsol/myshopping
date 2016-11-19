@@ -90,46 +90,96 @@
                     <div class="dropdown-cart-menu-container pull-right">
                         <div class="btn-group dropdown-cart">
                             <button type="button" class="btn btn-custom dropdown-toggle"
-                                    data-toggle="dropdown"><span class="cart-menu-icon"></span> 0 item(s)
+
+
+                                    data-toggle="dropdown"><span class="cart-menu-icon"></span> <?php echo sizeof($this->session->userdata('cartData')); ?>- item(s)
                                 <span class="drop-price">- $0.00</span></button>
-                            <div class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu"><p
+                            <div style="min-width: 600px;"  class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu"><p
                                     class="dropdown-cart-description">Recently added item(s).</p>
                                 <ul class="dropdown-cart-product-list">
-                                    <li class="item clearfix"><a href="<?php echo $root; ?>home" title="Delete item"
-                                                                 class="delete-item"><i
-                                                class="fa fa-times"></i></a> <a href="<?php echo $root; ?>home"
-                                                                                title="Edit item"
-                                                                                class="edit-item"><i
-                                                class="fa fa-pencil"></i></a>
-                                        <figure><a href="<?php echo $root; ?>products"><img
-                                                    src="<?php echo $root; ?>assets/images/products/thumbnails/item12.jpg"
-                                                    alt="phone 4"></a></figure>
-                                        <div class="dropdown-cart-details"><p class="item-name"><a
-                                                    href="<?php echo $root; ?>products">Cam Optia AF Webcam</a></p>
 
-                                            <p>1x <span class="item-price">$499</span></p></div>
-                                    </li>
-                                    <li class="item clearfix"><a href="<?php echo $root; ?>home" title="Delete item"
-                                                                 class="delete-item"><i
-                                                class="fa fa-times"></i></a> <a href="<?php echo $root; ?>home"
-                                                                                title="Edit item"
-                                                                                class="edit-item"><i
-                                                class="fa fa-pencil"></i></a>
-                                        <figure><a href="<?php echo $root; ?>products"><img
-                                                    src="<?php echo $root; ?>assets/images/products/thumbnails/item13.jpg"
-                                                    alt="phone 2"></a></figure>
-                                        <div class="dropdown-cart-details"><p class="item-name"><a
-                                                    href="<?php echo $root; ?>products">Iphone Case Cover Original</a></p>
 
-                                            <p>1x <span class="item-price">$499<span
-                                                        class="sub-price">.99</span></span></p></div>
-                                    </li>
+                                    <?php if(($this->session->userdata('cartData')) && !empty($this->session->userdata('cartData'))): ?>
+
+
+
+
+
+
+                                    <?php
+
+                                    $total = 0;
+                                    $percentDiscount = 0;
+                                    foreach($r as $arr):  ?>
+                                        <li class="item clearfix">
+                                            <a href="<?php echo $root; ?>home" title="Delete item" class="delete-item">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+
+                                            <a href="<?php echo $root; ?>home" title="Edit item"  class="edit-item">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+
+                                            <figure>
+                                                <a href="<?php echo $root; ?>products"><img src="<?php echo $root; ?>assets/images/products/thumbnails/item12.jpg" alt="phone 4"></a>
+                                            </figure>
+
+                                            <div class="dropdown-cart-details">
+                                                <p class="item-name">
+                                                    <a href="<?php echo $root; ?>products"><?php echo $arr['title'];  ?></a>
+                                                </p>
+
+                                                <p>
+                                                    Price: <?php echo $arr['saleprice'];  ?>
+                                                    <span class="item-price">, Discount: <?php echo $arr['discountpercent']; ?> %</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <?php
+
+                                        $percentDiscount = $arr['saleprice'] * ($arr['discountpercent']/100);
+                                        $total+= $arr['saleprice'];
+                                        ?>
+                                    <?php endforeach;   ?>
+
+
+
+
+
+
+
+
+
+
+
                                 </ul>
                                 <ul class="dropdown-cart-total">
-                                    <li><span class="dropdown-cart-total-title">Shipping:</span>$7</li>
-                                    <li><span class="dropdown-cart-total-title">Total:</span>$1005<span
+                                    <li><span class="dropdown-cart-total-title">Tot Discount:</span><?php  echo $percentDiscount ?></li>
+                                    <li><span class="dropdown-cart-total-title">Tot Price:</span><?php echo $total;   ?><span
                                             class="sub-price">.99</span></li>
                                 </ul>
+                                <?php endif;  ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 <div class="dropdown-cart-action"><p><a href="<?php echo $root; ?>cart"
                                                                         class="btn btn-custom-2 btn-block">Cart</a>
                                     </p>

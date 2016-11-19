@@ -89,6 +89,8 @@
                     <div class="dropdown-cart-menu-container pull-right">
                         <div class="btn-group dropdown-cart">
                             <button type="button" class="btn btn-custom dropdown-toggle"
+
+
                                     data-toggle="dropdown"><span class="cart-menu-icon"></span> <?php echo sizeof($this->session->userdata('cartData')); ?>- item(s)
                                 <span class="drop-price">- $0.00</span></button>
                             <div style="min-width: 600px;"  class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu"><p
@@ -156,6 +158,9 @@
                                             class="sub-price">.99</span></li>
                                 </ul>
                                 <?php endif;  ?>
+
+
+
                                 <div class="dropdown-cart-action"><p><a href="<?php echo $root; ?>cart"
                                                                         class="btn btn-custom-2 btn-block">Cart</a>
                                     </p>
