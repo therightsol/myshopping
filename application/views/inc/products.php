@@ -69,21 +69,7 @@ foreach ($products as $product):
         </div>
     </div>
 </div>
-    <script>
-        jQuery(document).ready(function (){
-           jQuery('.add_to_cart').click(function (){
-               var id = jQuery(this).data('pid');
 
-               jQuery.ajax(
-                   {
-                      url: "<?php echo $root; ?>home/ajax_add_to_cart/" + id
-                   }
-               ).done(function ( response ){
-                   console.info(response);
-               });
-           })
-        });
-    </script>
     <?php //echo var_export($this->session->userdata('cartData'), true); ?>
 
 
@@ -93,3 +79,24 @@ else:
     echo '<h2>Sorry! no product is available. </h2>';
 endif;
     ?>
+
+<script>
+    jQuery(document).ready(function (){
+        jQuery('.add_to_cart').click(function ( e ){
+            //e.preventDefault();
+            var id = jQuery(this).data('pid');
+
+            //console.log("Id is " + id);
+            //alert(id);
+
+            jQuery.ajax(
+                {
+                    url: "<?php echo $root; ?>home/ajax_add_to_cart/" + id
+                }
+            ).done(function ( response ){
+                //console.info("Response is "  + response);
+                //alert('Your product has been added into cart');
+            });
+        })
+    });
+</script>

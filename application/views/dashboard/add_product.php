@@ -12,7 +12,7 @@ include 'inc/wrapper.inc.php';
 </div>
 <?php endif; ?>
 
-<form method="post" action="<?php echo $root; ?>dashboard/add_product" class="form-horizontal">
+<form method="post" enctype="multipart/form-data" action="<?php echo $root; ?>dashboard/add_product" class="form-horizontal">
     <fieldset>
 
         <!-- Form Name -->
@@ -183,7 +183,7 @@ include 'inc/wrapper.inc.php';
         <div class="form-group">
             <label class="col-md-4 control-label" for="upload">Upload Image</label>
             <div class="col-md-4">
-                <input id="upload" name="file" class="input-file" type="file">
+                <input id="upload" name="product_image" class="input-file" type="file">
             </div>
         </div>
 

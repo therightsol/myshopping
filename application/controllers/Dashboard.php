@@ -167,6 +167,36 @@ class Dashboard extends CI_Controller
 
         if (filter_input_array(INPUT_POST)) {
 
+            var_export($_POST);
+            echo '<hr />';
+            echo var_export($_FILES);
+
+
+            $config['upload_path']          = './product_images/';
+            $config['allowed_types']        = 'gif|jpg|png';
+            $config['max_size']             = 5000; // 5 MB
+
+
+            $this->load->library('upload', $config);
+
+            if ( ! $this->upload->do_upload('product_image'))
+            {
+                // file not uploaded
+                // $data['fnu'] = '';
+                // redirect
+                $data['ferror'] = $this->upload->display_errors();
+            }
+            else
+            {
+                // file uploaded
+                // show success message
+                // redirect
+            }
+
+
+            echo 'm here';
+
+            exit;
 
             $rules = array(
 
@@ -237,6 +267,9 @@ class Dashboard extends CI_Controller
 //                var_export($result);
 
                 if ($result) {
+
+                    // Upload file now.
+
 
 //                    echo 'Product Added Successfully';
                     $data['success'] = true;

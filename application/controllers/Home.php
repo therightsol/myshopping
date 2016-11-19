@@ -74,4 +74,21 @@ class Home extends CI_Controller {
 
     }
 
+    public function clear_cart(){
+        // clearing session
+        $this->session->unset_userdata('cartData');
+
+        // redirecting
+        $request_url = $_SERVER['REQUEST_URI'];
+        $request_url = explode('/', $request_url, -1);
+
+        $url = '';
+        foreach ($request_url as $path){
+            $url .= $path . '/';
+        }
+
+        echo 'Returning to back within 5 seconds.';
+        header('refresh:1;url=' . $url);
+    }
+
 }
