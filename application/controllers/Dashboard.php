@@ -38,6 +38,7 @@ class Dashboard extends CI_Controller
 
                 $isRecordAvailable = $this->checkIsAvailable( array ( 'email' => $email ) );
 
+
                 if ($isRecordAvailable) {
 
                     $password = $this->input->post('loginpass', True);
@@ -54,7 +55,7 @@ class Dashboard extends CI_Controller
 
                         $this->session->set_userdata('usertype', $user->usertype);
 
-                        redirect('dashboard/dashboardlogin');
+                        redirect('dashboard');
                     }else{
                         $data['error_password_login'] = true;
 
