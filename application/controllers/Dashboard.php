@@ -11,8 +11,75 @@ class Dashboard extends CI_Controller
 
     public function dashboardlogin()
     {
-        $this->load->view('dashboard/dashboardlogin');
+        $this->load->library('form_validation');
+
+        if(filter_input_array(INPUT_POST)){
+            $rules = array(
+                array(
+                    'field' => 'loginmail',
+                    'label' => 'E-mail',
+                    'rules' => 'required|valid_email|max_length[255]'
+                ),
+                array(
+                    'field' => 'loginpass',
+                    'label' => 'Password',
+                    'rules' => 'required|min_length[7]|max_length[255]'
+                )
+
+            );
+
+            $this->form_validation->set_rules($rules);
+
+            if(! $this->form_validation->run()== false){
+
+                $this->load->model('user');
+
+                $email = $this->input->post('loginmail', True);
+
+                $isRecordAvailable = $this->checkIsAvailable( array ( 'email' => $email ) );
+
+                if ($isRecordAvailable) {
+
+                    $password = $this->input->post('loginpass', True);
+
+                    $user = $this->user->getRecord( $email, 'email' );
+
+                    $is_pass_match = password_verify($password, $user->password);
+
+                    if ($is_pass_match){
+
+                        $this->session->set_userdata('username', $user->username);
+
+                        $this->session->set_userdata('email', $user->email);
+
+                        $this->session->set_userdata('usertype', $user->usertype);
+
+                        redirect('dashboard/dashboardlogin');
+                    }else{
+                        $data['error_password_login'] = true;
+
+                        $this->load->view ('dashboard/dashboardlogin', $data);
+                    }
+                }
+                else {
+                    $data['error_email_login'] = true;
+
+                    $this->load->view('dashboard/dashboardlogin', $data);
+                }
+            }
+            else {
+                $data['error_validate']= true;
+                $this->load->view ('dashboard/dashboardlogin', $data);
+            }
+        }
+        else {
+            $data['msg'] = false;
+
+            $this->load->view('dashboard/dashboardlogin', $data);
+
+        }
     }
+
 
     public function dashboardlogout()
     {

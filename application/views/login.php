@@ -39,7 +39,6 @@ include 'inc/anonymous_menu.inc';
                         <p>If you have an account with us, please log in.</p>
                         <?php if ($msg): ?>
                             <h1 style="color:blue;"> <?php echo $_POST['loginmail'] ; ?> <br/><br/>! You are Signed in Successfully. </h1>
-
                         <?php endif; ?>
 
 
