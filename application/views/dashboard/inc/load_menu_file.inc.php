@@ -7,15 +7,17 @@ if ($is_user_loggedIn && !empty($is_user_loggedIn)){
     if ($user_type && !empty($user_type)){
         if ($user_type == 1){
             // user is admin
-            $this->load->view('dashboard/dashboard');
+
+            $this->load->view('dashboard');
 
         }
         else if ($user_type == 2){
 
             echo 'sorry';
+
         }
     }
 }else {
 
-   $this->load->view('dashboard/dashboardlogin');
+    redirect('dashboard/dashboardlogin');
 }

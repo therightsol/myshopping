@@ -11,24 +11,10 @@ include 'inc/dashhead.inc.php';
                     <div class="panel-body">
                         <form role="form" method="post">
                             <fieldset>
-
-                                <div class="text-danger">
-                                    <?php
-                                    if (form_error('loginmail')){
-                                        echo ('loginmail');
-                                    }
-                                    ?>
-                                </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="E-mail" name="loginmail" type="email" autofocus>
                                 </div>
-                                <div class="text-danger">
-                                    <?php
-                                    if (form_error('loginpass')){
-                                        echo ('loginpass');
-                                    }
-                                    ?>
-                                </div>
+
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="loginpass" type="password" value="">
                                 </div>
