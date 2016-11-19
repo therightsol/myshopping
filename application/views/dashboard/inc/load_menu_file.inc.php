@@ -15,15 +15,14 @@ if ($is_user_loggedIn && !empty($is_user_loggedIn)){
         if ($user_type == 1){
             // user is admin
 
-            include 'dashhead.inc.php';
-            include 'jsfooterlink.inc.php';
-            include 'wrapper.inc.php';
+            $this->load->view('dashboard');
 
         }else if ($user_type == 2){
-            $this->load ->view('dashboard/dashboardlogin');
 
+            echo 'sorry';
         }
     }
 }else {
-   $this->load->view('dashboard/dashboardlogin');
+
+    redirect('dashboard/dashboardlogin');
 }
