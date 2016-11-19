@@ -1,7 +1,7 @@
 <?php
 include 'inc/dashhead.inc.php';
 include 'inc/wrapper.inc.php';
-include 'inc/load_menu_file.inc.php';
+//include 'inc/load_menu_file.inc.php';
 ?>
 
     <div id="page-wrapper">

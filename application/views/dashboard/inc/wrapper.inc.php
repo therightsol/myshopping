@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class=F"navbar-brand" href="<?php echo $root; ?>dashboard" style="display: block;color: #0a0a0a;font-size: 1.5em;margin-top: 15px;margin-left: 5px">SB Admin v2.0</a>
+            <a class=F"navbar-brand" href="<?php echo $root; ?>dashboard" style="display: block;color: #0a0a0a;font-size: 1.5em;margin-top: 15px;margin-left: 15px">TRS</a>
         </div>
         <ul class="nav navbar-top-links navbar-right">
 
