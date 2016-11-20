@@ -45,6 +45,27 @@
                                 <a href="<?php echo $root; ?>dashboard/setting"> Settings </a>
                             </li>
                         </ul>
+
+                    </li>
+
+                    <li>
+                        <a href="<?php echo $root; ?>"><i class="fa fa-user fa-fw"></i> Users <span class="fa arrow"></span> </a>
+                        <ul class="nav nav-secnd-left">
+                            <li>
+                                <a href="<?php echo $root; ?>dashboard/add_user">Add User</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $root; ?>dashboard/delete_user">Delete User</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $root; ?>dashboard/update_user">  Update User</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $root; ?>dashboard/view_user">View User</a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li>
                         <a href="<?php echo $root; ?>"><i class="fa fa-shopping-cart fa-fw"></i> Product <span class="fa arrow"></span> </a>
                         <ul class="nav nav-secnd-left">

@@ -324,6 +324,27 @@ class Dashboard extends CI_Controller
 
     }
 
+    public function delete_specificUser($id)
+
+    {
+        $this->load->model('user');
+        $user_id = $id;
+        $recordDeleted = $this->user->deleteRecord('id', $user_id);
+
+        if ($recordDeleted) {
+            redirect('dashboard/delete_user');
+            /*$q = $this->db->get('products');
+            $r = $q->result_array();
+            $data = array('r' => $r);
+            $this->load->view('dashboard/delete_product', $data);*/
+
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/delete_user', $data);
+
+        }
+    }
+
     public function delete_specificRecord($id)
 
     {
@@ -556,6 +577,224 @@ class Dashboard extends CI_Controller
 
         return false;
         //$this->debug($is_record_available, true);
+    }
+
+    public function add_user()
+    {
+
+        $data['user_added'] = false;
+        $data['user_failed'] = false;
+        $data['not_avail'] = false;
+        $data['user_added'] = false;
+
+        $this->load->library('form_validation');
+
+        if (filter_input_array(INPUT_POST)) {
+
+
+            $rules = array(
+
+                array(
+                    'field' => 'first_name',
+                    'label' => 'First Name',
+                    'rules' => 'required|min_length[3]|max_length[255]'
+                ),
+                array(
+                    'field' => 'last_name',
+                    'label' => 'Last Name',
+                    'rules' => 'required|min_length[3]|max_length[255]'
+                ),
+                array(
+                    'field' => 'user_name',
+                    'label' => 'Username',
+                    'rules' => 'required|min_length[3]|max_length[255]'
+                ),
+                array(
+                    'field' => 'e_mail',
+                    'label' => 'Email',
+                    'rules' => 'required|valid_email'
+                ),
+                array(
+                    'field' => 'user_pass',
+                    'label' => 'Password',
+                    'rules' => 'required|min_length[7]|max_length[255]'
+                ),
+                array(
+                    'field' => 'c_pass',
+                    'label' => 'Confirm Password',
+                    'rules' => 'required|min_length[7]|max_length[255]|matches[user_pass]'
+                ),
+                array(
+                    'field' => 'dash_pass',
+                    'label' => 'Dashboard Password',
+                    'rules' => 'required|min_length[7]|max_length[255]'
+                ),
+
+            );
+
+            $this->form_validation->set_rules($rules);
+
+            if (!$this->form_validation->run() == FALSE) {
+
+                //CONTINUE
+
+                $this->load->model('user');
+
+                // step 1: check if username or email are available or not,
+
+                $username = $this->input->post('user_name', True);
+                $email = $this->input->post('e_mail', True);
+
+                $isRecordAvailable = $this->checkIsAvailable(array('user_name' => $username, 'e_mail' => $email));
+
+                if (!$isRecordAvailable) {
+
+                    //you can now create record
+
+                    // getting the remaining values
+
+                    $firstname = $this->input->post('first_name', true);
+                    $lastname = $this->input->post('last_name', true);
+                    $password = $this->input->post('user_pass', true);
+                    $usertype = $this->input->post('usertype' , true);
+
+                    $encryptedpass = password_hash($password, PASSWORD_BCRYPT, array('cost => 12'));
+
+                    $this->user->firstname = $firstname;
+                    $this->user->lastname = $lastname;
+                    $this->user->email = $email;
+                    $this->user->username = $username;
+                    $this->user->password = $encryptedpass;
+                    $this->user->usertype = $usertype;
+
+                    date_default_timezone_set('ASIA/KARACHI');
+
+                    $this->user->createdAt = date('Y-m-d H:i:s');
+
+                    $result = $this->user->insertRecord();
+
+                    if($result){
+
+//                        echo 'user added';
+
+                        $data['user_added'] = true;
+
+                        $this->load->view('dashboard/add_user' , $data);
+
+                    }else{
+
+//                        echo 'not added due to some error';
+
+                        $data['user_failed'] = true;
+
+                        $this->load->view('dashboard/add_user' , $data);
+
+                    }
+
+                }else{
+
+//                    echo 'sorry user not available';
+
+                    $data['not_avail'] = true;
+
+                    $this->load->view('dashboard/add_user' , $data);
+
+                }
+            }else{
+
+                $data['validation_errors'] = validation_errors();
+                $this->load->view('dashboard/add_user' , $data);
+
+            }
+        }else{
+
+            $this->load->view('dashboard/add_user' , $data);
+
+        }
+    }
+
+    public function update_user(){
+
+        $this->load->model('user');
+        $q = $this->db->get('users');
+        $r = $q->result_array();
+        if ($r) {
+            $data = array('r' => $r);
+            $this->load->view('dashboard/update_user', $data);
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/update_user', $data);
+        }
+
+
+    }
+
+    public function view_update_user($id)
+    {
+        $this->load->model('user');
+        $q = $this->user->getRecord($id, 'id');
+        $r = (array)$q;
+        if ($r) {
+            $this->load->view('dashboard/view_update_user', $r);
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/view_update_user', $data);
+        }
+    }
+
+    public function update_specificUser($id)
+    {
+        //
+
+        $this->load->model('user');
+
+        $colName = 'id';
+        $where = $this->input->post('u_id' , true);
+
+
+        $firstupdate = $this->input->post('ufname', true);
+        $lastupdate = $this->input->post('ulname', true);
+        $typeupdate = $this->input->post('utype', true);
+        $passwordupdate = $this->input->post('upass', true);
+
+        $encryptedPass = password_hash($passwordupdate , password_becrypt , array('cost' => 12));
+
+        $updateData = array(
+            'ufname' => $firstupdate,
+            'ulname' => $lastupdate,
+            'utype' => $typeupdate,
+            'upass' => $encryptedPass,
+
+        );
+        $result = $this->user->updateRecord($colName, $updateData, $where);
+        if ($result) {
+
+            redirect('dashboard/update_specificUser');
+        } else {
+            echo 'User not updated';
+        }
+    }
+
+    public function delete_user(){
+
+        $this->load->model('user');
+        $q = $this->db->get('users');
+        $r = $q->result_array();
+        if ($r) {
+            $data = array('r' => $r);
+            $this->load->view('dashboard/delete_user', $data);
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/delete_user', $data);
+        }
+
+
+    }
+
+    public function view_user(){
+
+        $this->load->view('dashboard/view_user');
+
     }
 
 }

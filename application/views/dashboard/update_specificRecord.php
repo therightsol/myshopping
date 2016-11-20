@@ -31,7 +31,7 @@ include 'inc/wrapper.inc.php';
 
 
             <div class="form-group">
-                <label class="col-md-4 control-label" for="tax">Purchase Price</label>
+                <label class="col-md-4 control-label" for="purchaseprice">Purchase Price</label>
                 <div class="col-md-6">
                     <input id="purchaseprice" name="purchaseprice" type="text" value=<?php echo $purchaseprice; ?> class="form-control input-md">
 
@@ -42,7 +42,7 @@ include 'inc/wrapper.inc.php';
 
 
             <div class="form-group">
-                <label class="col-md-4 control-label" for="tax">Sales Price</label>
+                <label class="col-md-4 control-label" for="saleprice">Sales Price</label>
                 <div class="col-md-6">
                     <input id="saleprice" name="saleprice" type="text" value=<?php echo $saleprice; ?> class="form-control input-md">
 
@@ -62,7 +62,7 @@ include 'inc/wrapper.inc.php';
             </div>
 
             <div class="form-group">
-                <label class="col-md-4 control-label" for="name">Discount </label>
+                <label class="col-md-4 control-label" for="pdiscount">Discount </label>
                 <div class="col-md-6">
                     <input id="pdiscount" name="pdiscount" type="text" value=<?php echo $discountpercent; ?> class="form-control input-md">
 
@@ -70,14 +70,14 @@ include 'inc/wrapper.inc.php';
             </div>
 
             <div class="form-group">
-                <label class="col-md-4 control-label" for="name">Slug</label>
+                <label class="col-md-4 control-label" for="pslug">Slug</label>
                 <div class="col-md-6">
                     <input id="pslug" name="pslug" type="text" value=<?php echo $slug; ?> class="form-control input-md">
 
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-4 control-label" for="name">SKU</label>
+                <label class="col-md-4 control-label" for="p_sku">SKU</label>
                 <div class="col-md-6">
                     <input id="p_sku" name="p_sku" type="text" value=<?php echo $sku; ?> class="form-control input-md">
 
