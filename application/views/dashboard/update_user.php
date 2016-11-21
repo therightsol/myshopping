@@ -60,7 +60,7 @@ include 'inc/wrapper.inc.php';
                                 <td><?php echo $row['updatedAt'];   ?></td>
                                 <!--<td><a class="btn" href="<?php /*$root; */?>view_specificRecord/<?php /*  echo $row['id'];   */?>">view record</a></td>-->
 
-                                <td><a href="<?php echo $root;?>dashboard/view_update_user/<?php   echo $row['id'];   ?>" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>UPDATE</a></td>
+                                <td><a href="<?php echo $root;?>dashboard/view_update_specificRecord/<?php   echo $row['id'];   ?>" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>UPDATE</a></td>
 
                                 </td>
 

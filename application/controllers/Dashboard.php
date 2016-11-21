@@ -418,6 +418,19 @@ class Dashboard extends CI_Controller
         }
     }
 
+    public function view_update_specificRecord2($id)
+    {
+        $this->load->model('user');
+        $q = $this->user->getRecord($id, 'id');
+        $r = (array)$q;
+        if ($r) {
+            $this->load->view('dashboard/update_specificRecord2', $r);
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/update_specificRecord2', $data);
+        }
+    }
+
     public function update_specificProduct()
     {
         //
@@ -713,8 +726,8 @@ class Dashboard extends CI_Controller
         }
     }
 
-    public function update_user(){
-
+    public function update_user()
+    {
         $this->load->model('user');
         $q = $this->db->get('users');
         $r = $q->result_array();
@@ -725,8 +738,6 @@ class Dashboard extends CI_Controller
             $data['novalue'] = true;
             $this->load->view('dashboard/update_user', $data);
         }
-
-
     }
 
     public function view_update_user($id)
@@ -742,7 +753,7 @@ class Dashboard extends CI_Controller
         }
     }
 
-    public function update_specificUser($id)
+    public function update_specificUser()
     {
         //
 
@@ -793,7 +804,19 @@ class Dashboard extends CI_Controller
 
     public function view_user(){
 
-        $this->load->view('dashboard/view_user');
+
+        $this->load->model('user');
+        $q = $this->db->get('users');
+        $r = $q->result_array();
+
+        if ($r) {
+            $data = array('r' => $r);
+            $this->load->view('dashboard/view_user', $data);
+
+        } else {
+            $data['novalue'] = true;
+            $this->load->view('dashboard/view_user', $data);
+        }
 
     }
 
