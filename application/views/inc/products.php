@@ -55,17 +55,18 @@ foreach ($products as $product):
             </h3>
 
             <div class="item-action">
-                <a data-pid="<?php echo $product['id']; ?>" href=""
+                <a data-pid="<?php echo $product['id']; ?>" href="#"
                                         class="item-add-btn add_to_cart <?php echo 'pid-' . $product['id']; ?>">
                     <span
                         class="icon-cart-text">Add to Cart</span>
                 </a>
-
                 <div class="item-action-inner"><a href="<?php echo $root; ?>home"
                                                   class="icon-button icon-like">Favourite</a>
                     <a href="<?php echo $root; ?>checkout"
                        class="icon-button icon-compare">Checkout</a></div>
             </div>
+            <div style="display: none; font-weight: bold; color: #009000;" class="added pid-<?php echo $product['id']; ?>">Added into cart.</div>
+
         </div>
     </div>
 </div>
@@ -83,8 +84,15 @@ endif;
 <script>
     jQuery(document).ready(function (){
         jQuery('.add_to_cart').click(function ( e ){
-            //e.preventDefault();
-            var id = jQuery(this).data('pid');
+            e.preventDefault();
+
+            var $this = jQuery(this);
+            var span = $this.find('span');
+
+            var id = $this.data('pid');
+
+            var original_text = span.text();
+            span.text('Adding into cart ...').delay(500);
 
             //console.log("Id is " + id);
             //alert(id);
@@ -94,9 +102,81 @@ endif;
                     url: "<?php echo $root; ?>home/ajax_add_to_cart/" + id
                 }
             ).done(function ( response ){
-                //console.info("Response is "  + response);
-                //alert('Your product has been added into cart');
+
+                /*
+                *   Response is :
+                *   {"images":"","title":"abc","saleprice":"320.25000","discountpercent":"5.00","success":true}
+                *
+                * */
+
+                response = jQuery.parseJSON( response );
+
+                if ( response.success ){
+                    // 1) refreshing cart -- adding item into cart
+                    refresh_cart(response);
+
+                    // 2) setting original text to button
+                    span.text(original_text).fadeIn(100);
+
+                    //3) displaying message that product is added into cart and then scrolling to cart
+                    jQuery('.added.pid-'+id).show(350).delay(1600)
+                        .slideUp(150).promise().done(function (){
+                        jQuery('body').animate( { scrollTop: 100 }, 1000);
+                    });
+
+                    // 4) show cart dropdown.
+                    jQuery('.dropdown-cart-menu-container').find('.dropdown-menu')
+                        .addClass('showDropDown').delay(5500).queue(function(next){
+                        jQuery(this).removeClass("showDropDown");
+                        next();
+                    });
+                }
             });
         })
     });
+
+    function refresh_cart( response ){
+        var li = '';
+
+        li += '<li class="item clearfix">';
+            li  += "<a href=\"<?php echo $root; ?>home\" title=\"Delete item\" class=\"delete-item\">";
+                li += "<i class=\"fa fa-times\"></i>";
+            li += "</a>";
+
+            li += "<a href=\"<?php echo $root; ?>home\" title=\"Edit item\" class=\"edit-item\">";
+                li += "<i class=\"fa fa-pencil\"></i>";
+            li += "</a>";
+
+            li += "<figure>";
+                //li += "<a href=\"<?php echo $root; ?>products\"><img src=\"<?php echo $root; ?>" + response.images + "\" alt=\"" + response.title + "\" ></a>";
+                li += "<a href=\"<?php echo $root; ?>products\"><img src=\"<?php echo $root; ?>assets/images/products/thumbnails/item12.jpg\" alt=\"" + response.title + "\" ></a>";
+            li += "</figure>";
+
+            li += "<div class=\"dropdown-cart-details\">";
+                li += "<p class=\"item-name\">";
+                    li += "<a href=\"<?php echo $root; ?>products\">" + response.title + "</a>";
+                li += "</p>";
+
+                li += "<p>";
+                    li += "Price: " + response.saleprice;
+                    li += "<span class=\"item-price\">Discount:" + response.discountpercent + "% </span>";
+                li += "</p>";
+            li += '</div>';
+        li += '</li>';
+        jQuery('.dropdown-cart-product-list').append(li);
+    }
 </script>
+
+<style>/*
+    .dropdown-cart-menu-container .dropdown-menu{
+        !*display: block;*!
+    }
+
+    .dropdown-cart-menu-container .dropdown-menu:hover{
+        display: none !important;
+    }*/
+
+    .showDropDown{
+        display: block !important;
+    }
+</style>

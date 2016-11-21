@@ -65,13 +65,65 @@ class Home extends CI_Controller {
 
     public function ajax_add_to_cart( $id ){
 
-        $cartData = $this->session->userdata('cartData');
-        $cartData[] = $id;
-        $this->session->set_userdata('cartData', $cartData);
+        if ( $id ){
+            $cartData = $this->session->userdata('cartData');
+            $cartData[] = $id;
+            $this->session->set_userdata('cartData', $cartData);
 
+            $value = $this->get_Array_for_cart_item( $id );
 
-        echo true;
+            if ( is_array( $value ) ){
+                $value['success'] = true;
 
+                echo json_encode( $value );
+                return;
+            }
+        }
+
+        echo json_encode( array ( 'success' => false ) );
+    }
+
+    private function get_Array_for_cart_item( $id = null ){
+
+        if ( $id ) {
+
+            $this->load->model('product');
+            $result = $this->product->getRecord($id, 'id');
+
+            /*
+                stdClass::__set_state(array(
+                   'id' => '5',
+                   'title' => 'abc',
+                   'description' => 'sdfsfsfsf',
+                   'purchaseprice' => '259.35200',
+                   'saleprice' => '320.25000',
+                   'discountpercent' => '5.00',
+                   'images' => '',
+                   'slug' => 'aaa',
+                   'sku' => '',
+                   'status' => '1',
+                   'tax' => '10.00',
+                   'createdAt' => '2016-11-06 21:04:38',
+                   'updatedAt' => NULL,
+                ))
+            */
+
+            if (!empty($result) &&
+                array_key_exists('images', $result) &&
+                array_key_exists('title', $result) &&
+                array_key_exists('saleprice', $result) &&
+                array_key_exists('discountpercent', $result)
+            ) {
+                return array(
+                    'images' => $result->images,
+                    'title' => $result->title,
+                    'saleprice' => $result->saleprice,
+                    'discountpercent' => $result->discountpercent,
+                );
+            }
+        }
+
+       return false;
     }
 
     public function clear_cart(){

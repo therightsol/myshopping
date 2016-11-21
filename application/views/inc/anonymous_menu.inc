@@ -1,4 +1,4 @@
-<?php   ?>
+<?php ?>
 
 <div id="main-nav-container">
     <div class="container">
@@ -25,7 +25,8 @@
                                         <li><a href="<?php echo $root; ?>category_list">Skirts</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-5"><a href="<?php echo $root; ?>category" class="mega-menu-title">Shoes</a>
+                                <div class="col-5"><a href="<?php echo $root; ?>category"
+                                                      class="mega-menu-title">Shoes</a>
                                     <ul class="mega-menu-list clearfix">
                                         <li><a href="<?php echo $root; ?>category_list">Formal Shoes</a></li>
                                         <li><a href="<?php echo $root; ?>category_list">Casual Shoes</a></li>
@@ -72,7 +73,8 @@
 
 
                             <div class="mega-menu clearfix">
-                                <div class="col-5"><a href="<?php echo $root; ?>compare_product" class="mega-menu-title">Compare Products</a>
+                                <div class="col-5"><a href="<?php echo $root; ?>compare_product"
+                                                      class="mega-menu-title">Compare Products</a>
                                     <ul class="mega-menu-list clearfix">
 
                                     </ul>
@@ -91,14 +93,17 @@
                             <button type="button" class="btn btn-custom dropdown-toggle"
 
 
-                                    data-toggle="dropdown"><span class="cart-menu-icon"></span> <?php echo sizeof($this->session->userdata('cartData')); ?>- item(s)
+                                    data-toggle="dropdown"><span
+                                    class="cart-menu-icon"></span> <?php echo sizeof($this->session->userdata('cartData')); ?>
+                                - item(s)
                                 <span class="drop-price">- $0.00</span></button>
-                            <div style="min-width: 600px;"  class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu"><p
+                            <div style="min-width: 600px; padding: 10px 30px;"
+                                 class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu"><p
                                     class="dropdown-cart-description">Recently added item(s).</p>
                                 <ul class="dropdown-cart-product-list">
 
 
-                                    <?php if(($this->session->userdata('cartData')) && !empty($this->session->userdata('cartData'))): ?>
+                                    <?php if (($this->session->userdata('cartData')) && !empty($this->session->userdata('cartData'))): ?>
 
 
 
@@ -109,63 +114,61 @@
 
                                     $total = 0;
                                     $percentDiscount = 0;
-                                    foreach($r as $arr):  ?>
+                                    foreach ($r as $arr): ?>
                                         <li class="item clearfix">
                                             <a href="<?php echo $root; ?>home" title="Delete item" class="delete-item">
                                                 <i class="fa fa-times"></i>
                                             </a>
 
-                                            <a href="<?php echo $root; ?>home" title="Edit item"  class="edit-item">
+                                            <a href="<?php echo $root; ?>home" title="Edit item" class="edit-item">
                                                 <i class="fa fa-pencil"></i>
                                             </a>
 
                                             <figure>
-                                                <a href="<?php echo $root; ?>products"><img src="<?php echo $root; ?>assets/images/products/thumbnails/item12.jpg" alt="phone 4"></a>
+                                                <a href="<?php echo $root; ?>products"><img
+                                                        src="<?php echo $root; ?>assets/images/products/thumbnails/item12.jpg"
+                                                        alt="phone 4"></a>
                                             </figure>
 
                                             <div class="dropdown-cart-details">
                                                 <p class="item-name">
-                                                    <a href="<?php echo $root; ?>products"><?php echo $arr['title'];  ?></a>
+                                                    <a href="<?php echo $root; ?>products"><?php echo $arr['title']; ?></a>
                                                 </p>
 
                                                 <p>
-                                                    Price: <?php echo $arr['saleprice'];  ?>
-                                                    <span class="item-price">, Discount: <?php echo $arr['discountpercent']; ?> %</span>
+                                                    Price: <?php echo $arr['saleprice']; ?>
+                                                    <span
+                                                        class="item-price">, Discount: <?php echo $arr['discountpercent']; ?>
+                                                        %</span>
                                                 </p>
                                             </div>
                                         </li>
                                         <?php
 
-                                        $percentDiscount = $arr['saleprice'] * ($arr['discountpercent']/100);
-                                        $total+= $arr['saleprice'];
+                                        $percentDiscount = $arr['saleprice'] * ($arr['discountpercent'] / 100);
+                                        $total += $arr['saleprice'];
                                         ?>
-                                    <?php endforeach;   ?>
-
-
-
-
-
-
-
-
-
+                                    <?php endforeach; ?>
 
 
                                 </ul>
                                 <ul class="dropdown-cart-total">
-                                    <li><span class="dropdown-cart-total-title">Tot Discount:</span><?php  echo $percentDiscount ?></li>
-                                    <li><span class="dropdown-cart-total-title">Tot Price:</span><?php echo $total;   ?><span
+                                    <li><span
+                                            class="dropdown-cart-total-title">Tot Discount:</span><?php echo $percentDiscount ?>
+                                    </li>
+                                    <li><span class="dropdown-cart-total-title">Tot Price:</span><?php echo $total; ?>
+                                        <span
                                             class="sub-price">.99</span></li>
                                 </ul>
-                                <?php endif;  ?>
-
+                                <?php endif; ?>
 
 
                                 <div class="dropdown-cart-action"><p><a href="<?php echo $root; ?>cart"
                                                                         class="btn btn-custom-2 btn-block">Cart</a>
                                     </p>
 
-                                    <p><a href="<?php echo $root; ?>checkout" class="btn btn-custom btn-block">Checkout</a>
+                                    <p><a href="<?php echo $root; ?>checkout"
+                                          class="btn btn-custom btn-block">Checkout</a>
                                     </p></div>
                             </div>
                         </div>

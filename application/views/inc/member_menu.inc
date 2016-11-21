@@ -94,7 +94,7 @@
 
                                     data-toggle="dropdown"><span class="cart-menu-icon"></span> <?php echo sizeof($this->session->userdata('cartData')); ?>- item(s)
                                 <span class="drop-price">- $0.00</span></button>
-                            <div style="min-width: 600px;"  class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu"><p
+                            <div style="min-width: 600px;padding: 10px 30px;"  class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu"><p
                                     class="dropdown-cart-description">Recently added item(s).</p>
                                 <ul class="dropdown-cart-product-list">
 
