@@ -44,17 +44,27 @@ include 'inc/wrapper.inc.php';
                         </tfoot>
                         <tbody>
 
+                        <?php $i = 1; ?>
+                        <?php foreach($r as $row) : ?>
+
                         <tr>
 
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><?php echo $i; ?></td>
+                            <td><?php echo $row['id']; ?></td>
+                            <td><?php echo $row['username']; ?></td>
+                            <td><?php echo $row['email']; ?></td>
+                            <td><?php echo $row['usertype']; ?></td>
+                            <td><?php echo $row['createdAt']; ?></td>
+                            <td><?php echo $row['updatedAt']; ?></td>
+
+                            <td><a href="<?php echo $root;?>member" class="btn btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>VIEW RECORD</a></td>
+
 
                         </tr>
+
+                        <?php $i++; ?>
+
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
