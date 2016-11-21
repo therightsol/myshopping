@@ -87,7 +87,7 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="<?php echo $root; ?>dashboard/dashboardlogin">Login Page</a>
+                        <a href="<?php echo $root; ?>dashboard/dashboardlogout">Logout</a>
                     </li>
 
                         </ul>

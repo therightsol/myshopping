@@ -16,12 +16,12 @@ class Dashboard extends CI_Controller
         if(filter_input_array(INPUT_POST)){
             $rules = array(
                 array(
-                    'field' => 'loginmail',
+                    'field' => 'email',
                     'label' => 'E-mail',
                     'rules' => 'required|valid_email|max_length[255]'
                 ),
                 array(
-                    'field' => 'loginpass',
+                    'field' => 'password',
                     'label' => 'Password',
                     'rules' => 'required|min_length[7]|max_length[255]'
                 )
@@ -34,14 +34,14 @@ class Dashboard extends CI_Controller
 
                 $this->load->model('user');
 
-                $email = $this->input->post('loginmail', True);
+                $email = $this->input->post('email', True);
 
                 $isRecordAvailable = $this->checkIsAvailable( array ( 'email' => $email ) );
 
 
                 if ($isRecordAvailable) {
 
-                    $password = $this->input->post('loginpass', True);
+                    $password = $this->input->post('password', True);
 
                     $user = $this->user->getRecord( $email, 'email' );
 
@@ -53,7 +53,7 @@ class Dashboard extends CI_Controller
 
                         $this->session->set_userdata('email', $user->email);
 
-                        $this->session->set_userdata('usertype', $user->usertype);
+                        $this->session->set_userdata('usertype', $user->usertype == 1);
 
                         redirect('dashboard');
                     }else{
@@ -84,7 +84,7 @@ class Dashboard extends CI_Controller
 
     public function dashboardlogout()
     {
-        $this->load->view('dashboard/dashboardlogout');
+        redirect('dashboard/dashboardlogin');
     }
 
     public function setting()
