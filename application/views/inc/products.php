@@ -166,17 +166,3 @@ endif;
         jQuery('.dropdown-cart-product-list').append(li);
     }
 </script>
-
-<style>/*
-    .dropdown-cart-menu-container .dropdown-menu{
-        !*display: block;*!
-    }
-
-    .dropdown-cart-menu-container .dropdown-menu:hover{
-        display: none !important;
-    }*/
-
-    .showDropDown{
-        display: block !important;
-    }
-</style>
