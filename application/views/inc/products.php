@@ -121,7 +121,7 @@ endif;
                     //3) displaying message that product is added into cart and then scrolling to cart
                     jQuery('.added.pid-'+id).show(350).delay(1600)
                         .slideUp(150).promise().done(function (){
-                        jQuery('body').animate( { scrollTop: 100 }, 1000);
+                        jQuery('body').animate( { scrollTop: 100 }, 1200);
                     });
 
                     // 4) show cart dropdown.
@@ -166,3 +166,9 @@ endif;
         jQuery('.dropdown-cart-product-list').append(li);
     }
 </script>
+
+<style>
+    .showDropDown{
+        display: block !important;
+    }
+</style>
