@@ -128,7 +128,22 @@ class Checkout extends CI_Controller {
                 $data['countryName'] =  ($metaRec[7]['metavalue']);
                 $data['region/state'] =  ($metaRec[8]['metavalue']);
 
+
+                if (isset($_SESSION['cartData'])) {
+                    $cartdata = $this->load_cartData();
+                    $cartdata = json_decode(json_encode($cartdata), True);
+                    $data['r'] = $cartdata;
+
+                }
+
+
+                $data['empty'] = true;
+
+
                 $merge = array_merge($user + $data);
+
+
+
 
                 $this->load->view ('checkout', $merge);
 
@@ -185,6 +200,19 @@ class Checkout extends CI_Controller {
         echo '<tt><pre>' . var_export($val, True) . '</pre></tt>';
 
         if ($die) exit('<hr />Exit from Debug in Register.php Controller.');
+    }
+    private function load_cartData(){
+        $pids = $this->session->userdata('cartData');
+
+        $this->load->model('product');
+        //$this->product->getRecord($pids, 'id');
+
+        $result = array();
+        foreach($pids as $pid){
+            $result[] = $this->product->getRecord($pid, 'id');
+        }
+
+        return $result;
     }
 
 

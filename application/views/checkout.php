@@ -413,11 +413,20 @@
                         </div>          <!--payment method-->
 
 
+
+
+                        <?php if(($this->session->userdata('cartData')) && !empty($this->session->userdata('cartData'))): ?>
                         <div class="panel">
                             <div class="accordion-header">
                                 <div class="accordion-title">6 Step: <span>Confirm Order</span></div>
                                 <a class="accordion-btn opened" data-toggle="collapse" data-target="#confirm"></a>
                             </div>
+
+
+
+
+
+
                             <div id="confirm" class="collapse in">
                                 <div class="panel-body">
                                     <div class="table-responsive">
@@ -432,21 +441,34 @@
                                             </tr>
                                             </thead>
                                             <tbody>
+
+                                            <?php
+
+                                            $total = 0;
+                                            foreach($r as $arr):
+
+
+                                                ?>
+
+
+
+
+
                                             <tr>
                                                 <td class="item-name-col">
                                                     <figure><a href="<?php echo $root; ?>checkout"><img
                                                                 src="<?php echo $root; ?>assets/images/products/compare1.jpg"
                                                                 alt="Lowlands Lace Blouse"></a></figure>
-                                                    <header class="item-name"><a href="<?php echo $root; ?>checkout">Lowlands Lace
-                                                            Blouse</a></header>
+                                                    <header class="item-name"><a href="<?php echo $root; ?>checkout"><?php echo $arr['title'];  ?></a></header>
                                                     <ul>
-                                                        <li>Color: White</li>
+                                                        <li><?php echo $arr['description'];  ?></li>
                                                         <li>Size: SM</li>
                                                     </ul>
                                                 </td>
-                                                <td class="item-code">MP125984154</td>
+
+                                                <td class="item-code"><?php echo $arr['sku'];  ?></td>
                                                 <td class="item-price-col"><span
-                                                        class="item-price-special">$1175</span></td>
+                                                        class="item-price-special"><?php echo $arr['saleprice'];  ?></span></td>
                                                 <td>
                                                     <div class="custom-quantity-input"><input type="text"
                                                                                               name="quantity"
@@ -459,46 +481,29 @@
                                                                 class="fa fa-angle-down"></i></a></div>
                                                 </td>
                                                 <td class="item-total-col"><span
-                                                        class="item-price-special">$1175</span> <a
+                                                        class="item-price-special"><?php echo $arr['saleprice'];  ?></span> <a
                                                         href="<?php echo $root; ?>checkout" class="close-button"></a></td>
                                             </tr>
+
+                                                <?php
+
+                                                $percentDiscount = $arr['saleprice'] * ($arr['discountpercent']/100);
+                                                $total+= $arr['saleprice'];
+
+
+                                                ?>
+
+                                            <?php endforeach; ?>
+
+
+
                                             <tr>
-                                                <td class="item-name-col">
-                                                    <figure><a href="<?php echo $root; ?>checkout"><img
-                                                                src="<?php echo $root; ?>assets/images/products/compare2.jpg"
-                                                                alt="Samsung Galaxy Ace"></a></figure>
-                                                    <header class="item-name"><a href="<?php echo $root; ?>checkout">Samsung
-                                                            Galaxy Ace</a></header>
-                                                    <ul>
-                                                        <li>Color: Black</li>
-                                                        <li>Size: XL</li>
-                                                    </ul>
-                                                </td>
-                                                <td class="item-code">MP125984154</td>
-                                                <td class="item-price-col"><span
-                                                        class="item-price-special">$1475</span></td>
-                                                <td>
-                                                    <div class="custom-quantity-input"><input type="text"
-                                                                                              name="quantity"
-                                                                                              value="1"> <a
-                                                            href="<?php echo $root; ?>checkout" onclick="return!1"
-                                                            class="quantity-btn quantity-input-up"><i
-                                                                class="fa fa-angle-up"></i></a> <a href="<?php echo $root; ?>checkout"
-                                                                                                   onclick="return!1"
-                                                                                                   class="quantity-btn quantity-input-down"><i
-                                                                class="fa fa-angle-down"></i></a></div>
-                                                </td>
-                                                <td class="item-total-col"><span
-                                                        class="item-price-special">$1475</span> <a
-                                                        href="<?php echo $root; ?>checkout" class="close-button"></a></td>
+                                                <td class="checkout-table-title" colspan="4">Sub Total:</td>
+                                                <td class="checkout-table-price"><?php  echo $total ?></td>
                                             </tr>
                                             <tr>
-                                                <td class="checkout-table-title" colspan="4">Subtotal:</td>
-                                                <td class="checkout-table-price">$399.44</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="checkout-table-title" colspan="4">Shipping:</td>
-                                                <td class="checkout-table-price">$6.00</td>
+                                                <td class="checkout-table-title" colspan="4">Discount:</td>
+                                                <td class="checkout-table-price"><?php echo $percentDiscount  ?></td>
                                             </tr>
                                             <tr>
                                                 <td class="checkout-table-title" colspan="4">Tax(0%):</td>
@@ -509,7 +514,7 @@
                                             <tr>
                                                 <td class="checkout-total-title" colspan="4"><strong>TOTAL:</strong>
                                                 </td>
-                                                <td class="checkout-total-price cart-total"><strong>$434.50</strong>
+                                                <td class="checkout-total-price cart-total"><strong><?php echo $total - $percentDiscount;  ?></strong>
                                                 </td>
                                             </tr>
                                             </tfoot>
@@ -521,6 +526,7 @@
                                 </div>
                             </div>
                         </div>              <!--confirm order-->
+                        <?php  endif;  ?>
                     </div>
 
                 </form>

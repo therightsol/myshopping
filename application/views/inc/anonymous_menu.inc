@@ -169,7 +169,14 @@
 
                                     <p><a href="<?php echo $root; ?>checkout"
                                           class="btn btn-custom btn-block">Checkout</a>
-                                    </p></div>
+                                    </p>
+                                    <p><a href="<?php echo $root; ?>home/clear_cart" class="btn btn-custom btn-block">Clear Cart</a>
+                                    </p>
+
+
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
