@@ -64,7 +64,6 @@ class Dashboard extends CI_Controller
                 }
                 else {
                     $data['error_email_login'] = true;
-
                     $this->load->view('dashboard/dashboardlogin', $data);
                 }
             }
@@ -75,16 +74,17 @@ class Dashboard extends CI_Controller
         }
         else {
             $data['msg'] = false;
-
             $this->load->view('dashboard/dashboardlogin', $data);
-
         }
     }
 
 
     public function dashboardlogout()
     {
-        redirect('dashboard/dashboardlogin');
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('password');
+        $this->session->sess_destroy();
+        redirect('dashboard/dashboardlogin','refresh');
     }
 
     public function setting()
