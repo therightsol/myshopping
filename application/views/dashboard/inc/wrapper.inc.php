@@ -142,7 +142,9 @@
                             </li>
 
                         </ul>
-
+                    <li>
+                        <a href="<?php echo $root;?>dashboard/order"><i class="fa fa-shopping-cart fa-fw"></i> Order </span></a>
+                    </li>
                     </li>
 
                     <li>
