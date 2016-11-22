@@ -20,6 +20,7 @@ include 'inc/wrapper.inc.php';
                 </div>
 
             </div>
+
             <div class="form-group">
                 <label class="col-md-4 control-label" for="name">Product Title</label>
                 <div class="col-md-6">

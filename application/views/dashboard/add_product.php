@@ -20,7 +20,19 @@ include 'inc/load_menu_file.inc.php';
         <!-- Form Name -->
         <h1 style="text-align: center;">Add Products</h1>
 
+        <?php if($success) : ?>
 
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <div class="alert alert-success"><?php echo'Product added successfully.'; ?>.</div>
+
+                </div>
+
+            </div>
+
+        <?php endif; ?>
         <!-- Text input-->
 
         <div class="form-group">
@@ -60,19 +72,7 @@ include 'inc/load_menu_file.inc.php';
 
         </div>
 
-        <?php if($success) : ?>
 
-        <div class="row">
-
-            <div class="col-md-12">
-
-                <div class="alert alert-success"><?php echo'Product added successfully.'; ?>.</div>
-
-            </div>
-
-        </div>
-
-        <?php endif; ?>
 
         <div class="form-group">
             <label class="col-md-4 control-label" for="name">Product Name</label>
@@ -175,9 +175,9 @@ include 'inc/load_menu_file.inc.php';
 
         <!-- Textarea -->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="textarea">Description</label>
+            <label class="col-md-4 control-label" for="textarea" >Description</label>
             <div class="col-md-4">
-                <textarea class="form-control" id="textarea" name="textarea">Product Description</textarea>
+                <textarea class="form-control" id="textarea" name="textarea" placeholder="Description"></textarea>
             </div>
         </div>
 

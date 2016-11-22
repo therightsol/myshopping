@@ -1,6 +1,13 @@
 /* Venedor Premium Ecommerce Template - Eon  */
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Gudea:400,700,400italic|Oswald:400,700,300);
 
+.center_img {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
 body {
     font: 15px/1.5 Arial, sans-serif;
     color: #7c807e;

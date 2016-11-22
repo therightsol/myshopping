@@ -376,7 +376,7 @@ class Dashboard extends CI_Controller
         $r = $q->result_array();
 
 
-        var_export($r);
+
         if ( is_array($r) && !empty($r)) {
 
             $data = array('r' => $r);
@@ -449,7 +449,7 @@ class Dashboard extends CI_Controller
         $p_sku = $this->input->post('p_sku', true);
         /*$p_status = $this->input->post('p_status', true);*/
         $p_tax = $this->input->post('p_tax', true);
-
+        date_default_timezone_set('ASIA/KARACHI');
 
         $updateData = array(
             'title' => $titleupdate,
@@ -460,6 +460,7 @@ class Dashboard extends CI_Controller
             'sku' => $p_sku,
             /*'status'    =>  $titleupdate,*/
             'tax' => $p_tax,
+            'updatedAt' => $this->product->updatedAt = date('Y-m-d H:i:s'),
 
 
         );
