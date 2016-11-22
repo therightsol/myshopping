@@ -13,6 +13,7 @@
     <link href="<?php echo $root; ?>dashboardassets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
     <link href="<?php echo $root; ?>dashboardassets/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="<?php echo $root; ?>dashboardassets/css/ordercss.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
 
