@@ -1,6 +1,8 @@
 <?php
 if (isset($products) && is_array($products) && !empty($products)):
 
+    $no_image_path = 'assets/images/No_image.png';
+
 foreach ($products as $product):
     $price = $product['saleprice'];
     $price = explode('.', $price);
@@ -25,6 +27,9 @@ foreach ($products as $product):
     }
 
 
+    if (empty($product['images'])){
+        $product['images'] = $no_image_path;
+    }
 
 
     ?>
@@ -32,8 +37,8 @@ foreach ($products as $product):
     <div class="item item-hover">
         <div class="item-image-wrapper">
             <figure class="item-image-container"><a
-                    href="<?php echo $root; ?>single"><img
-                        src="<?php echo $root; ?>assets/images/products/item5.jpg"
+                    href="<?php echo $root; ?>single">
+<img src="<?php echo $root . $product['images']; ?>"
                         alt="item1" class="item-image">
                     <img
                         src="<?php echo $root; ?>assets/images/products/item5-hover.jpg"

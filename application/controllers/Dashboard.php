@@ -168,12 +168,11 @@ class Dashboard extends CI_Controller
 
         if (filter_input_array(INPUT_POST)) {
 
-            var_export($_POST);
-            echo '<hr />';
-            echo var_export($_FILES);
+            //var_export($_POST);
+            //echo '<hr />';
+            //echo var_export($_FILES);
 
-
-            $config['upload_path']          = './product_images/';
+            $config['upload_path'] = $upload_path = 'product_images/';
             $config['allowed_types']        = 'gif|jpg|png';
             $config['max_size']             = 5000; // 5 MB
 
@@ -189,6 +188,15 @@ class Dashboard extends CI_Controller
             }
             else
             {
+                $uploaded_data = $this->upload->data();
+                $uploaded_file_name = $uploaded_data['file_name'];
+
+                $full_uploaded_path = $upload_path . $uploaded_file_name;
+
+                
+                $this->load->model('product');
+                $this->product->images = $full_uploaded_path;
+                
                 // file uploaded
                 // show success message
                 // redirect
