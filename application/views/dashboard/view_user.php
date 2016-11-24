@@ -45,7 +45,7 @@ include 'inc/wrapper.inc.php';
                         <tbody>
 
                         <?php $i = 1; ?>
-                        <?php foreach($r as $row) : ?>
+                        <?php foreach($r as $row): ?>
 
                         <tr>
 
@@ -57,7 +57,7 @@ include 'inc/wrapper.inc.php';
                             <td><?php echo $row['createdAt']; ?></td>
                             <td><?php echo $row['updatedAt']; ?></td>
 
-                            <td><a href="<?php echo $root;?>member" class="btn btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>VIEW RECORD</a></td>
+                        <td><a href="<?php echo $root;?>member" class="btn btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>VIEW RECORD</a></td>
 
 
                         </tr>
@@ -65,6 +65,7 @@ include 'inc/wrapper.inc.php';
                         <?php $i++; ?>
 
                         <?php endforeach; ?>
+
                         </tbody>
                     </table>
                 </div>

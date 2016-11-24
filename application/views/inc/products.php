@@ -21,6 +21,7 @@ foreach ($products as $product):
 
         $discount = $product['discountpercent'];
 
+
     }
 
 

@@ -595,56 +595,135 @@ class Dashboard extends CI_Controller
 
     public function add_user()
     {
-
-        $data['user_added'] = false;
-        $data['user_failed'] = false;
-        $data['not_avail'] = false;
-        $data['user_added'] = false;
+        $data['error'] = false;
+        $data['added'] = false;
+        $data['internal']= false;
+        $data['userexists'] = false;
 
         $this->load->library('form_validation');
 
+
         if (filter_input_array(INPUT_POST)) {
 
+            //1) SET RULES:
 
             $rules = array(
 
                 array(
-                    'field' => 'first_name',
+
+                    'field' => 'u_fname',
                     'label' => 'First Name',
                     'rules' => 'required|min_length[3]|max_length[255]'
+
                 ),
                 array(
-                    'field' => 'last_name',
+
+                    'field' => 'u_lname',
                     'label' => 'Last Name',
-                    'rules' => 'required|min_length[3]|max_length[255]'
+                    'rules' => 'required|min_length[4]|max_length[100]'
+
                 ),
                 array(
-                    'field' => 'user_name',
-                    'label' => 'Username',
-                    'rules' => 'required|min_length[3]|max_length[255]'
-                ),
-                array(
-                    'field' => 'e_mail',
+
+                    'field' => 'u_email',
                     'label' => 'Email',
-                    'rules' => 'required|valid_email'
+                    'rules' => 'required|valid_email|max_length[255]'
+
                 ),
                 array(
-                    'field' => 'user_pass',
+
+                    'field' => 'u_tel',
+                    'label' => 'Phone',
+                    'rules' => 'required|min_length[11]|numeric'
+
+                ),
+                array(
+
+                    'field' => 'u_fax',
+                    'label' => 'Fax',
+                    'rules' => 'required|min_length[11]|numeric'
+
+                ),
+                array(
+
+                    'field' => 'u_pass',
                     'label' => 'Password',
                     'rules' => 'required|min_length[7]|max_length[255]'
+
                 ),
                 array(
-                    'field' => 'c_pass',
+
+                    'field' => 'u_con',
                     'label' => 'Confirm Password',
-                    'rules' => 'required|min_length[7]|max_length[255]|matches[user_pass]'
+                    'rules' => 'required|min_length[7]|max_length[255]|matches[u_pass]'
+
                 ),
                 array(
-                    'field' => 'dash_pass',
-                    'label' => 'Dashboard Password',
-                    'rules' => 'required|min_length[7]|max_length[255]'
+
+                    'field' => 'u_com',
+                    'label' => 'Company',
+                    'rules' => 'required|min_length[7]'
+
+                ),
+                array(
+
+                    'field' => 'u_add',
+                    'label' => 'Address1',
+                    'rules' => 'required|min_length[15]'
+
+                ),
+                array(
+
+                    'field' => 'u_add2',
+                    'label' => 'Address2',
+                    'rules' => 'required|min_length[15]'
+
+                ),
+                array(
+
+                    'field' => 'u_city',
+                    'label' => 'City',
+                    'rules' => 'required|min_length[6]'
+
+                ),
+                array(
+
+                    'field' => 'u_post',
+                    'label' => 'Post Code',
+                    'rules' => 'required|numeric'
+
+                ),
+                array(
+
+                    'field' => 'u_country',
+                    'label' => 'Country',
+                    'rules' => 'required'
+
+                ),
+                array(
+
+                    'field' => 'u_state',
+                    'label' => 'Region/State',
+                    'rules' => 'required'
+
+                ),
+                array(
+
+                    'field' => 'u_name',
+                    'label' => 'Username',
+                    'rules' => 'required|min_length[3]|max_length[255]'
+
+                ),
+                array(
+
+                    'field' => 'u_check',
+                    'label' => 'Checkbox',
+                    'rules' => 'required'
+
                 ),
 
             );
+
 
             $this->form_validation->set_rules($rules);
 
@@ -656,10 +735,10 @@ class Dashboard extends CI_Controller
 
                 // step 1: check if username or email are available or not,
 
-                $username = $this->input->post('user_name', True);
-                $email = $this->input->post('e_mail', True);
+                $username = $this->input->post('u_name', True);
+                $email = $this->input->post('u_email', True);
 
-                $isRecordAvailable = $this->checkIsAvailable(array('user_name' => $username, 'e_mail' => $email));
+                $isRecordAvailable = $this->checkIsAvailable(array('username' => $username, 'email' => $email));
 
                 if (!$isRecordAvailable) {
 
@@ -667,10 +746,9 @@ class Dashboard extends CI_Controller
 
                     // getting the remaining values
 
-                    $firstname = $this->input->post('first_name', true);
-                    $lastname = $this->input->post('last_name', true);
-                    $password = $this->input->post('user_pass', true);
-                    $usertype = $this->input->post('usertype' , true);
+                    $firstname = $this->input->post('u_fname', true);
+                    $lastname = $this->input->post('u_lname', true);
+                    $password = $this->input->post('u_pass', true);
 
                     $encryptedpass = password_hash($password, PASSWORD_BCRYPT, array('cost => 12'));
 
@@ -679,7 +757,6 @@ class Dashboard extends CI_Controller
                     $this->user->email = $email;
                     $this->user->username = $username;
                     $this->user->password = $encryptedpass;
-                    $this->user->usertype = $usertype;
 
                     date_default_timezone_set('ASIA/KARACHI');
 
@@ -687,39 +764,134 @@ class Dashboard extends CI_Controller
 
                     $result = $this->user->insertRecord();
 
-                    if($result){
+                    if ($result) {
 
-//                        echo 'user added';
+                        $this->load->model('usersmeta');
 
-                        $data['user_added'] = true;
 
-                        $this->load->view('dashboard/add_user' , $data);
+                        $metaRec = array(
 
-                    }else{
+                            array(
 
-//                        echo 'not added due to some error';
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'telephoneNumber',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('u_tel', true),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
 
-                        $data['user_failed'] = true;
+                            ),
+                            array(
 
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'faxNumber',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('u_fax', true),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
+
+                            ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'companyName',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('u_com', true),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
+
+                            ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'firstAddress',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('u_add', true),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
+
+                            ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'secondAddress',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('u_add2', true),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
+
+                            ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'cityName',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('u_city', true),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
+
+                            ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'postCode',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('u_post', true),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
+
+                            ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'countryName',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('u_country', true),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
+
+                            ),
+                            array(
+
+                                'uid' => $this->usersmeta->uid = $result,
+                                'metakey' => $this->usersmeta->metakey = 'region/state',
+                                'metavalue' => $this->usersmeta->metavalue = $this->input->post('u_state', true),
+                                'createdAt' => $this->usersmeta->createdAt = date('Y-m-d H:i:s')
+
+                            )
+
+                        );
+                        $numrows = $this->usersmeta->insertbatch($metaRec);
+
+                        if ($numrows == count($metaRec)) {
+
+                            echo 'Registered successfully';
+
+                        } else {
+
+                            $data['error'] = true;
+                            $this->load->view('dashboard/add_user' , $data);
+
+                            echo 'sorry not added some errors';
+                        }
+
+                    } else {
+
+//                        echo 'Sorry! There are some internal problems';
+
+                        $data['internal']= true;
                         $this->load->view('dashboard/add_user' , $data);
 
                     }
 
-                }else{
+                    echo 'User Successfully registered';
 
-//                    echo 'sorry user not available';
-
-                    $data['not_avail'] = true;
+                    $data['added'] = true;
 
                     $this->load->view('dashboard/add_user' , $data);
 
+                }   else {
+
+                    $data['userexists'] = true;
+                    $this->load->view('dashboard/add_user', $data);
+
+                    echo 'sorry user exist';
+
                 }
-            }else{
+            } else {
+
+                //show errors
 
                 $data['validation_errors'] = validation_errors();
-                $this->load->view('dashboard/add_user' , $data);
+
+                $this->load->view('dashboard/add_user', $data);
 
             }
+
         }else{
 
             $this->load->view('dashboard/add_user' , $data);
@@ -764,24 +936,25 @@ class Dashboard extends CI_Controller
         $where = $this->input->post('u_id' , true);
 
 
-        $firstupdate = $this->input->post('ufname', true);
-        $lastupdate = $this->input->post('ulname', true);
-        $typeupdate = $this->input->post('utype', true);
-        $passwordupdate = $this->input->post('upass', true);
+        $firstupdate = $this->input->post('update_fname', true);
+        $lastupdate = $this->input->post('update_lname', true);
+        $typeupdate = $this->input->post('update_utype', true);
+        $passwordupdate = $this->input->post('update_upass', true);
 
-        $encryptedPass = password_hash($passwordupdate , password_becrypt , array('cost' => 12));
+        $encryptedPass = password_hash($passwordupdate , PASSWORD_BCRYPT , array('cost' => 12));
 
         $updateData = array(
-            'ufname' => $firstupdate,
-            'ulname' => $lastupdate,
-            'utype' => $typeupdate,
-            'upass' => $encryptedPass,
+            'firstname' => $firstupdate,
+            'lastname' => $lastupdate,
+            'usertype' => $typeupdate,
+            'password' => $encryptedPass,
 
         );
         $result = $this->user->updateRecord($colName, $updateData, $where);
         if ($result) {
 
-            redirect('dashboard/update_specificUser');
+            echo 'user updated';
+//            redirect('dashboard/update_specificUser');
         } else {
             echo 'User not updated';
         }
